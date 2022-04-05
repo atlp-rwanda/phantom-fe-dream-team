@@ -31,22 +31,12 @@ git clone https://github.com/atlp-rwanda/phantom-fe-dream-team Phantom
 cd Phantom
 ```
 ## Installation
-+ For those who love yarn
-```bash 
-yarn install
-```
 
 + For those who love NPM
 ```bash 
 npm install
 ```
 ## Runnning the bundle
-
-```bash
- yarn build
-```
-
-or 
 
 ```bash
  npm run build
@@ -61,10 +51,6 @@ Run `npm run start` to intialize and run the webpack development server. Navigat
 To run the app in production build of the app, use either of the following.
 
 ```bash
- yarn start
-```
-or
-```bash
  npm start
 ```
 ## Collaborators
@@ -72,10 +58,18 @@ or
 -[Achillesonga](#https://github.com/songa1)
 -[shemalucien](#https://github.com/shemalucien)
 -[ArthurJunior](#https://github.com/arthurjunior250)
+-[harerimanajonathan](#https://github.com/harerajo)
+-[JulesHabarurema](#https://github.com/Juleshb)
+-[KwizeraSteven](#https://github.com/Stevenkwizera06)
+-[GisagaraPrince](#https://github.com/gyssa-prince)
+-[BenjaminByiringiro](#https://github.com/Benafrica)
+-[GermainRukundo](#https://github.com/Rukundo725)
 ## License
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) 
 ## Badges
 [![GitHub version](https://badge.fury.io/gh/temilaj%2Freact-webpack-starter.svg)](https://badge.fury.io/gh/temilaj%2Freact-webpack-starter)
+
 ## Features
 
 ## How to Contribute

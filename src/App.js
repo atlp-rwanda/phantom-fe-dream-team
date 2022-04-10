@@ -9,7 +9,7 @@ import {
   
   
   function App() {
-    const counter = useSelector(state => state);
+    const counter = useSelector(state => state.counterReducer);
     const dispatch = useDispatch();
 
     return (

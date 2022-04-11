@@ -6,17 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "test": "jest --watch --env=jsdom",
+    "test": "react-scripts test",
     "coverage": "jest --coverage --silent --env=jsdom"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": ["./src/**"],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90
-      }
-    }
   },
   "keywords": [],
   "author": "",
@@ -25,10 +16,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0"
   },
   "devDependencies": {
-    "jest": "^27.5.1",
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
@@ -40,6 +31,7 @@
     "enzyme-to-json": "^3.6.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.6.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.71.0",

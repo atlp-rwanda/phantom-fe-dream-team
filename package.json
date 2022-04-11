@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "test": "jest --watch --env=jsdom",
-    "coverage": "jest --coverage --silent --env=jsdom"
+    "test": "jest --watch --env=jsdom"
+    
   },
   "jest": {
     "collectCoverage": true,

@@ -8,6 +8,7 @@
     "build": "webpack --mode production",
     "test": "jest --watch --env=jsdom",
     "coverage": "jest --coverage --silent --env=jsdom"
+    
   },
   "jest": {
     "collectCoverage": true,

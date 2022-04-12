@@ -1,5 +1,9 @@
-body{
+body {
     background: black;
     color: beige;
 }
 
+h3 {
+    color: white;
+    text-align: center;
+}

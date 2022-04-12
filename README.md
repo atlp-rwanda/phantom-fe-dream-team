@@ -39,12 +39,12 @@ npm install
 ## Runnning the bundle
 
 ```bash
- npm run build
+ npm run start
 ```
 
 ## Running the app in Development
 
-Run `npm run start` to intialize and run the webpack development server. Navigate to [http://localhost:3000/](http://localhost:3000). The app will automatically reload if you change any of the source files.
+Run `npm run dev:start` to intialize and run the webpack development server. Navigate to [http://localhost:3000/](http://localhost:3000). The app will automatically reload if you change any of the source files.
 
 ## Running the app in Production
 

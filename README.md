@@ -75,4 +75,4 @@ To run the app in production build of the app, use either of the following.
 ## How to Contribute
 
 ## Tests
-[![react CI/CD](https://github.com/atlp-rwanda/phantom-fe-dream-team/.github/workflows/devops.yml/badge.svg?branch=ch-setup-testing-%2327)](https://github.com/atlp-rwanda/phantom-fe-dream-team/.github/workflows/devops.yml)
+![react CI/CD](https://github.com/atlp-rwanda/phantom-fe-dream-team/actions/workflows/devops.yml/badge.svg)

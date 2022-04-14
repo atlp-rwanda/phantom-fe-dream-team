@@ -5,9 +5,9 @@ on:
   push:
     branches: [ develop ]
   pull_request:
-    branches: [ ch-setup-testing-#27 ]
+    branches: [ ch-setup-testing-#27, github-actions]
 
-  
+
   workflow_dispatch:
 jobs:
   
@@ -20,7 +20,7 @@ jobs:
         with: 
               node-version: '16.x'
 
-  
+
       - name: install all dependence
         run: npm install
       - name:  run tests

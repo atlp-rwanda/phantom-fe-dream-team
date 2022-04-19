@@ -75,3 +75,4 @@ To run the app in production build of the app, use either of the following.
 ## How to Contribute
 
 ## Tests
+![CI](https://github.com/atlp-rwanda/phantom-fe-dream-team/actions/workflows/.github/workflows/main.yml/badge.svg)

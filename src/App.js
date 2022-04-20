@@ -1,8 +1,9 @@
 import React from "react"
+import Navbar from "./components/Navbar/Navbar";
 function App() {
     return (<div>
-        <h2>Welcome To Phantom</h2>
-        <h3>Date : {new Date().toDateString()}</h3>
+        <Navbar />
     </div>)
 }
 export default App;
+

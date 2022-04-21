@@ -10,7 +10,7 @@ function Navbar() {
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-8"
+                                className="h-8 w-12"
                                 src={logo}
                                 alt="logo"
                             />

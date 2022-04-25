@@ -5,12 +5,12 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <nav className="bg-white-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="bg-white-800 shadow-xs">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-12"
+                                className="h-14 w-16"
                                 src={logo}
                                 alt="logo"
                             />

@@ -7,7 +7,9 @@
     "dev:start": "webpack server --mode development",
     "start": "webpack --mode production",
     "test": "react-scripts test",
-    "coverage": "jest --coverage --silent --env=jsdom"
+    "test:coverage":"CI=true npm test -- -- env=jsdom --coverage"
+    
+  
   },
   "keywords": [],
   "author": "",

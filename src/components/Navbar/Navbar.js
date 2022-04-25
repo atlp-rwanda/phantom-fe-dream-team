@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Transition } from "@headlessui/react";
-import logo from './logo.png';
+ import { Transition } from "@headlessui/react";
+ import logo from './logo.png';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -17,7 +17,7 @@ function Navbar() {
                         </div>
                         <div className="flex items-center">
 
-                            <div className="hidden md:block">
+                            <div className="block md:hidden">
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <a
                                         href="#"
@@ -62,7 +62,7 @@ function Navbar() {
                                 </div>
                             </div>
                         </div>
-                        <div className="-mr-2 flex md:hidden">
+                        <div className="-mr-2 flex md:block lg:hidden xl:hidden 2xl:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
@@ -119,7 +119,7 @@ function Navbar() {
                     leaveTo="opacity-0 scale-95"
                 >
                     {(ref) => (
-                        <div className="md:hidden" id="mobile-menu">
+                        <div className="md:block" id="mobile-menu">
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                                 <a
                                     href="#"

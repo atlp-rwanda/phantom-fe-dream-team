@@ -5,7 +5,7 @@ import React from 'react';
 import Landingpage from './components/Landingpage/Landingpage';
 test('renders learn react link', () => {
   render(<Landingpage />);
-  const linkElement = screen.getByText("WELCOME TO FANTOM");
+  const linkElement = screen.getByText("WELCOME TO PHANTOM");
   expect(linkElement).toBeInTheDocument;
 });
 test(' it should render paragraph', () => {

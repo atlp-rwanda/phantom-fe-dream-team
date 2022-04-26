@@ -9,7 +9,7 @@ function Landingpage() {
            <div  className='bg-[url("https://en.yutong.com/res/images/importimg/2020JTQpX0374S/images/product-details-img1.jpg")] bg-no-repeat bg-fixed bg-cover lg:w-50'>
                <div className='bg-[#1f2937]   opacity-80 h-80  mx-40 sm:mx-20  ' >
                   
-                   <h1 className='text-white text-4xl  sm:text-xl md:text-2xl lg:text-3xl  xs:text-xs pt-20 font-serif  ml-20 font-black '>WELCOME TO FANTOM</h1>
+                   <h1 className='text-white text-4xl  sm:text-xl md:text-2xl lg:text-3xl  xs:text-xs pt-20 font-serif  ml-20 font-black '>WELCOME TO PHANTOM</h1>
                     <p className='text-[#e5e7eb] text -base  sm:text-xs md:text-sm lg:text-base  mt-20  ml-20'>Don't need to wait for the bus for long? We can help. know the best nearby station</p>
                    
                </div>

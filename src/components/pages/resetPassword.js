@@ -1,16 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
-import bus from '../../assets/bus.png'
+import bus from '../../assets/bus.png';
 export default function resetPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setsuccess] = useState("");
   const [path, setPath] = useState("");
 
   const emailValidation = () => {
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
     if (regEx.test(email)) {
-      setPath("/EmailExists");
+      setPath("/ResetPassword/EmailExists");
+      setsuccess("Email is Valid");
+      setMessage("")
       
     } else if (!regEx.test(email) && email !== "") {
       setMessage("Email is Not Valid");
@@ -41,6 +44,7 @@ export default function resetPassword() {
          placeholder='Enter your email' 
          className='border mt-5 rounded-lg py-2 p-2'/>
           <p className="text-red">{message}</p>
+          <p className="text-green">{success}</p>
          <div className='mt-5 md:mb-10 sm:mb'>
          <Link  to={path}>
        <button className='bg-blue text-white py-2.5 px-8 rounded-lg mb-10'  onClick={emailValidation}>Search</button>
@@ -52,5 +56,6 @@ export default function resetPassword() {
     </div>
 
     </form>
+    
   )
 }

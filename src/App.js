@@ -1,5 +1,12 @@
 import React from "react"
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+=======
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Email from './components/pages/emailExist'
+import Sent from './components/pages/emailSent'
+import Reset from './components/pages/resetPassword';
+>>>>>>> chore(path):change path
 import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
@@ -25,6 +32,7 @@ function App() {
     return (<div>
 
         <BrowserRouter>
+<<<<<<< HEAD
       
             <Routes>
             <Route element={<NavbarLayout/>}>
@@ -45,6 +53,15 @@ function App() {
 
 
 
+=======
+        <Routes>
+          <Route exact path="/" ></Route>
+          <Route exact path="/ResetPassword" element={<Reset />}></Route>
+          <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
+          <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
+        </Routes>
+    </BrowserRouter>
+>>>>>>> chore(path):change path
     </div>)
 }
 export default App;

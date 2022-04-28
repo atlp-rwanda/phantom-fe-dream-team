@@ -1,7 +1,7 @@
 import  { resetActionType } from "../constants/resetActionType"
 const {GET_EMAIL } = resetActionType;
 const initialState = {
-    email:'email@gmail.com',   
+    email:'andela1@gmail.com'  
 }
 
 export const resetReducer = (state = initialState , { type }) =>{

@@ -4,13 +4,14 @@ import Email from './components/pages/emailExist'
 import Sent from './components/pages/emailSent'
 import Reset from './components/pages/resetPassword';
 import Navbar from "./components/Navbar/Navbar";
+import Home from './components/pages/home'
 function App() {
     return (<div>
       <Navbar/>
         <BrowserRouter>
         <Routes>
-          <Route exact path="/" ></Route>
-          <Route exact path="/ResetPassword" element={<Reset />}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/ResetPassword" element={<Reset />}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
         </Routes>

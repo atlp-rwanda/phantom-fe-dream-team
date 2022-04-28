@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
 import user from './img/user.png';
 import SuccefullPopup from './components/succesfull';
@@ -11,6 +12,7 @@ function Profile() {
     const counter = useSelector(state => state.updateProfile);
     const dispatch = useDispatch();
     const [succeed, setSucceed] = useState(false);
+    const [error, setError] = useState(false);
     let username = counter[0];
     let email= counter[1];
     var i=0;
@@ -92,11 +94,12 @@ function close(){
 <img className=" absolute top-2 right-40 h-8 w-8  " src={Vector} alt="succed icon"  />
   <h3 class="px-10">Profile Updated</h3>
 </SuccefullPopup> 
-{/*<ErrorPopup trigger={succeed}>
-<button onClick={()=>setSucceed(false)} class="absolute top-0 right-2">X</button>               
+<ErrorPopup trigger={error}>
+<button onClick={()=>setSucceed(false)} class="absolute top-0 right-2">X</button>    
+<Icon icon="bxs:error" width="32" height="32" className="absolute top-2 right-40 h-8 w-8" />           
 <img className=" absolute top-2 right-40 h-8 w-8  " src={Error} alt="succed icon"  />
   <h3 class="px-10">An error occured</h3>
-</ErrorPopup>*/}
+</ErrorPopup>
         </div> 
         </diV>
           );

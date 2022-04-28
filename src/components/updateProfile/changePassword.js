@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
 import user from './img/user.png';
 import SuccefullPopup from './components/succesfull';
@@ -11,6 +12,7 @@ function ChangePassword() {
     const password = useSelector(state => state.changePassword);
     const dispatch = useDispatch();
     const [succeed, setSucceed] = useState(false);
+    const [error, setError] = useState(false);
 
     function Submit(){
       const OldPassword =document.getElementById('Opassword').value;
@@ -70,14 +72,14 @@ function ChangePassword() {
 </form>
  <SuccefullPopup trigger={succeed}>
 <button onClick={()=>close()} class="absolute top-0 right-2">X</button>              
-<img className=" absolute top-2 right-40 h-8 w-8  " src={Vector} alt="succed icon"  />
+<Icon icon="flat-color-icons:ok" />
   <h3 class="px-10">Profile Updated</h3>
 </SuccefullPopup> 
-{/*<ErrorPopup trigger={succeed}>
+<ErrorPopup trigger={error}>
 <button onClick={()=>setSucceed(false)} class="absolute top-0 right-2">X</button>               
 <img className=" absolute top-2 right-40 h-8 w-8  " src={Error} alt="succed icon"  />
   <h3 class="px-10">An error occured</h3>
-</ErrorPopup>*/}
+</ErrorPopup>
         </div> 
         </div>
           );

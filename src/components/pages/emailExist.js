@@ -1,7 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png'
+import { useSelector } from 'react-redux';
+import swal from '@sweetalert/with-react';
 export default function emailExist() {
+  const resetEmail = useSelector( state => state.resetReducer.email )
+  if(resetEmail){
+    swal({
+      title: "Good job!",
+      text: "Email found",
+      icon: "success",
+    });
+  }
   return (
 
 
@@ -13,7 +23,7 @@ export default function emailExist() {
          <p className='mt-10 text-left ml-8 p-2'>we found the following information asssociated with your account</p>
          <p className='mt-5 text-left ml-10'>Email a confirmation code to </p>
          <div className='flex'>
-         <p className='text-left ml-10'>e*****@*******.com </p>
+         <p className='text-left ml-10'>{resetEmail}</p>
          <input type='radio' className='ml-20' name='email'/>
          </div>
          <div className='mt-10 md:mb-10 sm:mb'>

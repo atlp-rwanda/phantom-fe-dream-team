@@ -30,16 +30,6 @@ module.exports = {
       b: ' 3.67105px 3.67105px 3.67105px #4378FF',},
       width: {
         '1/3': '30%',},
-<<<<<<< HEAD
-=======
-        colors: {
-          'blue': '#1442A7',
-          'white': '#FFFFFF',
-          'red':'#FF0000',
-          'green':'#008000'
-        },
-        
->>>>>>> chore(path):change path
     extend: {},
   },
   }

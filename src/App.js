@@ -8,6 +8,7 @@ import Sent from './components/pages/emailSent'
 import Reset from './components/pages/resetPassword';
 >>>>>>> chore(path):change path
 import Navbar from "./components/Navbar/Navbar";
+<<<<<<< HEAD
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -21,6 +22,9 @@ import Login from "./components/Logout/login"
 import Logout from "./components/Logout/logout"
 import { Outlet } from 'react-router-dom';
 
+=======
+import Home from './components/pages/home'
+>>>>>>> chore(popup):popup notification
 function App() {
     const NavbarLayout = () => (
         <>
@@ -55,8 +59,8 @@ function App() {
 
 =======
         <Routes>
-          <Route exact path="/" ></Route>
-          <Route exact path="/ResetPassword" element={<Reset />}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/ResetPassword" element={<Reset />}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
         </Routes>

@@ -2,31 +2,60 @@ import React from 'react';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png';
+import { useSelector } from 'react-redux';
+import swal from '@sweetalert/with-react';
+import data from "./data";
+
 export default function resetPassword() {
+  const resetEmail = useSelector( state => state.resetReducer.email )
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setsuccess] = useState("");
   const [path, setPath] = useState("");
+ 
+    const Elements = data.map((item) => {
+      // return console.log(item.email)
+    });
+
 
   const emailValidation = () => {
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
     if (regEx.test(email)) {
-      setPath("/ResetPassword/EmailExists");
       setsuccess("Email is Valid");
       setMessage("")
+      console.log(email)
+
+      if(email==resetEmail){
+      setPath("/ResetPassword/EmailExists");
+    }else{
+      swal({
+        title: "Oops!",
+        text: "Email not found",
+        icon: "error",
+        button: "Ok!",
+      });
+    }
+  
+
+
       
     } else if (!regEx.test(email) && email !== "") {
       setMessage("Email is Not Valid");
+      setsuccess("")
     }
     else if (email == "") {
       setMessage("Email is Required");
+      setsuccess("")
     }  else {
-      setMessage("");
+      setMessage("")
+      setsuccess("")
     }
   };
 
   const handleOnChange = (e) => {
     setEmail(e.target.value);
+      setMessage("")
+      setsuccess("")
   };
   return (
 

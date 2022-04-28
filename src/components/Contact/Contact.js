@@ -36,14 +36,14 @@ function Contact() {
 
         <div className="flex flex-col rounded-none m-3">
           <div className="border-gray-50 flex flex-col">
-            <label for="name" className=" text-base "><span>FullNames</span><span className="text-white text-red-600 ml-5">*</span></label>
+            <label  className=" text-base "><span>FullNames</span><span className="text-white text-red-600 ml-5">*</span></label>
             <div className="">
               <input type="text" name="name" placeholder="Full Names..." className="w-64 p-2  sm:text-sm rounded-none
                 border-solid border-2 sm:w-32"/>
             </div>
           </div>
           <div className="border-gray-50 flex flex-col">
-            <label for="email" className=" text-base"><span>Email</span><span className="text-red-600 ml-5 text-base">*</span></label>
+            <label  className=" text-base"><span>Email</span><span className="text-red-600 ml-5 text-base">*</span></label>
             <div className="border-gray-50">
               <input type="email" name="email" placeholder="Email..." className="w-64 p-2 rounded-none
                 border-solid border-2  sm:w-32"/>

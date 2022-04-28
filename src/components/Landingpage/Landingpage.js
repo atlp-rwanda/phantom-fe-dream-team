@@ -16,7 +16,7 @@ function Landingpage() {
                <div className='flex flex-row sm:flex-col mt-80   bg-[#f8fafc]' >
                    
                  
-                   <img src="https://images.unsplash.com/photo-1632276536839-84cad7fd03b0?crop=entropy&cs=srgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDV8fGJ1c3xlbnwwfHx8fDE2NTA3MjIyODE&ixlib=rb-1.2.1&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450" class=" w-180 " alt="..." />
+                   <img src="https://images.unsplash.com/photo-1632276536839-84cad7fd03b0?crop=entropy&cs=srgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDV8fGJ1c3xlbnwwfHx8fDE2NTA3MjIyODE&ixlib=rb-1.2.1&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450" className=" w-180 " alt="..." />
                
                     
                    <div className=' mt-20 ml-40 sm:ml-20 '>

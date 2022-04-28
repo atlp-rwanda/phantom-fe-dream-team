@@ -1,17 +1,10 @@
-export const increment = () => {
+  export const updateProfile = (username,email)=>{
     return {
-      type: "INCREMENT",
+      type: "UPDATE", Username:username, Email:email,
     };
-  };
-  
-  export const decrement = () => {
+  }
+  export const changePassword = (Password)=>{
     return {
-      type: "DECREMENT",
+      type: "CHANGE", NewPassword:Password,
     };
-  };
-  
-  export const reset = () => {
-    return {
-      type: "RESET",
-    };
-  };
+  }

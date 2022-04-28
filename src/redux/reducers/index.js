@@ -1,9 +1,10 @@
-import counterReducer from "./counterReducer";
+import updateProfile from "./updateProfile";
+import changePassword from "./changepassword";
 //import other reducers
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    counterReducer
+    updateProfile,changePassword
     //other reducers
 });
 

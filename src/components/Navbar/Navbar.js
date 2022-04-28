@@ -6,11 +6,11 @@ function Navbar() {
     return (
         <div>
             <nav className="bg-white-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-12"
+                                className="h-14 w-21"
                                 src={logo}
                                 alt="logo"
                             />
@@ -21,41 +21,41 @@ function Navbar() {
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         Home
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         Services
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         About
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         Contact
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         Signin
                                     </a>
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans text-lg"
                                     >
                                         Register
                                     </a>

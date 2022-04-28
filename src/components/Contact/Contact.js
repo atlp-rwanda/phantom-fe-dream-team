@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { useSelector, useDispatch} from 'react-redux';
+import { sendmessage } from '../../redux/actions';
 import { Icon } from '@iconify/react';
 function Contact() {
+  // const message = useSelector(state => state.contactReducer);
+  // const dispatch = useDispatch();
+  // console.log(message);
+
   return (
     <div className="bg-white text-blue-600 m-8 md:m-4 sm:m-4" >
          <div className="text-4xl mb-5 text-center font-sans ">
@@ -63,7 +69,7 @@ function Contact() {
               <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="20" rows="10" className="font-sans rounded-none mt-3 h-20 w-full border-solid border-2  sm:w-32"></textarea>
             </div>
             <div className="flex">
-            <button type="button" className="font-sans rounded-none mt-3 px-8 py-2 rounded-lg mb-5 text-white bg-blue-600">Send</button>
+            <button type="button" onClick={() => dispatch(sendmessage())} className="font-sans rounded-none mt-3 px-8 py-2 rounded-lg mb-5 text-white bg-blue-600 ">Send</button>
           </div>
           </div>
           

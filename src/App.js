@@ -7,21 +7,23 @@ import Footer from "./components/Footer/Footer";
 import Signin from "./components/Signin";
 import Register from "./components/Register"; 
 function App() {
+
     return (<div>
-       
+         
          <BrowserRouter>
+         <Navbar/>
          <Routes>
         
-         <Route exact path="/" element={[ <Navbar/>,<Landingpage/>,<Contact/>,<Footer/> ]}></Route>  
-         <Route exact path="/Signin" element={[<Navbar/>,<Signin/>]}/>
-         <Route exact path="/Register" element={[<Navbar/>,<Register/>]}/>
-         <Route exact path="/Contact" element={[<Navbar/>,<Contact/>,<Footer/>]}/>
+         <Route exact path="/" element={[<Landingpage/>,<Contact/>]}></Route>  
+         <Route exact path="/Signin" element={<Signin/>}/>
+         <Route exact path="/Register" element={<Register/>}/>
+         <Route exact path="/Contact" element={<Contact/>}/>
 
          </Routes>
-       
+         <Footer/>
          </BrowserRouter>
       
-       
+        
 
     </div>)
 }

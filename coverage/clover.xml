@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1651148006791" clover="3.2.0">
-  <project timestamp="1651148006791" name="All files">
-    <metrics statements="50" coveredstatements="3" conditionals="7" coveredconditionals="0" methods="13" coveredmethods="3" elements="70" coveredelements="6" complexity="0" loc="50" ncloc="50" packages="9" files="12" classes="12">
+<coverage generated="1651158644677" clover="3.2.0">
+  <project timestamp="1651158644677" name="All files">
+    <metrics statements="45" coveredstatements="4" conditionals="5" coveredconditionals="0" methods="12" coveredmethods="3" elements="62" coveredelements="7" complexity="0" loc="45" ncloc="45" packages="9" files="12" classes="12">
       <package name="src">
         <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="App.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/App.js">
@@ -14,7 +14,7 @@
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/index.js">
           <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -41,10 +41,11 @@
         </file>
       </package>
       <package name="src.components.Contact">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <file name="Contact.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Contact/Contact.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="9" type="stmt"/>
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="10" count="9" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.components.Footer">
@@ -86,33 +87,27 @@
         </file>
       </package>
       <package name="src.redux.actions">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js">
-          <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.redux.reducers">
-        <metrics statements="9" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <file name="counterReducer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/counterReducer.js">
-          <metrics statements="6" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="2" count="0" type="cond" truecount="0" falsecount="1"/>
+        <metrics statements="7" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="contactReducer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/contactReducer.js">
+          <metrics statements="4" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+          <line num="2" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/index.js">
           <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="3" count="0" type="stmt"/>
-          <line num="5" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
         </file>
       </package>
     </metrics>

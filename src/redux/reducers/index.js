@@ -1,9 +1,11 @@
-import counterReducer from "./counterReducer";
+
+import contactReducer from "./contactReducer";
 //import other reducers
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    counterReducer
+  
+    contactReducer
     //other reducers
 });
 

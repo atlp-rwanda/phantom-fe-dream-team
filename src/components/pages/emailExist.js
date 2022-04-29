@@ -2,16 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png'
 import { useSelector } from 'react-redux';
-import swal from '@sweetalert/with-react';
 export default function emailExist() {
   const resetEmail = useSelector( state => state.resetReducer.email )
-  if(resetEmail){
-    swal({
-      title: "Good job!",
-      text: "Email found",
-      icon: "success",
-    });
-  }
+
   return (
 
 

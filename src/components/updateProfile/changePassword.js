@@ -36,7 +36,7 @@ function ChangePassword() {
       window.location.reload()
     }
     return (
-      <div>
+      <div className="pt-32">
       <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold sm:pl-[260px] text-2xl">Change your password</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 content-center ...">
             <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center  pt-40 flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
@@ -66,9 +66,9 @@ function ChangePassword() {
 </div>
 <div class="md:mr-0 border-t-2 border-indigo-500 ...  lg:mr-32"></div>
 <p className="text-center md:">
-<button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg[1023px]:px-9 ml-0">Save</button>
+<button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-0">Save</button>
 <Link to="../profile" >
-<button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg[1023px]:px-9 ml-20 mr-20">Cancel</button>
+<button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-20">Cancel</button>
 </Link>
 </p>
 </form>

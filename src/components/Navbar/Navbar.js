@@ -4,11 +4,11 @@ import logo from './logo.png';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div>
-            <nav className="bg-white-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-                    <div className="flex items-center justify-between h-16">
-                        <div className="flex-shrink-0">
+        <div className="relative">
+        <nav className="bg-white border-b-2 fixed top-0 left-0 right-0 border-indigo-500 ">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    <div className="flex-shrink-0">
                             <img
                                 className="h-14 w-21"
                                 src={logo}

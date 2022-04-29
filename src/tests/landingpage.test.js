@@ -4,22 +4,8 @@ import React from 'react';
 import Landingpage from '../components/Landingpage/Landingpage';
 import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
-test('renders WELCOME TO PHANTOM"', () => {
-  render(<Landingpage />);
-  const linkElement = screen.getByText("WELCOME TO PHANTOM");
-  expect(linkElement).toBeInTheDocument;
-});
-test(' it should render paragraph', () => {
-  render(<Landingpage />);
-  const linkElement = screen.getByText("Don't need to wait for the bus for long? We can help. know the best nearby station");
-  expect(linkElement).toBeInTheDocument;
-});
+import Services from '../components/Services'
 
-test(' it should render about phantom', () => {
-  render(<Landingpage />);
-  const linkElement = screen.getByText("About Phantom");
-  expect(linkElement).toBeInTheDocument;
-});
 
 test(' it should render about phantom  details', () => {
   render(< br />);
@@ -113,6 +99,67 @@ test('renders Contact', () => {
 test('renders All Rights Reserved By Phantmom 2022', () => {
   render(<Footer />);
   const linkElement = screen.getByText("All Rights Reserved By Phantmom 2022");
+});
+
+
+
+
+
+
+test(' it should render paragraph', () => {
+  render(<Landingpage />);
+  const linkElement = screen.getByText("Choose Your Route Track your bus live .");
+  expect(linkElement).toBeInTheDocument;
+});
+test(' it should render about button', () => {
+  render(<Landingpage />);
+  const linkElement = screen.getByText("Read More");
+  expect(linkElement).toBeInTheDocument;
+}); 
+
+test(' it should render how phantom works', () => {
+  render(<Services />);
+  const linkElement = screen.getByText("HOw It works");
+  expect(linkElement).toBeInTheDocument;
+});
+
+
+
+test(' it should  render phantom first step', () => {
+  render(<Services />);
+  const linkElement = screen.getByText("step1");
+  expect(linkElement).toBeInTheDocument;
+});
+
+
+
+
+test(' it should render  phantom step2 ', () => {
+  render(<Services/>);
+   const linkElement =screen.getByText("step2");
+   expect(linkElement).toBeInTheDocument;
+  
+});
+
+test(' it should render  phantom step2 detail ', () => {
+  render(<Services/>);
+   const linkElement =screen.getByText("Enter Location & destination");
+   expect(linkElement).toBeInTheDocument;
+  
+});
+
+test(' it should render  phantom step3 ', () => {
+  render(<Services/>);
+   const linkElement =screen.getByText("step3");
+   expect(linkElement).toBeInTheDocument;
+  
+});
+
+test(' it should render  phantom step3 detail ', () => {
+  render(<Services/>);
+   const linkElement =screen.getByText("Find the nearest bus");
+   expect(linkElement).toBeInTheDocument;
+  
 });
 
 

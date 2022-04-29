@@ -18,12 +18,18 @@ function ChangePassword() {
       const OldPassword =document.getElementById('Opassword').value;
       const NewPassword1 =document.getElementById('Npassword1').value;
       const NewPassword2 =document.getElementById('Npassword2').value;
-      if(NewPassword1!=NewPassword2){
+      if(OldPassword==''|| NewPassword1=='' || NewPassword2=='' ){
+      document.getElementById("error").innerHTML ='All inputs should be filled !!!';
+      }
+      else if(OldPassword!=password){
+        document.getElementById("error").innerHTML ='Incorrect old password !!!';
+      }
+      else if(NewPassword1.length<6){
+      document.getElementById("error").innerHTML ='A password shold be atleast 6 characters !!!';
+      }
+     else if(NewPassword1!=NewPassword2){
         document.getElementById("error").innerHTML ='New password not matching !!!';
       }
-    else if(OldPassword!=password){
-      document.getElementById("error").innerHTML ='Incorrect old password !!!';
-    }
     else{
       dispatch(changePassword(NewPassword1))
       document.getElementById("error").innerHTML ='';
@@ -34,6 +40,12 @@ function ChangePassword() {
     function close(){
       setSucceed(false)
       window.location.reload()
+    }
+    if (succeed==true){
+      setTimeout(() => {
+        setSucceed(false)
+        window.location.reload()
+      }, "5000")
     }
     return (
       <div className="pt-32">
@@ -65,7 +77,7 @@ function ChangePassword() {
 <p id='error' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
 <div class="md:mr-0 border-t-2 border-indigo-500 ...  lg:mr-32"></div>
-<p className="text-center md:">
+<p className="text-center md:text-left">
 <button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-0">Save</button>
 <Link to="../profile" >
 <button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-20">Cancel</button>
@@ -74,7 +86,7 @@ function ChangePassword() {
 </form>
  <SuccefullPopup trigger={succeed}>
 <button onClick={()=>close()} class="absolute top-0 right-2">X</button>              
-<Icon icon="flat-color-icons:ok" />
+<img className=" absolute top-2 right-40 h-8 w-8  " src={Vector} alt="succed icon"  />
   <h3 class="px-10">password changed</h3>
 </SuccefullPopup> 
 <ErrorPopup trigger={error}>

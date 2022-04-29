@@ -9,12 +9,12 @@ import Vector from './img/vector.png';
 import {updateProfile} from "../../redux/actions/index";
 import Error from './img/errorIcon.png'
 function Profile() {
-    const counter = useSelector(state => state.updateProfile);
+    const UserInfo = useSelector(state => state.updateProfile);
     const dispatch = useDispatch();
     const [succeed, setSucceed] = useState(false);
     const [error, setError] = useState(false);
-    let username = counter[0];
-    let email= counter[1];
+    let username = UserInfo[0];
+    let email= UserInfo[1];
     var i=0;
     function ValidateEmail(mail) 
     {
@@ -71,6 +71,12 @@ function Buttons2(){
 function close(){
   setSucceed(false)
   window.location.reload()
+}
+if (succeed==true){
+  setTimeout(() => {
+    setSucceed(false)
+    window.location.reload()
+  }, "5000")
 }
     return (
       <div>

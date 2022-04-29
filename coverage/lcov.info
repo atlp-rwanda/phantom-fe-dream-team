@@ -1,6 +1,151 @@
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/App.js
 FN:13,App
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/App.js
+FN:10,App
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js
+FN:7,App
+>>>>>>> develop
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/App.js
+FN:14,App
+FNF:1
+FNH:0
+FNDA:0,App
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:15,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/index.js
+FNF:0
+FNH:0
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:10,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Buses.js
+FN:12,Buses
+FNF:1
+FNH:0
+FNDA:0,Buses
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:13,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Drivers.js
+FN:12,drivers
+FNF:1
+FNH:0
+FNDA:0,drivers
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:13,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Home.js
+FN:4,Home
+FNF:1
+FNH:0
+FNDA:0,Home
+DA:1,0
+DA:2,0
+DA:5,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Routes.js
+FN:13,Routes
+FNF:1
+FNH:0
+FNDA:0,Routes
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:14,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/add.js
+FN:3,add
+FNF:1
+FNH:0
+FNDA:0,add
+DA:1,0
+DA:4,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/dashboard.js
+FN:14,Dashboard
+>>>>>>> feat(design): design dashboard
+>>>>>>> feat(design): design dashboard
 FNF:1
 FNH:0
 FNDA:0,App
@@ -69,9 +214,18 @@ SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Contact/Contact.js
 FN:5,Contact
 FNF:1
 FNH:1
+<<<<<<< HEAD
 FNDA:10,Contact
 DA:6,10
 LF:1
+=======
+<<<<<<< HEAD
+FNDA:9,Contact
+FNDA:0,(anonymous_1)
+DA:10,9
+DA:72,0
+LF:2
+>>>>>>> feat(design): design dashboard
 LH:1
 BRF:0
 BRH:0
@@ -83,13 +237,22 @@ FNF:1
 FNH:1
 FNDA:7,Footer
 DA:4,7
+=======
+FNDA:8,Dashboard
+DA:15,8
+>>>>>>> feat(design): design dashboard
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Landingpage/Landingpage.js
+=======
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/components/Landingpage/Landingpage.js
+>>>>>>> feat(design): design dashboard
 FN:7,Landingpage
 FNF:1
 FNH:1
@@ -97,10 +260,31 @@ FNDA:1,Landingpage
 DA:8,1
 LF:1
 LH:1
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/users.js
+FN:12,users
+FNF:1
+FNH:0
+FNDA:0,users
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:13,0
+LF:11
+LH:0
+>>>>>>> feat(design): design dashboard
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Landingpage/Services.js
 FN:5,Services
 FNF:1
@@ -117,6 +301,19 @@ SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Navbar/Navbar.js
 FN:5,Navbar
 FN:48,(anonymous_4)
 FN:102,(anonymous_5)
+=======
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/components/Navbar/Navbar.js
+FN:5,Navbar
+FN:45,(anonymous_4)
+FN:99,(anonymous_5)
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Navbar/Navbar.js
+FN:4,Navbar
+FN:67,(anonymous_4)
+FN:121,(anonymous_5)
+>>>>>>> feat(design): design dashboard
+>>>>>>> feat(design): design dashboard
 FNF:3
 FNH:0
 FNDA:0,Navbar
@@ -128,17 +325,32 @@ DA:3,0
 DA:4,0
 DA:5,0
 DA:6,0
+<<<<<<< HEAD
 DA:7,0
 DA:48,0
 DA:103,0
 LF:9
 LH:0
+<<<<<<< HEAD
 BRDA:56,0,0,0
 BRDA:56,0,1,0
+=======
+BRDA:53,0,0,0
+BRDA:53,0,1,0
+=======
+DA:67,0
+DA:122,0
+LF:8
+LH:0
+BRDA:75,0,0,0
+BRDA:75,0,1,0
+>>>>>>> feat(design): design dashboard
+>>>>>>> feat(design): design dashboard
 BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
 FN:5,emailExist
 FN:6,(anonymous_1)
@@ -150,12 +362,32 @@ DA:6,4
 DA:8,4
 LF:2
 LH:2
+=======
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/redux/store.js
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/store.js
+>>>>>>> feat(design): design dashboard
+FNF:0
+FNH:0
+DA:1,0
+DA:2,0
+DA:5,0
+LF:3
+LH:0
+>>>>>>> feat(design): design dashboard
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
 FN:5,emailSent
+=======
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/redux/actions/index.js
+FN:1,(anonymous_0)
+>>>>>>> feat(design): design dashboard
 FNF:1
 FNH:1
 FNDA:2,emailSent
@@ -241,11 +473,62 @@ FNDA:1,skeletonUI
 DA:4,1
 LF:1
 LH:1
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js
+FN:1,(anonymous_0)
+FN:7,(anonymous_1)
+FN:13,(anonymous_2)
+FNF:3
+FNH:0
+FNDA:0,(anonymous_0)
+FNDA:0,(anonymous_1)
+FNDA:0,(anonymous_2)
+DA:1,0
+DA:2,0
+DA:7,0
+DA:8,0
+DA:13,0
+DA:14,0
+LF:6
+LH:0
+>>>>>>> feat(design): design dashboard
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/useLoader.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/redux/reducers/contactReducer.js
+FN:1,(anonymous_0)
+FNF:1
+FNH:0
+FNDA:0,(anonymous_0)
+DA:1,0
+DA:2,0
+DA:4,0
+DA:6,0
+LF:4
+LH:0
+BRDA:1,0,0,0
+BRDA:3,1,0,0
+BRDA:3,1,1,0
+BRF:3
+BRH:0
+end_of_record
+TN:
+SF:/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/redux/reducers/index.js
+FNF:0
+FNH:0
+DA:2,0
+DA:4,0
+DA:6,0
+LF:3
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/useLoader.js
+>>>>>>> feat(design): design dashboard
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:8,(anonymous_2)
@@ -266,6 +549,41 @@ DA:9,0
 DA:12,0
 DA:15,0
 LF:9
+<<<<<<< HEAD
+=======
+>>>>>>> develop
+=======
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/counterReducer.js
+FN:2,(anonymous_0)
+FNF:1
+FNH:0
+FNDA:0,(anonymous_0)
+DA:2,0
+DA:4,0
+DA:6,0
+DA:8,0
+DA:10,0
+DA:12,0
+LF:6
+LH:0
+BRDA:2,0,0,0
+BRDA:5,1,0,0
+BRDA:5,1,1,0
+BRDA:5,1,2,0
+BRDA:5,1,3,0
+BRF:5
+BRH:0
+end_of_record
+TN:
+SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/index.js
+FNF:0
+FNH:0
+DA:1,0
+DA:3,0
+DA:5,0
+LF:3
+>>>>>>> feat(design): design dashboard
+>>>>>>> feat(design): design dashboard
 LH:0
 BRF:0
 BRH:0

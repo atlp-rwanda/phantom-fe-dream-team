@@ -16,7 +16,11 @@ import Add from "./add";
 
 
 
-function Dashboard() {
+
+
+function Dashboard(props) {
+  // const [currentComponent,setCurrentComponent] = React.useState();
+  // console.log(props.location)
   return (
 
     <div className='flex sm:px-6 lg:px-8'>
@@ -118,6 +122,8 @@ function Dashboard() {
         Buses()
         </section>
       </section>
+
+
 
 
 

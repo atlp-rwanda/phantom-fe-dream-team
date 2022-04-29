@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <coverage generated="1651779096392" clover="3.2.0">
   <project timestamp="1651779096392" name="All files">
     <metrics statements="104" coveredstatements="17" conditionals="24" coveredconditionals="3" methods="26" coveredmethods="9" elements="154" coveredelements="29" complexity="0" loc="104" ncloc="104" packages="11" files="21" classes="21">
@@ -7,9 +6,6 @@
         <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="App.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/App.js">
           <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <coverage generated="1651237390192" clover="3.2.0">
   <project timestamp="1651237390192" name="All files">
     <metrics statements="47" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="13" coveredmethods="4" elements="65" coveredelements="9" complexity="0" loc="47" ncloc="47" packages="9" files="13" classes="13">
@@ -17,7 +13,6 @@
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="App.js" path="/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/App.js">
           <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-=======
 <coverage generated="1651481454029" clover="3.2.0">
   <project timestamp="1651481454030" name="All files">
     <metrics statements="95" coveredstatements="15" conditionals="26" coveredconditionals="5" methods="22" coveredmethods="6" elements="143" coveredelements="26" complexity="0" loc="95" ncloc="95" packages="7" files="15" classes="15">
@@ -25,8 +20,6 @@
         <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="App.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js">
           <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
->>>>>>> develop
-=======
 <coverage generated="1651173678447" clover="3.2.0">
   <project timestamp="1651173678447" name="All files">
     <metrics statements="93" coveredstatements="1" conditionals="7" coveredconditionals="0" methods="15" coveredmethods="1" elements="115" coveredelements="2" complexity="0" loc="93" ncloc="93" packages="6" files="14" classes="14">
@@ -34,19 +27,12 @@
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="App.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/App.js">
           <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
->>>>>>> feat(design): design dashboard
->>>>>>> feat(design): design dashboard
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> feat(design): design dashboard
           <line num="7" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
@@ -55,24 +41,16 @@
           <line num="12" count="0" type="stmt"/>
           <line num="15" count="0" type="stmt"/>
         </file>
-<<<<<<< HEAD
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/index.js">
-=======
-        <file name="index.js" path="/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/index.js">
-=======
           <line num="8" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/index.js">
->>>>>>> develop
-=======
           <line num="7" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
           <line num="15" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/index.js">
->>>>>>> feat(design): design dashboard
->>>>>>> feat(design): design dashboard
           <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
@@ -83,11 +61,6 @@
           <line num="10" count="0" type="stmt"/>
         </file>
       </package>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> feat(design): design dashboard
       <package name="src.components">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="Register.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Register.js">
@@ -130,7 +103,6 @@
         <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="Navbar.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Navbar/Navbar.js">
           <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-=======
       <package name="src.components">
         <metrics statements="50" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
         <file name="Buses.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Buses.js">
@@ -142,18 +114,8 @@
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
-<<<<<<< HEAD
           <line num="48" count="0" type="stmt"/>
           <line num="103" count="0" type="stmt"/>
-=======
-          <line num="8" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-        <file name="Drivers.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Drivers.js">
-          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
->>>>>>> feat(design): design dashboard
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
@@ -161,7 +123,6 @@
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
-<<<<<<< HEAD
           <line num="45" count="0" type="stmt"/>
           <line num="100" count="0" type="stmt"/>
         </file>
@@ -170,20 +131,10 @@
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="store.js" path="/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/redux/store.js">
           <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-=======
-          <line num="8" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-        <file name="Home.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Home.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
->>>>>>> feat(design): design dashboard
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
         </file>
-<<<<<<< HEAD
       </package>
       <package name="src.redux.actions">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -207,25 +158,20 @@
           <line num="2" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
-=======
       <package name="src.components.Navbar">
         <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="Navbar.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Navbar/Navbar.js">
           <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-=======
         <file name="Routes.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Routes.js">
           <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
->>>>>>> feat(design): design dashboard
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
-<<<<<<< HEAD
           <line num="53" count="0" type="stmt"/>
           <line num="108" count="0" type="stmt"/>
->>>>>>> feat(design): design dashboard
         </file>
       </package>
       <package name="src.components.ResetPassword">
@@ -242,7 +188,6 @@
         <file name="resetPassword.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js">
           <metrics statements="36" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
-=======
           <line num="7" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
@@ -262,14 +207,24 @@
           <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
->>>>>>> feat(design): design dashboard
+          <line num="13" count="0" type="stmt"/>
+        </file>
+        <file name="Drivers.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Drivers.js">
+          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
-<<<<<<< HEAD
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
@@ -325,15 +280,12 @@
         </file>
       </package>
       <package name="src.redux.actions">
-<<<<<<< HEAD
         <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
-=======
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <file name="index.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/index.js">
-=======
           <line num="9" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
@@ -365,18 +317,12 @@
       <package name="src.redux.actions">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js">
->>>>>>> feat(design): design dashboard
           <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
->>>>>>> feat(design): design dashboard
           <line num="2" count="0" type="stmt"/>
         </file>
-<<<<<<< HEAD
         <file name="resetAction.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/resetAction.js">
-=======
-<<<<<<< HEAD
         <file name="resetAction.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/resetAction.js">
->>>>>>> feat(design): design dashboard
           <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
@@ -411,10 +357,6 @@
           <line num="8" count="4" type="cond" truecount="1" falsecount="1"/>
           <line num="10" count="0" type="stmt"/>
           <line num="12" count="4" type="stmt"/>
-<<<<<<< HEAD
-=======
->>>>>>> develop
-=======
       </package>
       <package name="src.redux.reducers">
         <metrics statements="9" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -432,8 +374,6 @@
           <line num="1" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
->>>>>>> feat(design): design dashboard
->>>>>>> feat(design): design dashboard
         </file>
       </package>
     </metrics>

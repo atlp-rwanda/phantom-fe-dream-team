@@ -16,6 +16,18 @@ function Profile() {
     let username = counter[0];
     let email= counter[1];
     var i=0;
+    function ValidateEmail(mail) 
+    {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(mail.match(mailformat))
+      {
+        return (true)
+      }
+        return (false)
+    }
+
+
+
     function removeReadonly (){
       document.getElementById('Uname').readOnly = false;
       document.getElementById('Uname').value = username;
@@ -34,10 +46,19 @@ function Buttons1(){
     }
   if(i==1){
   const username1 =document.getElementById('Uname').value;
-  const Email1 =document.getElementById('Email').value
+  const Email1 =document.getElementById('Email').value;
+  if(username1 =='' || Email1 ==''){
+    document.getElementById("error").innerHTML ='Username and Email should not be blank !!!';
+  }else{
+   const a=ValidateEmail(Email1);
+    if(a==true){
     dispatch(updateProfile(username1,Email1))
+    document.getElementById("error").innerHTML ='';
     setSucceed(true);
+  }else{
+  document.getElementById("error").innerHTML ='Enter a valid email !!!';
   }
+}}
 }
 function Buttons2(){
   if(i==0){
@@ -52,7 +73,7 @@ function close(){
   window.location.reload()
 }
     return (
-      <diV>
+      <div>
       {/* <h1 id='updatePhrase' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-2xl text-blue-600 pl-[260px] text-center font-bold"></h1> */}
 
         <div class="grid grid-cols-1 md:grid-cols-2 content-center ...">
@@ -79,11 +100,12 @@ function close(){
   </span>
   <input type="text" name="Password" class="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="***********" readOnly />
 </label>
+<p id='error' className="not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
 <div class="md:mr-0 border-t-2 border-indigo-500 ...  lg:mr-32"></div>
-<button type="button" onClick={() => Buttons1()} class="md:rounded-md mt-4 py-1 self-baseline px-9 ml-5 mr-20 mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ..."><p id='operation1'>Update profile</p></button>
+<button type="button" onClick={() => Buttons1()} class="ml-0 px-[1px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... sm:px-9 ml-5 mr-20"><p id='operation1'>Update profile</p></button>
 
-<button type="button" onClick={() => Buttons2()} class="md:rounded-md py-1 px-9 self-center mr-20 ml mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><p id='operation2'>Change password</p></button>
+<button type="button" onClick={() => Buttons2()} class="ml-0 px-[1px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... sm:px-9 ml-5 mr-20"><p id='operation2'>Change password</p></button>
 </form>
 
 
@@ -101,7 +123,7 @@ function close(){
   <h3 class="px-10">An error occured</h3>
 </ErrorPopup>
         </div> 
-        </diV>
+        </div>
           );
 }
 export default Profile;

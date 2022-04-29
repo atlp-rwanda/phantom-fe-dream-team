@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 function Footer() {
   return (
     <div>
-      <footer className="FooterComponent bg-zinc-800 sm:px-6 lg:px-8">
+      <footer className="FooterComponent bg-zinc-800 sm:text-1xl px-2 lg:px-8">
         <div className="text-center text-3xl text-white  pb-4">
           <h1>Let’s connect!</h1>
 

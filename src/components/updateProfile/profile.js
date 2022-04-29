@@ -81,7 +81,7 @@ function close(){
             <img className="w-16 md:w-32 lg:w-48 " src={user} alt="user icon"  />
             </div>
             <form class =" pt-10 md:pt-4 border-blue-500 sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
-            <div class= "md:mr-0 border-r-2 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
+            <div class= "flex flex-col justify-center items-center md:mr-0 border-r-2 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
             <label class="flex">
   <span class="mt-2 text-sm font-medium text-blue-700 px-[30.5px] text-base  ">
     Username:
@@ -103,9 +103,11 @@ function close(){
 <p id='error' className="not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
 <div class="md:mr-0 border-t-2 border-indigo-500 ...  lg:mr-32"></div>
-<button type="button" onClick={() => Buttons1()} class="ml-0 px-[1px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... sm:px-9 ml-5 mr-20"><p id='operation1'>Update profile</p></button>
+<p className="text-center md:">
+<button type="button" onClick={() => Buttons1()} class="ml-1 px-[4px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... lg[1023px]:px-9 ml-0"><p id='operation1'>Update profile</p></button>
 
-<button type="button" onClick={() => Buttons2()} class="ml-0 px-[1px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... sm:px-9 ml-5 mr-20"><p id='operation2'>Change password</p></button>
+<button type="button" onClick={() => Buttons2()} class="ml-0 px-[4px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 place-self-center ... lg[1023px]:px-9 ml-20 mr-20"><p id='operation2'>Change password</p></button>
+</p>
 </form>
 
 

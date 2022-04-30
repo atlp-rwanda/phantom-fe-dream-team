@@ -183,6 +183,7 @@ end_of_record
 TN:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
 FN:5,emailExist
 FN:6,(anonymous_1)
@@ -221,23 +222,21 @@ TN:
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
 =======
 =======
+=======
+>>>>>>> chore(popup):popup notification
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/emailExist.js
-FN:6,emailExist
-FN:7,(anonymous_1)
+FN:5,emailExist
+FN:6,(anonymous_1)
 FNF:2
 FNH:2
-FNDA:5,emailExist
+FNDA:4,emailExist
 FNDA:4,(anonymous_1)
-DA:7,5
+DA:6,4
 DA:8,4
-DA:9,4
-DA:15,4
-LF:4
-LH:4
-BRDA:8,0,0,4
-BRDA:8,0,1,0
-BRF:2
-BRH:1
+LF:2
+LH:2
+BRF:0
+BRH:0
 end_of_record
 TN:
 >>>>>>> chore(popup):popup notification
@@ -280,6 +279,7 @@ end_of_record
 TN:
 >>>>>>> chore(popup):popup notification
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/resetPassword.js
+<<<<<<< HEAD
 FN:9,resetPassword
 FN:10,(anonymous_4)
 <<<<<<< HEAD
@@ -292,6 +292,13 @@ FN:21,(anonymous_6)
 FN:55,(anonymous_7)
 FNF:5
 >>>>>>> chore(popup):popup notification
+=======
+FN:8,resetPassword
+FN:9,(anonymous_4)
+FN:17,(anonymous_5)
+FN:51,(anonymous_6)
+FNF:4
+>>>>>>> chore(popup):popup notification
 FNH:0
 FNDA:0,resetPassword
 FNDA:0,(anonymous_4)
@@ -303,19 +310,23 @@ FNDA:0,(anonymous_6)
 >>>>>>> chore(path):change path
 =======
 FNDA:0,(anonymous_6)
+<<<<<<< HEAD
 FNDA:0,(anonymous_7)
+>>>>>>> chore(popup):popup notification
+=======
 >>>>>>> chore(popup):popup notification
 DA:1,0
 DA:3,0
 DA:4,0
 DA:5,0
 DA:6,0
-DA:7,0
+DA:8,0
 DA:9,0
 DA:10,0
 DA:11,0
 DA:12,0
 DA:13,0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 DA:14,0
@@ -377,40 +388,42 @@ DA:15,0
 DA:14,0
 >>>>>>> chore(popup):popup notification
 DA:16,0
+=======
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+>>>>>>> chore(popup):popup notification
 DA:21,0
 DA:22,0
-DA:23,0
 DA:24,0
 DA:25,0
-DA:26,0
-DA:28,0
-DA:29,0
-DA:31,0
+DA:27,0
+DA:38,0
+DA:39,0
+DA:40,0
 DA:42,0
 DA:43,0
 DA:44,0
 DA:46,0
 DA:47,0
-DA:48,0
-DA:50,0
 DA:51,0
-DA:55,0
+DA:52,0
+DA:53,0
+DA:54,0
 DA:56,0
-DA:57,0
-DA:58,0
-DA:60,0
-LF:35
+LF:33
 LH:0
-BRDA:23,0,0,0
-BRDA:23,0,1,0
-BRDA:28,1,0,0
-BRDA:28,1,1,0
-BRDA:42,2,0,0
-BRDA:42,2,1,0
-BRDA:42,3,0,0
-BRDA:42,3,1,0
-BRDA:46,4,0,0
-BRDA:46,4,1,0
+BRDA:19,0,0,0
+BRDA:19,0,1,0
+BRDA:24,1,0,0
+BRDA:24,1,1,0
+BRDA:38,2,0,0
+BRDA:38,2,1,0
+BRDA:38,3,0,0
+BRDA:38,3,1,0
+BRDA:42,4,0,0
+BRDA:42,4,1,0
 BRF:10
 BRH:0
 end_of_record

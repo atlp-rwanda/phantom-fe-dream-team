@@ -2,14 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import sent from '../../assets/message-sent.png'
 import bus from '../../assets/bus.png'
-import { useLoader } from './useLoader';
-import SkeletonUI from './skeletonUI';
 export default function emailSent() {
-  const { loading } = useLoader();
   return (
-    <div>
-    {loading && <SkeletonUI />}
-    {!loading && (
     <form className='relative w-full '>
     <div className='flex-column justify-center text-center mt-20  lg:flex md:flex'>
      <img src={bus} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
@@ -26,7 +20,5 @@ export default function emailSent() {
      </div>
     </div>
     </form>
-          )}
-          </div>
   )
 }

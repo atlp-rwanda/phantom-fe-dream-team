@@ -1,7 +1,6 @@
 
 import { resetReducer } from "../../../redux/reducers/resetReducers";
-import { resetActionType } from "../../../redux/constants/resetActionType";
-import { resetAction } from "../../../redux/actions/resetAction";
+
 
 describe("reset", () => {
 

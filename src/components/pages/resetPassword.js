@@ -4,8 +4,11 @@ import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
 import swal from '@sweetalert/with-react';
+import { useLoader } from './useLoader';
+import SkeletonUI from './skeletonUI';
 
 export default function resetPassword() {
+  const { loading } = useLoader();
   const resetEmail = useSelector( state => state.resetReducer.email )
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -54,7 +57,9 @@ export default function resetPassword() {
       setsuccess("")
   };
   return (
-
+    <div>
+    {loading && <SkeletonUI />}
+    {!loading && (
     <form className='relative w-full '>
     <div className='flex-column justify-center ml-auto text-center mt-20  lg:flex md:flex'>
      <img src={bus} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
@@ -81,6 +86,8 @@ export default function resetPassword() {
     </div>
 
     </form>
+         )}
+         </div>
     
   )
 }

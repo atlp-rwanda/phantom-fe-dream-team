@@ -2,11 +2,16 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png'
 import { useSelector } from 'react-redux';
+import { useLoader } from './useLoader';
+import SkeletonUI from './skeletonUI';
 export default function emailExist() {
+  const { loading } = useLoader();
   const resetEmail = useSelector( state => state.resetReducer.email )
 
   return (
-
+    <div>
+    {loading && <SkeletonUI />}
+    {!loading && (
 
     <form className='relative w-full '>
     <div className='flex-column justify-center ml-auto text-center mt-20  lg:flex md:flex'>
@@ -28,6 +33,8 @@ export default function emailExist() {
      </div>
     </div>
     </form>
+          )}
+          </div>
 
   )
 }

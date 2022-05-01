@@ -7,7 +7,9 @@ import {changePassword} from "../../redux/actions/index";
 import {Link} from 'react-router-dom';
 import ErrorPopup from "./components/error";
 import Vector from './img/vector.png';
-import Error from './img/errorIcon.png'
+import Error from './img/errorIcon.png';
+import { useLoader } from './components/useLoader';
+import SkeletonUI from './components/skeletonUI';
 function ChangePassword() {
     const password = useSelector(state => state.changePassword);
     const dispatch = useDispatch();
@@ -47,9 +49,13 @@ function ChangePassword() {
         window.location.reload()
       }, "5000")
     }
+    const { loading } = useLoader();
     return (
-      <div className="pt-32">
-      <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold sm:pl-[260px] text-2xl">Change your password</h1>
+      <div>
+      {loading && <SkeletonUI />}
+      {!loading && (
+        <div className="pt-32">
+          <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold sm:pl-[260px] text-2xl">Change your password</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 content-center ...">
             <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center  pt-40 flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
             <img className="w-16 md:w-32 lg:w-48 " src={user} alt="user icon"  />
@@ -94,7 +100,9 @@ function ChangePassword() {
 <img className=" absolute top-2 right-40 h-8 w-8  " src={Error} alt="succed icon"  />
   <h3 class="px-10">An error occured</h3>
 </ErrorPopup>
-        </div> 
+        </div>
+        </div>
+      )} 
         </div>
           );
 }

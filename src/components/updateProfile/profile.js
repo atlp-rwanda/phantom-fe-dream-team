@@ -7,8 +7,13 @@ import {Link} from 'react-router-dom';
 import ErrorPopup from "./components/error";
 import Vector from './img/vector.png';
 import {updateProfile} from "../../redux/actions/index";
-import Error from './img/errorIcon.png'
+import Error from './img/errorIcon.png';
+import { useLoader } from './components/useLoader';
+import SkeletonUI from './components/skeletonUI';
 function Profile() {
+
+
+  
     const UserInfo = useSelector(state => state.updateProfile);
     const dispatch = useDispatch();
     const [succeed, setSucceed] = useState(false);
@@ -78,9 +83,11 @@ if (succeed==true){
     window.location.reload()
   }, "5000")
 }
+const { loading } = useLoader();
     return (
       <div>
-      {/* <h1 id='updatePhrase' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-2xl text-blue-600 pl-[260px] text-center font-bold"></h1> */}
+        {loading && <SkeletonUI />}
+      {!loading && (
 
         <div class="pt-32 grid grid-cols-1 md:grid-cols-2 content-center ...">
             <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
@@ -131,7 +138,9 @@ if (succeed==true){
   <h3 class="px-10">An error occured</h3>
 </ErrorPopup>
         </div> 
+      )}
         </div>
+        
           );
 }
 export default Profile;

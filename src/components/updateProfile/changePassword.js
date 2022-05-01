@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
-import user from './img/user.png';
-import SuccefullPopup from './components/succesfull';
+import user from '../img/user.png';
+import SuccefullPopup from '../succesfull';
 import {changePassword} from "../../redux/actions/index";
 import {Link} from 'react-router-dom';
-import ErrorPopup from "./components/error";
-import Vector from './img/vector.png';
-import Error from './img/errorIcon.png';
-import { useLoader } from './components/useLoader';
-import SkeletonUI from './components/skeletonUI';
+import ErrorPopup from "../error";
+import Vector from '../img/vector.png';
+import Error from '../img/errorIcon.png';
+import { useLoader } from '../useLoader';
+import SkeletonUI from '../skeletonUI';
 function ChangePassword() {
     const password = useSelector(state => state.changePassword);
     const dispatch = useDispatch();

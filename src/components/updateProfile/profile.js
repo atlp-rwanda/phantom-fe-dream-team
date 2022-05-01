@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
-import user from './img/user.png';
-import SuccefullPopup from './components/succesfull';
+import user from '../img/user.png';
+import SuccefullPopup from '../succesfull';
 import {Link} from 'react-router-dom';
-import ErrorPopup from "./components/error";
-import Vector from './img/vector.png';
+import ErrorPopup from "../error";
+import Vector from '../img/vector.png';
 import {updateProfile} from "../../redux/actions/index";
-import Error from './img/errorIcon.png';
-import { useLoader } from './components/useLoader';
-import SkeletonUI from './components/skeletonUI';
+import Error from '../img/errorIcon.png';
+import { useLoader } from '../useLoader';
+import SkeletonUI from '../skeletonUI';
 function Profile() {
 
 
@@ -40,9 +40,9 @@ function Profile() {
       document.getElementById('Email').value = email;
       document.getElementById("editPicture").innerHTML=`<label>
       <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>CHANGE</strong></label>`
-       document.getElementById("updatePhrase").innerHTML ='Update your profile';
       document.getElementById("operation1").innerHTML ='Save';
-      document.getElementById("operation2").innerHTML ='Cancel';
+      document.getElementById("operation2").innerHTML ='Cancel'; 
+      document.getElementById("updatePhrase").innerHTML ='Update your profile';
      }
 
     

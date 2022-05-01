@@ -6,6 +6,7 @@ export default function skeletonUI() {
       <img src={loader} alt='' />
     </div>
   )
-}
+};
+
 
 

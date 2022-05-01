@@ -4,18 +4,18 @@ import { sendmessage } from '../../redux/actions';
 import { Icon } from '@iconify/react';
 function Contact() {
   return (
-    <div className="bg-white text-blue-600 m-8 md:m-4 sm:flex flex-col" >
+    <div className="bg-white text-blue-600 m-8 md:m-4 md:flex flex-col sm:flex flex-col " >
          <div className="text-4xl mb-5 text-center font-sans ">
-          <h1 className="">Get in touch with us</h1>
+          <h1 className="text-blue-800 font-bold">Get in touch with us</h1>
         </div>
-      <form action="" className="border-solid border-2 mb-5 rounded font-sans flex justify-around sm:flex-col">
+      <form action="" className="border-solid border-2 mb-5 rounded font-sans flex justify-around md:flex-col items-center xs:flex-col items-center ">
      
 
         <div className="flex flex-col rounded-none mt-3" >
           <div className="text-2xl font-sans">
-            <h2 className="">Contact us</h2>
+            <h2 className="text-blue-700 font-bold md:text-center xs:text-center">Contact us</h2>
           </div>
-          <div className="flex flex-col mr-5 m-3">
+          <div className="flex flex-col mr-5 m-3 xs:w-full">
 
 
             <div className="flex mt-5">
@@ -38,17 +38,17 @@ function Contact() {
 
         <div className="flex flex-col rounded-none m-3">
           <div className="border-gray-50 flex flex-col">
-            <label  className=" text-base "><span>FullNames</span><span className="text-white text-red-600 ml-5">*</span></label>
+            <label  className=" text-blue-700 font-bold text-base "><span>FullNames</span><span className="text-white text-red-600 ml-5">*</span></label>
             <div className="">
               <input type="text" name="name" placeholder="Full Names..." className="w-64 p-2  sm:text-sm rounded-none
-                border-solid border-2 sm:w-32"/>
+                border-solid border-2"/>
             </div>
           </div>
           <div className="border-gray-50 flex flex-col">
-            <label  className=" text-base"><span>Email</span><span className="text-red-600 ml-5 text-base">*</span></label>
+            <label  className=" text-blue-700 font-bold text-base"><span>Email</span><span className="text-red-600 ml-5 text-base">*</span></label>
             <div className="border-gray-50">
               <input type="email" name="email" placeholder="Email..." className="w-64 p-2 rounded-none
-                border-solid border-2  sm:w-32"/>
+                border-solid border-2 "/>
             </div>
 
           </div>
@@ -58,14 +58,14 @@ function Contact() {
 
           <div className=" flex flex-col place-content-center  rounded-none">
             <div className="flex">
-              <p className="">Leave us a message...</p>
+              <p className="text-blue-800 font-bold">Leave us a message...</p>
             </div>
 
             <div className="flex">
-              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="20" rows="10" className="font-sans rounded-none mt-3 h-20 w-full border-solid border-2  sm:w-32"></textarea>
+              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="20" rows="10" className="font-sans rounded-none mt-3 h-20 w-full border-solid border-2"></textarea>
             </div>
             <div className="flex">
-            <button type="button" className="font-sans rounded-none mt-3 px-8 py-2 rounded-lg mb-5 text-white bg-blue-600 ">Send</button>
+            <button type="button" className="mt-3 lg:mt-5 bg-blue-500 text-white hover:bg-white hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs ">Send</button>
           </div>
           </div>
           

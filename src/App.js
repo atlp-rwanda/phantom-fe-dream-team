@@ -6,7 +6,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Signin from "./components/Signin";
 import Register from "./components/Register"; 
-import Services from "./components/services";
+import Services from "./components/Landingpage/Services";
 function App() {
 
     return (<div>

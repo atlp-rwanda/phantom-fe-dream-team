@@ -3,17 +3,17 @@ import { Icon } from '@iconify/react';
 function Footer() {
   return (
     <div>
-      <footer className="FooterComponent bg-zinc-800 sm:text-1xl px-2 lg:px-8">
+      <footer className="FooterComponent bg-gray-600 md: sm:text-xl text-ceneter px-2 lg:px-8">
         <div className="text-center text-3xl text-white  pb-4">
           <h1>Let’s connect!</h1>
 
         </div>
         <div className="flex justify-around mt-5 ">
-          <div className="text-white flex flex-col space-y-4 items-center">
+          <div className="text-white flex flex-col space-y-4 items-center md:hidden xs:hidden">
             <div className="">
             <Icon icon="el:map-marker" width="36" />
             </div>
-           <div className=" flex flex-col items-center space-y-4">
+           <div className=" flex flex-col items-center space-y-4 ">
            <h3>kigali,Rwanda</h3>
             <h3>KN 20 Ave</h3>
            </div>
@@ -34,7 +34,7 @@ function Footer() {
              
 
           </div>
-          <div className="text-white flex flex-col space-y-4 items-center">
+          <div className="text-white flex flex-col space-y-4 items-center md:hidden xs:hidden">
             <h3>Terms of Services</h3>
             <h3>Privacy Policy</h3>
             <h3>Contact</h3>
@@ -44,7 +44,7 @@ function Footer() {
 
         <div>
 
-          <h2 className="text-center  text-white text-2xl mt-5 pb-4"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
+          <h2 className="text-center text-white text-xl mt-5 pb-4 sm:text-xl"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
 
         </div>
       </footer>

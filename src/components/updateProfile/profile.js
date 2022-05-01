@@ -38,10 +38,12 @@ function Profile() {
       document.getElementById('Uname').value = username;
       document.getElementById('Email').readOnly = false;
       document.getElementById('Email').value = email;
+      document.getElementById("editPicture").innerHTML=`<label>
+      <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>CHANGE</strong></label>`
+       document.getElementById("updatePhrase").innerHTML ='Update your profile';
       document.getElementById("operation1").innerHTML ='Save';
       document.getElementById("operation2").innerHTML ='Cancel';
-      document.getElementById("updatePhrase").innerHTML ='Update your profile';
-  }
+     }
 
     
 function Buttons1(){
@@ -92,6 +94,8 @@ const { loading } = useLoader();
         <div class="pt-32 grid grid-cols-1 md:grid-cols-2 content-center ...">
             <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
             <img className="w-16 md:w-32 lg:w-48 " src={user} alt="user icon"  />
+            <p id='editPicture'>
+            </p>
             </div>
             <form class =" pt-10  md:pt-4 border-blue-500 border-none sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
             <div class= "outline-none  sm:flex flex-col justify-center items-center mr-0 border-r-2 border-indigo-500 lg:mr-32 pt-12 pb-12 " >

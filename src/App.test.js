@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import React from 'react';
-import SignUp from './components/signUp'
+import SignUp from './components/Login'
 test('test wellcoming message', () => {
   render(<SignUp />);
   const linkElement = screen.getByText("Sign in to your account");

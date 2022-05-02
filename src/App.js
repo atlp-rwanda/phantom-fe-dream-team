@@ -1,10 +1,10 @@
 import React from "react"
 import Navbar from "./components/Navbar/Navbar";
-import SignUp from "./components/signUp"
+import Login from "./components/Login"
 function App() {
     return (<div>
         <Navbar />
-        <SignUp />
+        <Login />
     </div>)
 }
 export default App;

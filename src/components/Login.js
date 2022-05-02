@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 
 
-function SignUp() {
+function Login() {
 
   
   function ValidateEmail(mail) 
@@ -120,7 +120,7 @@ function SignUp() {
   )
 }
 
-export default SignUp
+export default Login
 
 
 

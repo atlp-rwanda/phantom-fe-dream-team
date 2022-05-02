@@ -1,6 +1,6 @@
 TN:
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js
-FN:8,App
+FN:7,App
 FNF:1
 FNH:0
 FNDA:0,App
@@ -10,9 +10,8 @@ DA:3,0
 DA:4,0
 DA:5,0
 DA:6,0
-DA:7,0
-DA:9,0
-LF:8
+DA:8,0
+LF:7
 LH:0
 BRF:0
 BRH:0
@@ -59,7 +58,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/emailExist.js
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
 FN:5,emailExist
 FN:6,(anonymous_1)
 FNF:2
@@ -74,7 +73,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/emailSent.js
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
 FN:5,emailSent
 FNF:1
 FNH:1
@@ -86,22 +85,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/home.js
-FN:4,home
-FNF:1
-FNH:0
-FNDA:0,home
-DA:1,0
-DA:2,0
-DA:3,0
-DA:5,0
-LF:4
-LH:0
-BRF:0
-BRH:0
-end_of_record
-TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/resetPassword.js
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js
 FN:10,resetPassword
 FN:12,(anonymous_4)
 FN:20,(anonymous_5)
@@ -168,7 +152,7 @@ BRF:14
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/skeletonUI.js
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/skeletonUI.js
 FN:3,skeletonUI
 FNF:1
 FNH:1
@@ -180,7 +164,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/pages/useLoader.js
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/useLoader.js
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:8,(anonymous_2)

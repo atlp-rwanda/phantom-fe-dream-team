@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import logo from './logo.png';
+import logo from '../../assets/logo2.png';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <nav className="bg-white-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="bg-white-800 shadow-xs">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-12"
+                                className="h-14 w-16"
                                 src={logo}
                                 alt="logo"
                             />
@@ -21,41 +21,27 @@ function Navbar() {
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue px-3 py-2 rounded-md text-sm font-sans"
                                     >
                                         Home
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
-                                    >
-                                        Services
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
-                                    >
-                                        About
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue px-3 py-2 rounded-md text-sm font-sans"
                                     >
                                         Contact
                                     </a>
 
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue px-3 py-2 rounded-md text-sm font-sans"
                                     >
                                         Signin
                                     </a>
                                     <a
                                         href="#"
-                                        className=" hover:bg-blue-700 text-blue-400 px-3 py-2 rounded-md text-sm font-sans"
+                                        className=" hover:bg-blue-700 text-blue px-3 py-2 rounded-md text-sm font-sans"
                                     >
                                         Register
                                     </a>
@@ -123,34 +109,20 @@ function Navbar() {
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                                 <a
                                     href="#"
-                                    className=" hover:bg-blue-700 text-blue-400 block px-3 py-2 rounded-md text-sm font-sans"
-                                >
-                                    Services
-                                </a>
-
-                                <a
-                                    href="#"
-                                    className=" hover:bg-blue-700 text-blue-400 block px-3 py-2 rounded-md text-sm font-sans"
-                                >
-                                    About
-                                </a>
-
-                                <a
-                                    href="#"
-                                    className=" hover:bg-blue-700 text-blue-400 block px-3 py-2 rounded-md text-sm font-sans"
+                                    className=" hover:bg-blue-700 text-blue block px-3 py-2 rounded-md text-sm font-sans"
                                 >
                                     Contact
                                 </a>
 
                                 <a
                                     href="#"
-                                    className=" hover:bg-blue-700 text-blue-400  block px-3 py-2 rounded-md text-sm font-sans"
+                                    className=" hover:bg-blue-700 text-blue  block px-3 py-2 rounded-md text-sm font-sans"
                                 >
                                     Signin
                                 </a>
                                 <a
                                     href="#"
-                                    className=" hover:bg-blue-700 text-blue-400 block px-3 py-2 rounded-md text-sm font-sans"
+                                    className=" hover:bg-blue-700 text-blue block px-3 py-2 rounded-md text-sm font-sans"
                                 >
                                     Register
                                 </a>

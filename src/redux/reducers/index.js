@@ -1,11 +1,11 @@
 
-import contactReducer from "./contactReducer";
+import  {resetReducer}  from "./resetReducers"; 
 //import other reducers
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   
-    contactReducer
+    resetReducer
     //other reducers
 });
 

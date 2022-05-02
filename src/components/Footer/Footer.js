@@ -3,8 +3,8 @@ import { Icon } from '@iconify/react';
 function Footer() {
   return (
     <div>
-      <footer className="FooterComponent bg-gray-600 md: sm:text-xl text-ceneter px-2 lg:px-8">
-        <div className="text-center text-3xl text-white  pb-4">
+      <footer className="bg-gray-700 md: sm:text-xl text-ceneter px-0 sm:px-0 lg:px-8">
+        <div className="text-center text-3xl text-white  pb-4 sm:text-xl">
           <h1>Let’s connect!</h1>
 
         </div>
@@ -19,7 +19,7 @@ function Footer() {
            </div>
             
           </div>
-          <div className="text-white flex flex-col space-y-4 items-center">
+          <div className="text-white flex flex-col space-y-4 items-center xs:text-sm">
             <div className="">
             <h3>Follow Us to Get Updates !</h3>
             </div>
@@ -42,9 +42,9 @@ function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className='bg-blue-700'> 
 
-          <h2 className="text-center text-white text-xl mt-5 pb-4 sm:text-xl"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
+          <h2 className="text-center text-white text-md mt-5 pb-4 sm:text-sm"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
 
         </div>
       </footer>

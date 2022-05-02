@@ -1,20 +1,49 @@
-import React from "react"
+import React, { useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Email from './components/ResetPassword/emailExist'
-import Sent from './components/ResetPassword/emailSent'
-import Reset from './components/ResetPassword/resetPassword';
 import Navbar from "./components/Navbar/Navbar";
-function App() {
-    return (<div>
-      <Navbar/>
-        <BrowserRouter>
-        <Routes>
-          <Route path="/ResetPassword" element={<Reset />}></Route>
-          <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
-          <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-        </Routes>
-    </BrowserRouter>
-    </div>)
-}
-export default App;
+import { publicRoutes, privateRoutes } from "./routes";
+import Dashboard from "./layout";
 
+const token = localStorage.getItem("token");
+const App = () => {
+	const [isLoggedIn] = useState(token);
+
+	return (
+		<>
+			{!isLoggedIn ? (
+				<div>
+					<Navbar />
+					<BrowserRouter>
+						<Routes>
+							{publicRoutes.map((route) => (
+								<Route
+									key={route.id}
+									exact={route.exact}
+									path={route.path}
+									element={<route.element />}
+								/>
+							))}
+						</Routes>
+					</BrowserRouter>
+				</div>
+			) : (
+				<Dashboard>
+					<BrowserRouter>
+						<Routes>
+							{privateRoutes.map((route) => (
+								<Route
+									key={route.id}
+									exact={route.exact}
+									path={route.path}
+									element={<route.element />}
+								/>
+							))}
+						</Routes>
+					</BrowserRouter>
+				</Dashboard>
+			)}
+		</>
+	);
+};
+
+export default App;

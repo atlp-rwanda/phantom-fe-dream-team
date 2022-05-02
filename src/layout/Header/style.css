@@ -1,0 +1,31 @@
+.header {
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+input {
+	width: 441px;
+	height: 65.08px;
+	border-radius: 10px;
+	box-shadow: 3.7px 3.7px 3.7px 0.9px rgba(67, 120, 255, 1);
+	border: 0.93px solid rgba(20, 66, 167, 1);
+	padding: 10px 50px;
+}
+
+.searchIcon {
+	margin-top: -45px;
+	margin-left: 10px;
+}
+
+.addIcon {
+	width: 58px;
+	height: 58px;
+}
+
+.header-text {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	color: #1442a7;
+	font-size: 35px;
+}

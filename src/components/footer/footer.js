@@ -1,13 +1,8 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import { useLoader } from '../useLoader';
-import SkeletonUI from '../skeletonUI';
 function Footer() {
-    const { loading } = useLoader();
   return (
     <div>
-        {loading && <SkeletonUI />}
-      {!loading && (
       <footer className="FooterComponent bg-gray-600 md: sm:text-xl text-ceneter px-2 lg:px-8">
         <div className="text-center text-3xl text-white  pb-4 sm:text-xl">
           <h1>Let’s connect!</h1>
@@ -53,7 +48,6 @@ function Footer() {
 
         </div>
       </footer>
-       )}
     </div>
   )
 }

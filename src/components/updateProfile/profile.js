@@ -96,7 +96,7 @@ const { loading } = useLoader();
             </p>
             </div>
             <form class =" pt-10  border-none md:pt-4 border-blue-500 border-none sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
-            <div className ="content-center border-r-0 sm:border-r-2 border-indigo-500 mr-0  lg:mr-32 pt-12 pb-12 border-r-2 border-indigo-500" >
+            <div className ="text-[12px]sm:text-sm border-r-0 md:border-r-2 mr-0 border-indigo-500 mr-0  lg:mr-32 pt-12 pb-12" >
             <label class="flex">
   <span class="mt-2 text-sm font-medium text-blue-700 px-[30.5px] text-base  ">
     Username:

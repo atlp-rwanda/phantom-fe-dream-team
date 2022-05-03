@@ -8,7 +8,10 @@ import { Transition } from "@headlessui/react";
 import logo from '../../assets/logo2.png';
 import { Icon } from '@iconify/react';
 import { useSelector } from 'react-redux';
+import { useLoader } from '../ResetPassword/useLoader';
+import SkeletonUI from '../ResetPassword/skeletonUI';
 export default function logout() {
+    const { loading } = useLoader();
   const Username = useSelector( state => state.authReducer.user )
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -29,6 +32,9 @@ export default function logout() {
       };
       const [isOpen, setIsOpen] = useState(false);
   return (
+    <div>
+    {loading && <SkeletonUI />}
+    {!loading && (
       <div>
       <nav className="bg-white-800 shadow-xs">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -115,5 +121,7 @@ export default function logout() {
                 </Transition>
             </nav >
      </div>
+         )}
+         </div>
   )
 }

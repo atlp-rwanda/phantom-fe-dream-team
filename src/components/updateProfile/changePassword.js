@@ -6,8 +6,6 @@ import SuccefullPopup from '../succesfull';
 import {changePassword} from "../../redux/actions/index";
 import {Link} from 'react-router-dom';
 import ErrorPopup from "../error";
-import Vector from '../img/vector.png';
-import Error from '../img/errorIcon.png';
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 function ChangePassword() {
@@ -55,49 +53,47 @@ function ChangePassword() {
       {loading && <SkeletonUI />}
       {!loading && (
         <div className="pt-32">
-          <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold sm:pl-[260px] text-2xl">Change your password</h1>
+          <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold pt-0 md:pl-[260px] text-2xl">Change your password</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 content-center ...">
             <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center  pt-40 flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
             <img className="w-16 md:w-32 lg:w-48 " src={user} alt="user icon"  />
             </div>
-            <form class =" pt-10 md:pt-4 border-blue-500 sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
-            <div class= "md:mr-0 border-r-2 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
+            <form class =" pt-10 md:pt-4 border-blue-500 sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ">
+            <div class= "text-[12px]sm:text-sm border-r-0 md:border-r-2 mr-0 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
             <label class="flex">
-  <span class="mt-2 text-sm font-medium text-blue-700 px-[42px] text-base  ">
+  <span class="px-[10px] xxs:px-[42px] mt-0 font-medium text-blue-700 text-base">
     Old Password:
   </span>
   <input type="password" id="Opassword" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
-  <span class=" mt-2 text-sm font-medium text-blue-700 px-[39px] text-base ">
+  <span class="px-[8px] xxs:px-[39px] mt-0 font-medium text-blue-700 text-base">
     New Password:
   </span>
   <input type="password" id="Npassword1" class="py-2 md: mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
-  <span class="mt-2 text-sm font-medium text-blue-700 px-[30px] text-base  ">
+  <span class="px-[0px] xxs:px-[30px] mt-0 font-medium text-blue-700  text-base  ">
    Retype Password:
   </span>
   <input type="password" id="Npassword2" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1 sm: " placeholder="************" />
 </label>
 <p id='error' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
-<div class="md:mr-0 border-t-2 border-indigo-500 ...  lg:mr-32"></div>
-<p className="text-center md:text-left">
-<button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-0">Save</button>
+<div class="borde-t-0 md:border-t-2 mr-0 border-indigo-500 ...  lg:mr-32"></div>
+<p className="text-[12px] sm:text-sm text-center">
+<button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-9 ml-0">Save</button>
 <Link to="../profile" >
-<button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ... lg:px-9 ml-20">Cancel</button>
+<button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-9 ml-20">Cancel</button>
 </Link>
 </p>
 </form>
  <SuccefullPopup trigger={succeed}>
 <button onClick={()=>close()} class="absolute top-0 right-2">X</button>              
-<img className=" absolute top-2 right-40 h-8 w-8  " src={Vector} alt="succed icon"  />
   <h3 class="px-10">password changed</h3>
 </SuccefullPopup> 
 <ErrorPopup trigger={error}>
-<button onClick={()=>setSucceed(false)} class="absolute top-0 right-2">X</button>               
-<img className=" absolute top-2 right-40 h-8 w-8  " src={Error} alt="succed icon"  />
+<button onClick={()=>setError(false)} class="absolute top-0 right-2">X</button>               
   <h3 class="px-10">An error occured</h3>
 </ErrorPopup>
         </div>

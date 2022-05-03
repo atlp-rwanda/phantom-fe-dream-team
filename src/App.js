@@ -4,6 +4,9 @@ import Email from './components/ResetPassword/emailExist'
 import Sent from './components/ResetPassword/emailSent'
 import Reset from './components/ResetPassword/resetPassword';
 import Navbar from "./components/Navbar/Navbar";
+
+import Dashboard from "./components/Dashboard";
+import RoutesDashboard from "./components/RoutesDashboard/RoutesDashboard";
 function App() {
     return (<div>
       <Navbar/>
@@ -12,6 +15,7 @@ function App() {
           <Route path="/ResetPassword" element={<Reset />}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
+          <Route exact path="/Dashboard" element={<Dashboard/>}></Route>
         </Routes>
     </BrowserRouter>
     </div>)

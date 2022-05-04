@@ -3,16 +3,15 @@ import { Link } from 'react-router-dom';
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import RoutesDashboard from './RoutesDashboard/RoutesDashboard';
 function Dashboard() {
-    <BrowserRouter>
-    <Routes>
-      <Route exact path="/Dashboard/Routes"  element={<RoutesDashboard/>}></Route>
-    </Routes>
-  </BrowserRouter>
+ 
+    
+      
+
   return (
-    <div>
+    <div className='mt-20'>
         
            <Link to={"/Dashboard/Routes"} >
-               routesdashboard
+              <button>routesdashboard</button>
           </Link>
     </div>
   )

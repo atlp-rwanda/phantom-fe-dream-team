@@ -14,6 +14,9 @@ import Reset from './components/ResetPassword/resetPassword';
 
 import Dashboard from "./components/Dashboard";
 import RoutesDashboard from "./components/RoutesDashboard/RoutesDashboard";
+import AddnewRoutes from "./components/RoutesDashboard/addnewRoutes";
+import UpdateRoute from "./components/RoutesDashboard/UpdateRoute";
+import DeleteRoute from "./components/RoutesDashboard/DeleteRoute";
 
 function App() {
 
@@ -31,9 +34,16 @@ function App() {
                 <Route path="/ResetPassword" element={<Reset />}></Route>
                 <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
                 <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-                <Route path="/Dashboard" element={<Dashboard />}></Route>
+                <Route path="/Dashboard" element={<Dashboard/>}></Route>
+                <Route path="/Dashboard/Routes"  element={<RoutesDashboard/>}></Route>
+                <Route path="/Dashboard/Routes/add"  element={<AddnewRoutes/>}></Route>
+                <Route path="/Dashboard/Routes/update"  element={<UpdateRoute/>}></Route>
+                <Route path="/Dashboard/Routes/delete"  element={<DeleteRoute/>}></Route>
+   
+   
+   
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </BrowserRouter>
 
 

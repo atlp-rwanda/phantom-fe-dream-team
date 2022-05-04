@@ -1,11 +1,14 @@
 
 import  {resetReducer}  from "./resetReducers"; 
+import routesReducer from "./routesSlice";
 //import other reducers
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   
-    resetReducer
+    resetReducer,
+    routesReducer
+
     //other reducers
 });
 

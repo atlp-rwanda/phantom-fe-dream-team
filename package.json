@@ -7,19 +7,11 @@
     "dev:start": "webpack server --mode development",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
     "coverage": "react-scripts test --coverage a"
-      },
-=======
-    "test:coverage": "CI=true npm test -- --env=jsdom --coverage"
-=======
-    "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
-    "coverage": "react-scripts test --coverage a"
->>>>>>> chore(popup):popup notification
+
   },
->>>>>>> chore(path):change path
+
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import {useNavigate } from 'react-router-dom';
 export default function login() {
 
-    let from ='/logout';
+    let to ='/logout';
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const data={
@@ -12,14 +12,15 @@ export default function login() {
     }
     const HandleSubmit=()=>{
         dispatch(loginUser(data.user));
-        navigate(from);
-        console.log('success')
+        navigate(to);
+        // console.log('success')
     }
   return (
 
     <>
+
     <div className='flex justify-center mt-5 '>
-     <button className='bg-blue text-white  px-10 py-5 rounded-xl' onClick={HandleSubmit}>login</button>
+     <button className='bg-blue-700 text-white  px-10 py-5 rounded-xl mt-40 mb-40' onClick={HandleSubmit}>login</button>
      </div>
     </>
    

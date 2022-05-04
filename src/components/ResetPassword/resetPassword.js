@@ -3,9 +3,9 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
-import swal from '@sweetalert/with-react';
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
+import ErrorPopup from './error';
 
 export default function resetPassword() {
   const { loading } = useLoader();
@@ -27,12 +27,7 @@ export default function resetPassword() {
       if(email==resetEmail){
       setPath("/ResetPassword/EmailExists");
     }else{
-      swal({
-        title: "Oops!",
-        text: "Email not found",
-        icon: "error",
-        button: "Ok!",
-      });
+      setError(true);
     }
   
 
@@ -56,14 +51,29 @@ export default function resetPassword() {
       setMessage("")
       setsuccess("")
   };
+    //popup
+    const [error, setError] = useState(false);
+    function close(){
+      setError(false)
+      window.location.reload()
+    }
+    if (error==true){
+      setTimeout(() => {
+        setError(false)
+      }, "5000")
+    }
   return (
     <div>
+        <ErrorPopup trigger={error}>
+        <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
+        <h3 class="px-10">Email not found</h3>
+        </ErrorPopup> 
     {loading && <SkeletonUI />}
     {!loading && (
     <form className='relative w-full '>
-    <div className='flex-column justify-center ml-auto text-center mt-20  lg:flex md:flex'>
-     <img src={bus} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
-     <div className='md:w-1/3 lg:w-1/3 w-2/3 md:shadow-xl lg:shadow-xl'>
+    <div className='flex justify-center ml-auto text-center mt-40 mb-20  lg:flex md:flex'>
+     <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden lg:hidden' />
+     <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
          <p className='mt-10'>Reset Password</p>
          <p className='mt-20'>find your phantom account</p>
          <input 
@@ -72,15 +82,15 @@ export default function resetPassword() {
              onChange={handleOnChange}
          type='text' 
          placeholder='Enter your email' 
-         className='border mt-5 rounded-lg py-2 p-2'/>
-          <p className="text-red">{message}</p>
-          <p className="text-green">{success}</p>
-         <div className='mt-5 md:mb-10 sm:mb'>
+         className='border-2 border-black  mt-5 rounded-lg py-2 p-2'/>
+          <p className="text-red-500">{message}</p>
+          <p className="text-green-700">{success}</p>
+         <div className='mt-5 md:mb-10 xs:flex xs:justify-center sm:mb-10 lg:mb-10 '>
          <Link  to={path}>
-       <button className='bg-blue text-white py-2.5 px-8 rounded-lg mb-10'  onClick={emailValidation}>Search</button>
+       <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mb-10'  onClick={emailValidation}>Search</button>
        </Link>
-       <Link to="/ResetPassword">
-     <button className='bg-blue text-white py-2.5 px-8 rounded-lg ml-8'>Cancel</button></Link>
+       <Link to="/">
+     <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-8'>Cancel</button></Link>
          </div>
      </div>
     </div>

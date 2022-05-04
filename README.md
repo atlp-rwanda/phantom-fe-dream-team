@@ -1,5 +1,6 @@
 # Phantom
-
+## Tests
+![CI](https://github.com/atlp-rwanda/phantom-fe-dream-team/actions/workflows/.github/workflows/main.yml/badge.svg)
 ## Description
 Phantom is an application that allows simulating bus movements and enabling passengers to track their locations & movements. 
 
@@ -74,5 +75,4 @@ To run the app in production build of the app, use either of the following.
 
 ## How to Contribute
 
-## Tests
-![CI](https://github.com/atlp-rwanda/phantom-fe-dream-team/actions/workflows/.github/workflows/main.yml/badge.svg)
+

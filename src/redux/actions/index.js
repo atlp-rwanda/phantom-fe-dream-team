@@ -1,17 +1,5 @@
-export const increment = () => {
+  export const sendmessage = () => {
     return {
-      type: "INCREMENT",
-    };
-  };
-  
-  export const decrement = () => {
-    return {
-      type: "DECREMENT",
-    };
-  };
-  
-  export const reset = () => {
-    return {
-      type: "RESET",
+      type: "SENDMESSAGE",
     };
   };

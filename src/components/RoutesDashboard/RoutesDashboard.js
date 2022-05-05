@@ -1,28 +1,25 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import { Route, Link, Routes } from "react-router-dom";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteRoute } from '../../redux/reducers/routesSlice';
 import UpdateRoute from './UpdateRoute';
-import AddnewRoutes from './addnewRoutes';
-import Dashboard from '../Dashboard';
+import AddnewRoutes from './AddnewRoutes';
 import DeleteRoute from './DeleteRoute';
-
 function RoutesDashboard() {
-  const routeList=useSelector((state)=>state.routesReducer.value);
-  <BrowserRouter>
-    <Routes>
-      <Route path="/Dashboard" element={<Dashboard />} />
-      <Route path="/Dashboard/Routes/add" element={<AddnewRoutes />}></Route>
-      <Route path="/Dashboard/Routes/update" element={<UpdateRoute />}></Route>
-      <Route path="/Dashboard/Routes/delete" element={<DeleteRoute />}></Route>
+  const dispatch=useDispatch();
+  const routeList = useSelector((state) => state.routesReducer.value);
 
-    </Routes>
-  </BrowserRouter>
   return (
     <div className='mt-20'>
+      <Routes>
+
+        <Route path="add" element={<AddnewRoutes />}></Route>
+        <Route path="update" element={<UpdateRoute />}></Route>
+        <Route path="delete" element={<DeleteRoute />}></Route>
+      </Routes>
+
 
       <table>
         <tr>
@@ -35,7 +32,7 @@ function RoutesDashboard() {
           <th> Action</th>
           <th>
           </th>
-          <Link to={"/Dashboard/Routes/add"} >
+          <Link to={"add"} >
             addnewRoute
           </Link>
 
@@ -51,17 +48,17 @@ function RoutesDashboard() {
               <td>{route.stations}</td>
               <td>{route.price}</td>
               <td className='flex'>
-                <Link to={"/Dashboard/Routes/update"} >
+                <Link to={"update"} >
                   <Icon icon="ci:edit" width="24" className='text-green' />
                 </Link>
 
-                <Link to={"/Dashboard/Routes/delete"} >
-                  <Icon 
-                   onClick={() => {
-                    dispatch(deleteRoute({ routeno: route.routeno}));
-                  }}
-                
-                  icon="fluent:delete-28-regular" width="24" className='text-red' />
+                <Link to={"delete"} >
+                  <Icon
+                    onClick={() => {
+                      dispatch(deleteRoute({ id: route.id }));
+                    }}
+
+                    icon="fluent:delete-28-regular" width="24" className='text-red' />
                 </Link>
 
 
@@ -74,4 +71,4 @@ function RoutesDashboard() {
   )
 }
 
-export default RoutesDashboard
+export default RoutesDashboard;

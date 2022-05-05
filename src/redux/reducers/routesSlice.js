@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const data= [
-  { Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 },
-  { Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 },
-  { Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 }
+  { id:1,Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 },
+  { id:2,Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 },
+  {id:3, Routeno: 502, from: "nyabugogo", to: "town", no_of_stations: 3, stations: "stations", price: 245 }
 ];
 
 const routesSlice = createSlice({

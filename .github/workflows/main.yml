@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ develop, ch-setup-testing-#27]
+    branches: [  ch-setup-testing-#27]
   pull_request:
     branches: [ ch-setup-testing-#27 ]
 
@@ -34,10 +34,10 @@ coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js v16.14.2
+      - name: Use Node.js 16.x'
         uses: actions/setup-node@v3
         with:
-          node-version: v16.14.2
+          node-version: 16.x'
           cache: "npm"
       - run: npm i
       - uses: paambaati/codeclimate-action@v2.5.0

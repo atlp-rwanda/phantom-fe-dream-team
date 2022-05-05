@@ -121,17 +121,9 @@ function Dashboard() {
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> initial commit
     </div>
 
   )
 }
-<<<<<<< HEAD
 export default Dashboard;
 
-=======
-export default Dashboard;
->>>>>>> initial commit

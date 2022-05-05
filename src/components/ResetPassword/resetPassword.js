@@ -3,7 +3,6 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
-import swal from '@sweetalert/with-react';
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
 

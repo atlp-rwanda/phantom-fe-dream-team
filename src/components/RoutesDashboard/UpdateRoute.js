@@ -31,7 +31,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold w-24 text-base "><span>Route no</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="504" 
+                <input type="text" name="name" placeholder={routeno} 
                   onChange={(event) => {
                     setRouteno(event.target.value);
                   }}
@@ -42,7 +42,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold text-base w-24 "><span>From</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="Nyabugogo" 
+                <input type="text" name="name" placeholder={from} 
                  onChange={(event) => {
                   setFrom(event.target.value);
                 }}
@@ -53,7 +53,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold text-base w-24 "><span>To</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="Remera" 
+                <input type="text" name="name" placeholder={to}
                onChange={(event) => {
                 setTo(event.target.value);
               }}
@@ -64,7 +64,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold text-base w-24"><span>No of stations</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="10"
+                <input type="text" name="name" placeholder={no_of_stations}
                  onChange={(event) => {
                   setNoofstations(event.target.value);
                 }}
@@ -76,7 +76,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold text-base w-24 "><span>Stations</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube"
+                <input type="text" name="name" placeholder={stations}
                  onChange={(event) => {
                   setStations(event.target.value);
                 }}
@@ -87,7 +87,7 @@ function UpdateRoute() {
             <div className="border-gray-50 flex ">
               <label className=" text-blue-700 font-bold text-base w-24 "><span>Price</span></label>
               <div className="">
-                <input type="text" name="name" placeholder="325" 
+                <input type="text" name="name" placeholder={price} 
                  onChange={(event) => {
                   setPrice(event.target.value);
                 }}

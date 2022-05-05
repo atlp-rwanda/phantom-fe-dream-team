@@ -9,6 +9,7 @@ const linkElement = screen.getByText("Get in touch with us");
 expect(linkElement).toBeInTheDocument;
 });
 import Dashboard from './components/dashboard';
+import Dashboard from './components/Dashboard/dashboard';
 import { MemoryRouter as Router } from 'react-router-dom';
 
 

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Signin from "./components/Signin";
+import Signin from "./components/Signin.js";
 import Register from "./components/Register";
 import Services from "./components/Landingpage/Services";
 import Email from './components/ResetPassword/emailExist'

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import logo from '../images/logo.png';
+// import logo from '../images/logo.png';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -14,7 +14,7 @@ function Navbar() {
                               <Link to={"/"} >
                               <img
                                 className="h-14 w-21"
-                                src={logo}
+                                // src={logo}
                                 alt="logo"
                             />
                                     </Link>

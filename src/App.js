@@ -10,12 +10,14 @@ import Services from "./components/Landingpage/Services";
 import Email from './components/ResetPassword/emailExist'
 import Sent from './components/ResetPassword/emailSent'
 import Reset from './components/ResetPassword/resetPassword';
+import sidebar from "./components/Dashboard/sidebar";
+import Dashboard from "./components/Dashboard/dashboard";
 function App() {
 
     return (<div>
 
         <BrowserRouter>
-            <Navbar />
+             {/*<Navbar />*/}
             <Routes>
 
                 <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
@@ -26,6 +28,8 @@ function App() {
                 <Route path="/ResetPassword" element={<Reset />}></Route>
                 <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
                 <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
+                <Route exact path="/dashboard" element={<Dashboard />} />
+               
             </Routes>
             <Footer />
         </BrowserRouter>

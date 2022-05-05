@@ -1,6 +1,7 @@
 import React from 'react'
-import icon from './images/ICON.png'
-import add from './images/add.png';
+import icon from '../images/ICON.png'
+import add from '../images/add.png';
+import {Link} from 'react-router-dom';
 
 
 function TopNavbar() {

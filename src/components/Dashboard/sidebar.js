@@ -1,11 +1,13 @@
 import React from 'react'
-import username from './images/username.png';
-import route from './images/routes.png';
+import username from '../images/username.png';
+import route from '../images/routes.png';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 import { BiBus } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
- function sidebar() {
+import {Link} from 'react-router-dom';
+ 
+ function sidebar({setRoute}) {
   return (
     <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center m-auto'>
         <div className='flex flex-wrap'>
@@ -17,14 +19,14 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                 <img className=' h-6 w-6'
                     src={route} />
-                    <Link to="/dashboard/Routes">
+                    <Link to="#Routes" onClick={e => setRoute("Routes")}>
                         <h1>Routes</h1>
                     </Link>
             </div>
 
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                 <BiBus className='h-6 w-6' />
-                    <Link to="/dashboard/Buses">
+                    <Link to="#Buses" onClick={e => setRoute("Buses")}>
                         <h1>Buses</h1>
                     </Link>
 
@@ -32,7 +34,7 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
 
                 <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                     <BsPersonBadgeFill className='h-6 w-6' />
-                        <Link to="/dashboard/Drivers">
+                        <Link to="#Drivers" onClick={e => setRoute("Drivers")}>
                             <h1>Drivers</h1>
                         </Link>
 
@@ -40,7 +42,7 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
 
                 <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                     <FaUsers className='h-6 w-6' />
-                        <Link to="/dashboard/users">
+                        <Link to="#Users" onClick={e => setRoute("Users")}>
                             <h1>Users</h1>
                         </Link>
 

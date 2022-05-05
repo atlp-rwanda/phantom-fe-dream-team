@@ -74,5 +74,7 @@ To run the app in production build of the app, use either of the following.
 ## Features
 
 ## How to Contribute
+## code climate
+<a href="https://codeclimate.com/github/atlp-rwanda/phantom-fe-dream-team/maintainability"><img src="https://api.codeclimate.com/v1/badges/4a2cb342ecae405be27c/maintainability" /></a>
 
 

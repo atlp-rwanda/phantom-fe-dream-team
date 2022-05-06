@@ -61,19 +61,19 @@ function ChangePassword() {
             <form class =" pt-10 md:pt-4 border-blue-500 sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ">
             <div class= "text-[12px]sm:text-sm border-r-0 md:border-r-2 mr-0 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
             <label class="flex">
-  <span class="px-[10px] xxs:px-[42px] mt-0 font-medium text-blue-700 text-base">
+  <span class="px-[10px] xxs:px-[43px] mt-0 font-medium text-blue-700 text-base">
     Old Password:
   </span>
-  <input type="password" id="Opassword" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
+  <input type="password" id="Opassword" class="py-3 md:py-1 mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
   <span class="px-[8px] xxs:px-[39px] mt-0 font-medium text-blue-700 text-base">
     New Password:
   </span>
-  <input type="password" id="Npassword1" class="py-2 md: mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
+  <input type="password" id="Npassword1" class="py-1 mt-0 px-5 w-64  bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
-  <span class="px-[0px] xxs:px-[30px] mt-0 font-medium text-blue-700  text-base  ">
+  <span class="px-[0px] xxs:px-[28.5px] mt-0 font-medium text-blue-700  text-base  ">
    Retype Password:
   </span>
   <input type="password" id="Npassword2" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1 sm: " placeholder="************" />

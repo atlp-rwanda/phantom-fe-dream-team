@@ -8,5 +8,4 @@ const allReducers = combineReducers({
     resetReducer
     //other reducers
 });
-
 export default allReducers;

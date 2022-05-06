@@ -1,31 +1,28 @@
-import React, {useState} from 'react';
-import { Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 import TopNavbar from './TopNavbar';
+import RoutesDashboard from './RoutesDashboard';
+import Buses from './Buses';
+import Drivers from './Drivers';
+import Users from './Users'
+
 
 
 function Dashboard(props) {
-  const [route, setRoute] = useState("");
-
-  const Route = () => {
-    if(route === "users"){
-      console.log(route)
-      return <users />
-    }else if(route === "buses"){
-      return <Buses />
-    }else if(route === "drivers"){
-      return <Drivers />
-    }else if(route === "routes"){
-      return <Route />
-    }
-  }
   return (
-
+    
     <div className='flex sm:px-6 lg:px-8'>
+    
     <Sidebar />     
       <section className='flex flex-col basis-4/5'>
         <TopNavbar />
-        <p>{route}</p>
+        <Routes>
+    <Route path="Routes/*" element={<RoutesDashboard />} />
+    <Route path="Buses/*" element={<Buses />} />
+    <Route path="Drivers/*" element={<Drivers />} />
+    <Route path="Users/*" element={<Users />} />
+    </Routes>
       
       </section>
     </div>

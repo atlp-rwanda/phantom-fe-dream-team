@@ -1,10 +1,11 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import icon from '../images/ICON.png'
 import add from '../images/add.png';
 import {Link} from 'react-router-dom';
 
 
 function TopNavbar() {
+   const [Title, setTitle] = useState('ADMIN DASHBOARD');
     return (
         
     
@@ -14,7 +15,7 @@ function TopNavbar() {
                     <img className='w-20 h-12'
                     src={icon} />
                         <h1 className="flex  text-blue-800 mt-3 ml-16">
-                        ADMIN DASHBOARD</h1>
+                         {Title}</h1>
               </div>
     
     

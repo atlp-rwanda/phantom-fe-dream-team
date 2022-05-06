@@ -6,7 +6,7 @@ import { BiBus } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import {Link} from 'react-router-dom';
- 
+
  function sidebar({setRoute}) {
   return (
     <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center m-auto'>
@@ -19,14 +19,14 @@ import {Link} from 'react-router-dom';
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                 <img className=' h-6 w-6'
                     src={route} />
-                    <Link to="#Routes" onClick={e => setRoute("Routes")}>
+                    <Link to="Routes">
                         <h1>Routes</h1>
                     </Link>
             </div>
 
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                 <BiBus className='h-6 w-6' />
-                    <Link to="#Buses" onClick={e => setRoute("Buses")}>
+                    <Link to="Buses">
                         <h1>Buses</h1>
                     </Link>
 
@@ -34,7 +34,7 @@ import {Link} from 'react-router-dom';
 
                 <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                     <BsPersonBadgeFill className='h-6 w-6' />
-                        <Link to="#Drivers" onClick={e => setRoute("Drivers")}>
+                        <Link to="Drivers">
                             <h1>Drivers</h1>
                         </Link>
 
@@ -42,7 +42,7 @@ import {Link} from 'react-router-dom';
 
                 <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                     <FaUsers className='h-6 w-6' />
-                        <Link to="#Users" onClick={e => setRoute("Users")}>
+                        <Link to="Users">
                             <h1>Users</h1>
                         </Link>
 

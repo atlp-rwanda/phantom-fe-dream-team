@@ -28,10 +28,10 @@ function App() {
                 <Route path="/ResetPassword" element={<Reset />}></Route>
                 <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
                 <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-                <Route exact path="/dashboard" element={<Dashboard />} />
+                <Route exact path="/dashboard/*" element={<Dashboard />} />
                
             </Routes>
-            <Footer />
+            {/*<Footer />*/}
         </BrowserRouter>
 
     </div>)

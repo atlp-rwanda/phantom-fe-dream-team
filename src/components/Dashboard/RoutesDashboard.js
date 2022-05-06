@@ -1,9 +1,9 @@
 import React from 'react'
 
- function Routes() {
+ function RoutesDashboard() {
   return (
 
     <div>Routes</div>
   )}
 
-export default Routes;
+export default RoutesDashboard;

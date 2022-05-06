@@ -1,16 +1,22 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-
+import Dashboard from './components/Dashboard/dashboard';
+import { MemoryRouter as Router } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
+import Buses from './components/Dashboard/Buses';
+import RoutesDashboard from './components/Dashboard/RoutesDashboard';
+import Drivers from './components/Dashboard/Drivers';
+import Users from './components/Dashboard/Users';
+import Add from './components/Dashboard/Add';
+import Home from './components/Dashboard/Home'
+
 
 test('renders Get in touch with us', () => {
 render(<Contact />);
 const linkElement = screen.getByText("Get in touch with us");
 expect(linkElement).toBeInTheDocument;
 });
-import Dashboard from './components/dashboard';
-import Dashboard from './components/Dashboard/dashboard';
-import { MemoryRouter as Router } from 'react-router-dom';
+
 
 
 test('renders Username', () => {
@@ -58,3 +64,38 @@ test('renders ADMIN DASHBOARD', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
+test('renders buses', () => {
+  render(<Router><Buses/></Router>);
+  const linkElement = screen.getByText("Buses");
+  expect(linkElement).toBeInTheDocument;
+});
+
+test('renders drivers', () => {
+  render(<Router><Drivers/></Router>);
+  const linkElement = screen.getByText("drivers");
+  expect(linkElement).toBeInTheDocument;
+});
+
+test('renders users', () => {
+  render(<Router><Users/></Router>);
+  const linkElement = screen.getByText("Users");
+  expect(linkElement).toBeInTheDocument;
+});
+
+test('renders routes', () => {
+  render(<Router><RoutesDashboard/></Router>);
+  const linkElement = screen.getByText("Routes");
+  expect(linkElement).toBeInTheDocument;
+});
+
+test('renders add', () => {
+  render(<Router><Add/></Router>);
+  const linkElement = screen.getByText("add new ......");
+  expect(linkElement).toBeInTheDocument;
+});
+
+test('renders home', () => {
+  render(<Router><Home/></Router>);
+  const linkElement = screen.getByText("Dashboard");
+  expect(linkElement).toBeInTheDocument;
+});

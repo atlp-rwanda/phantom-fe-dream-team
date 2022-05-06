@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <coverage generated="1651779096392" clover="3.2.0">
   <project timestamp="1651779096392" name="All files">
     <metrics statements="104" coveredstatements="17" conditionals="24" coveredconditionals="3" methods="26" coveredmethods="9" elements="154" coveredelements="29" complexity="0" loc="104" ncloc="104" packages="11" files="21" classes="21">
@@ -23,6 +24,8 @@
         </file>
         <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/index.js">
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 <coverage generated="1651173621429" clover="3.2.0">
   <project timestamp="1651173621429" name="All files">
     <metrics statements="48" coveredstatements="8" conditionals="15" coveredconditionals="0" methods="11" coveredmethods="1" elements="74" coveredelements="9" complexity="0" loc="48" ncloc="48" packages="6" files="8" classes="8">
@@ -33,7 +36,10 @@
           <line num="5" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/andelarwanda/Phantom/src/index.js">
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
           <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
@@ -45,6 +51,7 @@
         </file>
       </package>
       <package name="src.components">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="Register.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Register.js">
@@ -215,6 +222,8 @@
           <line num="10" count="0" type="stmt"/>
           <line num="12" count="4" type="stmt"/>
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
         <metrics statements="18" coveredstatements="8" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <file name="signUp.js" path="/Users/andelarwanda/Phantom/src/components/signUp.js">
           <metrics statements="18" coveredstatements="8" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -285,7 +294,10 @@
           <line num="1" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
           <line num="5" count="0" type="stmt"/>
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
         </file>
       </package>
     </metrics>

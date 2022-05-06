@@ -1,5 +1,6 @@
 TN:
 <<<<<<< HEAD
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/App.js
 FN:13,App
 FNF:1
@@ -88,6 +89,11 @@ DA:4,7
 SF:/Users/andelarwanda/Phantom/src/App.js
 FN:4,App
 FNF:1
+=======
+SF:/Users/andelarwanda/Phantom/src/App.js
+FN:4,App
+FNF:1
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 FNH:0
 FNDA:0,App
 DA:5,0
@@ -281,6 +287,7 @@ BRH:0
 end_of_record
 TN:
 <<<<<<< HEAD
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/store.js
 FNF:0
 FNH:0
@@ -303,6 +310,8 @@ DA:2,0
 LF:2
 LH:1
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 SF:/Users/andelarwanda/Phantom/src/index.js
 FNF:0
 FNH:0
@@ -315,11 +324,15 @@ DA:6,0
 DA:10,0
 LF:7
 LH:0
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 <<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/resetAction.js
 FN:5,(anonymous_0)
@@ -330,6 +343,8 @@ DA:1,0
 DA:5,0
 DA:6,0
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 SF:/Users/andelarwanda/Phantom/src/components/signUp.js
 FN:10,SignUp
 FN:18,(anonymous_1)
@@ -398,13 +413,17 @@ FNH:0
 DA:1,0
 DA:2,0
 DA:5,0
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 LF:3
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 <<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/constants/resetActionType.js
 FNF:0
@@ -413,6 +432,8 @@ DA:1,2
 LF:1
 LH:1
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 SF:/Users/andelarwanda/Phantom/src/redux/actions/index.js
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
@@ -430,11 +451,15 @@ DA:13,0
 DA:14,0
 LF:6
 LH:0
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 <<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/contactReducer.js
 FN:1,(anonymous_0)
@@ -484,6 +509,8 @@ BRF:3
 BRH:2
 end_of_record
 =======
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d
 SF:/Users/andelarwanda/Phantom/src/redux/reducers/counterReducer.js
 FN:2,(anonymous_0)
 FNF:1
@@ -517,4 +544,7 @@ LH:0
 BRF:0
 BRH:0
 end_of_record
+<<<<<<< HEAD
 >>>>>>> 9566809 (feat(SignUp): Login Form)
+=======
+>>>>>>> 02d725330574231aeadae8f1a3bbe481b9580a9d

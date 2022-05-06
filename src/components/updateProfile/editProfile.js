@@ -93,14 +93,14 @@ const { loading } = useLoader();
         {loading && <SkeletonUI />}
       {!loading && (
 
-        <div class="pt-32 grid grid-cols-1 md:grid-cols-2 content-center">
-            <div  className="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
+        <div class=" grid-cols-2 pt-32 md: grid grid-cols-1 content-center">
+            <div  className="flex flex-col md:hidden justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
             <img className="h-64 w-64 rounded-full " src={user} alt="user icon"  />
             <p id='editPicture'>
             </p>
             </div>
             <form class =" pt-10  border-none md:pt-4 border-blue-500 border-none sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
-            <div className ="text-[12px]sm:text-sm border-r-0 md:border-r-2 mr-0 border-indigo-500 mr-0  lg:mr-32 pt-12 pb-12" >
+            <div className ="text-sm sm:text-[12px] border-r-2 md:border-r-0 mr-0 border-indigo-500 mr-32  lg:mr-0 pt-12 pb-12" >
             <label class="flex">
   <span class="mt-2 text-sm font-medium text-blue-700 px-[33px] text-base  ">
     Username:
@@ -121,11 +121,11 @@ const { loading } = useLoader();
 </label>
 <p id='error' className="not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
-<div class="border-t-0 sm:border-t-2 mr-0  border-indigo-500 ...  lg:mr-32"></div>
-<p className="text-[12px] sm:text-sm text-center">
-<button type="button" onClick={() => Buttons1()} className="ml-1 px-[4px] rounded-md mt-4 py-1 self-baseline  mb-5 font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 lg:px-9 ml-0"><p id='operation1'>Update profile</p></button>
+<div class="border-t-2 md:border-t-0   border-indigo-500 ...  mr-32 lg:mr-0"></div>
+<p className=" p-8 flex text-sm sm:text-[8px]">
+<button type="button" onClick={() => Buttons1()} className="ml-15 px-9 sm:px-4 text-sm md:text-[16px] ml-0 rounded-md mt-4 py-1  self-baseline  mb-5  font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-[10px]"><p id='operation1'>Update profile</p></button>
 
-<button type="button" onClick={() => Buttons2()} className="ml-0 px-[4px] rounded-md mt-4 py-1 self-baseline  mb-5 font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 lg:px-9 ml-20 mr-20"><p id='operation2'>Change password</p></button>
+<button type="button" onClick={() => Buttons2()} className="ml-20 px-9 sm:px-4 text-sm md:text-[16px] rounded-md mt-4 py-1 self-baseline  mb-5 font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-[10px]"><p id='operation2'>Change password</p></button>
 </p>
 </form>
 

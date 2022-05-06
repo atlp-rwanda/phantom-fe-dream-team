@@ -19,30 +19,30 @@ function Profile() {
         {!loading && (
                <div className=" w-full h-full md: flex justify-center pt-[100px] pb-[80px] p-8 ">
                  <div className="flex">
-                   <div className=" hidden md:flex lg:w-[320px] h-[400px] content-center text-white">
-                   <img className="h-3/5 rounded-full md:rounded-lg lg:h-full w-full  " src={user} alt="user icon"  />
+                   <div className=" flex md:hidden lg:w-[320px] h-[400px] content-center text-white">
+                   <img className=" md:h-3/5 rounded-lg lg:h-full w-full  " src={user} alt="user icon"  />
                    </div>
-                <div className="grid-cols-2 block md:flex w-[500px] h-[370px] mt-[15px] content-center bg-blue-600">
-                 <div className="pt-5 md:pt-0 pr-2">
-                 <div className="pt-0 md:pt-[40px] p-[40px] bg-blue-100 w-full h-full w-[500px]">
-                   <p className="flex">
-                 <img className="flex md:hidden w-[80px] h-[80px] rounded-full" src={user} alt="user icon"  />
+                <div className="flex w-[500px] md:grid-cols-2 block h-[370px] mt-[15px] content-center bg-blue-600">
+                 <div className="pr-0 sm:pl-2 pt-0 md:pt-5">
+                 <div className="pt-[40px] md:pt-0 p-[40px] bg-blue-100 w-full h-full w-[500px]">
+                   <p className="pl-0 sm:pl-4 flex">
+                 <img className="hidden md:flex w-[80px] h-[80px] rounded-full" src={user} alt="user icon"  />
                  <Link to='./editprofile'>
-                 <Icon icon="ant-design:setting-filled"className="flex md:hidden h-16 w-9 ml-32" />
+                 <Icon icon="ant-design:setting-filled"className="hidden md:flex h-16 w-9 ml-32" />
                  </Link>
                  </p>
-                     <h1 className="text-[22px] pb-[25px] flex "><u>MY INFORMATION</u></h1>
-                 <h2 className="text-[18px]">{username}</h2>
-                 <h2 className="flex">
+                     <h1 className="pl-0 sm:pl-4 text-[22px] pb-[25px] flex "><u>MY INFORMATION</u></h1>
+                 <h2 className="pl-0 sm:pl-4 text-[18px]">{username}</h2>
+                 <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="clarity:email-solid" className="mt-1"/>
-                 <h2 className="text-[13px] pl-[8px]">{email}</h2>
+                 <h2 className="pl-0 sm:pl-4 text-[13px] pl-[8px]">{email}</h2>
                  </h2>
-                 <h2 className="flex">
+                 <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="bxs:phone" className="mt-1" />
-                 <h2 className="text-[13px] pb-[15px] pl-[8px]">{phone}</h2>
+                 <h2 className="pl-0 sm:pl-4 text-[13px] pb-[15px] pl-[8px]">{phone}</h2>
                  </h2>
                  
-                 <div className="flex">
+                 <div className=" pl-0 sm:pl-4 flex">
                   <div>
                   <h2>MY ROLE:</h2>
                   <h2>BUS TYPE:</h2>
@@ -55,9 +55,9 @@ function Profile() {
                   </div>
                   </div>
                  </div> 
-                 <p className="hidden md:flex justify-items-center ">
+                 <p className="flex md:hidden justify-items-center ">
                   <Link to="./editprofile" >
-<button type="button" class="ml-0 rounded-md mt-1 py-1 self-baseline mb-5 text-sm font-medium text-gray-100 focus:outline-none bg-blue-600 border border-blue-400 hover:bg-blue-900 hover:text-white lg:px-9 ml-20">Update info</button>
+<button type="button" class="ml-0 rounded-md mt-1 py-1 self-baseline mb-5 text-sm font-medium text-gray-100 focus:outline-none bg-blue-600 border border-blue-400 hover:bg-blue-900 hover:text-white px-9 ml-20">Update info</button>
 </Link>   </p>  
                  </div>
                 </div>

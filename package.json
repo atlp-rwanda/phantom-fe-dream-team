@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev:start": "webpack server --mode development",
-    "start": "webpack --mode production",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage a"
-  },
+      },
   "keywords": [],
   "author": "",
   "license": "ISC",

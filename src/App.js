@@ -9,16 +9,26 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import CurrentMap from "./components/updateProfile/currentMap";
-import Footer from "./components/footer/footer";
+import Landingpage from "./components/Landingpage/Landingpage";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Signin from "./components/Signin";
+import Register from "./components/Register";
+import Services from "./components/Landingpage/Services";
 function App() {
+
     return (<div>
         
         <BrowserRouter>
         <Routes>
+        <Route exact path="/" element={[<Navbar/>,<Landingpage />, <Services />, <Contact />]}></Route>
+        <Route exact path="/Signin" element={[<Navbar/>,<Signin />]} />
+                <Route exact path="/Register" element={[<Navbar/>,<Register />]} />
+                <Route exact path="/Contact" element={[<Navbar/>,<Contact />]} />
         <Route exact path="/profile" element={[<OperatorNavbar/>,<Profile/>,<Footer/>]}></Route> 
         <Route exact path="/profile/map" element={[<OperatorNavbar/>,<CurrentMap/>,<Footer/>]}></Route>  
         <Route exact path="/profile/editprofile" element={[<OperatorNavbar /> ,<EditProfile/>,<Footer/>]}></Route>
-        <Route exact path="/profile/changepassword" element={[<Navbar /> ,<ChangePassword/>,<Footer/>]}></Route>
+        <Route exact path="/profile/changepassword" element={[<OperatorNavbar/> ,<ChangePassword/>,<Footer/>]}></Route>
           <Route path="/ResetPassword" element={[<Navbar /> ,<Reset />,<Footer/>]}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={[<Navbar /> ,<Email />,<Footer/>]}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={[<Navbar /> ,<Sent />,<Footer/>]}></Route>

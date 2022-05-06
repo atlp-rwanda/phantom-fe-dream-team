@@ -53,38 +53,38 @@ function ChangePassword() {
       {loading && <SkeletonUI />}
       {!loading && (
         <div className="pt-32">
-          <h1 className="not-italic subpixel-antialiased text-sm font-sans text-xl text-blue-600 pl-[0] text-center font-bold pt-0 md:pl-[260px] text-2xl">Change your password</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 content-center ...">
-            <div  class="hidden md:flex flex-col justify-center items-center  pt-4 flex flex-col justify-center items-center  pt-40 flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40   ">
-            <img className="w-16 md:w-32 lg:w-48 " src={user} alt="user icon"  />
+          <h1 className="pl-[260px] sm:pl-[0] not-italic subpixel-antialiased font-sans text-xl text-blue-600 text-center font-bold ">Change your password</h1>
+          <div class=" grid-cols-2 md: grid grid-cols-1 content-center">
+            <div  className="flex flex-col md:hidden justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
+            <img className="h-64 w-64 rounded-full " src={user} alt="user icon"  />
             </div>
-            <form class =" pt-10 md:pt-4 border-blue-500 sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ">
-            <div class= "text-[12px]sm:text-sm border-r-0 md:border-r-2 mr-0 border-indigo-500 lg:mr-32 pt-12 pb-12 " >
+            <form class =" pt-10  border-none md:pt-4 border-blue-500 border-none sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">
+            <div className ="text-sm sm:text-[12px] border-r-2 md:border-r-0 mr-0 border-indigo-500 mr-32  lg:mr-0 pt-12 pb-12" >
             <label class="flex">
-  <span class="px-[10px] xxs:px-[43px] mt-0 font-medium text-blue-700 text-base">
+  <span class="px-[43px] xxs:px-[10px] mt-0 font-medium text-blue-700 text-base">
     Old Password:
   </span>
   <input type="password" id="Opassword" class="py-3 md:py-1 mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
-  <span class="px-[8px] xxs:px-[39px] mt-0 font-medium text-blue-700 text-base">
+  <span class="px-[39px] sm:px-[42px] mt-0 font-medium text-blue-700 text-base">
     New Password:
   </span>
   <input type="password" id="Npassword1" class="py-1 mt-0 px-5 w-64  bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="************" />
 </label>
 <label class="flex mt-6">
-  <span class="px-[0px] xxs:px-[28.5px] mt-0 font-medium text-blue-700  text-base  ">
+  <span class="px-[28.5px] sm:px-[42px] mt-0 font-medium text-blue-700  text-base  ">
    Retype Password:
   </span>
   <input type="password" id="Npassword2" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1 sm: " placeholder="************" />
 </label>
 <p id='error' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
 </div>
-<div class="borde-t-0 md:border-t-2 mr-0 border-indigo-500 ...  lg:mr-32"></div>
-<p className="text-[12px] sm:text-sm text-center">
-<button type="button" onClick={()=>Submit()} class="ml-15 px-[10px] rounded-md mt-4 py-1  self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-9 ml-0">Save</button>
+<div class=" border-t-2 md:border-t-0   border-indigo-500 ...  mr-32 lg:mr-0"></div>
+<p className="p-8 flex text-sm sm:text-[8px]">
+<button type="button" onClick={()=>Submit()} class="ml-15 px-9 sm:px-4 text-sm md:text-[16px] ml-0 rounded-md mt-4 py-1  self-baseline  mb-5  font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-[10px]">Save</button>
 <Link to="../profile" >
-<button type="button" class="ml-0 px-[10px] rounded-md mt-4 py-1 self-baseline  mb-5 text-sm font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-9 ml-20">Cancel</button>
+<button type="button" class="ml-20 px-9 sm:px-4 text-sm md:text-[16px] rounded-md mt-4 py-1 self-baseline  mb-5 font-medium text-white focus:outline-none bg-blue-800 border border-blue-400 hover:bg-white hover:text-blue-700 lg:px-[10px]">Cancel</button>
 </Link>
 </p>
 </form>

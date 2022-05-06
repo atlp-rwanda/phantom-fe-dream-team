@@ -1,7 +1,8 @@
+import { getDefaultNormalizer } from '@testing-library/react';
 import React, {useState} from 'react'
-import bg from './img/bg.jpg'
+import bus from '../../../src/assets/bus.png'
 
-const Login = () => {
+const Signin = () => {
 
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -86,7 +87,7 @@ const Login = () => {
               
             <div className='relative'>
               <div className='flex-column justify-center ml-auto text-center mt-20  lg:flex md:flex'>
-                <img src={bg} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
+                <img src={bus} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
                 <div className='md:w-1/3 lg:w-1/3 w-2/3 shadow-xl' >
                   <label className='block text-gray-700 text-center mt-2'>Sign in to your account</label>
 
@@ -144,7 +145,7 @@ const Login = () => {
       </>
     )
 }
-export default Login
+export default Signin
 
 
 

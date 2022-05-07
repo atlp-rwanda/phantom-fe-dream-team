@@ -80,15 +80,15 @@ const Signin = () => {
       
       <>
       
-        <h1 className ="text-blue-500 font-bold text-center  top-10 text-[36px] top-[3px]">SignIn</h1>
+        <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1>
 
         <div >
           {
               
-            <div className='relative'>
-              <div className='flex-column justify-center ml-auto text-center mt-20  lg:flex md:flex'>
-                <img src={bus} alt='bus' className='w-1/3 shadow-xs hidden lg:block md:hidden' />
-                <div className='md:w-1/3 lg:w-1/3 w-2/3 shadow-xl' >
+            <div className='relative w-full'>
+              <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
+                <img src={bus} alt='bus' className='w-1/3 shadow-xs lg:block md:hidden lg:hidden' />
+                <div className='w-1/3 xs:w-[300px] 2xl:shadow-xl sm:w-[300px] md:w-[300px] lg:w-[300px]' >
                   <label className='block text-gray-700 text-center mt-2'>Sign in to your account</label>
 
                   <div className=' text-center'>
@@ -102,7 +102,7 @@ const Signin = () => {
                         type='email' 
                         placeholder='Username' 
                         onChange={handleEmailChange} value = {email}
-                        className='w-1/5 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
+                        className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {emailError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{emailError}</div>}
                       </div>
                 
@@ -114,20 +114,20 @@ const Signin = () => {
                         onChange={handlePasswordChange} value = {password}
                         type='password'  
                         placeholder='Password'  
-                        className='w-1/5 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
+                        className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {passwordError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{passwordError}</div>}
                               
                       </div>
 
-                      <button  className='w-1/5 px-4 py-3 rounded-lg bg-gray-200 mt-2 border bg-blue-500 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
+                      <button  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-500 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
                     </form>
                     <div className='text-center mt-2'>
                       <a href='#' className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</a>
                     </div>
 
-                      <hr className='my-6 border-gray-300 w-1/4'/>
+                      <hr className='my-1 border-gray-300 w-3/5 ml-20'/>
 
-                    <p className='mt-8 text-center pb-5'>
+                    <p className='text-center'>
                       Not a member? &nbsp;   
                       <a href='#' className='text-blue-500 hover:text-blue-700 font-semibold'>
                        Register

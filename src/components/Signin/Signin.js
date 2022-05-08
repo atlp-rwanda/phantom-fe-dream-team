@@ -1,9 +1,13 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
+import { useLoader } from './useLoader';
+import SkeletonUI from './skeletonUI';
+import ErrorPopup from './error';
 
 const Signin = () => {
 
+  const { loading } = useLoader();
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
@@ -74,16 +78,35 @@ const Signin = () => {
 
 
   }
+
+  //popup
+  const [error, setError] = useState(false);
+  function close(){
+    setError(false)
+    window.location.reload()
+  }
+  if (error==true){
+    setTimeout(() => {
+      setError(false)
+    }, "5000")
+  }
     
 
     return (
       
       <>
       
-        <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1>
+         
 
         <div >
-          {
+
+        
+
+        <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1> 
+
+             {loading && <SkeletonUI />}
+    {!loading && (
+          
               
             <div className='relative w-full'>
               <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
@@ -139,7 +162,7 @@ const Signin = () => {
               </div>
             </div>
           
-          }
+    )}
 
         </div>
       </>

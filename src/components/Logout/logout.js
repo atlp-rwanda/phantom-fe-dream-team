@@ -1,49 +1,71 @@
-import React, { useState } from "react";
+import React from 'react'
+import { useDispatch} from 'react-redux';
+import { logoutUser  } from '../../redux/reducers/authReducer';
+import {useNavigate } from 'react-router-dom';
+import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import logo from '../../assets/logo2.png';
-import {Link} from 'react-router-dom';
-function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <div className="relative">
-            <nav className="bg-white border-b-2 fixed top-0 left-0 right-0 border-blue-600 z-10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+import { Icon } from '@iconify/react';
+import { useSelector } from 'react-redux';
+import { useLoader } from '../ResetPassword/useLoader';
+import SkeletonUI from '../ResetPassword/skeletonUI';
+import SuccefullPopup from './success';
+export default function logout() {
+   
+    const { loading } = useLoader();
+    const Username = useSelector( state => state.authReducer.user )
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    window.addEventListener("load", function () {
+      if (!localStorage.getItem("auth")) {
+        navigate('/login');
+      }
+    });
+
+    const logout = () => {
+        dispatch(logoutUser ());
+        setSucceed(true);
+        // navigate('/login');
+      };
+      //BURGER MENU
+      const [isOpen, setIsOpen] = useState(false);
+      //popup
+      const [succeed, setSucceed] = useState(false);
+      function close(){
+        setSucceed(false)
+        window.location.reload()
+      }
+      if (succeed==true){
+        setTimeout(() => {
+          setSucceed(false)
+          window.location.reload()
+        }, "2000")
+      }
+  return (
+    <div className='mb-80'>
+    {loading && <SkeletonUI />}
+    {!loading && (
+      <div>
+        <SuccefullPopup trigger={succeed}>
+        <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
+        <h3 class="px-10">You are logged out</h3>
+        </SuccefullPopup> 
+
+        <nav className="bg-white border-b-2 fixed top-0 left-0 right-0 border-blue-600 ">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0">
-                           
-                              <Link to={"/"} >
-                              <img
-                                className="h-14 w-21"
+                            <img
+                                className="h-14 w-16"
                                 src={logo}
                                 alt="logo"
                             />
-                                    </Link>
                         </div>
-                        <div className="flex items-center">
-
-                            <div className="block md:hidden">
-                                <div className="ml-10 flex items-baseline space-x-4">
-
-                                    <Link to={"/"} className=" hover:bg-blue-700 hover:text-white text-blue-400 px-3 py-2 rounded-md text-sm font-sans">
-                                        Home
-                                    </Link>
-
-                                    <Link to={"/Contact"} className=" hover:bg-blue-700 hover:text-white  text-blue-400 px-3 py-2 rounded-md text-sm font-sans">
-                                        Contact
-                                    </Link>
-
-                                    <Link to={"/Signin"} className=" hover:bg-blue-700 hover:text-white  text-blue-400 px-3 py-2 rounded-md text-sm font-sans">
-                                        SignIn
-                                    </Link>
-
-                                    <Link to={"/Register"} className=" hover:bg-blue-700 hover:text-white  text-blue-400 px-3 py-2 rounded-md text-sm font-sans">
-                                        Register
-                                    </Link>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="-mr-2 flex md:block lg:hidden xl:hidden 2xl:hidden">
+               
+                        <div className="-mr-2 flex">
+                        <Icon icon="bxs:user" color="#1442a7" className='mt-3 mr-2'/>
+                        <h1 className='mr-5 mt-2 text-blue'>{Username}</h1>
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
@@ -100,29 +122,22 @@ function Navbar() {
                     leaveTo="opacity-0 scale-95"
                 >
                     {(ref) => (
-                        <div className="md:block" id="mobile-menu">
-                            <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
-
-                                    <Link to={"/Contact"} className="hover:bg-blue-700 hover:text-white text-blue-400 block px-3 py-2 rounded-md text-sm font-sans">
-                                        Contact
-                                    </Link>
-
-                                    <Link to={"/Signin"} className="hover:bg-blue-700 hover:text-white text-blue-400 block px-3 py-2 rounded-md text-sm font-sans">
-                                        SignIn
-                                    </Link>
-
-                                    <Link to={"/Register"} className="hover:bg-blue-700 hover:text-white  text-blue-400 block px-3 py-2 rounded-md text-sm font-sans">
-                                        Register
-                                    </Link>
-
-                               
+                        <div id="mobile-menu">
+                            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 float-right">
+                          
+                                  <button
+                                  onClick={logout}
+                                  className="bg-blue-700 text-white rounded-xl px-8">
+                                  Logout
+                                  </button>
+                        
                             </div>
                         </div>
                     )}
                 </Transition>
             </nav >
-        </div>
-    );
+     </div>
+         )}
+         </div>
+  )
 }
-export default Navbar;

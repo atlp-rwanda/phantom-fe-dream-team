@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:start": "webpack server --mode development",
-    "start": "webpack --mode production",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
     "coverage": "react-scripts test --coverage a"

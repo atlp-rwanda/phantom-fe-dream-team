@@ -22,10 +22,10 @@ function Profile() {
                    <div className=" flex md:hidden lg:w-[320px] h-[400px] content-center text-white">
                    <img className=" md:h-3/5 rounded-lg lg:h-full w-full  " src={user} alt="user icon"  />
                    </div>
-                <div className="flex w-[500px] md:grid-cols-2 block h-[370px] mt-[15px] content-center bg-blue-600">
-                 <div className="pr-0 sm:pl-2 pt-0 md:pt-5">
-                 <div className="pt-[40px] md:pt-0 p-[40px] bg-blue-100 w-full h-full w-[500px]">
-                   <p className="pl-0 sm:pl-4 flex">
+                <div className="ml-0 pl-0 flex w-[500px] sm:w-[340px] md:grid-cols-2 block h-[370px] mt-[15px] content-center bg-blue-600">
+                 <div className="pr-0 sm:pl-4 w-5/6 pt-0 md:pt-5">
+                 <div className="pt-[40px] sm:w-[340px] md:pt-0 p-[40px] bg-blue-100 w-full h-full w-[500px]">
+                   <p className="pl-0 w-[fit] sm:  pl-4 flex">
                  <img className="hidden md:flex w-[80px] h-[80px] rounded-full" src={user} alt="user icon"  />
                  <Link to='./editprofile'>
                  <Icon icon="ant-design:setting-filled"className="hidden md:flex h-16 w-9 ml-32" />

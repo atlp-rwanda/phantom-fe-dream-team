@@ -93,8 +93,8 @@ const { loading } = useLoader();
         {loading && <SkeletonUI />}
       {!loading && (
 
-        <div class=" grid-cols-2 pt-32 md: grid grid-cols-1 content-center">
-            <div  className="flex flex-col md:hidden justify-center items-center  pt-4 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
+        <div class="pt-32  grid grid-cols-2  content-center">
+            <div  className="flex md:hidden justify-center items-center  pt-0 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
             <img className="h-64 w-64 rounded-full " src={user} alt="user icon"  />
             <p id='editPicture'>
             </p>

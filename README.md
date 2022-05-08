@@ -1,4 +1,6 @@
 # Phantom
+## Maintainability Badge
+<a href="https://codeclimate.com/github/atlp-rwanda/phantom-fe-dream-team/maintainability"><img src="https://api.codeclimate.com/v1/badges/4a2cb342ecae405be27c/maintainability" /></a>
 ## Tests
 ![CI](https://github.com/atlp-rwanda/phantom-fe-dream-team/actions/workflows/.github/workflows/main.yml/badge.svg)
 ## Description
@@ -74,7 +76,6 @@ To run the app in production build of the app, use either of the following.
 ## Features
 
 ## How to Contribute
-## Maintainability Badge
-<a href="https://codeclimate.com/github/atlp-rwanda/phantom-fe-dream-team/maintainability"><img src="https://api.codeclimate.com/v1/badges/4a2cb342ecae405be27c/maintainability" /></a>
+
 
 

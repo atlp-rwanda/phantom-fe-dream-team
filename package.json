@@ -8,8 +8,9 @@
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
+     "test:coveralls":"jest --coverage && coveralls < coverage/lcov.info",
     "coverage": "react-scripts test --coverage a"
-      },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -35,6 +36,7 @@
     "autoprefixer": "^10.4.4",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.2.4",
+    "coveralls": "^3.1.1",
     "css-loader": "^6.7.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",

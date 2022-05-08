@@ -55,7 +55,7 @@ function ChangePassword() {
         <div className="pt-32">
           <h1 className="pl-[260px] sm:pl-[0] not-italic subpixel-antialiased font-sans text-xl text-blue-600 text-center font-bold ">Change your password</h1>
           <div class="grid grid-cols-2  content-center">
-            <div  className="flex flex-col md:hidden justify-center items-center  pt-0 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-40 mb-24   ">
+            <div  className="flex flex-col md:hidden justify-center items-center  pt-0 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-0 mb-24   ">
             <img className="h-64 w-64 rounded-full " src={user} alt="user icon"  />
             </div>
             <form class =" pt-10  border-none md:pt-4 border-blue-500 border-none sm:border-green-500 md:border-indigo-500 lg:border-red-500 xl:border-black ... ">

@@ -26,7 +26,7 @@ function App() {
     return (<div>
 
         <BrowserRouter>
-      
+        <Navbar />
             <Routes>
             <Route element={<NavbarLayout/>}></Route>
                 <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
@@ -37,9 +37,9 @@ function App() {
                 <Route path="/ResetPassword" element={<Reset />}></Route>
                 <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
                 <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-                <Route exact path="/profile" element={[<OperatorNavbar /> ,<Profile/>]}></Route>
-                <Route exact path="/profile/editprofile" element={[<OperatorNavbar /> ,<EditProfile/>]}></Route>
-              <Route exact path="/profile/changepassword" element={[<OperatorNavbar/> ,<ChangePassword/>]}></Route>            
+                <Route exact path="/profile" element={[<Profile/>]}></Route>
+                <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
+              <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>            
             </Routes>
             <Footer />
         </BrowserRouter>

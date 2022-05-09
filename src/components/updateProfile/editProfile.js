@@ -74,7 +74,7 @@ function Buttons2(){
     window.location.assign("/profile/changepassword")
     }
   if(i==1){
-    window.location.reload()
+    window.location.assign("../profile")
   }
 }
 function close(){

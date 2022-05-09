@@ -9,7 +9,7 @@
     "test": "react-scripts test",
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
-    "coverage": "react-scripts test --coverage a"
+    "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "keywords": [],
   "author": "",

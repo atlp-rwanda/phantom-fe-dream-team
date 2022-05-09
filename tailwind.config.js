@@ -24,21 +24,12 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
       'xs': {'max':'414px'}
      
-    }
-  },
+    },
     boxShadow: {
-      xs: '0px 3.67105px 0px #4378FF',
-      xl: ' 3.67105px 3.67105px 3.67105px #4378FF',},
+      a: '0px 3.67105px 0px #4378FF',
+      b: ' 3.67105px 3.67105px 3.67105px #4378FF',},
       width: {
         '1/3': '30%',},
-        colors: {
-          'blue': '#1442A7',
-          'white': '#FFFFFF',
-          'red':'#FF0000',
-          'green':'#008000'
-        },
-      
     extend: {},
+  },
   }
-  
-

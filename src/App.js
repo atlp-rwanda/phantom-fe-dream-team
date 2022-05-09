@@ -1,5 +1,6 @@
 import React from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
@@ -12,14 +13,23 @@ import Sent from './components/ResetPassword/emailSent'
 import Reset from './components/ResetPassword/resetPassword';
 import sidebar from "./components/Dashboard/sidebar";
 import Dashboard from "./components/Dashboard/dashboard";
+import Login from "./components/Logout/login"
+import Logout from "./components/Logout/logout"
+import { Outlet } from 'react-router-dom';
 function App() {
+    const NavbarLayout = () => (
+        <>
+          <Navbar />
+          <Outlet />
+        </>
+      );
 
     return (<div>
 
         <BrowserRouter>
              {/*<Navbar />*/}
             <Routes>
-
+            <Route element={<NavbarLayout/>}>
                 <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
 
                 <Route exact path="/Signin" element={<Signin />} />
@@ -30,11 +40,15 @@ function App() {
                 <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
                 <Route exact path="/dashboard/*" element={<Dashboard />} />
                
+                <Route exact path="/login" element={<Login />}></Route>
+            </Route>
+            <Route exact path="/logout" element={<Logout />}></Route>
             </Routes>
             {/*<Footer />*/}
         </BrowserRouter>
 
+
+
     </div>)
 }
 export default App;
-

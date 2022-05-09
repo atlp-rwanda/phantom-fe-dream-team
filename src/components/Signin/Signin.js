@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
-import ErrorPopup from './error';
+import SuccefullPopup from './Successful';
 
 const Signin = () => {
 
@@ -43,8 +43,8 @@ const Signin = () => {
           setEmailError('');
           if (password === 'demo'){
             // success message
-            alert(`Hey ${email} you have successfully loged in !`);
-            window.location.assign('https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwirgraEgL_3AhW6RfEDHR2iBdcQPAgI')
+           setSucceed(true)
+            // window.location.assign('https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwirgraEgL_3AhW6RfEDHR2iBdcQPAgI')
             // setsuccessMessage('you are logged in ')
 
           }
@@ -79,36 +79,35 @@ const Signin = () => {
 
   }
 
-  //popup
-  const [error, setError] = useState(false);
-  function close(){
-    setError(false)
-    window.location.reload()
-  }
-  if (error==true){
-    setTimeout(() => {
-      setError(false)
-    }, "5000")
-  }
+   //popup
+   const [succeed, setSucceed] = useState(false);
+   function close(){
+     setSucceed(false)
+     window.location.reload()
+   }
+   if (succeed==true){
+     setTimeout(() => {
+       setSucceed(false)
+       window.location.reload()
+     }, "5000")
+   }
     
 
     return (
       
       <>
+      <SuccefullPopup trigger={succeed}>
+                <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
+                <h3 class="px-10">Hey ${email} you have successfully loged in !</h3>
+                </SuccefullPopup>
       
-         
-
-        <div >
-
-        
-
+      <div >
         <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1> 
 
              {loading && <SkeletonUI />}
     {!loading && (
-          
-              
-            <div className='relative w-full'>
+            
+            <div className='relative w-full'> 
               <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
                 <img src={bus} alt='bus' className='w-1/3 shadow-xs lg:block md:hidden lg:hidden' />
                 <div className='w-1/3 xs:w-[300px] 2xl:shadow-xl sm:w-[300px] md:w-[300px] lg:w-[300px]' >

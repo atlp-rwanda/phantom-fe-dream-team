@@ -8,9 +8,7 @@
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage a"
-
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,7 +17,6 @@
     "@headlessui/react": "^1.5.0",
     "@react-google-maps/api": "^2.10.2",
     "@reduxjs/toolkit": "^1.8.1",
-    "@sweetalert/with-react": "^0.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.1.2",
     "google-maps-react": "^2.0.6",

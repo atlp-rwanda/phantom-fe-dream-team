@@ -7,8 +7,8 @@ import { Transition } from "@headlessui/react";
 import logo from '../../assets/logo2.png';
 import { Icon } from '@iconify/react';
 import { useSelector } from 'react-redux';
-import { useLoader } from '../ResetPassword/useLoader';
-import SkeletonUI from '../ResetPassword/skeletonUI';
+import { useLoader } from '../useLoader';
+import SkeletonUI from '../skeletonUI';
 import SuccefullPopup from './success';
 export default function logout() {
    

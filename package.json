@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "test:coverage": "CI=true npm test -- --env=jsdom --coverage",
-     "test:coveralls":"jest --coverage && coveralls < coverage/lcov.info",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "coverage": "react-scripts test --coverage a"
   },
   "keywords": [],

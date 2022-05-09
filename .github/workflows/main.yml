@@ -58,22 +58,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
 
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@v1
+    - name: Use Node.js "16.x"
+      uses: actions/setup-node@v3
       with:
-        node-version: 10.x
+        node-version: "16.x"
 
     - name: npm install, make test-coverage
       run: |
         npm install
-        make test-coverage
+        test:coveralls
 
     - name: Coveralls
-      uses: coverallsapp/github-action@master
+      uses: coverallsapp/github-action@ch-configure-codeclimate-#27 
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: smUWwxqlFBp6DvL2d3XQfgtu73ykHvDhA
         
           
 

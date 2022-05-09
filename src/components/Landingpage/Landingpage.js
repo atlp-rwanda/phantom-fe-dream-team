@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import bus from '../images/landing.png';
+import bus from '../../assets/landing.png';
 
 
 function Landingpage() {

@@ -11,19 +11,19 @@ import Users from './Users'
 
 function Dashboard(props) {
   return (
-    
+
     <div className='flex sm:px-6 lg:px-8'>
-    
-    <Sidebar />     
-      <section className='flex flex-col basis-4/5'>
-        <TopNavbar />
-        <Routes>
-    <Route path="Routes/*" element={<RoutesDashboard />} />
-    <Route path="Buses/*" element={<Buses />} />
-    <Route path="Drivers/*" element={<Drivers />} />
-    <Route path="Users/*" element={<Users />} />
-    </Routes>
-      
+
+      <Sidebar />
+        <section className='flex flex-col basis-4/5'>
+          <TopNavbar />
+            <Routes>
+              <Route path="Routes/*" element={<RoutesDashboard />} />
+              <Route path="Buses/*" element={<Buses />} />
+              <Route path="Drivers/*" element={<Drivers />} />
+              <Route path="Users/*" element={<Users />} />
+            </Routes>
+
       </section>
     </div>
 

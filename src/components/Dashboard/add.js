@@ -1,6 +1,6 @@
 import React from 'react'
 
- function add() {
+function add() {
   return (
     <div>add new ......</div>
   )

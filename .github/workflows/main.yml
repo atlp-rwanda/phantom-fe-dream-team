@@ -47,6 +47,38 @@ jobs:
   #         debug: true
   #         coverageCommand: npm run coverage
 
+  on: ["push", "pull_request"]
+
+
+
+
+name: Test Coveralls
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 10.x
+
+    - name: npm install, test:coveralls
+      run: |
+        npm install
+        test:coveralls
+
+    - name: Coveralls
+      uses: coverallsapp/github-actionv2.5.0
+      with:
+        github-token: smUWwxqlFBp6DvL2d3XQfgtu73ykHvDhA
+
+
         
           
 

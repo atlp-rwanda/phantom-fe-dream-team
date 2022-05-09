@@ -26,27 +26,6 @@ jobs:
       - name: run build
         run: npm run build --if-present
 
-
-  # coverage:
-  #   needs: [build]
-  #   name: coverage
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Use Node.js "16.x"
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: "16.x"
-  #         cache: "npm"
-  #     - run: npm i
-  #     - uses: paambaati/codeclimate-action@v2.5.0
-  #       env:
-  #         CI: "true"
-  #         CC_TEST_REPORTER_ID: 74df2ea9ad92b7f4e378f49f2789df950eaa7cf75220f2247efa470f9bdd1e9e
-  #       with:
-  #         debug: true
-  #         coverageCommand: npm run coverage
-
 on: ["push", "pull_request"]
 
 name: Test Coveralls
@@ -58,24 +37,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v1
 
-    - name: Use Node.js "16.x"
-      uses: actions/setup-node@v3
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
       with:
-        node-version: "16.x"
+        node-version: 10.x
 
     - name: npm install, make test-coverage
       run: |
         npm install
-        test:coveralls
+        make test-coverage
 
     - name: Coveralls
-      uses: coverallsapp/github-action@ch-configure-codeclimate-#27 
+      uses: coverallsapp/github-action@master
       with:
         github-token: smUWwxqlFBp6DvL2d3XQfgtu73ykHvDhA
-        
-          
-
 
 

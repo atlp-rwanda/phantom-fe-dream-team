@@ -12,19 +12,19 @@ function TopNavbar() {
     <div className='flex flex-nowrap  bg-white row-auto items-center border-2 border-solid border-white border-b-black w-full sm:mt-10 h-20 sm:flex-col'>
 
         <div className='flex text-blue-600 sm:ml-[-3px]'>
-            <div className='w-20 h-12 sm:mt-[-40px]'>
-              <img
+            <div className='sm:mt-[-40px]'>
+              <img className='h-16 w-8'
                 src={icon} />
             </div>
 
-                <div className="flex  h-12 text-blue-800 mt-3 ml-10 ">
-                  <h1 className='sm:mt-[-40px]'>
+                <div className="flex text-blue-800 mt-3 ml-10 ">
+                  <h1 className='pt-2 text-[16px] sm:mt-[-40px]'>
                     {Title}</h1>
                 </div>
 
           </div>
 
-              <div className="flex">
+              <div className="flex sm:mt-10">
 
                     <div>
                       <Link to="/add">
@@ -54,4 +54,4 @@ function TopNavbar() {
 
 
 
-export default TopNavbar
+export default TopNavbar 

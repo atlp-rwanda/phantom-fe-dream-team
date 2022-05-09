@@ -6,8 +6,8 @@ import Contact from './components/Contact/Contact';
 import Buses from './components/Dashboard/Buses';
 import RoutesDashboard from './components/Dashboard/RoutesDashboard';
 import Drivers from './components/Dashboard/Drivers';
-import Users from './components/Dashboard/Users';
-import Add from './components/Dashboard/Add';
+import Users from './components/Dashboard/users';
+import Add from './components/Dashboard/add';
 import Home from './components/Dashboard/Home'
 
 

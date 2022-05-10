@@ -18,10 +18,10 @@ jobs:
       with:
         node-version: 16.x
 
-    - name: npm install, test:coveralls"
+    - name: npm install, test:coveralls
       run: |
         npm install
-        test:coveralls"
+        test:coveralls
       
 
    - name: Coveralls GitHub Action

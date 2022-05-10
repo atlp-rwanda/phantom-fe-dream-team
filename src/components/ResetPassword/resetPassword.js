@@ -3,9 +3,9 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
-import { useLoader } from './useLoader';
-import SkeletonUI from './skeletonUI';
-import ErrorPopup from './error';
+import { useLoader } from '../useLoader';
+import SkeletonUI from '../skeletonUI';
+import ErrorPopup from '../error';
 
 export default function resetPassword() {
   const { loading } = useLoader();

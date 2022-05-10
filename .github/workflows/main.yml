@@ -24,7 +24,7 @@ jobs:
        test:
     strategy:
       matrix:
-        platform: [ ubuntu-latest, macOS-latest ]
+        platform:  ubuntu-latest, macOS-latest 
         node: "16.x"
     name: test/node ${{ matrix.node }}/${{ matrix.platform }}
     runs-on: ${{ matrix.platform }}

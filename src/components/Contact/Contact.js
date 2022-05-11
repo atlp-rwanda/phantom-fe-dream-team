@@ -4,11 +4,11 @@ import { sendmessage } from '../../redux/actions';
 import { Icon } from '@iconify/react';
 function Contact() {
   return (
-    <div className="bg-white text-blue-600 m-8 md:m-4 md:flex flex-col sm:flex flex-col " >
+    <div className="bg-white text-blue-600 m-8 md:m-4 md:flex md:flex-col sm:flex sm:flex-col " >
       <div className="text-4xl mb-5 text-center font-sans ">
         <h1 className="text-blue-800 font-bold">Get in touch with us</h1>
       </div>
-      <form action="" className="border-solid border-2 mb-5 rounded-lg font-sans flex justify-around md:flex-col items-center xs:flex-col items-center ">
+      <form action="" className="border-solid border-2 mb-5 rounded-lg font-sans flex justify-around md:flex-col md:items-center xs:flex-col xs:items-center ">
 
 
         <div className="flex flex-col rounded-none m-3" >
@@ -38,7 +38,7 @@ function Contact() {
 
         <div className="flex flex-col rounded-none m-3">
           <div className="border-gray-50 flex flex-col">
-            <label className=" text-blue-700 font-bold text-base "><span>FullNames</span><span className="text-white text-red-600 ml-5">*</span></label>
+            <label className=" text-blue-700 font-bold text-base "><span>FullNames</span><span className=" text-red-600 ml-5">*</span></label>
             <div className="">
               <input type="text" name="name" placeholder="Full Names..." className="w-64 p-2  sm:text-sm rounded-md
                 border-solid border-2"/>

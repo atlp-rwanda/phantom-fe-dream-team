@@ -6,8 +6,7 @@ import { BiBus } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-
-function sidebar({ setRoute }) {
+function Sidebar({ setRoute }) {
     return (
         <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center m-auto sm:justify-items-center sm:m-auto'>
             <div className='flex flex-wrap'>
@@ -15,56 +14,44 @@ function sidebar({ setRoute }) {
                     src={username} />
                 <h1 className='flex text-center pt-6 mt-1 gap hover:text-blue-600 md:hidden'>Username</h1>
             </div>
-
-                <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
-
-                    <Link className='flex' to="Routes">
-                        <img className=' h-6 w-6'
-                            src={route} />
-                             <h1 className='md:hidden'>Routes</h1>
-                        
-                    </Link>
-                </div>
-
-                    <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
-
-                        <Link className='flex' to="Buses">
-                            <BiBus className='h-6 w-6' />
-                            <h1 className='md:hidden'>Buses</h1>
-                        </Link>
-
-                    </div>
-
-                        <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
-
-                            <Link className='flex' to="Drivers">
-                                <BsPersonBadgeFill className='h-6 w-6' />
-                                <h1 className='md:hidden'>Drivers</h1>
-                            </Link>
-
-                        </div>
-
-                            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
-
-                                <Link className='flex' to="Users">
-                                    <FaUsers className='h-6 w-6' />
-                                    <h1 className='md:hidden'>Users</h1>
-                                </Link>
-
-                            </div>
-
-                                <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
-
-                                    <Link className='flex' to="/Home">
-                                        <RiLogoutBoxLine className='h-6 w-6' />
-                                        <h1 className='md:hidden'>Logout</h1>
-                                    </Link>
-
-                                </div>
-
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Routes">
+                    <img className=' h-6 w-6 mr-2'
+                        src={route} />
+                    <h1 className='md:hidden'>Routes</h1>
+                </Link>
+            </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Buses">
+                    <BiBus className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Buses</h1>
+                </Link>
+            </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Drivers">
+                    <BsPersonBadgeFill className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Drivers</h1>
+                </Link>
+            </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Users">
+                    <FaUsers className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Users</h1>
+                </Link>
+            </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Roles">
+                    <FaUsers className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Roles</h1>
+                </Link>
+            </div>
+            <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
+                <Link className='flex' to="/Home">
+                    <RiLogoutBoxLine className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Logout</h1>
+                </Link>
+            </div>
         </section>
-
     )
 }
-
-export default sidebar
+export default Sidebar;

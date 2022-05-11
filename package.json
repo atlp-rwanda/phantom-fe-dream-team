@@ -7,7 +7,7 @@
     "dev:start": "webpack server --mode development",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
-    "coverage": "react-scripts test --coverage a && ./coverage/lcov.info | coveralls"
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
   "author": "",

@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ develop, ch-setup-testing-#27]
+    branches: [ develop, ch-setup-testing-#27, ch-test-coverage]
   pull_request:
-    branches: [ ch-setup-testing-#27 ]
+    branches: [ ch-setup-testing-#27, ch-test-coverage ]
 
 
   workflow_dispatch:

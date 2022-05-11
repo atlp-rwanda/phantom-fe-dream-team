@@ -20,13 +20,13 @@ function Contact() {
 
             <div className="flex mt-5">
               <Icon icon="el:map-marker" width="36" />
-              <h3 className=" text-xl ml-3 ">kigali,Rwanda</h3>
+              <h3 className=" text-xl ml-3 ">Kigali, Rwanda</h3>
             </div>
             <div className="flex mt-5">
 
               <Icon icon="akar-icons:envelope" width="36" />
 
-              <h2 className=" text-xl ml-3 ">contact@phathom.com</h2>
+              <h2 className=" text-xl ml-3 ">contact@phantom.com</h2>
             </div>
             <div className="flex mr-5 mt-5">
               <Icon icon="fluent:call-24-regular" width="36" />
@@ -62,7 +62,7 @@ function Contact() {
             </div>
 
             <div className="flex">
-              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="20" rows="10" className="rounded-md mt-3 h-20 w-full border-solid border-2 Class Properties resize-none"></textarea>
+              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="22" rows="10" className="rounded-md mt-3 h-20 w-full border-solid border-2 Class Properties resize-none"></textarea>
             </div>
             <div className="flex">
               <button type="button" className="mt-3 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs ">Send</button>

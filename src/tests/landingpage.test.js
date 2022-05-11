@@ -21,15 +21,15 @@ const linkElement = screen.getByText("Contact us");
 expect(linkElement).toBeInTheDocument;
 });
 
-test('renders kigali,Rwanda', () => {
+test('renders Kigali, Rwanda', () => {
 render(<Contact />);
-const linkElement = screen.getByText("kigali,Rwanda");
+const linkElement = screen.getByText("Kigali, Rwanda");
 expect(linkElement).toBeInTheDocument;
 });
 
-test('renders contact@phathom.com', () => {
+test('renders contact@phantom.com', () => {
 render(<Contact />);
-const linkElement = screen.getByText("contact@phathom.com");
+const linkElement = screen.getByText("contact@phantom.com");
 });
 test('renders FullNames', () => {
 render(<Contact />);
@@ -86,9 +86,9 @@ const linkElement = screen.getByText("Contact");
 });
 
 
-test('renders All Rights Reserved By Phantmom 2022', () => {
+test('renders All Rights Reserved By Phantom 2022', () => {
 render(<Footer />);
-const linkElement = screen.getByText("All Rights Reserved By Phantmom 2022");
+const linkElement = screen.getByText("All Rights Reserved By Phantom 2022");
 });
 
 
@@ -104,34 +104,34 @@ expect(linkElement).toBeInTheDocument;
 
 
 
-test(' it should render phantom first step', () => {
+test(' it should render phantom first Step', () => {
 render(<Services />);
-const linkElement = screen.getByText("step1");
+const linkElement = screen.getByText("Step1");
 expect(linkElement).toBeInTheDocument;
 });
 
 
 
 
-test(' it should render phantom step2 ', () => {
+test(' it should render phantom Step2 ', () => {
 render(<Services/>);
-const linkElement =screen.getByText("step2");
+const linkElement =screen.getByText("Step2");
 expect(linkElement).toBeInTheDocument;
 });
 
-test(' it should render phantom step2 detail ', () => {
+test(' it should render phantom Step2 detail ', () => {
 render(<Services/>);
 const linkElement =screen.getByText("Enter Location & destination");
 expect(linkElement).toBeInTheDocument;
 });
 
-test(' it should render phantom step3 ', () => {
+test(' it should render phantom Step3 ', () => {
 render(<Services/>);
-const linkElement =screen.getByText("step3");
+const linkElement =screen.getByText("Step3");
 expect(linkElement).toBeInTheDocument;
 });
 
-test(' it should render phantom step3 detail ', () => {
+test(' it should render phantom Step3 detail ', () => {
 render(<Services/>);
 const linkElement =screen.getByText("Find the nearest bus");
 expect(linkElement).toBeInTheDocument;

@@ -16,6 +16,7 @@ import { Outlet } from 'react-router-dom';
 import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
+import RegisterUser from "./components/RegisterUser/registerUser"
 
 function App() {
     const NavbarLayout = () => (
@@ -42,6 +43,7 @@ function App() {
                 <Route exact path="/profile" element={[<Profile/>]}></Route>
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
+              <Route exact path="/RegisterUser" element={[<RegisterUser/>]}></Route>
               </Route>  
               <Route exact path="/logout" element={<Logout />}></Route>        
             </Routes>

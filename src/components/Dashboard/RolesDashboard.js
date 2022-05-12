@@ -17,7 +17,10 @@ function SetRoles() {
                <div className=" w-full h-full md: block justify-start pt-[100px] pb-[80px] p-8 ">
                <div className="block w-full">
                 <h2 className='font-bold'>CHANGE USER ROLE</h2>
+                <div className="flex">
                 <input type="text" id='Uname' name="Uname" className="mt-12 px-[8px] w-[240px]  bg-white border-2 border-black text-sm" placeholder='Search user'/>
+                <Icon icon="akar-icons:search" className="absolute mt-[53px] ml-[220px]" />
+                </div>
                 </div>
                 <div className="flex pt-8">
                   <div className="block">
@@ -29,7 +32,7 @@ function SetRoles() {
                    <select className="mt-2 pl-[4px] w-[120px] bg-white border-2 border-black text-[12px]">
                    <option selected>Driver</option>
                    <option>Operator</option>
-                   <option>Other</option>
+                   <option>None</option>
                    </select>
                   </div>
                   

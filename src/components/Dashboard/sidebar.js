@@ -6,7 +6,7 @@ import { BiBus } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-function sidebar({ setRoute }) {
+function Sidebar({ setRoute }) {
     return (
         <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center m-auto sm:justify-items-center sm:m-auto'>
             <div className='flex flex-wrap'>
@@ -54,13 +54,4 @@ function sidebar({ setRoute }) {
         </section>
     )
 }
-export default sidebar
-
-
-
-
-
-
-
-
-
+export default Sidebar;

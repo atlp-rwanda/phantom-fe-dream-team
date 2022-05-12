@@ -8,3 +8,8 @@
       type: "CHANGE", NewPassword:Password,
     };
   }
+  export const setPermission= (Role,Read,Add,Edit,Delete)=>{
+    return {
+      type:"permission",role:Role,read:Read,add:Add,edit:Edit,delete:Delete
+    };
+    }

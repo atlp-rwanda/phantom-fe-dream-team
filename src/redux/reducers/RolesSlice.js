@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const data= [
-    {id:1,name:"shemalucien",role:"driver"}
+    {id:1,name:"shemalucien",role:"driver",permissions:"read,add,edit,delete"}
 ];
 const rolesSlice = createSlice({
 

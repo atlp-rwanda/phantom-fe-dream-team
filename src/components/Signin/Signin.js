@@ -1,18 +1,80 @@
 import { getDefaultNormalizer } from '@testing-library/react';
+import {Link} from 'react-router-dom';
 import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
 import SuccefullPopup from './Successful';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { login } from '../../redux/actions/loginActions';
+
+
+
+
 
 const Signin = () => {
-
+  const [succeed, setSucceed] = useState(false);
+  const loginInfo = useSelector(state => state.LoginReducer)
+  console.log('loginfo',loginInfo)
+  
+ function checkUserLoggedIn(){
+  if (loginInfo== true) {
+    setSucceed(true)
+  }
+ }
+  const Dispatch = useDispatch();
   const { loading } = useLoader();
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [successMessage, setsuccessMessage] = useState('');
+
+
+
+  function formSubmit(e){
+    e.preventDefault();
+
+    const inputEmail = document.getElementById('email').value
+    const inputPassword = document.getElementById('password').value
+    const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(inputEmail == ''){
+      setEmailError('email can not be empty')
+    }
+    if (inputPassword == ''){
+      setPassword('password can not be empty')
+    }
+    
+
+    // //checking if email is empty
+    // if (inputEmail!==''){
+    //   if (emailRegEx.test(inputEmail)){
+    //     setEmailError('');
+    //   }
+    //   else if (inputEmail != loginInfo[0]){
+    //     setEmailError("invalid email")
+    //   }
+    //   //checking if password is empty
+    //   if (inputPassword==''){
+        
+    //     setPasswordError('Password is required')
+    //   }
+    //   if (password!= loginInfo[1]){
+    //     setPasswordError("wrong password")
+    //   }
+
+
+    // }
+    // else{
+    //   setPasswordError('E-mail is required')
+    // }
+
+    Dispatch(login(inputEmail,inputPassword))
+
+    // checkUserLoggedIn();
+
+  }
 
 
   const handleEmailChange = (e) => {
@@ -78,9 +140,11 @@ const Signin = () => {
 
 
   }
+  
+
+  
 
    //popup
-   const [succeed, setSucceed] = useState(false);
    function close(){
      setSucceed(false)
      window.location.reload()
@@ -89,16 +153,17 @@ const Signin = () => {
      setTimeout(() => {
        setSucceed(false)
        window.location.reload()
-     }, "5000")
+     }, "15000")
    }
     
 
     return (
       
       <>
+  
       <SuccefullPopup trigger={succeed}>
                 <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
-                <h3 class="px-10">Hey ${email} you have successfully loged in !</h3>
+                {/* <h3 class="px-10">Hey ${loginInfo[0]} you have successfully loged in !</h3> */}
                 </SuccefullPopup>
       
       <div >
@@ -115,15 +180,16 @@ const Signin = () => {
 
                   <div className=' text-center'>
             
-                    <form className='mt-6' onSubmit={handleFormSubmit}>
+                    <form className='mt-6'  >
                       <div>
 
                         <input 
+                        type='email' 
                         name="email"
                         id="email"
-                        type='email' 
+                        
                         placeholder='Username' 
-                        onChange={handleEmailChange} value = {email}
+                        // onChange={handleEmailChange} value = {inputEmail}
                         className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {emailError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{emailError}</div>}
                       </div>
@@ -131,17 +197,18 @@ const Signin = () => {
                       <div className='mt-4'>
                     
                         <input 
+                        type='password'
                         name="password"
                         id="password"
-                        onChange={handlePasswordChange} value = {password}
-                        type='password'  
+                        // onChange={handlePasswordChange} value = {inputPassword}
+                         
                         placeholder='Password'  
                         className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {passwordError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{passwordError}</div>}
                               
                       </div>
 
-                      <button  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-500 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
+                      <button onClick={()=>formSubmit()}  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-500 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
                     </form>
                     <div className='text-center mt-2'>
                       <a href='#' className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</a>
@@ -167,6 +234,8 @@ const Signin = () => {
       </>
     )
 }
+
+
 export default Signin
 
 

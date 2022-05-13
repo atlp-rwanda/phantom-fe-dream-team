@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
@@ -28,10 +28,10 @@ function App() {
 
     return (<div>
 
-        <BrowserRouter>
+        <Router>
             <Routes>
             <Route element={<NavbarLayout/>}>
-                <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
+                {/* <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route> */}
 
                 <Route exact path="/Signin" element={<Signin />} />
                 <Route exact path="/Register" element={<Register />} />
@@ -49,7 +49,7 @@ function App() {
             </Routes>
 
             <Footer />
-        </BrowserRouter>
+        </Router>
 
 
 

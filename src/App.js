@@ -3,7 +3,6 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import Signin from "./components/Signin";
 import Register from "./components/Register";
 import Services from "./components/Landingpage/Services";
@@ -47,8 +46,6 @@ function App() {
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>
-
-            <Footer />
         </BrowserRouter>
 
 

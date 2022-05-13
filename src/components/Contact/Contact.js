@@ -20,13 +20,13 @@ function Contact() {
 
             <div className="flex mt-5">
               <Icon icon="el:map-marker" width="36" />
-              <h3 className=" text-xl ml-3 ">kigali,Rwanda</h3>
+              <h3 className=" text-xl ml-3 ">Kigali, Rwanda</h3>
             </div>
             <div className="flex mt-5">
 
               <Icon icon="akar-icons:envelope" width="36" />
 
-              <h2 className=" text-xl ml-3 ">contact@phathom.com</h2>
+              <h2 className=" text-xl ml-3 ">contact@phantom.com</h2>
             </div>
             <div className="flex mr-5 mt-5">
               <Icon icon="fluent:call-24-regular" width="36" />

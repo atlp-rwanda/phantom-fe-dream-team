@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from '@testing-library/react';
 import {Link} from 'react-router-dom';
 import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
@@ -9,20 +8,18 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/loginActions';
 
 
-
-
-
 const Signin = () => {
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
   console.log('loginfo',loginInfo)
   
- function checkUserLoggedIn(){
-  if (loginInfo === true) {
-    console.log('you are loggedin')
-    setSucceed(true)
-  }
- }
+//  function checkUserLoggedIn(){
+//   if (loginInfo[1] == true) {
+//     // history.push()
+//     console.log('you are loggedin')
+//     setSucceed(true)
+//   }
+//  }
   const Dispatch = useDispatch();
   const { loading } = useLoader();
   const [email, setEmail] = useState('');
@@ -58,8 +55,6 @@ const Signin = () => {
 
     Dispatch(login(inputEmail,inputPassword))
 
-    checkUserLoggedIn();
-
   }
 
 
@@ -76,6 +71,7 @@ const Signin = () => {
     setPassword(e.target.value);
     
   }
+  
    //popup
    function close(){
      setSucceed(false)

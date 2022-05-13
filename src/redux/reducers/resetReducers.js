@@ -6,7 +6,7 @@ const initialState = {
 
 export const resetReducer = (state = initialState , { type }) =>{
     switch (type) {
-        case GET_EMAIL:
+        case GET_EMAIL:z
             return state.email;     
         default:
             return state;

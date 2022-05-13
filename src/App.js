@@ -17,6 +17,7 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import RegisterUser from "./components/RegisterUser/registerUser"
+import Management from "./components/RegisterUser/management";
 
 function App() {
     const NavbarLayout = () => (
@@ -44,6 +45,7 @@ function App() {
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
               <Route exact path="/RegisterUser" element={[<RegisterUser/>]}></Route>
+              <Route exact path="/Management" element={[<Management/>]}></Route>
               </Route>  
               <Route exact path="/logout" element={<Logout />}></Route>        
             </Routes>

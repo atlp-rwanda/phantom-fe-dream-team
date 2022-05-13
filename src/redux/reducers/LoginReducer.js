@@ -14,7 +14,7 @@ const LoginReducer =(state = localStorage.getItem('auth'),action) =>{
             if(
                  userEmail === 'gerukundo14@gmail.com' && userPassword === 'demo'
                  ){
-                // state =[userEmail,true]
+                state =[userEmail,true]
                 localStorage.setItem('auth',true)
                 localStorage.setItem('login',[userEmail,true])
                 return state

@@ -18,7 +18,8 @@ const Signin = () => {
   console.log('loginfo',loginInfo)
   
  function checkUserLoggedIn(){
-  if (loginInfo== true) {
+  if (loginInfo === true) {
+    console.log('you are loggedin')
     setSucceed(true)
   }
  }
@@ -39,40 +40,25 @@ const Signin = () => {
     const inputPassword = document.getElementById('password').value
     const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(inputEmail == ''){
-      setEmailError('email can not be empty')
-    }
-    if (inputPassword == ''){
-      setPassword('password can not be empty')
-    }
-    
-
-    // //checking if email is empty
-    // if (inputEmail!==''){
-    //   if (emailRegEx.test(inputEmail)){
-    //     setEmailError('');
-    //   }
-    //   else if (inputEmail != loginInfo[0]){
-    //     setEmailError("invalid email")
-    //   }
-    //   //checking if password is empty
-    //   if (inputPassword==''){
+    //checking if email is empty
+    if (inputEmail!==''){
+      if (emailRegEx.test(inputEmail)){
+        setEmailError('');
+      }
+      
+      if (inputPassword==''){
         
-    //     setPasswordError('Password is required')
-    //   }
-    //   if (password!= loginInfo[1]){
-    //     setPasswordError("wrong password")
-    //   }
-
-
-    // }
-    // else{
-    //   setPasswordError('E-mail is required')
-    // }
+        setPasswordError('Password is required')
+      }
+     
+    }
+    else{
+      setEmailError('E-mail is required')
+    }
 
     Dispatch(login(inputEmail,inputPassword))
 
-    // checkUserLoggedIn();
+    checkUserLoggedIn();
 
   }
 
@@ -90,66 +76,12 @@ const Signin = () => {
     setPassword(e.target.value);
     
   }
-
-  const handleFormSubmit = (e) =>{
-    e.preventDefault();
-
-    //checking if email is empty
-    if (email!==''){
-      // check other conditions
-
-      const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (emailRegEx.test(email)){
-        setEmailError('');
-        if (email ==='gerukundo14@gmail.com'){
-          setEmailError('');
-          if (password === 'demo'){
-            // success message
-           setSucceed(true)
-            // window.location.assign('https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwirgraEgL_3AhW6RfEDHR2iBdcQPAgI')
-            // setsuccessMessage('you are logged in ')
-
-          }
-          else{
-            setPasswordError('Wrong password');
-
-          }
-
-        }
-        else{
-          setEmailError('Wrong User Email or Password');
-
-        }
-
-      }
-      
-
-    }
-    else{
-      setEmailError('Email is required')
-    }
-
-    //checking if password is empty
-    if (password!==''){
-
-    }
-    else{
-      setPasswordError('Password is required')
-    }
-
-
-
-  }
-  
-
-  
-
    //popup
    function close(){
      setSucceed(false)
      window.location.reload()
    }
-   if (succeed==true){
+   if (succeed === true){
      setTimeout(() => {
        setSucceed(false)
        window.location.reload()
@@ -163,7 +95,7 @@ const Signin = () => {
   
       <SuccefullPopup trigger={succeed}>
                 <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
-                {/* <h3 class="px-10">Hey ${loginInfo[0]} you have successfully loged in !</h3> */}
+                <h3 class="px-10">Hey ${loginInfo[0]} you have successfully loged in !</h3>
                 </SuccefullPopup>
       
       <div >
@@ -180,7 +112,7 @@ const Signin = () => {
 
                   <div className=' text-center'>
             
-                    <form className='mt-6'  >
+                    <form className='mt-6' onSubmit={formSubmit} >
                       <div>
 
                         <input 
@@ -189,7 +121,7 @@ const Signin = () => {
                         id="email"
                         
                         placeholder='Username' 
-                        // onChange={handleEmailChange} value = {inputEmail}
+                        onChange={handleEmailChange}
                         className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {emailError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{emailError}</div>}
                       </div>
@@ -200,7 +132,7 @@ const Signin = () => {
                         type='password'
                         name="password"
                         id="password"
-                        // onChange={handlePasswordChange} value = {inputPassword}
+                        onChange={handlePasswordChange}
                          
                         placeholder='Password'  
                         className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
@@ -208,7 +140,7 @@ const Signin = () => {
                               
                       </div>
 
-                      <button onClick={()=>formSubmit()}  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-600 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
+                      <button  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-600 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
                     </form>
                     <div className='text-center mt-2'>
                     <Link to={"/Register"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>
@@ -216,12 +148,12 @@ const Signin = () => {
 
                       <hr className='my-1 border-gray-300 w-3/5 ml-20'/>
 
-                    <p className='text-center'>
+                    {/* <p className='text-center'>
                       Not a member? &nbsp;   
                       <a href='#' className='text-blue-500 hover:text-blue-700 font-semibold'>
                        Register
                       </a>
-                    </p>
+                    </p> */}
                   </div>
 
                 </div>

@@ -208,7 +208,7 @@ const Signin = () => {
                               
                       </div>
 
-                      <button onClick={()=>formSubmit()}  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-500 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
+                      <button onClick={()=>formSubmit()}  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-600 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
                     </form>
                     <div className='text-center mt-2'>
                     <Link to={"/Register"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>

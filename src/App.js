@@ -16,6 +16,7 @@ import { Outlet } from 'react-router-dom';
 import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
+import Dashboard from "./components/Dashboard/dashboard";
 
 function App() {
     const NavbarLayout = () => (
@@ -43,8 +44,10 @@ function App() {
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
               </Route>  
-              <Route exact path="/logout" element={<Logout />}></Route>        
+              <Route exact path="/logout" element={<Logout />}></Route>  
+              <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>
+
             <Footer />
         </BrowserRouter>
 
@@ -54,5 +57,4 @@ function App() {
 }
 
 export default App;
-
 

@@ -7,6 +7,7 @@ import Buses from './Buses';
 import Drivers from './Drivers';
 import Users from './users'
 import  SetRoles from '../SetRolesPermission/setRoles';
+import AddRole from '../SetRolesPermission/AddRole';
 function Dashboard(props) {
   return (
     <div className='flex sm:px-6 lg:px-8'>
@@ -19,7 +20,8 @@ function Dashboard(props) {
               <Route path="Buses/*" element={<Buses />} />
               <Route path="Drivers/*" element={<Drivers />} />
               <Route path="Users/*" element={<Users />} />
-              <Route path="Roles/*" element={<SetRoles/>} />
+              <Route path="Roles/" element={<SetRoles/>} />
+              <Route path="Roles/add" element={<AddRole/>} />
             </Routes>
       </section>
     </div>

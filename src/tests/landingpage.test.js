@@ -86,16 +86,6 @@ const linkElement = screen.getByText("Contact");
 });
 
 
-test('renders All Rights Reserved By Phantom 2022', () => {
-render(<Footer />);
-const linkElement = screen.getByText("All Rights Reserved By Phantom 2022");
-});
-
-
-
-
-
-
 test(' it should render paragraph', () => {
 render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");

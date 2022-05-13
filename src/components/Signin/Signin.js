@@ -103,7 +103,7 @@ const Signin = () => {
             <div className='relative w-full'> 
               <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
                 <img src={bus} alt='bus' className='w-1/3 shadow-xs lg:block md:hidden lg:hidden' />
-                <div className='w-1/3 xs:w-[300px] 2xl:shadow-xl sm:w-[300px] md:w-[300px] lg:w-[300px]' >
+                <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] w-64 sm:border-none' >
                   <label className='block text-gray-700 text-center mt-2'>Sign in to your account</label>
 
                   <div className=' text-center'>
@@ -118,7 +118,7 @@ const Signin = () => {
                         
                         placeholder='Username' 
                         onChange={handleEmailChange}
-                        className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
+                        className='w-2/3 px-4 py-3 rounded-lg bg-white mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {emailError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{emailError}</div>}
                       </div>
                 
@@ -131,18 +131,18 @@ const Signin = () => {
                         onChange={handlePasswordChange}
                          
                         placeholder='Password'  
-                        className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
+                        className='w-2/3 px-4 py-3 rounded-lg bg-white mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {passwordError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{passwordError}</div>}
                               
                       </div>
 
-                      <button  className='w-2/3 px-4 py-3 rounded-lg bg-gray-200 mt-6 border bg-blue-600 hover:bg-blue-400 focus:bg-#1d4ed8 text-white font-semibold focus:outline-none'>Log In</button>
+                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'>Log In</button>
                     </form>
                     <div className='text-center mt-2'>
-                    <Link to={"/Register"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>
+                    <Link to={"/ResetPassword"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>
                     </div>
 
-                      <hr className='my-1 border-gray-300 w-3/5 ml-20'/>
+                      <hr className='my-1 border-gray-300 w-2/3 ml-20'/>
 
                     {/* <p className='text-center'>
                       Not a member? &nbsp;   

@@ -4,7 +4,7 @@ on:
   push:
     branches: [develop, ch-configure-codeclimate-#27]
     pull-request :
-     branches: [ch-configure-codeclimate-#27]    
+     branches: [develop, ch-configure-codeclimate-#27]    
  
 
     workflow_dispatch:

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652637316436" clover="3.2.0">
-  <project timestamp="1652637316436" name="All files">
+<coverage generated="1652639097813" clover="3.2.0">
+  <project timestamp="1652639097813" name="All files">
     <metrics statements="360" coveredstatements="76" conditionals="161" coveredconditionals="20" methods="112" coveredmethods="27" elements="633" coveredelements="123" complexity="0" loc="360" ncloc="360" packages="15" files="52" classes="52"/>
     <package name="src">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -103,7 +103,7 @@
     </package>
     <package name="src.components.Footer">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Footer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Footer/Footer.js">
+      <file name="footer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Footer/footer.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="7" type="stmt"/>
       </file>

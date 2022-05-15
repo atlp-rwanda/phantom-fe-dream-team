@@ -3,6 +3,7 @@
     {
       "id": 1,
       "Role": "Admin",
+      "Description": "Admin Description",
       "Permissions": {
         "AddEditDelOp": true,
         "viewDelOp": true,
@@ -15,6 +16,7 @@
     {
       "id": 4,
       "Role": "Driver",
+      "Description": "Driver Description",
       "Permissions": {
         "AddEditDelOp": true,
         "viewDelOp": false,
@@ -26,8 +28,9 @@
     },
     {
       "Role": "MANAGER",
+      "Description": "Manager Description",
       "Permissions": {
-        "AddEditDelOp": true,
+        "AddEditDelOp": false,
         "viewDelOp": true,
         "AssgnRemDriv": true,
         "addRemRoute": true,

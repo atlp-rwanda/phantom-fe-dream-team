@@ -127,12 +127,12 @@ function Delete(id){
 }
 
   return(
-    <div>
-   <table className="w-[1100px]" id='Wtable'>
-  <thead>
+    <div className="flex flex-col relative">
+   <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx" >
+  <thead className="sm:hidden"> 
     <tr className="mb-12 text-xl text-blue-700 border-solid border-2 border-black">
           <th className="">Role name</th>
-          <th classname="colspan=4 " >Permissions</th>
+          <th classname="colspan=4" >Permissions</th>
           <th classname="colspan=2 " >Actions</th>
         </tr>
         </thead>
@@ -148,7 +148,7 @@ function Delete(id){
                         {info.Description}
                       </h3>
                     </td>
-                    <td className="flex flex-col text-lg">
+                    <td className="flex flex-col text-lg sm:text-sm">
                       <h1 className="font-bold text-blue-700">Permissions</h1>
                       <td className="flex"><input type="checkbox" id={'One'+info.id} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
                       <td className="flex"><input type="checkbox" id={'Two'+info.id}  className="mt-2 mr-2" />View Operators</td>

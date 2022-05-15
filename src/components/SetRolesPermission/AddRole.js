@@ -55,12 +55,12 @@ function submitForm() {
   return (
 
     <div className=''>
-      <div className=" w-full h-full md: block justify-start pt-[100px] pb-[80px] p-8 ">
+      <div className=" w-full h-full md: block justify-start">
         <div className="block w-full">
           <h2 className='font-bold'>ADD USER ROLE</h2>
         </div>
         <div className="flex pt-8">
-          <div className="flex-col">
+          <div className="flex-col ml-12">
             <h3 className="mt-2">User Role:</h3>
             <h3 className="mt-2">Permissions:</h3>
           </div>
@@ -73,7 +73,7 @@ function submitForm() {
             <div>
                               
             <h1 className="font-bold text-blue-700"> Select Permissions</h1>
-              <tr className='flex flex-col'>
+              <tr className='flex flex-col sm:text-sm'>
 
               <td className="flex"><input type="checkbox" id={'One'} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
                       <td className="flex"><input type="checkbox" id={'Two'}  className="mt-2 mr-2" />View Operators</td>
@@ -88,10 +88,17 @@ function submitForm() {
         </div>
         <div className="flex mt-12">
           <div className="pr-9">
-            <button className="bg-white border-2 border-black px-4 w-[100px] text-[14px] hover:bg-black hover:text-white">Cancel</button>
+
+
+            <button className=" ml-12 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">
+            <Link to={"/Dashboard/Roles"} >
+            Cancel
+        </Link>
+
+              </button>
           </div>
           <div>
-            <button onClick={()=>submitForm()} className="bg-white border-2 border-black px-4 w-[100px] text-[14px] hover:bg-black hover:text-white">Save</button>
+            <button onClick={()=>submitForm()} className=" lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">Save</button>
           </div>
         </div>
 

@@ -8,12 +8,13 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 function Sidebar({ setRoute }) {
     return (
-        <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center m-auto sm:justify-items-center sm:m-auto'>
-            <div className='flex flex-wrap'>
-                <img className='h-12 w-12 gap-2 mt-4'
+        <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
+            <div className='flex flex-wrap mt-3'>
+                <img className='h-12 w-12 gap-2 '
                     src={username} />
-                <h1 className='flex text-center pt-6 mt-1 gap hover:text-blue-600 md:hidden'>Username</h1>
+                <h1 className='text-blue-600 flex text-center pt-2 hover:text-black md:hidden'>Username</h1>
             </div>
+            <div>
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
                 <Link className='flex' to="Routes">
                     <img className=' h-6 w-6 mr-2'
@@ -51,6 +52,8 @@ function Sidebar({ setRoute }) {
                     <h1 className='md:hidden'>Logout</h1>
                 </Link>
             </div>
+            </div>
+           
         </section>
     )
 }

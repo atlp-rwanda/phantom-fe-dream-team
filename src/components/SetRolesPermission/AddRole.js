@@ -1,5 +1,56 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Icon } from '@iconify/react';
+import { useSelector, useDispatch } from 'react-redux';
+import user from '../img/random.jpg';
+import SuccefullPopup from '../succesfull';
+import { Route, Link, Routes, useLocation } from "react-router-dom";
+import ErrorPopup from "../error";
+import { useLoader } from '../useLoader';
+import SkeletonUI from '../skeletonUI';
+import UpdateRole from "./UpdateRole";
+import DeleteRole from "./DeleteRole";
+import {setPermission} from "../../redux/actions/index";
+import data from './data.json';
+import { info } from "autoprefixer";
 function AddRole() {
+  const [Role, setRole] = useState('');
+  const [Permissions, setPermissions] = [{
+   AddEditDelOp:useState(false),
+   viewDelOp:useState(false),
+   AssgnRemDriv:useState(false),
+   addRemRoute:useState(false),
+   UpdateBusInfo:useState(false),
+   UpdateProf:useState(false),
+  }];
+
+function submitForm() {
+
+
+  const OneInput = document.getElementById('One');
+  Permissions.AddEditDelOp = OneInput.checked ? true : false;
+  const TwoInput = document.getElementById('Two')
+  Permissions.viewDelOp = TwoInput.checked ? true : false;
+
+  const ThreeInput = document.getElementById('Three')
+  Permissions.AssgnRemDriv = ThreeInput.checked ? true : false;
+
+  const FourInput = document.getElementById('Four')
+  Permissions.addRemRoute = FourInput.checked ? true : false;
+  const FiveInput = document.getElementById('Five')
+  Permissions.UpdateBusInfo = FiveInput.checked ? true : false;
+  const SixInput = document.getElementById('Six')
+  Permissions.UpdateProf = SixInput.checked ? true : false;
+
+  const role = { Role, Permissions };
+
+  fetch('http://localhost:8000/Permissions/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(role)
+  }).then(() => {
+    window.location.assign("../Roles")
+  })
+  }
 
   return (
 
@@ -15,31 +66,21 @@ function AddRole() {
           </div>
           <div className="pl-4">
             <div className='mt-2 '>
-              <input type="text" id='' placeholder='Enter Role Name' className='border border-solid-2 border-black rounded' />
+              <input type="text" id='' placeholder='Enter Role Name' value={Role}
+          onChange={(e) => setRole(e.target.value)}
+           className='border border-solid-2 border-black rounded' />
             </div>
             <div>
                               
             <h1 className="font-bold text-blue-700"> Select Permissions</h1>
               <tr className='flex flex-col'>
 
-                  <td className="flex"><input type="checkbox" id='delete1' className="mt-2 mr-2" />Check All Permissions</td>
-                  <td className="flex"><input type="checkbox" id='read2' className="mt-2 mr-2" />assign driver to bus</td>
-                  <td className="flex"><input type="checkbox" id='add2' className="mt-2 mr-2" />edit driver to bus</td>
-                  <td className="flex"><input type="checkbox" id='edit2' className="mt-2 mr-2" />delete driver to bus</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />View drivers</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />add driver</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />edit driver</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />View buses</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />Add bus</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />edit bus</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />delete bus</td>
-
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />view route</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />add route</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />update route</td>
-                  <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />delete route</td>
-                
-
+              <td className="flex"><input type="checkbox" id={'One'} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
+                      <td className="flex"><input type="checkbox" id={'Two'}  className="mt-2 mr-2" />View Operators</td>
+                      <td className="flex"><input type="checkbox" id={'Three'}  className="mt-2 mr-2" />Assign,Remove Driver to bus</td>
+                      <td className="flex"><input type="checkbox" id={'Four'}  className="mt-2 mr-2" />Add,Remove route </td>
+                      <td className="flex"><input type="checkbox" id={'Five'}  className="mt-2 mr-2" />Update Bus status</td>
+                      <td className="flex"><input type="checkbox" id={'Six'}  className="mt-2 mr-2" />Update profile</td>
               </tr>
             </div>
 
@@ -50,7 +91,7 @@ function AddRole() {
             <button className="bg-white border-2 border-black px-4 w-[100px] text-[14px] hover:bg-black hover:text-white">Cancel</button>
           </div>
           <div>
-            <button className="bg-white border-2 border-black px-4 w-[100px] text-[14px] hover:bg-black hover:text-white">Save</button>
+            <button onClick={()=>submitForm()} className="bg-white border-2 border-black px-4 w-[100px] text-[14px] hover:bg-black hover:text-white">Save</button>
           </div>
         </div>
 

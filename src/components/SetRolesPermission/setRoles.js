@@ -10,203 +10,177 @@ import SkeletonUI from '../skeletonUI';
 import AddRole from "./AddRole";
 import UpdateRole from "./UpdateRole";
 import DeleteRole from "./DeleteRole";
-import { setPermission } from "../../redux/actions/index";
-function SetRoles() {
+import {setPermission} from "../../redux/actions/index";
+import data from './data.json';
+import { info } from "autoprefixer";
 
-  const RolesAndPermissions = useSelector(state => state.PermissionReducer);
+function setRoles (){
   const dispatch = useDispatch();
+  const [Infos, setData] = useState(null);
+  const [Permissions, setPermissions] = [{
+    AddEditDelOp:useState(false),
+    viewDelOp:useState(false),
+    AssgnRemDriv:useState(false),
+    addRemRoute:useState(false),
+    UpdateBusInfo:useState(false),
+    UpdateProf:useState(false),
+   }];
 
-  function loadForm() {
-    let i, j;
-    for (i = 0; i < 3; i++) {
-      for (j = 0; j < 5; j++) {
-        if (RolesAndPermissions[i][j] == 'true') {
-          if (j == 0) {
-            document.getElementById('read' + (i + 1)).checked = true;
-          }
-          else if (j == 1) {
-            document.getElementById('add' + (i + 1)).checked = true;
-          }
-          else if (j == 2) {
-            document.getElementById('edit' + (i + 1)).checked = true;
-          }
-          else if (j == 3) {
-            document.getElementById('delete' + (i + 1)).checked = true;
-          }
+  useEffect(() => {
+    fetch('http://localhost:8000/Permissions')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        setData(data);
+      })
+  }, [])
 
+//
+
+// Permissions.map((Perm)=>(
+//     loadForm()
+//   ))
+
+function loadForm(info) {
+  const Perm= info.Permissions;
+  console.log(Perm.AddEditDelOp);
+  if (Perm.AddEditDelOp == true) {
+         document.getElementById('One' + (info.id)).checked = true;
+         }
+   if (Perm.viewDelOp == true) {
+          document.getElementById('Two' + (info.id)).checked = true;
         }
+   if (Perm.AssgnRemDriv == true) {
+          document.getElementById('Three' + (info.id)).checked = true;
+        }
+  if (Perm.addRemRoute == true) {
+          document.getElementById('Four' + (info.id)).checked = true;
+     }     
+  if (Perm.UpdateBusInfo == true) {
+      document.getElementById('Five' + (info.id)).checked = true;
+    }   
+  if (Perm.UpdateProf == true) {
+      document.getElementById('Six' + (info.id)).checked = true;
+    }     
+    
+  // let i, j;
+  // for (i = 0; i < 3; i++) {
+  //   for (j = 0; j < 5; j++) {
+  //     if ( == 'true') {
+  //       if (j == 0) {
+  //         document.getElementById('read' + (i + 1)).checked = true;
+  //       }
+  //       else if (j == 1) {
+  //         document.getElementById('add' + (i + 1)).checked = true;
+  //       }
+  //       else if (j == 2) {
+  //         document.getElementById('edit' + (i + 1)).checked = true;
+  //       }
+  //       else if (j == 3) {
+  //         document.getElementById('delete' + (i + 1)).checked = true;
+  //       }
+
+  //     }
+  //   }
+  // }
+}
+function submitForm(id) {
+  const OneInput = document.getElementById('One'+id);
+  Permissions.AddEditDelOp = OneInput.checked ? true : false;
+  const TwoInput = document.getElementById('Two'+id)
+  Permissions.viewDelOp = TwoInput.checked ? true : false;
+
+  const ThreeInput = document.getElementById('Three'+id)
+  Permissions.AssgnRemDriv = ThreeInput.checked ? true : false;
+
+  const FourInput = document.getElementById('Four'+id)
+  Permissions.addRemRoute = FourInput.checked ? true : false;
+  const FiveInput = document.getElementById('Five'+id)
+  Permissions.UpdateBusInfo = FiveInput.checked ? true : false;
+  const SixInput = document.getElementById('Six'+id)
+  Permissions.UpdateProf = SixInput.checked ? true : false;
+
+  const role = Permissions ;
+
+
+  console.log('Role:', role)
+  fetch('http://localhost:8000/Permissions/'+id, {
+    method: 'PATCH',
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(
+      {
+      "Permissions": {"AddEditDelOp":Permissions.AddEditDelOp,"viewDelOp":Permissions.viewDelOp, "AssgnRemDriv":Permissions.AssgnRemDriv,"addRemRoute":Permissions.addRemRoute,"UpdateBusInfo":Permissions.UpdateBusInfo,"UpdateProf":Permissions.UpdateProf}         // we are changing the "likes" value to 5
       }
-    }
-  }
-  function TobeCalledAfterRefresh() {
-    setTimeout(() => {
-      loadForm()
-    }, "1000")
-  }
-  TobeCalledAfterRefresh()
-  var a;
-  const { loading } = useLoader();
-  function Test1() {
-    a = 1
-  }
-  function Test2() {
-    a = 2
-  }
-  function Test3() {
-    a = 3
-  }
+    )
+  }).then(() => {
+    console.log('new role added');
+  })
 
-  function submitForm() {
-    var Role = document.getElementById('role' + a).value
-    var Read, Add, Edit, Delete;
+}
+function Delete(id){
+  fetch('http://localhost:8000/Permissions/' + id, {
+    method: 'DELETE'
+  }).then(() => {
+    window.reload()
+  }) 
+}
 
-
-    const readInput = document.getElementById('read' + a);
-    Read = readInput.checked ? true : false;
-    const addInput = document.getElementById('add' + a)
-    Add = addInput.checked ? true : false;
-
-    const editInput = document.getElementById('edit' + a)
-    Edit = editInput.checked ? true : false;
-
-    const deleteInput = document.getElementById('delete' + a)
-    Delete = deleteInput.checked ? true : false;
-
-
-    console.log('Role:', Role, 'Read:', Read)
-    dispatch(setPermission(Role, Read, Add, Edit, Delete))
-    window.location.reload();
-
-  }
-
-
-  return (
-
-
-
+  return(
     <div>
-
-
-      <Routes>
-        <Route exact path="Roles/add" element={<AddRole />}></Route>
-        <Route exact path="update" element={<UpdateRole />}></Route>
-        <Route exact path="delete" element={<DeleteRole />}></Route>
-      </Routes>
-      <table className="w-[1100px]">
-        <tr className="mb-12 text-xl text-blue-700 border-solid border-2 border-black">
+   <table className="w-[1100px]" id='Wtable'>
+  <thead>
+    <tr className="mb-12 text-xl text-blue-700 border-solid border-2 border-black">
           <th className="">Role name</th>
           <th classname="colspan=4 " >Permissions</th>
           <th classname="colspan=2 " >Actions</th>
         </tr>
-
-        <tr onChange={() => Test1()} className="mb-12  h-8 text-xl hover:border-solid hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
-          <td className="text-lg font-bold "><input type="text" id='role1' value="Admin" />
-            <h3>
-              Description: Admin Control <br />
-              All Operations of the Application
-            </h3>
-          </td>
-          <td className="flex flex-col text-lg">
-            <h1 className="font-bold text-blue-700">Permissions</h1>
-            <td className="flex"><input type="checkbox" id='read1' className="mt-2 mr-2 " />View Operators</td>
-            <td className="flex"><input type="checkbox" id='add1' className="mt-2 mr-2" />Add Operator</td>
-            <td className="flex"><input type="checkbox" id='edit1' className="mt-2 mr-2" />Edit Operator</td>
-            <td className="flex"><input type="checkbox" id='delete1' className="mt-2 mr-2" />Delete Operator</td>
-            <td className="flex"><input type="checkbox" id='' className="mt-2 mr-2" />Check All Permissions</td>
-          </td>
-          <td className='pl-8'>
-            <td>
-              <button onClick={() => submitForm()}>
-                <Icon icon="carbon:change-catalog" color="green" />
-              </button>
-            </td>
-            <td>
-              <Link to={"delete"} >
-                <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
-              </Link>
-            </td>
-          </td>
-        </tr>
-        <tr onChange={() => Test2()} className="mb-12 h-8 text-xl hover:border-solid hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
-          <td className="text-xl font-bold">
-            <input type="text" id='role2' value="Operator" />
-            <h3>
-              Description: Admin Control <br />
-              All Operations of the Application
-            </h3>
-          </td>
-          <td className="flex flex-col text-lg">
-            <h1 className="font-bold text-blue-700">Permissions</h1>
-            <td className="flex"><input type="checkbox" id='delete1' className="mt-2 mr-2" />Check All Permissions</td>
-            <td className="flex"><input type="checkbox" id='read2' className="mt-2 mr-2" />assign driver to bus</td>
-            <td className="flex"><input type="checkbox" id='add2' className="mt-2 mr-2" />edit driver to bus</td>
-            <td className="flex"><input type="checkbox" id='edit2' className="mt-2 mr-2" />delete driver to bus</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />View drivers</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />add driver</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />edit driver</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />View buses</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />Add bus</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />edit bus</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />delete bus</td>
-
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />view route</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />add route</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />update route</td>
-            <td className="flex"><input type="checkbox" id='delete2' className="mt-2 mr-2" />delete route</td>
-          </td>
-          <td className='pl-8'>
-            <td>
-              <button onClick={() => submitForm()}>
-                <Icon icon="carbon:change-catalog" color="green" />
-              </button>
-            </td>
-            <td>
-              <Link to={"delete"} >
-                <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
-              </Link>
-            </td>
-          </td>
-        </tr>
-        <tr onChange={() => Test3()} className="mb-12 h-8 text-xl hover:border-solid hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
-          <td className="text-xl font-bold"><input type="text" id='role3' value="Driver" />
-            <h3>
-              Description: Admin Control <br />
-              All Operations of the Application
-            </h3>
-          </td>
-          <td className="flexflex-col text-lg">
-            <h1 className="font-bold text-blue-700">Permissions</h1>
-            <td className="flex"><input type="checkbox" id='read3' className="mt-2 mr-2" />View Profile</td>
-            <td className="flex"><input type="checkbox" id='edit3' className="mt-2 mr-2" />Update Profile</td>
-            <td className="flex"><input type="checkbox" id='delete3' className="mt-2 mr-2" />Delete Account </td>
-          </td>
-          <td className='pl-8'>
-            <td>
-              <button onClick={() => submitForm()}>
-                <Icon icon="carbon:change-catalog" color="green" />
-              </button>
-            </td>
-            <td>
-              <Link to={"delete"} >
-                <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
-              </Link>
-            </td>
-          </td>
-        </tr>
-      </table>
-      <button className="m-12 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">
-        <Link to={"update"} >
-          Edit Role name
-        </Link>
-      </button>
+        </thead>
+        <tbody>
+          {Infos && Infos.map((info)=>(
+             setTimeout(() => {
+              loadForm(info)
+            }, "1000"),
+                    <tr className="mb-12  h-8 text-xl hover:border-solid hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
+                    <td className="text-lg font-bold "><input type="text" id='role1' placeholder={info.Role} />
+                      <h3>
+                        Description:  <br />
+                        {info.Description}
+                      </h3>
+                    </td>
+                    <td className="flex flex-col text-lg">
+                      <h1 className="font-bold text-blue-700">Permissions</h1>
+                      <td className="flex"><input type="checkbox" id={'One'+info.id} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
+                      <td className="flex"><input type="checkbox" id={'Two'+info.id}  className="mt-2 mr-2" />View Operators</td>
+                      <td className="flex"><input type="checkbox" id={'Three'+info.id}  className="mt-2 mr-2" />Assign,Remove Driver to bus</td>
+                      <td className="flex"><input type="checkbox" id={'Four'+info.id}  className="mt-2 mr-2" />Add,Remove route </td>
+                      <td className="flex"><input type="checkbox" id={'Five'+info.id}  className="mt-2 mr-2" />Update Bus status</td>
+                      <td className="flex"><input type="checkbox" id={'Six'+info.id}  className="mt-2 mr-2" />Update profile</td>
+                    </td>
+                    <td className='pl-8'>
+                      <td>
+                        <button onClick={()=>submitForm(info.id)}>
+                          <Icon icon="carbon:change-catalog" color="green" />
+                        </button>
+                      </td>
+                      <td>
+                      <button onClick={()=>Delete(info.id)}>
+                          <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
+                      </button>
+                      </td>
+                    </td>
+              </tr>
+          ))}
+  </tbody>
+</table>
       <button className="m-12 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">
         <Link to={"add"} >
-          Add Role name
+          Add New Role
         </Link>
 
 
       </button>
     </div>
-  );
+  )
 }
-export default SetRoles;
+export default setRoles;

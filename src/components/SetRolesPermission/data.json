@@ -1,0 +1,40 @@
+{
+  "Permissions": [
+    {
+      "id": 1,
+      "Role": "Admin",
+      "Permissions": {
+        "AddEditDelOp": true,
+        "viewDelOp": true,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": true,
+        "UpdateProf": true
+      }
+    },
+    {
+      "id": 4,
+      "Role": "Driver",
+      "Permissions": {
+        "AddEditDelOp": true,
+        "viewDelOp": false,
+        "AssgnRemDriv": true,
+        "addRemRoute": false,
+        "UpdateBusInfo": false,
+        "UpdateProf": true
+      }
+    },
+    {
+      "Role": "MANAGER",
+      "Permissions": {
+        "AddEditDelOp": true,
+        "viewDelOp": true,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": true,
+        "UpdateProf": true
+      },
+      "id": 5
+    }
+  ]
+}

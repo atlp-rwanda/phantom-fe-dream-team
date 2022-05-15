@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652294571426" clover="3.2.0">
-  <project timestamp="1652294571426" name="All files">
-    <metrics statements="281" coveredstatements="50" conditionals="110" coveredconditionals="9" methods="98" coveredmethods="20" elements="489" coveredelements="79" complexity="0" loc="281" ncloc="281" packages="15" files="47" classes="47"/>
+<coverage generated="1652637316436" clover="3.2.0">
+  <project timestamp="1652637316436" name="All files">
+    <metrics statements="360" coveredstatements="76" conditionals="161" coveredconditionals="20" methods="112" coveredmethods="27" elements="633" coveredelements="123" complexity="0" loc="360" ncloc="360" packages="15" files="52" classes="52"/>
     <package name="src">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/App.js">
@@ -16,7 +16,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="13" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="9" coveredmethods="4"/>
       <file name="Register.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Register.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
@@ -30,23 +30,23 @@
         <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
       <file name="skeletonUI.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/skeletonUI.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="10" type="stmt"/>
       </file>
       <file name="succesfull.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/succesfull.js">
         <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
       <file name="useLoader.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/useLoader.js">
-        <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="20" type="stmt"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="15" count="20" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Contact">
@@ -57,7 +57,7 @@
       </file>
     </package>
     <package name="src.components.Dashboard">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+      <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8"/>
       <file name="Buses.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/Buses.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
@@ -70,26 +70,31 @@
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
       </file>
+      <file name="RolesDashboard.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/RolesDashboard.js">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
       <file name="RoutesDashboard.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/RoutesDashboard.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
       <file name="TopNavbar.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="8" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
       <file name="add.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/add.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
       </file>
       <file name="dashboard.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/dashboard.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="11" count="8" type="stmt"/>
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
       <file name="sidebar.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/sidebar.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="10" count="7" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
       </file>
       <file name="users.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/users.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -98,7 +103,7 @@
     </package>
     <package name="src.components.Footer">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="footer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Footer/footer.js">
+      <file name="Footer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Footer/Footer.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="7" type="stmt"/>
       </file>
@@ -229,21 +234,91 @@
       </file>
     </package>
     <package name="src.components.SetRolesPermission">
-      <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="setRoles.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/setRoles.js">
-        <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+      <metrics statements="70" coveredstatements="11" conditionals="46" coveredconditionals="9" methods="22" coveredmethods="3"/>
+      <file name="AddRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/AddRole.js">
+        <metrics statements="21" coveredstatements="4" conditionals="16" coveredconditionals="4" methods="5" coveredmethods="1"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="12" type="stmt"/>
+        <line num="56" count="12" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+      </file>
+      <file name="AssignRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/AssignRole.js">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="DeleteRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/DeleteRole.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="UpdateRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/UpdateRole.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="setRoles.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/setRoles.js">
+        <metrics statements="45" coveredstatements="7" conditionals="30" coveredconditionals="5" methods="13" coveredmethods="2"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="100" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="102" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="128" count="8" type="stmt"/>
+        <line num="129" count="8" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="147" count="0" type="stmt"/>
+        <line num="167" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.updateProfile">
@@ -355,17 +430,19 @@
       <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <file name="store.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/store.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="3" type="cond" truecount="1" falsecount="1"/>
       </file>
     </package>
     <package name="src.redux.actions">
-      <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js">
-        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
       <file name="resetAction.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/resetAction.js">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -378,32 +455,49 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="resetActionType.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/constants/resetActionType.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.redux.reducers">
-      <metrics statements="61" coveredstatements="28" conditionals="21" coveredconditionals="8" methods="14" coveredmethods="4"/>
-      <file name="RolesSlice.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/RolesSlice.js">
-        <metrics statements="11" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+      <metrics statements="78" coveredstatements="36" conditionals="28" coveredconditionals="10" methods="9" coveredmethods="5"/>
+      <file name="PermissionReducer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/PermissionReducer.js">
+        <metrics statements="28" coveredstatements="11" conditionals="9" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="13" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
+        <line num="37" count="9" type="stmt"/>
       </file>
       <file name="authReducer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/authReducer.js">
         <metrics statements="11" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -413,14 +507,14 @@
       </file>
       <file name="changepassword.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/changepassword.js">
         <metrics statements="8" coveredstatements="5" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="9" type="cond" truecount="1" falsecount="1"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
       </file>
       <file name="contactReducer.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/contactReducer.js">
         <metrics statements="4" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -440,33 +534,33 @@
       </file>
       <file name="index.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/index.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
       <file name="resetReducers.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/resetReducers.js">
         <metrics statements="6" coveredstatements="5" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="10" type="cond" truecount="1" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
       </file>
       <file name="updateProfile.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/updateProfile.js">
         <metrics statements="14" coveredstatements="9" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="cond" truecount="1" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
       </file>
     </package>
   </project>

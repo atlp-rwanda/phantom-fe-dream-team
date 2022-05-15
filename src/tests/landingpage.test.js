@@ -23,13 +23,13 @@ expect(linkElement).toBeInTheDocument;
 
 test('renders kigali,Rwanda', () => {
 render(<Contact />);
-const linkElement = screen.getByText("kigali,Rwanda");
+const linkElement = screen.getByText("Kigali, Rwanda");
 expect(linkElement).toBeInTheDocument;
 });
 
 test('renders contact@phathom.com', () => {
 render(<Contact />);
-const linkElement = screen.getByText("contact@phathom.com");
+const linkElement = screen.getByText("contact@phanthom.com");
 });
 test('renders FullNames', () => {
 render(<Contact />);
@@ -101,21 +101,15 @@ render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");
 expect(linkElement).toBeInTheDocument;
 });
-
-
-
 test(' it should render phantom first step', () => {
 render(<Services />);
-const linkElement = screen.getByText("step1");
+const linkElement = screen.getByText("Step1");
 expect(linkElement).toBeInTheDocument;
 });
 
-
-
-
 test(' it should render phantom step2 ', () => {
 render(<Services/>);
-const linkElement =screen.getByText("step2");
+const linkElement =screen.getByText("Step2");
 expect(linkElement).toBeInTheDocument;
 });
 
@@ -127,7 +121,7 @@ expect(linkElement).toBeInTheDocument;
 
 test(' it should render phantom step3 ', () => {
 render(<Services/>);
-const linkElement =screen.getByText("step3");
+const linkElement =screen.getByText("Step3");
 expect(linkElement).toBeInTheDocument;
 });
 

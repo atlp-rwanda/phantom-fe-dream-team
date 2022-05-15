@@ -125,13 +125,18 @@ function Delete(id){
     window.reload()
   }) 
 }
-
+const { loading } = useLoader();
   return(
+    <div>
+
+{loading && <SkeletonUI />}
+        {!loading && (
     <div className="flex flex-col relative">
+      
    <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx" >
   <thead className="sm:hidden"> 
     <tr className="mb-12 text-xl text-blue-700 border-solid border-2 border-black">
-          <th className="">Role name</th>
+          <th className="">Role</th>
           <th classname="colspan=4" >Permissions</th>
           <th classname="colspan=2 " >Actions</th>
         </tr>
@@ -144,7 +149,7 @@ function Delete(id){
                     <tr className="mb-12  h-8 text-xl hover:border-solid hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
                     <td className="text-lg font-bold "><input type="text" id='role1' placeholder={info.Role} />
                       <h3>
-                        Description:  <br />
+                        Description: <br />
                         {info.Description}
                       </h3>
                     </td>
@@ -180,6 +185,8 @@ function Delete(id){
 
 
       </button>
+      </div>
+        )}
     </div>
   )
 }

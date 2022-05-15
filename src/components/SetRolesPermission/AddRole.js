@@ -51,10 +51,13 @@ function submitForm() {
     window.location.assign("../Roles")
   })
   }
+  const { loading } = useLoader();
 
   return (
 
     <div className=''>
+        {loading && <SkeletonUI />}
+        {!loading && (
       <div className=" w-full h-full md: block justify-start">
         <div className="block w-full">
           <h2 className='font-bold'>ADD USER ROLE</h2>
@@ -104,9 +107,9 @@ function submitForm() {
 
 
       </div>
-
+        )}
     </div >
   )
 }
 
-export default AddRole
+export default AddRole;

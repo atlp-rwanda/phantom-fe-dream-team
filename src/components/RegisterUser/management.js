@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom';
-export default function management() {
 
+export default function management() {
+  
 const getDataform=()=>{
     const data=localStorage.getItem('register')
     if(data){
@@ -10,7 +11,13 @@ const getDataform=()=>{
         return []
     }
 }
+const [role,setRole]=useState('')
+const handleEdit = (todoId) => {
+    setRole(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+    window.location.reload();
+  };
 const [users,setUsers]=useState(getDataform())
+
 const cardElements = users.map((item) => {
     return (
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -27,30 +34,44 @@ const cardElements = users.map((item) => {
            {item.phone}
         </td>
         <td className="px-6 py-4">
-           {item.role}
+        <select id="roles" onChange={(e)=>setRole(e.target.value)} value={item.role} >
+        <option value="Admin">Admin</option>
+          <option value="Driver">Driver</option>
+          <option value="Operator">Operator</option>
+          </select>
         </td>
         <td className="px-6 py-4 text-right">
-            <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+            <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={()=>handleEdit(item.ID)}>Edit</p>
         </td>
         <td class="px-6 py-4 text-right">
-            <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+            <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={()=>handleDelete(item.ID)}>Delete</p>
         </td>
     </tr>
     );
   });
+    // delete a user
+    const handleDelete=(id)=>{
+        const removedArr = [...users].filter(user => user.ID !== id);
 
+        setUsers(removedArr);
+        window.location.reload();
+      }
+      const LOCAL_STORAGE_KEY = 'register'
+      useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(users))
+      }, [users])
 
   return (
       <>  
       <div className='flex justify-center'>
       <Link to="/RegisterUser">
-         <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mt-20'>Register user</button>
+         <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mt-10'>Register user</button>
          </Link>
          </div>
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg justify-center text-center flex mt-20 mb-40">
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg justify-center text-center flex mt-10 mb-40">
     
-    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table className="w-full text-sm text-left text-gray-700 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" className="px-6 py-3">
                     First name
@@ -69,7 +90,7 @@ const cardElements = users.map((item) => {
                 </th>
                 
                 <th scope="col" className="px-6 py-3">
-                    <span className="sr-only">Edit</span>
+                    Action
                 </th>
                 <th scope="col" className="px-6 py-3">
                     <span className="sr-only">Delete</span>

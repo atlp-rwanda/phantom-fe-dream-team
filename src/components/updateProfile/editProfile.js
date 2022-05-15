@@ -119,7 +119,7 @@ const { loading } = useLoader();
   </span>
   <input type="text" id="Phone" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={phone} readOnly />
 </label>
-<p id='error' className="not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
+<p id='error' className="not-italic subpixel-antialiased text-sm  text-ml text-red-500 text-center font-bold"></p>
 </div>
 <div class="border-t-2 md:border-t-0   border-indigo-500 ...  mr-32 lg:mr-0"></div>
 <p className=" p-8 flex text-sm sm:text-[8px]">

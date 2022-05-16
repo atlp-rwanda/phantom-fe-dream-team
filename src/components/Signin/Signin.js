@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
@@ -8,10 +8,12 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/loginActions';
 
 
+
 const Signin = () => {
+  let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
-  console.log('loginfo',loginInfo)
+  console.log(loginInfo)
   
 //  function checkUserLoggedIn(){
 //   if (loginInfo[1] == true) {
@@ -54,6 +56,12 @@ const Signin = () => {
     }
 
     Dispatch(login(inputEmail,inputPassword))
+    if (loginInfo){
+      console.log("welcome")
+      setSucceed(true);
+    }
+    
+   //navigate("/dashboard");
 
   }
 
@@ -80,8 +88,8 @@ const Signin = () => {
    if (succeed === true){
      setTimeout(() => {
        setSucceed(false)
-       window.location.reload()
-     }, "15000")
+       navigate("/dashboard");
+     }, "5000")
    }
     
 

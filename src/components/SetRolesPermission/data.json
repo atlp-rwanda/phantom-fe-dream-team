@@ -30,7 +30,7 @@
       "Role": "MANAGER",
       "Description": "Manager Description",
       "Permissions": {
-        "AddEditDelOp": false,
+        "AddEditDelOp": true,
         "viewDelOp": true,
         "AssgnRemDriv": true,
         "addRemRoute": true,

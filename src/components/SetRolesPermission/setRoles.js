@@ -15,6 +15,8 @@ import data from './data.json';
 import { info } from "autoprefixer";
 
 function setRoles (){
+
+
   const dispatch = useDispatch();
   const [Infos, setData] = useState(null);
   const [Permissions, setPermissions] = [{
@@ -85,6 +87,8 @@ function loadForm(info) {
   //   }
   // }
 }
+
+
 function submitForm(id) {
   const OneInput = document.getElementById('One'+id);
   Permissions.AddEditDelOp = OneInput.checked ? true : false;
@@ -127,7 +131,7 @@ function Delete(id){
 }
 const { loading } = useLoader();
   return(
-    <div>
+    <>
 
 {loading && <SkeletonUI />}
         {!loading && (
@@ -187,7 +191,7 @@ const { loading } = useLoader();
       </button>
       </div>
         )}
-    </div>
+    </>
   )
 }
 export default setRoles;

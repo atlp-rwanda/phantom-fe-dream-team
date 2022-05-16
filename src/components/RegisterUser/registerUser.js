@@ -19,7 +19,7 @@ export default function register() {
        navigate('/dashboard/Register')
      }, "2000")
    }
-   //end
+  //  end
 function Upload(){
   document.getElementById("editPicture").innerHTML=`<label>
   <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>Upload Picture</strong></label>`

@@ -4,8 +4,10 @@ import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
 import SuccefullPopup from './Successful';
+import ErrorPopup from '../error'; 
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/loginActions';
+
 
 
 
@@ -13,15 +15,7 @@ const Signin = () => {
   let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
-  console.log(loginInfo)
   
-//  function checkUserLoggedIn(){
-//   if (loginInfo[1] == true) {
-//     // history.push()
-//     console.log('you are loggedin')
-//     setSucceed(true)
-//   }
-//  }
   const Dispatch = useDispatch();
   const { loading } = useLoader();
   const [email, setEmail] = useState('');
@@ -29,8 +23,20 @@ const Signin = () => {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [successMessage, setsuccessMessage] = useState('');
+  const [errorMessage, seterrorMessage] = useState('');
 
+// console.log('ggdgs',loginInfo)
 
+var loggedin =  localStorage.getItem("auth")
+console.log('loggedin',loggedin)
+// preventing a loggedin user to login again while the token is still active 
+  function check (){
+    if (loggedin =='true'){
+      console.log("welcome")
+      navigate("/dashboard");
+    }
+  }
+  check()
 
   function formSubmit(e){
     e.preventDefault();
@@ -49,6 +55,9 @@ const Signin = () => {
         
         setPasswordError('Password is required')
       }
+      if (inputEmail == '' && loginInfo[1] == false){
+        setEmailError('email is not found')
+      }
      
     }
     else{
@@ -56,13 +65,12 @@ const Signin = () => {
     }
 
     Dispatch(login(inputEmail,inputPassword))
-    if (loginInfo){
-      console.log("welcome")
-      setSucceed(true);
+    if (loginInfo[1] == true){
+      navigate("/dashboard");
     }
-    
-   //navigate("/dashboard");
-
+    else{
+      seterrorMessage('user not found')
+    }
   }
 
 
@@ -80,19 +88,6 @@ const Signin = () => {
     
   }
   
-   //popup
-   function close(){
-     setSucceed(false)
-     window.location.reload()
-   }
-   if (succeed === true){
-     setTimeout(() => {
-       setSucceed(false)
-       navigate("/dashboard");
-     }, "5000")
-   }
-    
-
     return (
       
       <>
@@ -118,14 +113,14 @@ const Signin = () => {
             
                     <form className='mt-6' onSubmit={formSubmit} >
                       <div>
-
+                      {errorMessage&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{errorMessage}</div>}
                         <input 
                         type='email' 
                         name="email"
                         id="email"
                         
                         placeholder='Username' 
-                        onChange={handleEmailChange}
+                        // onChange={handleEmailChange}
                         className='w-2/3 px-4 py-3 rounded-lg bg-white mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
                         {emailError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{emailError}</div>}
                       </div>
@@ -136,7 +131,7 @@ const Signin = () => {
                         type='password'
                         name="password"
                         id="password"
-                        onChange={handlePasswordChange}
+                        // onChange={handlePasswordChange}
                          
                         placeholder='Password'  
                         className='w-2/3 px-4 py-3 rounded-lg bg-white mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none' />
@@ -151,13 +146,6 @@ const Signin = () => {
                     </div>
 
                       <hr className='my-1 border-gray-300 w-2/3 ml-20'/>
-
-                    {/* <p className='text-center'>
-                      Not a member? &nbsp;   
-                      <a href='#' className='text-blue-500 hover:text-blue-700 font-semibold'>
-                       Register
-                      </a>
-                    </p> */}
                   </div>
 
                 </div>

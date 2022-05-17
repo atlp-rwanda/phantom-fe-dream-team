@@ -6,7 +6,7 @@ if (localStorage.getItem('auth')== null){
 
 var loggedin =  localStorage.getItem("auth")
 
-const LoginReducer =(state = localStorage.getItem('auth'),action) =>{
+const LoginReducer =(state = loggedin,action) =>{
     var userEmail = action.Email
     var userPassword = action.Password
      switch(action.type){
@@ -15,10 +15,9 @@ const LoginReducer =(state = localStorage.getItem('auth'),action) =>{
                 state =[userEmail,true]
                 localStorage.setItem('auth',true)
                 localStorage.setItem('login',[userEmail,true])
-                // window.location.href('/dashboard')
                 return state
             }else{
-                state= ['',false]
+                state= [userEmail,false]
                 return state
                                 
             }

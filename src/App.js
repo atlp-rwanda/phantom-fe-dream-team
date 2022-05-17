@@ -16,7 +16,6 @@ import { Outlet } from 'react-router-dom';
 import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
-import RegisterUser from "./components/RegisterUser/registerUser"
 import Dashboard from "./components/Dashboard/dashboard";
 
 function App() {
@@ -46,7 +45,7 @@ function App() {
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
            
               </Route>  
-              <Route exact path="/RegisterUser" element={[<RegisterUser/>]}></Route>
+          
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>

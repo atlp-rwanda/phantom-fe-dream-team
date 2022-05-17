@@ -4,7 +4,7 @@ import add from '../../assets/Dashboard-images/add.png';
 import { Link } from 'react-router-dom';
 
 
-function TopNavbar() {
+function TopNavbar({goto}) {
   const [Title, setTitle] = useState('ADMIN DASHBOARD');
   return (
 
@@ -26,12 +26,12 @@ function TopNavbar() {
 
               <div className="flex sm:mt-10">
 
-                    <div>
-                      <Link to="/add">
-                        <img className="h-8 w-8 ml-[400px] mb-2 sm:mt-[-40px] sm:ml-[40px]"
+                    
+                    <div onClick={goto}>
+                        <img className="h-8 w-8 ml-[400px] mb-2 sm:mt-[-40px] sm:ml-2"
                           src={add} />
-                      </Link>
                     </div>
+                  
 
                   <div className="relative ml-2 sm:mt-[-40px]">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-2">

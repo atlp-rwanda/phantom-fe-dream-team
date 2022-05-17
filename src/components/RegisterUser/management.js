@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import {Link} from 'react-router-dom';
+import TopNavbar from '../Dashboard/TopNavbar';
 
 export default function management() {
   
@@ -88,12 +88,8 @@ const cardElements = users.map((item) => {
 
   return (
       <>  
-     
-      <div className='flex justify-center'>
-      <Link to="/RegisterUser">
-         <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mt-10'>Register user</button>
-         </Link>
-         </div>
+ <TopNavbar goto={e=>window.location.assign('/dashboard/Register/add')}/>
+
          {Elements}
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg justify-center text-center flex mt-10 mb-40 ">
 

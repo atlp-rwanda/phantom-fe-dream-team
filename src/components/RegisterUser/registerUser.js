@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {useNavigate } from 'react-router-dom';
-import LOGOUT from '../Logout/logout';
 import {Link} from 'react-router-dom';
 import user from '../../assets/user.png'
 import SuccefullPopup from '../Logout/success'
 import ErrorPopup from '../ResetPassword/error';
+import TopNavbar from '../Dashboard/TopNavbar';
 
 const LOCAL_STORAGE_KEY = 'register'
 export default function register() {
@@ -180,7 +180,7 @@ const handleOnChange3=(e)=>{
 
   return (
     <>
-     <LOGOUT/>
+ <TopNavbar goto={e=>window.location.assign('/dashboard/Register/add')}/>
     <SuccefullPopup trigger={succeed}>
         <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
         <h3 class="px-10">User Created</h3>
@@ -190,7 +190,7 @@ const handleOnChange3=(e)=>{
         <h3 class="px-10">Please fill all input</h3>
         </ErrorPopup> 
       
-     <h1 className='text-center mt-[90px] text-2xl text-blue-700 font-Poppins'>Register Drivers & Operators</h1>
+     <h1 className='text-center mt-[10px] text-2xl text-blue-700 font-Poppins'>Register Drivers & Operators</h1>
 
     <div className='flex justify-center ml-auto text-center mt-10 mb-10  lg:flex md:flex sm:flex-col items-center'>
       <div className='w-1/3 mt-[70px]'>

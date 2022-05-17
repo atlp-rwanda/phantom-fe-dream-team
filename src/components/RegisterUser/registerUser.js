@@ -233,19 +233,19 @@ const handleOnChange3=(e)=>{
        <p className="text-red-500">{message1}</p>
       <p className="text-green-700">{success1}</p>
        <div className='flex '>
-         <label for="phone" class="text-blue-700 text-xl mt-6 sm:sr-only">Phone:</label>
+       <label for="email" class="text-blue-700 text-xl mt-6 sm:sr-only">Phone:</label>
          <input 
          type='text' 
          placeholder='Phone number' 
-         className='border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[55px] focus:outline-none sm:w-[250px]'
+        className='border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[56px] focus:outline-none sm:w-[250px] sm:ml-[-20px] sm:ml-[-1px]'
          onChange={handleOnChange3} 
          value={phone}/>
        </div>
        <p className="text-red-500">{message4}</p>
       <p className="text-green-700">{success4}</p>
        <div className='flex'>
-         <label for="role" class="text-blue-700 text-xl mt-6 sm:sr-only">Role:</label>
-         <select  onChange={(e)=>setRole(e.target.value)} value={role}  class="border-2 border-blue-700 text-sm rounded-lg focus:ring-blue-700 focus:border-blue-700 block w-[337px] py-2 ml-[75px] mt-5 mb-10 shadow-b focus:outline-none sm:w-[250px]">
+         <label for="role" className="text-blue-700 text-xl mt-6 sm:sr-only">Role:</label>
+         <select  onChange={(e)=>setRole(e.target.value)} value={role}  className="border-2 border-blue-700 text-sm rounded-lg focus:ring-blue-700 focus:border-blue-700 block w-[337px] py-2 ml-[75px] mt-5 mb-10 shadow-b focus:outline-none sm:w-[250px] sm:ml-[-1px]">
           <option selected>Role</option>
           <option value="Admin">Admin</option>
           <option value="Driver">Driver</option>
@@ -260,7 +260,6 @@ const handleOnChange3=(e)=>{
      <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-5'>Cancel</button>
      </Link>
      </div>
-
     </>
 )
 }

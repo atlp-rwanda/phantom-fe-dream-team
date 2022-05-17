@@ -34,7 +34,7 @@ const cardElements = users.map((item) => {
            {item.phone}
         </td>
         <td className="px-6 py-4">
-        <select id="roles" onChange={(e)=>setRole(e.target.value)} value={item.role} >
+        <select  onChange={(e)=>setRole(e.target.value)} value={item.role} >
         <option value="Admin">Admin</option>
           <option value="Driver">Driver</option>
           <option value="Operator">Operator</option>

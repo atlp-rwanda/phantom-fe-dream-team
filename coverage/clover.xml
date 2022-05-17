@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652635048785" clover="3.2.0">
-  <project timestamp="1652635048785" name="All files">
+<coverage generated="1652709421603" clover="3.2.0">
+  <project timestamp="1652709421603" name="All files">
     <metrics statements="440" coveredstatements="59" conditionals="116" coveredconditionals="11" methods="114" coveredmethods="22" elements="670" coveredelements="92" complexity="0" loc="440" ncloc="440" packages="16" files="49" classes="49">
       <package name="src">
         <metrics statements="29" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -308,13 +308,13 @@
           <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="63" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
           <line num="71" count="0" type="stmt"/>
-          <line num="75" count="0" type="stmt"/>
-          <line num="92" count="0" type="stmt"/>
-          <line num="102" count="0" type="stmt"/>
-          <line num="111" count="0" type="stmt"/>
-          <line num="120" count="0" type="stmt"/>
-          <line num="125" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="98" count="0" type="stmt"/>
+          <line num="107" count="0" type="stmt"/>
+          <line num="116" count="0" type="stmt"/>
+          <line num="121" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.components.ResetPassword">

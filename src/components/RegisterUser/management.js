@@ -12,10 +12,7 @@ const getDataform=()=>{
     }
 }
 const [role,setRole]=useState('')
-const handleEdit = (todoId) => {
-    setRole(prev => prev.map(item => (item.id === todoId ? newValue : item)));
-    window.location.reload();
-  };
+
 const [users,setUsers]=useState(getDataform())
 
 const cardElements = users.map((item) => {
@@ -39,9 +36,6 @@ const cardElements = users.map((item) => {
           <option value="Driver">Driver</option>
           <option value="Operator">Operator</option>
           </select>
-        </td>
-        <td className="px-6 py-4 text-right">
-            <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={()=>handleEdit(item.ID)}>Edit</p>
         </td>
         <td class="px-6 py-4 text-right">
             <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={()=>handleDelete(item.ID)}>Delete</p>
@@ -92,9 +86,7 @@ const cardElements = users.map((item) => {
                 <th scope="col" className="px-6 py-3">
                     Action
                 </th>
-                <th scope="col" className="px-6 py-3">
-                    <span className="sr-only">Delete</span>
-                </th>
+
             </tr>
         </thead>
         <tbody>

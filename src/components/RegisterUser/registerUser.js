@@ -126,7 +126,7 @@ const firstNameValidation = () => {
     setsuccess2("")
   } 
 };
-//lastname validation
+//Lastname validation
 const [message3, setMessage3] = useState("");
 const [success3, setsuccess3] = useState("");
 const lastNameValidation = () => {

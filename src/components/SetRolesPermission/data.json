@@ -21,23 +21,10 @@
         "AddEditDelOp": true,
         "viewDelOp": false,
         "AssgnRemDriv": true,
-        "addRemRoute": false,
+        "addRemRoute": true,
         "UpdateBusInfo": false,
         "UpdateProf": true
       }
-    },
-    {
-      "Role": "MANAGER",
-      "Description": "Manager Description",
-      "Permissions": {
-        "AddEditDelOp": true,
-        "viewDelOp": true,
-        "AssgnRemDriv": true,
-        "addRemRoute": true,
-        "UpdateBusInfo": true,
-        "UpdateProf": true
-      },
-      "id": 5
     }
   ]
 }

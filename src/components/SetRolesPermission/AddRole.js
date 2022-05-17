@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch } from 'react-redux';
-import user from '../img/random.jpg';
 import SuccefullPopup from '../succesfull';
-import { Route, Link, Routes, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ErrorPopup from "../error";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
-import UpdateRole from "./UpdateRole";
-import DeleteRole from "./DeleteRole";
+import TopNavbar from "../Dashboard/TopNavbar";
 import { setPermission } from "../../redux/actions/index";
 import data from './data.json';
 import { info } from "autoprefixer";
@@ -69,6 +67,7 @@ function AddRole() {
   return (
 
     <>
+      <TopNavbar goto={e=>window.location.assign('/dashboard/Roles/add')}/>
       {loading && <SkeletonUI />}
       {!loading && (
         <div className=" w-full h-full md: block justify-start">

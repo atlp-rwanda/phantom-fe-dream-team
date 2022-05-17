@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import user from '../img/random.jpg';
 import SuccefullPopup from '../succesfull';
 import { Route, Link, Routes, useLocation } from "react-router-dom";
@@ -8,11 +8,11 @@ import ErrorPopup from "../error";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 import AddRole from "./AddRole";
-import UpdateRole from "./UpdateRole";
-import DeleteRole from "./DeleteRole";
+
 import { setPermission } from "../../redux/actions/index";
 import data from './data.json';
 import { info } from "autoprefixer";
+import TopNavbar from "../Dashboard/TopNavbar";
 
 function setRoles() {
 
@@ -132,9 +132,10 @@ function setRoles() {
   const { loading } = useLoader();
   return (
     <>
+    <TopNavbar goto={e=>window.location.assign('/dashboard/Roles/add')}/>
 
-      {/* {loading && <SkeletonUI />}
-        {!loading && ( */}
+      {loading && <SkeletonUI />}
+        {!loading && (
       <div className="flex flex-col relative">
 
         <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx m-4 border-black border-2 border-solid" >
@@ -182,13 +183,8 @@ function setRoles() {
             ))}
           </tbody>
         </table>
-        <button className="m-12 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">
-          <Link to={"add"} >
-            Add New Role
-          </Link>
-        </button>
       </div>
-      {/* )} */}
+       )} 
     </>
   )
 }

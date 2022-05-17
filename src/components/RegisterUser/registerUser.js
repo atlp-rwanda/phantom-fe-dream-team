@@ -192,10 +192,10 @@ const handleOnChange3=(e)=>{
       
      <h1 className='text-center mt-[10px] text-2xl text-blue-700 font-Poppins'>Register Drivers & Operators</h1>
 
-    <div className='flex justify-center ml-auto text-center mt-10 mb-10  lg:flex md:flex sm:flex-col items-center'>
+    <div className='flex justify-center ml-auto text-center mt-10 mb-10  lg:flex md:flex sm:flex-col items-center sm:mt-[-20px]'>
       <div className='w-1/3 mt-[70px]'>
-     <img src={user} alt='user' className='w-[60%]'/>
-     <h1 className='text-blue-700 mr-40 sm:ml-6' id='editPicture' onClick={Upload}>Edit</h1>
+     <img src={user} alt='user' className='w-[60%] sm:w-[100%]'/>
+     <h1 className='text-blue-700 mr-40 sm:ml-8' id='editPicture' onClick={Upload}>Edit</h1>
      </div>
      <div className='w-[500px] xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
        <div className='flex sm:flex-col'>
@@ -237,7 +237,7 @@ const handleOnChange3=(e)=>{
          <input 
          type='text' 
          placeholder='Phone number' 
-        className='border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[56px] focus:outline-none sm:w-[250px] sm:ml-[-20px] sm:ml-[-1px]'
+        className='border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[56px] focus:outline-none sm:w-[250px] sm:ml-[-20px] sm:ml-[15px]'
          onChange={handleOnChange3} 
          value={phone}/>
        </div>
@@ -245,7 +245,7 @@ const handleOnChange3=(e)=>{
       <p className="text-green-700">{success4}</p>
        <div className='flex'>
          <label for="role" className="text-blue-700 text-xl mt-6 sm:sr-only">Role:</label>
-         <select  onChange={(e)=>setRole(e.target.value)} value={role}  className="border-2 border-blue-700 text-sm rounded-lg focus:ring-blue-700 focus:border-blue-700 block w-[337px] py-2 ml-[75px] mt-5 mb-10 shadow-b focus:outline-none sm:w-[250px] sm:ml-[-1px]">
+         <select  onChange={(e)=>setRole(e.target.value)} value={role}  className="border-2 border-blue-700 text-sm rounded-lg focus:ring-blue-700 focus:border-blue-700 block w-[337px] py-2 ml-[75px] mt-5 mb-10 shadow-b focus:outline-none sm:w-[250px] sm:ml-[15px]">
           <option selected>Role</option>
           <option value="Admin">Admin</option>
           <option value="Driver">Driver</option>

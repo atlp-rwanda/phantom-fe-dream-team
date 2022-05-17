@@ -13,7 +13,7 @@ import { setPermission } from "../../redux/actions/index";
 import data from './data.json';
 import { info } from "autoprefixer";
 function AddRole() {
-  const { loading } = useLoader();
+  const { loading,setLoading } = useLoader();
   const [succeed, setSucceed] = useState(false);
   const [error, setError] = useState(false);
   const [Role, setRole] = useState('');
@@ -89,6 +89,8 @@ function AddRole() {
               <div>
 
                 <h1 className="font-bold text-blue-700"> Select Permissions</h1>
+                <table>
+                  <tbody>
                 <tr className='flex flex-col sm:text-sm'>
 
                   <td className="flex"><input type="checkbox" id={'One'} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
@@ -98,6 +100,8 @@ function AddRole() {
                   <td className="flex"><input type="checkbox" id={'Five'} className="mt-2 mr-2" />Update Bus status</td>
                   <td className="flex"><input type="checkbox" id={'Six'} className="mt-2 mr-2" />Update profile</td>
                 </tr>
+                </tbody>
+                </table>
               </div>
 
             </div>
@@ -121,14 +125,14 @@ function AddRole() {
 
         </div>
 
-      )}
+       )}
       <SuccefullPopup trigger={succeed}>
         <button onClick={() => close()} className="absolute top-0 right-2">X</button>
-        <h3 class="px-10">Success</h3>
+        <h3 className="px-10">Success</h3>
       </SuccefullPopup>
       <ErrorPopup trigger={error}>
         <button onClick={() => setError(false)} className="absolute top-0 right-2">X</button>
-        <h3 class="px-10">An error occured</h3>
+        <h3 className="px-10">An error occured</h3>
       </ErrorPopup>
 
     </>

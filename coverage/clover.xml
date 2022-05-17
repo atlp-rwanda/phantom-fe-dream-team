@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652709676104" clover="3.2.0">
-  <project timestamp="1652709676104" name="All files">
-    <metrics statements="482" coveredstatements="81" conditionals="163" coveredconditionals="23" methods="116" coveredmethods="29" elements="761" coveredelements="133" complexity="0" loc="482" ncloc="482" packages="15" files="52" classes="52">
+<coverage generated="1652759826914" clover="3.2.0">
+  <project timestamp="1652759826914" name="All files">
+    <metrics statements="482" coveredstatements="81" conditionals="159" coveredconditionals="19" methods="116" coveredmethods="29" elements="757" coveredelements="129" complexity="0" loc="482" ncloc="482" packages="15" files="52" classes="52">
       <package name="src">
         <metrics statements="28" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="App.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/App.js">
@@ -57,7 +57,7 @@
         </file>
         <file name="skeletonUI.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/skeletonUI.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="10" type="stmt"/>
+          <line num="4" count="6" type="stmt"/>
         </file>
         <file name="succesfull.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/succesfull.js">
           <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
@@ -66,7 +66,7 @@
         <file name="useLoader.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/useLoader.js">
           <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
           <line num="3" count="3" type="stmt"/>
-          <line num="4" count="21" type="stmt"/>
+          <line num="4" count="20" type="stmt"/>
           <line num="6" count="20" type="stmt"/>
           <line num="7" count="10" type="stmt"/>
           <line num="8" count="10" type="stmt"/>
@@ -117,7 +117,7 @@
         </file>
         <file name="TopNavbar.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="8" count="2" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
         </file>
         <file name="add.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/add.js">
@@ -307,10 +307,10 @@
         </file>
       </package>
       <package name="src.components.SetRolesPermission">
-        <metrics statements="82" coveredstatements="14" conditionals="48" coveredconditionals="10" methods="26" coveredmethods="3"/>
+        <metrics statements="82" coveredstatements="14" conditionals="44" coveredconditionals="6" methods="26" coveredmethods="3"/>
         <file name="AddRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/AddRole.js">
           <metrics statements="32" coveredstatements="7" conditionals="18" coveredconditionals="5" methods="9" coveredmethods="1"/>
-          <line num="16" count="13" type="stmt"/>
+          <line num="16" count="12" type="stmt"/>
           <line num="17" count="12" type="stmt"/>
           <line num="18" count="12" type="stmt"/>
           <line num="19" count="12" type="stmt"/>
@@ -339,9 +339,9 @@
           <line num="65" count="0" type="stmt"/>
           <line num="69" count="12" type="stmt"/>
           <line num="86" count="0" type="stmt"/>
-          <line num="117" count="0" type="stmt"/>
-          <line num="126" count="0" type="stmt"/>
+          <line num="121" count="0" type="stmt"/>
           <line num="130" count="0" type="stmt"/>
+          <line num="134" count="0" type="stmt"/>
         </file>
         <file name="AssignRole.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/AssignRole.js">
           <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -358,8 +358,8 @@
           <line num="4" count="0" type="stmt"/>
         </file>
         <file name="setRoles.js" path="/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/setRoles.js">
-          <metrics statements="45" coveredstatements="7" conditionals="30" coveredconditionals="5" methods="13" coveredmethods="2"/>
-          <line num="20" count="9" type="stmt"/>
+          <metrics statements="45" coveredstatements="7" conditionals="26" coveredconditionals="1" methods="13" coveredmethods="2"/>
+          <line num="20" count="8" type="stmt"/>
           <line num="21" count="8" type="stmt"/>
           <line num="22" count="8" type="stmt"/>
           <line num="31" count="8" type="stmt"/>

@@ -4,6 +4,7 @@ import { MemoryRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 import { Provider } from 'react-redux';
 import AddRole from '../components/SetRolesPermission/AddRole';
+
 test('renders ADD USER ROLE', () => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
     const linkElement = screen.getByText("ADD USER ROLE");

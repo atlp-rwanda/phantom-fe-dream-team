@@ -106,7 +106,7 @@ console.log('loggedin',loggedin)
             <div className='relative w-full'> 
               <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
                 <img src={bus} alt='bus' className='w-1/3 shadow-xs lg:block md:hidden lg:hidden' />
-                <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] w-64 sm:border-none' >
+                <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] w-64 sm:border-none md:2xl-hidden' >
                   <label className='block text-gray-700 text-center mt-2'>Sign in to your account</label>
 
                   <div className=' text-center'>

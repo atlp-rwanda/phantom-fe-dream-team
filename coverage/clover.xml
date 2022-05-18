@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652894823952" clover="3.2.0">
-  <project timestamp="1652894823952" name="All files">
-    <metrics statements="591" coveredstatements="107" conditionals="197" coveredconditionals="20" methods="136" coveredmethods="28" elements="924" coveredelements="155" complexity="0" loc="591" ncloc="591" packages="17" files="55" classes="55">
+<coverage generated="1652903267100" clover="3.2.0">
+  <project timestamp="1652903267100" name="All files">
+    <metrics statements="610" coveredstatements="66" conditionals="197" coveredconditionals="14" methods="134" coveredmethods="21" elements="941" coveredelements="101" complexity="0" loc="610" ncloc="610" packages="17" files="54" classes="54">
       <package name="src">
-        <metrics statements="28" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="29" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="App.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js">
-          <metrics statements="21" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="2" count="0" type="stmt"/>
           <line num="3" count="0" type="stmt"/>
@@ -24,6 +24,7 @@
           <line num="17" count="0" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
           <line num="22" count="0" type="stmt"/>
           <line num="23" count="0" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
@@ -85,22 +86,19 @@
         </file>
       </package>
       <package name="src.components.Dashboard">
-        <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8"/>
+        <metrics statements="19" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
         <file name="Buses.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Buses.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="1" type="stmt"/>
         </file>
         <file name="Drivers.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Drivers.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
         </file>
         <file name="Home.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Home.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="1" type="stmt"/>
-        </file>
-        <file name="Register.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Register.js">
-          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="0" type="stmt"/>
         </file>
         <file name="RoutesDashboard.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/RoutesDashboard.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -108,24 +106,32 @@
         </file>
         <file name="TopNavbar.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="8" count="20" type="stmt"/>
-          <line num="9" count="20" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="9" count="7" type="stmt"/>
+        </file>
+        <file name="User.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/User.js">
+          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
         </file>
         <file name="add.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/add.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="4" count="1" type="stmt"/>
         </file>
         <file name="dashboard.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/dashboard.js">
-          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="15" count="0" type="stmt"/>
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
         </file>
         <file name="sidebar.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/sidebar.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="12" count="6" type="stmt"/>
-        </file>
-        <file name="users.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/users.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="5" type="stmt"/>
         </file>
       </package>
       <package name="src.components.Footer">
@@ -147,7 +153,7 @@
         </file>
       </package>
       <package name="src.components.Logout">
-        <metrics statements="46" coveredstatements="1" conditionals="12" coveredconditionals="1" methods="12" coveredmethods="1"/>
+        <metrics statements="48" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <file name="login.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/login.js">
           <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
@@ -200,8 +206,10 @@
           <line num="125" count="0" type="stmt"/>
         </file>
         <file name="success.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/success.js">
-          <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-          <line num="4" count="13" type="cond" truecount="1" falsecount="1"/>
+          <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.components.Navbar">
@@ -232,8 +240,8 @@
         </file>
       </package>
       <package name="src.components.RegisterUser">
-        <metrics statements="140" coveredstatements="51" conditionals="54" coveredconditionals="6" methods="32" coveredmethods="6"/>
-        <file name="management.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/management.js">
+        <metrics statements="146" coveredstatements="14" conditionals="54" coveredconditionals="2" methods="31" coveredmethods="3"/>
+        <file name="Users.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/Users.js">
           <metrics statements="23" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="3"/>
           <line num="6" count="6" type="stmt"/>
           <line num="7" count="6" type="stmt"/>
@@ -260,31 +268,38 @@
           <line num="91" count="0" type="stmt"/>
         </file>
         <file name="registerUser.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/registerUser.js">
-          <metrics statements="117" coveredstatements="37" conditionals="52" coveredconditionals="4" methods="21" coveredmethods="3"/>
-          <line num="9" count="2" type="stmt"/>
-          <line num="11" count="13" type="stmt"/>
-          <line num="13" count="13" type="stmt"/>
+          <metrics statements="123" coveredstatements="0" conditionals="52" coveredconditionals="0" methods="20" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
           <line num="16" count="0" type="stmt"/>
-          <line num="18" count="13" type="cond" truecount="1" falsecount="1"/>
+          <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="19" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="21" count="0" type="stmt"/>
-          <line num="25" count="13" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
           <line num="27" count="0" type="stmt"/>
           <line num="28" count="0" type="stmt"/>
-          <line num="30" count="13" type="cond" truecount="1" falsecount="1"/>
+          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="31" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
           <line num="37" count="0" type="stmt"/>
-          <line num="40" count="13" type="stmt"/>
-          <line num="41" count="13" type="stmt"/>
-          <line num="42" count="13" type="stmt"/>
-          <line num="43" count="13" type="stmt"/>
-          <line num="44" count="13" type="stmt"/>
-          <line num="45" count="13" type="stmt"/>
-          <line num="47" count="13" type="stmt"/>
-          <line num="48" count="13" type="stmt"/>
-          <line num="52" count="13" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
           <line num="53" count="0" type="cond" truecount="0" falsecount="6"/>
           <line num="54" count="0" type="stmt"/>
           <line num="55" count="0" type="stmt"/>
@@ -307,14 +322,14 @@
           <line num="80" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="81" count="0" type="stmt"/>
           <line num="84" count="0" type="stmt"/>
-          <line num="88" count="13" type="stmt"/>
-          <line num="89" count="7" type="stmt"/>
-          <line num="90" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="93" count="13" type="stmt"/>
-          <line num="94" count="13" type="stmt"/>
-          <line num="100" count="13" type="stmt"/>
-          <line num="101" count="13" type="stmt"/>
-          <line num="102" count="13" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="93" count="0" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="100" count="0" type="stmt"/>
+          <line num="101" count="0" type="stmt"/>
+          <line num="102" count="0" type="stmt"/>
           <line num="103" count="0" type="stmt"/>
           <line num="104" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="105" count="0" type="stmt"/>
@@ -322,9 +337,9 @@
           <line num="107" count="0" type="cond" truecount="0" falsecount="4"/>
           <line num="108" count="0" type="stmt"/>
           <line num="109" count="0" type="stmt"/>
-          <line num="113" count="13" type="stmt"/>
-          <line num="114" count="13" type="stmt"/>
-          <line num="115" count="13" type="stmt"/>
+          <line num="113" count="0" type="stmt"/>
+          <line num="114" count="0" type="stmt"/>
+          <line num="115" count="0" type="stmt"/>
           <line num="116" count="0" type="stmt"/>
           <line num="117" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="118" count="0" type="stmt"/>
@@ -335,9 +350,9 @@
           <line num="124" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="125" count="0" type="stmt"/>
           <line num="126" count="0" type="stmt"/>
-          <line num="130" count="13" type="stmt"/>
-          <line num="131" count="13" type="stmt"/>
-          <line num="132" count="13" type="stmt"/>
+          <line num="130" count="0" type="stmt"/>
+          <line num="131" count="0" type="stmt"/>
+          <line num="132" count="0" type="stmt"/>
           <line num="133" count="0" type="stmt"/>
           <line num="134" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="135" count="0" type="stmt"/>
@@ -348,9 +363,9 @@
           <line num="141" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="142" count="0" type="stmt"/>
           <line num="143" count="0" type="stmt"/>
-          <line num="147" count="13" type="stmt"/>
-          <line num="148" count="13" type="stmt"/>
-          <line num="149" count="13" type="stmt"/>
+          <line num="147" count="0" type="stmt"/>
+          <line num="148" count="0" type="stmt"/>
+          <line num="149" count="0" type="stmt"/>
           <line num="150" count="0" type="stmt"/>
           <line num="151" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="152" count="0" type="stmt"/>
@@ -361,27 +376,26 @@
           <line num="158" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="159" count="0" type="stmt"/>
           <line num="160" count="0" type="stmt"/>
-          <line num="164" count="13" type="stmt"/>
+          <line num="164" count="0" type="stmt"/>
           <line num="165" count="0" type="stmt"/>
           <line num="166" count="0" type="stmt"/>
-          <line num="168" count="13" type="stmt"/>
+          <line num="168" count="0" type="stmt"/>
           <line num="169" count="0" type="stmt"/>
           <line num="170" count="0" type="stmt"/>
-          <line num="172" count="13" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
           <line num="173" count="0" type="stmt"/>
           <line num="174" count="0" type="stmt"/>
-          <line num="176" count="13" type="stmt"/>
+          <line num="176" count="0" type="stmt"/>
           <line num="177" count="0" type="stmt"/>
           <line num="178" count="0" type="stmt"/>
-          <line num="181" count="13" type="stmt"/>
-          <line num="183" count="0" type="stmt"/>
+          <line num="181" count="0" type="stmt"/>
           <line num="185" count="0" type="stmt"/>
           <line num="189" count="0" type="stmt"/>
           <line num="248" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.components.ResetPassword">
-        <metrics statements="47" coveredstatements="4" conditionals="18" coveredconditionals="1" methods="11" coveredmethods="4"/>
+        <metrics statements="49" coveredstatements="3" conditionals="18" coveredconditionals="0" methods="11" coveredmethods="3"/>
         <file name="emailExist.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="6" count="4" type="stmt"/>
@@ -392,8 +406,10 @@
           <line num="6" count="2" type="stmt"/>
         </file>
         <file name="error.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/error.js">
-          <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-          <line num="4" count="13" type="cond" truecount="1" falsecount="1"/>
+          <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
         </file>
         <file name="resetPassword.js" path="/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js">
           <metrics statements="43" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="7" coveredmethods="0"/>

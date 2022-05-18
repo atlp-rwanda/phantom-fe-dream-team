@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import user from '../../assets/user.png'
 import SuccefullPopup from '../Logout/success'
 import ErrorPopup from '../ResetPassword/error';
-import TopNavbar from '../Dashboard/TopNavbar';
+import LOGOUT from '../Logout/logout'
 
 const LOCAL_STORAGE_KEY = 'register'
 export default function register() {
@@ -25,7 +25,6 @@ export default function register() {
        const [error, setError] = useState(false);
        function close(){
          setError(false)
-         window.location.reload()
        }
        if (error==true){
          setTimeout(() => {
@@ -180,7 +179,7 @@ const handleOnChange3=(e)=>{
 
   return (
     <>
- <TopNavbar goto={e=>window.location.assign('/dashboard/Register/add')}/>
+    <LOGOUT/>
     <SuccefullPopup trigger={succeed}>
         <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
         <h3 className="px-10">User Created</h3>

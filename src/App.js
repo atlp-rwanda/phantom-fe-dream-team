@@ -17,7 +17,7 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
-
+import RegisterUser from "./components/RegisterUser/registerUser"
 function App() {
     const NavbarLayout = () => (
         <>
@@ -45,7 +45,7 @@ function App() {
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
            
               </Route>  
-          
+              <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>

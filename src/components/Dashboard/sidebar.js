@@ -38,7 +38,7 @@ function sidebar({ setRoute }) {
 
                         <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
 
-                            <Link className='flex' to="Register">
+                            <Link className='flex' to="Users">
                                 <GiArchiveRegister className='h-6 w-6' />
                                 <h1 className='md:hidden'>Register</h1>
                             </Link>
@@ -47,7 +47,7 @@ function sidebar({ setRoute }) {
 
                             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
 
-                                <Link className='flex' to="Users">
+                                <Link className='flex' to="User">
                                     <FaUsers className='h-6 w-6' />
                                     <h1 className='md:hidden'>Users</h1>
                                 </Link>

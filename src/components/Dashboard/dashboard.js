@@ -22,10 +22,10 @@ function Dashboard(props) {
             <Routes>
               <Route path="Routes/*" element={<RoutesDashboard />} />
               <Route path="Buses/*" element={<Buses />} />
-              <Route path="Register/" element={<Register />} />
+              <Route path="Users/" element={<Register />} />
               <Route path="Drivers/*" element={<Driver />} />
-              <Route path="Users/*" element={<Users />} />
-              <Route path="Register/add" element={<RegisterUser/>} />
+              <Route path="User/*" element={<Users />} />
+              <Route path="Register/AddUser" element={<RegisterUser/>} />
             </Routes>
   
       </section>

@@ -88,7 +88,7 @@ const cardElements = users.map((item) => {
 
   return (
       <>  
- <TopNavbar goto={e=>window.location.assign('/dashboard/Register/add')}/>
+ <TopNavbar goto={e=>window.location.assign('/dashboard/Register/AddUser')}/>
 
          {Elements}
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg justify-center text-center flex mt-10 mb-40 ">
@@ -128,7 +128,6 @@ const cardElements = users.map((item) => {
 </>
   )
 }
-
 
 
 

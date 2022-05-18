@@ -35,7 +35,7 @@ export default function register() {
   //  end
 function Upload(){
   document.getElementById("editPicture").innerHTML=`<label>
-  <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>Upload Picture</strong></label>`
+  <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required className="hidden"></input><strong>Upload Picture</strong></label>`
 }
 const [users,setUsers]=useState([])
 const [firstname,setFirstname]=useState('')
@@ -183,11 +183,11 @@ const handleOnChange3=(e)=>{
  <TopNavbar goto={e=>window.location.assign('/dashboard/Register/add')}/>
     <SuccefullPopup trigger={succeed}>
         <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
-        <h3 class="px-10">User Created</h3>
+        <h3 className="px-10">User Created</h3>
         </SuccefullPopup> 
         <ErrorPopup trigger={error}>
         <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
-        <h3 class="px-10">Please fill all input</h3>
+        <h3 className="px-10">Please fill all input</h3>
         </ErrorPopup> 
       
      <h1 className='text-center mt-[10px] text-2xl text-blue-700 font-Poppins'>Register Drivers & Operators</h1>
@@ -199,7 +199,7 @@ const handleOnChange3=(e)=>{
      </div>
      <div className='w-[500px] xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
        <div className='flex sm:flex-col'>
-         <label for="first_name" class="text-blue-700 text-xl mt-[55px] sm:sr-only">First name:</label>
+         <label htmlFor="first_name" className="text-blue-700 text-xl mt-[55px] sm:sr-only">First name:</label>
          <input 
          type='text' 
          placeholder='First name' 
@@ -211,7 +211,7 @@ const handleOnChange3=(e)=>{
        <p className="text-red-500">{message2}</p>
       <p className="text-green-700">{success2}</p>
        <div className='flex'>
-         <label for="last_name" class="text-blue-700 text-xl mt-6 sm:sr-only">Last name:</label>
+         <label htmlFor="last_name" className="text-blue-700 text-xl mt-6 sm:sr-only">Last name:</label>
          <input 
          type='text' 
          placeholder='Last name' 
@@ -222,7 +222,7 @@ const handleOnChange3=(e)=>{
        <p className="text-red-500">{message3}</p>
       <p className="text-green-700">{success3}</p>
        <div className='flex sm:justify-center'>
-         <label for="email" class="text-blue-700 text-xl mt-6 sm:sr-only">Email:</label>
+         <label htmlFor="email" className="text-blue-700 text-xl mt-6 sm:sr-only">Email:</label>
          <input 
          type='text' 
          placeholder='Email' 
@@ -233,7 +233,7 @@ const handleOnChange3=(e)=>{
        <p className="text-red-500">{message1}</p>
       <p className="text-green-700">{success1}</p>
        <div className='flex '>
-       <label for="email" class="text-blue-700 text-xl mt-6 sm:sr-only">Phone:</label>
+       <label htmlFor="email" className="text-blue-700 text-xl mt-6 sm:sr-only">Phone:</label>
          <input 
          type='text' 
          placeholder='Phone number' 
@@ -244,9 +244,9 @@ const handleOnChange3=(e)=>{
        <p className="text-red-500">{message4}</p>
       <p className="text-green-700">{success4}</p>
        <div className='flex'>
-         <label for="role" className="text-blue-700 text-xl mt-6 sm:sr-only">Role:</label>
+         <label htmlFor="role" className="text-blue-700 text-xl mt-6 sm:sr-only">Role:</label>
          <select  onChange={(e)=>setRole(e.target.value)} value={role}  className="border-2 border-blue-700 text-sm rounded-lg focus:ring-blue-700 focus:border-blue-700 block w-[337px] py-2 ml-[75px] mt-5 mb-10 shadow-b focus:outline-none sm:w-[250px] sm:ml-[15px]">
-          <option selected>Role</option>
+          <option defaultValue>Role</option>
           <option value="Admin">Admin</option>
           <option value="Driver">Driver</option>
           <option value="Operator">Operator</option>

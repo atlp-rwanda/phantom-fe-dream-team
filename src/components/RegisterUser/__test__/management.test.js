@@ -15,18 +15,11 @@ test('it should display First name', () => {
 test('it should display delete', () => {
   
   render( <Router><Management /> </Router>);
-  const linkElement = screen.getByText("Delete");
+  const linkElement = screen.getByText("Action");
   expect(linkElement).toBeInTheDocument;
 
 });
 
-test('it should display Register user', () => {
-  
-  render( <Router><Management /> </Router>);
-  const linkElement = screen.getByText("Register user");
-  expect(linkElement).toBeInTheDocument;
-
-});
 test('it should display Last name', () => {
   
   render( <Router><Management /> </Router>);

@@ -69,7 +69,7 @@ console.log('loggedin',loggedin)
       navigate("/dashboard");
     }
     else{
-      seterrorMessage('user not found')
+      seterrorMessage('user can not found')
     }
   }
 

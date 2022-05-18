@@ -18,7 +18,7 @@ export default function register() {
    if (succeed==true){
      setTimeout(() => {
        setSucceed(false)
-       navigate('/dashboard/Register')
+       navigate('/dashboard/Users')
      }, "2000")
    }
        //error popup
@@ -256,7 +256,7 @@ const handleOnChange3=(e)=>{
      </div>
      <div className='flex justify-center mb-10'>
      <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg' onClick={handlesubmit} >Register</button>
-     <Link to="/dashboard/Register">
+     <Link to="/dashboard/Users">
      <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-5'>Cancel</button>
      </Link>
      </div>

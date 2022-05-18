@@ -25,7 +25,7 @@ function Dashboard(props) {
               <Route path="Users/" element={<Register />} />
               <Route path="Drivers/*" element={<Driver />} />
               <Route path="User/*" element={<Users />} />
-              <Route path="Register/AddUser" element={<RegisterUser/>} />
+              <Route path="Users/AddUser" element={<RegisterUser/>} />
             </Routes>
   
       </section>

@@ -26,9 +26,11 @@ function TopNavbar({goto}) {
 
               <div className="flex sm:mt-10">
 
-                    <div onClick={goto}>
+                    <div>
+                      <Link to="#" onClick={goto}>
                         <img className="h-8 w-8 ml-[500px] mb-2 sm:mt-[-40px] sm:ml-2"
                           src={add} />
+                      </Link>
                     </div>
 
                   <div className="relative ml-2 sm:mt-[-40px]">

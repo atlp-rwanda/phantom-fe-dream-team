@@ -13,7 +13,7 @@ function Dashboard(props) {
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />
         <section className='flex flex-col basis-4/5'>
-          {/* <TopNavbar /> */}
+     
             <Routes>
             <Route path="/" element={<RoutesDashboard />} />
               <Route path="Routes/*" element={<RoutesDashboard />} />
@@ -21,7 +21,7 @@ function Dashboard(props) {
               <Route path="Drivers/*" element={<Drivers />} />
               <Route path="Users/*" element={<Users />} />
               <Route path="Roles/" element={<SetRoles/>} />
-              <Route path="Roles/add" element={<AddRole/>} />
+              <Route path="Roles/add" element={[<SetRoles/>,<AddRole/>]} />
             </Routes>
       </section>
     </div>

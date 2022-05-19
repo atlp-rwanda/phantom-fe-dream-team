@@ -15,7 +15,7 @@
     },
     {
       "id": 4,
-      "Role": "MANAGER",
+      "Role": "Managers",
       "Description": "Driver Description",
       "Permissions": {
         "AddEditDelOp": true,

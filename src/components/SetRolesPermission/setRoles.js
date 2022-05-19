@@ -11,7 +11,6 @@ import AddRole from "./AddRole";
 import {setPermission} from "../../redux/actions/index";
 import { info } from "autoprefixer";
 import TopNavbar from "../Dashboard/TopNavbar";
-
 function setRoles (){
 
 
@@ -156,22 +155,22 @@ const { loading } = useLoader();
         {!loading && (
       <div className="flex flex-col relative">
 
-        <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx m-4 border-black border-2 border-solid" >
-          <thead className="sm:hidden">
-            <tr className="mb-12 text-xl text-blue-700 border-solid border-2 border-black">
+        <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
+          <thead className="sm:text-sm">
+            <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
               <th className="">Role</th>
-              <th className="colspan=4" >Permissions</th>
-              <th className="colspan=2 " >Actions</th>
+              <th className=" colspan=4" >Permissions</th>
+              <th className="colspan=2  sm:hidden" >Actions</th>
             </tr>
           </thead>
           <tbody>
             {Infos && Infos.map((info) => (
-              setTimeout(() => {
+              setTimeout(() => { 
                 loadForm(info)
               }, "1000"),
-              <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 border-blue-600 drop-shadow-md hover:drop-shadow-2xl">
-                <td className="text-lg font-bold " onClick={()=>Editable(info.id)}><input type="text" id={'role'+info.id} placeholder={info.Role} readOnly />
-                  <h3>
+              <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
+                <td className="text-lg font-bold sm:text-sm sm:w-4 " onClick={()=>Editable(info.id)}><input type="text" id={'role'+info.id} placeholder={info.Role} readOnly />
+                  <h3 className="sm:text:sm">
                     Description: <br />
                     {info.Description}
                   </h3>
@@ -185,7 +184,7 @@ const { loading } = useLoader();
                   <td className="flex"><input type="checkbox" id={'Five' + info.id} className="mt-2 mr-2" />Update Bus status</td>
                   <td className="flex"><input type="checkbox" id={'Six' + info.id} className="mt-2 mr-2" />Update profile</td>
                 </td>
-                <td className='pl-8'>
+                <td className='pl-8 sm:flex'>
                   <td>
                     <button onClick={() => submitForm(info.id)}>
                       <Icon icon="carbon:change-catalog" color="green" />
@@ -202,7 +201,8 @@ const { loading } = useLoader();
           </tbody>
         </table>
       </div>
-       )} 
+      
+    )}  
     </>
   )
 }

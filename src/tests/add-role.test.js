@@ -3,37 +3,45 @@ import React from 'react';
 import { MemoryRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 import { Provider } from 'react-redux';
+import { act } from "react-dom/test-utils";
 import AddRole from '../components/SetRolesPermission/AddRole';
 
-test('renders ADD USER ROLE', () => {
-    render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
-    const linkElement = screen.getByText("ADD USER ROLE");
-    expect(linkElement).toBeInTheDocument;
-});
-
 test('renders User Role:', () => {
-    render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
-    const linkElement = screen.getByText("User Role:");
+    act(() => {
+        render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
+        const linkElement = screen.getByText("User Role:");
+       
+
+
     expect(linkElement).toBeInTheDocument;
 });
+})
 
 test('renders Permissions:', () => {
+    act(() => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
     const linkElement = screen.getByText("Permissions:");
     expect(linkElement).toBeInTheDocument;
 });
+})
 test('renders Select Permissions', () => {
+    act(() => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
     const linkElement = screen.getByText("Select Permissions");
     expect(linkElement).toBeInTheDocument;
 });
+})
 test('renders Cancel', () => {
+    act(() => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
     const linkElement = screen.getByText("Cancel");
     expect(linkElement).toBeInTheDocument;
 });
+})
 test('renders Save', () => {
+    act(() => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
     const linkElement = screen.getByText("Save");
     expect(linkElement).toBeInTheDocument;
 });
+})

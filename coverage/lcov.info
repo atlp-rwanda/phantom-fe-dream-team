@@ -1,7 +1,13 @@
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/App.js
 FN:22,App
 FN:23,(anonymous_1)
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js
+FN:21,App
+FN:22,(anonymous_1)
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNF:2
 FNH:0
 FNDA:0,App
@@ -24,16 +30,28 @@ DA:16,0
 DA:17,0
 DA:18,0
 DA:19,0
+<<<<<<< HEAD
 DA:23,0
 DA:24,0
 DA:30,0
 LF:21
+=======
+DA:20,0
+DA:22,0
+DA:23,0
+DA:29,0
+LF:22
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/index.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/index.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNF:0
 FNH:0
 DA:1,0
@@ -49,7 +67,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Register.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Register.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,Register
 FNF:1
 FNH:0
@@ -62,6 +84,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Signin.js
 FN:3,Signin
 FNF:1
@@ -85,10 +108,25 @@ LF:1
 LH:1
 BRDA:4,0,0,0
 BRDA:4,0,1,10
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/error.js
+FN:3,ErrorPopup
+FNF:1
+FNH:0
+FNDA:0,ErrorPopup
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRDA:5,0,0,0
+BRDA:5,0,1,0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:2
 BRH:1
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/skeletonUI.js
 FN:3,skeletonUI
 FNF:1
@@ -97,10 +135,23 @@ FNDA:8,skeletonUI
 DA:4,8
 LF:1
 LH:1
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/skeletonUI.js
+FN:3,skeletonUI
+FNF:1
+FNH:0
+FNDA:0,skeletonUI
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/succesfull.js
 FN:3,SuccefullPopup
 FNF:1
@@ -111,11 +162,29 @@ LF:1
 LH:1
 BRDA:4,0,0,0
 BRDA:4,0,1,10
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/succesfull.js
+FN:3,SuccefullPopup
+FNF:1
+FNH:0
+FNDA:0,SuccefullPopup
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRDA:5,0,0,0
+BRDA:5,0,1,0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:2
 BRH:1
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/useLoader.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/useLoader.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:8,(anonymous_2)
@@ -125,6 +194,7 @@ FNH:3
 FNDA:17,(anonymous_0)
 FNDA:8,(anonymous_1)
 FNDA:0,(anonymous_2)
+<<<<<<< HEAD
 FNDA:8,(anonymous_3)
 DA:3,3
 DA:4,17
@@ -136,11 +206,29 @@ DA:12,8
 DA:15,16
 LF:8
 LH:7
+=======
+FNDA:0,(anonymous_3)
+DA:1,0
+DA:3,0
+DA:4,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:12,0
+DA:15,0
+LF:9
+LH:0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Contact/Contact.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Contact/Contact.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,Contact
 FNF:1
 FNH:1
@@ -152,7 +240,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/Buses.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Buses.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:4,Buses
 FNF:1
 FNH:1
@@ -164,19 +256,29 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/Drivers.js
 FN:4,drivers
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Drivers.js
+FN:3,driver
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNF:1
-FNH:1
-FNDA:1,drivers
-DA:5,1
-LF:1
-LH:1
+FNH:0
+FNDA:0,driver
+DA:1,0
+DA:4,0
+LF:2
+LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/Home.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Home.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:4,Home
 FNF:1
 FNH:1
@@ -188,7 +290,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/RoutesDashboard.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/RoutesDashboard.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,RoutesDashboard
 FNF:1
 FNH:1
@@ -200,6 +306,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js
 FN:7,TopNavbar
 FNF:1
@@ -207,13 +314,40 @@ FNH:1
 FNDA:17,TopNavbar
 DA:8,17
 DA:9,17
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js
+FN:7,TopNavbar
+FNF:1
+FNH:1
+FNDA:7,TopNavbar
+DA:8,7
+DA:9,7
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 LF:2
 LH:2
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/add.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/User.js
+FN:5,User
+FNF:1
+FNH:0
+FNDA:0,User
+DA:1,0
+DA:2,0
+DA:6,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/add.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,add
 FNF:1
 FNH:1
@@ -225,6 +359,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/dashboard.js
 FN:11,Dashboard
 FNF:1
@@ -245,35 +380,68 @@ FNDA:6,Sidebar
 DA:10,6
 LF:1
 LH:1
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/dashboard.js
+FN:11,Dashboard
+FNF:1
+FNH:0
+FNDA:0,Dashboard
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:12,0
+LF:7
+LH:0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Dashboard/users.js
 FN:3,Users
 FNF:1
 FNH:1
 FNDA:1,Users
 DA:4,1
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/sidebar.js
+FN:10,sidebar
+FNF:1
+FNH:1
+FNDA:5,sidebar
+DA:11,5
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Footer/footer.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Footer/Footer.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,Footer
 FNF:1
 FNH:1
-FNDA:7,Footer
-DA:4,7
+FNDA:6,Footer
+DA:4,6
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Landingpage/Landingpage.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Landingpage/Landingpage.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:7,Landingpage
 FNF:1
 FNH:1
@@ -285,7 +453,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Landingpage/Services.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Landingpage/Services.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,Services
 FNF:1
 FNH:1
@@ -297,7 +469,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Logout/login.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/login.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,login
 FN:13,(anonymous_1)
 FNF:2
@@ -322,7 +498,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Logout/logout.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/logout.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:13,logout
 FN:16,(anonymous_4)
 FN:20,(anonymous_5)
@@ -392,7 +572,11 @@ BRF:10
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Logout/success.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/success.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,SuccefullPopup
 FNF:1
 FNH:0
@@ -408,7 +592,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Navbar/Navbar.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Navbar/Navbar.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,Navbar
 FN:48,(anonymous_4)
 FN:102,(anonymous_5)
@@ -434,7 +622,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/Navbar/operatorNav.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Navbar/operatorNav.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,OperatorNavbar
 FN:43,(anonymous_4)
 FN:97,(anonymous_5)
@@ -460,7 +652,291 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/Users.js
+FN:4,management
+FN:6,(anonymous_1)
+FN:18,(anonymous_2)
+FN:34,(anonymous_3)
+FN:41,(anonymous_4)
+FN:46,(anonymous_5)
+FN:70,(anonymous_6)
+FN:78,(anonymous_7)
+FN:79,(anonymous_8)
+FN:85,(anonymous_9)
+FN:91,(anonymous_10)
+FNF:11
+FNH:3
+FNDA:6,management
+FNDA:6,(anonymous_1)
+FNDA:0,(anonymous_2)
+FNDA:0,(anonymous_3)
+FNDA:0,(anonymous_4)
+FNDA:0,(anonymous_5)
+FNDA:0,(anonymous_6)
+FNDA:0,(anonymous_7)
+FNDA:0,(anonymous_8)
+FNDA:6,(anonymous_9)
+FNDA:0,(anonymous_10)
+DA:6,6
+DA:7,6
+DA:8,6
+DA:9,5
+DA:11,1
+DA:14,6
+DA:16,6
+DA:18,6
+DA:19,0
+DA:34,0
+DA:41,0
+DA:46,6
+DA:47,0
+DA:70,0
+DA:78,6
+DA:79,0
+DA:81,0
+DA:82,0
+DA:84,6
+DA:85,6
+DA:86,6
+DA:89,6
+DA:91,0
+LF:23
+LH:14
+BRDA:8,0,0,5
+BRDA:8,0,1,1
+BRF:2
+BRH:2
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/registerUser.js
+FN:10,register
+FN:15,close
+FN:19,(anonymous_5)
+FN:26,close
+FN:31,(anonymous_7)
+FN:36,Upload
+FN:52,(anonymous_9)
+FN:88,(anonymous_10)
+FN:93,(anonymous_11)
+FN:102,(anonymous_12)
+FN:115,(anonymous_13)
+FN:132,(anonymous_14)
+FN:149,(anonymous_15)
+FN:164,(anonymous_16)
+FN:168,(anonymous_17)
+FN:172,(anonymous_18)
+FN:176,(anonymous_19)
+FN:185,(anonymous_20)
+FN:189,(anonymous_21)
+FN:248,(anonymous_22)
+FNF:20
+FNH:0
+FNDA:0,register
+FNDA:0,close
+FNDA:0,(anonymous_5)
+FNDA:0,close
+FNDA:0,(anonymous_7)
+FNDA:0,Upload
+FNDA:0,(anonymous_9)
+FNDA:0,(anonymous_10)
+FNDA:0,(anonymous_11)
+FNDA:0,(anonymous_12)
+FNDA:0,(anonymous_13)
+FNDA:0,(anonymous_14)
+FNDA:0,(anonymous_15)
+FNDA:0,(anonymous_16)
+FNDA:0,(anonymous_17)
+FNDA:0,(anonymous_18)
+FNDA:0,(anonymous_19)
+FNDA:0,(anonymous_20)
+FNDA:0,(anonymous_21)
+FNDA:0,(anonymous_22)
+DA:1,0
+DA:2,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:13,0
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:37,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:47,0
+DA:48,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:84,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:93,0
+DA:94,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:181,0
+DA:185,0
+DA:189,0
+DA:248,0
+LF:123
+LH:0
+BRDA:18,0,0,0
+BRDA:18,0,1,0
+BRDA:30,1,0,0
+BRDA:30,1,1,0
+BRDA:53,2,0,0
+BRDA:53,2,1,0
+BRDA:53,3,0,0
+BRDA:53,3,1,0
+BRDA:53,3,2,0
+BRDA:53,3,3,0
+BRDA:60,4,0,0
+BRDA:60,4,1,0
+BRDA:60,5,0,0
+BRDA:60,5,1,0
+BRDA:60,5,2,0
+BRDA:60,5,3,0
+BRDA:60,5,4,0
+BRDA:60,5,5,0
+BRDA:80,6,0,0
+BRDA:80,6,1,0
+BRDA:90,7,0,0
+BRDA:90,7,1,0
+BRDA:104,8,0,0
+BRDA:104,8,1,0
+BRDA:107,9,0,0
+BRDA:107,9,1,0
+BRDA:107,10,0,0
+BRDA:107,10,1,0
+BRDA:117,11,0,0
+BRDA:117,11,1,0
+BRDA:120,12,0,0
+BRDA:120,12,1,0
+BRDA:120,13,0,0
+BRDA:120,13,1,0
+BRDA:124,14,0,0
+BRDA:124,14,1,0
+BRDA:134,15,0,0
+BRDA:134,15,1,0
+BRDA:137,16,0,0
+BRDA:137,16,1,0
+BRDA:137,17,0,0
+BRDA:137,17,1,0
+BRDA:141,18,0,0
+BRDA:141,18,1,0
+BRDA:151,19,0,0
+BRDA:151,19,1,0
+BRDA:154,20,0,0
+BRDA:154,20,1,0
+BRDA:154,21,0,0
+BRDA:154,21,1,0
+BRDA:158,22,0,0
+BRDA:158,22,1,0
+BRF:52
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,emailExist
 FN:6,(anonymous_1)
 FNF:2
@@ -475,7 +951,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,emailSent
 FNF:1
 FNH:1
@@ -487,7 +967,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/error.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/error.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:3,ErrorPopup
 FNF:1
 FNH:0
@@ -503,7 +987,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:10,resetPassword
 FN:12,(anonymous_4)
 FN:20,(anonymous_5)
@@ -585,6 +1073,7 @@ BRF:16
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/SetRolesPermission/AddRole.js
 FN:13,AddRole
 FN:27,submitForm
@@ -601,13 +1090,213 @@ FNH:1
 FNDA:11,AddRole
 FNDA:0,submitForm
 FNDA:0,(anonymous_2)
-FNDA:0,close
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/Signin.js
+FN:14,(anonymous_3)
+FN:17,(anonymous_4)
+FN:33,check
+FN:41,formSubmit
+FN:77,(anonymous_7)
+FN:84,(anonymous_8)
+FN:96,(anonymous_9)
+FNF:7
+FNH:0
+FNDA:0,(anonymous_3)
 FNDA:0,(anonymous_4)
-FNDA:0,(anonymous_5)
-FNDA:0,(anonymous_6)
+FNDA:0,check
+FNDA:0,formSubmit
 FNDA:0,(anonymous_7)
 FNDA:0,(anonymous_8)
 FNDA:0,(anonymous_9)
+DA:1,0
+DA:2,0
+DA:3,0
+DA:4,0
+DA:5,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:30,0
+DA:31,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:39,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:54,0
+DA:56,0
+DA:58,0
+DA:59,0
+DA:64,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:72,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:91,0
+DA:96,0
+LF:53
+LH:0
+BRDA:34,0,0,0
+BRDA:34,0,1,0
+BRDA:49,1,0,0
+BRDA:49,1,1,0
+BRDA:50,2,0,0
+BRDA:50,2,1,0
+BRDA:54,3,0,0
+BRDA:54,3,1,0
+BRDA:58,4,0,0
+BRDA:58,4,1,0
+BRDA:58,5,0,0
+BRDA:58,5,1,0
+BRDA:68,6,0,0
+BRDA:68,6,1,0
+BRDA:103,7,0,0
+BRDA:103,7,1,0
+BRDA:104,8,0,0
+BRDA:104,8,1,0
+BRDA:116,9,0,0
+BRDA:116,9,1,0
+BRDA:125,10,0,0
+BRDA:125,10,1,0
+BRDA:138,11,0,0
+BRDA:138,11,1,0
+BRF:24
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/Successful.js
+FN:3,SuccefullPopup
+FNF:1
+FNH:0
+FNDA:0,SuccefullPopup
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRDA:5,0,0,0
+BRDA:5,0,1,0
+BRF:2
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/error.js
+FN:3,ErrorPopup
+FNF:1
+FNH:0
+FNDA:0,ErrorPopup
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRDA:5,0,0,0
+BRDA:5,0,1,0
+BRF:2
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/skeletonUI.js
+FN:3,skeletonUI
+FNF:1
+FNH:0
+FNDA:0,skeletonUI
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/useLoader.js
+FN:3,(anonymous_0)
+FN:6,(anonymous_1)
+FN:8,(anonymous_2)
+FN:12,(anonymous_3)
+FNF:4
+FNH:0
+FNDA:0,(anonymous_0)
+FNDA:0,(anonymous_1)
+FNDA:0,(anonymous_2)
+FNDA:0,(anonymous_3)
+DA:1,0
+DA:3,0
+DA:4,0
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:12,0
+DA:15,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/footer/footer.js
+FN:3,Footer
+FNF:1
+FNH:0
+FNDA:0,Footer
+DA:1,0
+DA:2,0
+DA:4,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/changePassword.js
+FN:11,ChangePassword
+FN:12,(anonymous_4)
+FN:17,Submit
+FN:40,close
+FN:45,(anonymous_7)
+FN:85,(anonymous_8)
+FN:92,(anonymous_9)
+FN:96,(anonymous_10)
+FNF:8
+FNH:0
+FNDA:0,ChangePassword
+FNDA:0,(anonymous_4)
+FNDA:0,Submit
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
+FNDA:0,close
+FNDA:0,(anonymous_7)
+FNDA:0,(anonymous_8)
+FNDA:0,(anonymous_9)
+<<<<<<< HEAD
 DA:14,11
 DA:15,10
 DA:16,10
@@ -808,6 +1497,8 @@ FNDA:0,close
 FNDA:0,(anonymous_7)
 FNDA:0,(anonymous_8)
 FNDA:0,(anonymous_9)
+=======
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNDA:0,(anonymous_10)
 DA:1,0
 DA:2,0
@@ -872,7 +1563,11 @@ BRF:17
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/updateProfile/currentMap.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/currentMap.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,CurrentMap
 FNF:1
 FNH:0
@@ -894,7 +1589,11 @@ BRF:4
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/updateProfile/editProfile.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/editProfile.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:11,EditProfile
 FN:15,(anonymous_4)
 FN:23,ValidateEmail
@@ -1013,7 +1712,11 @@ BRF:22
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/components/updateProfile/profile.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/profile.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:10,Profile
 FN:11,(anonymous_4)
 FNF:2
@@ -1046,7 +1749,11 @@ BRF:4
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/store.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/store.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNF:0
 FNH:0
 DA:5,3
@@ -1058,16 +1765,41 @@ BRF:2
 BRH:1
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/index.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/index.js
+FN:1,(anonymous_0)
+FN:6,(anonymous_1)
+FNF:2
+FNH:0
+FNDA:0,(anonymous_0)
+FNDA:0,(anonymous_1)
+DA:1,2
+DA:2,0
+DA:6,2
+DA:7,0
+LF:4
+LH:2
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/loginActions.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:1,(anonymous_0)
 FN:6,(anonymous_1)
 FN:11,(anonymous_2)
 FNF:3
 FNH:0
 FNDA:0,(anonymous_0)
+<<<<<<< HEAD
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
 DA:1,4
+=======
+DA:1,1
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 DA:2,0
 DA:6,4
 DA:7,0
@@ -1079,7 +1811,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/actions/resetAction.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/resetAction.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
@@ -1093,7 +1829,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/constants/resetActionType.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/constants/resetActionType.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FNF:0
 FNH:0
 DA:1,4
@@ -1103,6 +1843,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/PermissionReducer.js
 FN:6,(anonymous_0)
 FNF:1
@@ -1118,10 +1859,26 @@ DA:9,9
 DA:10,9
 DA:11,9
 DA:13,9
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/LoginReducer.js
+FN:9,(anonymous_0)
+FNF:1
+FNH:1
+FNDA:3,(anonymous_0)
+DA:3,1
+DA:4,1
+DA:7,1
+DA:9,1
+DA:10,3
+DA:11,3
+DA:12,3
+DA:14,0
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 DA:15,0
 DA:16,0
 DA:17,0
 DA:18,0
+<<<<<<< HEAD
 DA:19,0
 DA:21,0
 DA:22,0
@@ -1152,6 +1909,27 @@ BRH:2
 end_of_record
 TN:
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/authReducer.js
+=======
+DA:20,0
+DA:21,0
+DA:25,3
+LF:15
+LH:8
+BRDA:3,0,0,1
+BRDA:3,0,1,0
+BRDA:9,1,0,3
+BRDA:12,2,0,0
+BRDA:12,2,1,3
+BRDA:14,3,0,0
+BRDA:14,3,1,0
+BRDA:14,4,0,0
+BRDA:14,4,1,0
+BRF:9
+BRH:3
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/authReducer.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:11,(anonymous_0)
 FN:13,(anonymous_1)
 FN:24,(anonymous_2)
@@ -1179,6 +1957,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/changepassword.js
 FN:4,(anonymous_0)
 FNF:1
@@ -1197,11 +1976,35 @@ LH:5
 BRDA:4,0,0,9
 BRDA:6,1,0,0
 BRDA:6,1,1,9
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/changepassword.js
+FN:4,(anonymous_0)
+FNF:1
+FNH:1
+FNDA:3,(anonymous_0)
+DA:3,1
+DA:4,1
+DA:5,3
+DA:6,3
+DA:8,0
+DA:9,0
+DA:10,0
+DA:12,3
+LF:8
+LH:5
+BRDA:4,0,0,3
+BRDA:6,1,0,0
+BRDA:6,1,1,3
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 BRF:3
 BRH:2
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/contactReducer.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/contactReducer.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -1219,7 +2022,11 @@ BRF:3
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/counterReducer.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/counterReducer.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -1241,17 +2048,28 @@ BRF:5
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/index.js
 FNF:0
 FNH:0
 DA:9,3
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/index.js
+FNF:0
+FNH:0
+DA:10,1
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/resetReducers.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/resetReducers.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
@@ -1271,7 +2089,11 @@ BRF:3
 BRH:2
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/andela/Desktop/phantom-fe-dream-team/src/redux/reducers/updateProfile.js
+=======
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/updateProfile.js
+>>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 FN:6,(anonymous_0)
 FNF:1
 FNH:1

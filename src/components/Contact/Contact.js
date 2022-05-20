@@ -8,7 +8,7 @@ function Contact() {
       <div className="text-4xl mb-5 text-center">
         <h1 className="text-blue-800 font-bold">Get in touch with us</h1>
       </div>
-      <form action="" className="border-solid border-2 mb-5 rounded-lg flex justify-around md:flex-col md:items-center xs:flex-col xs:items-center ">
+      <form action="" className="border-solid border-2 mb-5 rounded-lg  flex justify-around md:flex-col md:items-center xs:flex-col xs:items-center ">
 
 
         <div className="flex flex-col rounded-none m-3" >
@@ -26,7 +26,7 @@ function Contact() {
 
               <Icon icon="akar-icons:envelope" width="36" />
 
-              <h2 className=" text-xl ml-3 ">contact@phanthom.com</h2>
+              <h2 className=" text-xl ml-3 ">contact@phantom.com</h2>
             </div>
             <div className="flex mr-5 mt-5">
               <Icon icon="fluent:call-24-regular" width="36" />
@@ -62,7 +62,7 @@ function Contact() {
             </div>
 
             <div className="flex">
-              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="27.5" rows="10" className="font-sans rounded-md mt-3 h-20 w-full border-solid border-2 Class Properties resize-none"></textarea>
+              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="22" rows="10" className="rounded-md mt-3 h-20 w-full border-solid border-2 Class Properties resize-none"></textarea>
             </div>
             <div className="flex">
               <button type="button" className="mt-3 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs ">Send</button>

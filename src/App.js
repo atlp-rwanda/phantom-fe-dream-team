@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Signin from "./components/Signin";
+import Signin from "./components/Signin/Signin";
 import Register from "./components/Register";
 import Services from "./components/Landingpage/Services";
 import Email from './components/ResetPassword/emailExist'
@@ -17,6 +17,7 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
+import RegisterUser from "./components/RegisterUser/registerUser"
 
 
 function App() {
@@ -44,10 +45,11 @@ function App() {
           <Route exact path="/profile" element={[<Profile />]}></Route>
           <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
           <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
-        </Route>
-        <Route exact path="/logout" element={<Logout />}></Route>
-        <Route exact path="/dashboard/*" element={<Dashboard />} />
-      </Routes>
+          </Route>  
+              <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
+              <Route exact path="/logout" element={<Logout />}></Route>  
+              <Route exact path="/dashboard/*" element={<Dashboard />} />      
+            </Routes>
 {/* 
       <Footer /> */}
     </BrowserRouter>

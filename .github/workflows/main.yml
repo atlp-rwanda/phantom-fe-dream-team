@@ -1,43 +1,50 @@
-name: react CI/CD
-
+name: build
 on:
   push:
-    branches: [develop,ch-configure-codeclimate-#27 ]
-
+    branches:
+      - develop , ch-configure-codeclimate-#27 
+    tags:
+      - '!*' # Do not execute on tags
+    paths:
+      - src/*
+      - test/*
+      - '*.json'
+      - yarn.lock
+  pull_request:
+    paths:
+      - '!*.MD'
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  test:
     strategy:
       matrix:
-        node-version: [16.x]
+        platform: [ ubuntu-latest, macOS-latest ]
+        node: [16.x]
+    name: test/node ${{ matrix.node }}/${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm i
-      - run: npm run build --if-present
-
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: ${{ matrix.node }}
+    - run: npm install
+    - run: npm install
+    - run: npm build
+    - run: npm test
   coverage:
-    needs: [build]
+    needs: [ test ]
     name: coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm i
-      - uses: paambaati/codeclimate-action@v2.5.0
-        env:
-          CI: "true"
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-        with:
-          debug: true
-          coverageCommand: npm run coverage
-      
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: [16.x]
+    - run: npm install 
+    - run: npm install
+    - run: npm build
+    - uses: paambaati/codeclimate-action@v2.2.4
+      env:
+        CC_TEST_REPORTER_ID: 3b83d5ce2de2c20057beb6a86114483a52f127baac5cf24ee254fd34b2c88c81
+      with:
+        coverageCommand: npm run coverage
+

@@ -43,7 +43,7 @@ export default function logout() {
         }, "2000")
       }
   return (
-    <div className='mb-80'>
+    <div className='mb-20'>
     {loading && <SkeletonUI />}
     {!loading && (
       <div>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-
-function drivers() {
+function driver() {
   return (
 
     <div>drivers</div>
   )
 }
-export default drivers;
+
+export default driver;

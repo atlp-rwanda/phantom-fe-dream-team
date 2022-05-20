@@ -44,7 +44,7 @@ function Footer() {
 
         <div className='bg-blue-700'> 
 
-          <h2 className="text-center text-white text-md mt-5 pb-4 sm:text-sm"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
+          <h2 className="text-center text-white text-md mt-5 pb-4 sm:text-sm"><span>&copy;</span>All Rights Reserved By Phantom 2022</h2>
 
         </div>
       </footer>

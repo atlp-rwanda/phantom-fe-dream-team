@@ -1,4 +1,4 @@
-name: build
+name: react CI/CD
 on:
   push:
     branches:

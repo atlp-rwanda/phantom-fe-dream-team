@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import Dashboard from './components/Dashboard/dashboard';
 import Sidebar from './components/Dashboard/sidebar';
 import TopNavbar from './components/Dashboard/TopNavbar';
 import { MemoryRouter as Router } from 'react-router-dom';
@@ -37,11 +36,7 @@ test('renders Buses', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
-test('renders Drivers', () => {
-  render(<Router><Sidebar /></Router>);
-  const linkElement = screen.getByText("Drivers");
-  expect(linkElement).toBeInTheDocument;
-});
+
 
 
 test('renders Users ', () => {

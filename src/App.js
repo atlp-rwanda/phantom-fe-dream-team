@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landingpage from "./components/Landingpage/Landingpage";
 import Contact from "./components/Contact/Contact";
-import Signin from "./components/Signin";
+import Signin from "./components/Signin/Signin";
 import Register from "./components/Register";
 import Services from "./components/Landingpage/Services";
 import Email from './components/ResetPassword/emailExist'

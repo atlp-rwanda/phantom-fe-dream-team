@@ -8,7 +8,7 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 function Sidebar({ setRoute }) {
     return (
-        <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-screen gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
+        <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-full gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
             <div className='flex flex-wrap mt-3'>
                 <img className='h-12 w-12 gap-2 '
                     src={username} />

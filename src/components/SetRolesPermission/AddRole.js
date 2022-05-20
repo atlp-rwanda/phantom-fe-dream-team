@@ -10,11 +10,13 @@ import TopNavbar from "../Dashboard/TopNavbar";
 import { setPermission } from "../../redux/actions/index";
 import data from './data.json';
 import { info } from "autoprefixer";
+import SetRoles from "./setRoles";
 function AddRole() {
   const { loading,setLoading } = useLoader();
   const [succeed, setSucceed] = useState(false);
   const [error, setError] = useState(false);
   const [Role, setRole] = useState('');
+  const [Description, setDescription] = useState('');
   const [Permissions, setPermissions] = [{
     AddEditDelOp: useState(false),
     viewDelOp: useState(false),
@@ -41,8 +43,11 @@ function AddRole() {
     Permissions.UpdateBusInfo = FiveInput.checked ? true : false;
     const SixInput = document.getElementById('Six')
     Permissions.UpdateProf = SixInput.checked ? true : false;
-
-    const role = { Role, Permissions };
+    if(Role=='' || Description ==''){
+      document.getElementById("error").innerHTML ='Role and Role description must filled !!!';
+    }
+    else{
+    const role = { Role,Description, Permissions };
 
     fetch('http://localhost:8000/Permissions/', {
       method: 'POST',
@@ -52,6 +57,7 @@ function AddRole() {
       window.location.assign("../Roles")
       setSucceed(true);
     })
+  }
   }
   function close() {
     setSucceed(false)
@@ -70,19 +76,50 @@ function AddRole() {
       {/* <TopNavbar goto={e=>window.location.assign('/dashboard/Roles/add')}/> */}
       {/* {loading && <SkeletonUI />}
       {!loading && ( */}
-        <div className=" w-[500px] h-[400px] md: block justify-start sm:text-sm bg-gray-200   absolute right-[400px] top-[80px] sm:right-0">
+      <div className="opacity-80 blur-[1px]">
+      <SetRoles/>
+      </div>
+        <div className=" w-[500px] h-[440px] md: block justify-start sm:text-sm bg-gray-200  absolute right-[400px] top-[80px] sm:right-0 border-2 ring-2 ring-blue-600 ring-inset">
           <div className="flex pt-8">
             <div className="flex-col ml-12 font-bold text-black text-lg">
               <h3 className="mt-2">User Role:</h3>
-              <h3 className="mt-2">Permissions:</h3>
+              <h3 className="mt-2">Description:</h3>
             </div>
             <div className="pl-4">
               <div className='m-2 '>
                 <input type="text" id='' placeholder='Enter Role Name' value={Role}
                   onChange={(e) => setRole(e.target.value)}
                   className='border border-solid-2 border-blue-600 px-2 rounded' />
-              </div>
-              <div>
+    <textarea
+    value={Description}
+    onChange={(e) => setDescription(e.target.value)}
+      class="
+        form-control
+        block
+        resize-none
+        w-full
+        px-2
+        mt-4
+        h-[60px]
+        w-[220px]
+        sm:w-[195px]
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+      id="exampleFormControlTextarea1"
+      rows="3"
+      placeholder="description for the role"
+    ></textarea>
+  </div>
+              <div className="ml-2">
 
                 <h1 className="font-bold text-blue-700"> Select Permissions</h1>
                 <table m-0>
@@ -102,6 +139,7 @@ function AddRole() {
 
             </div>
           </div>
+          <p id='error' className="not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
           <div className="flex mt-12 ml-32">
             <div className="pr-9">
 

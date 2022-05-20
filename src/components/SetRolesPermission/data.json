@@ -15,16 +15,29 @@
     },
     {
       "id": 4,
-      "Role": "Managers",
+      "Role": "MANAGER",
       "Description": "Driver Description",
+      "Permissions": {
+        "AddEditDelOp": false,
+        "viewDelOp": true,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": false,
+        "UpdateProf": true
+      }
+    },
+    {
+      "Role": "President",
+      "Description": "Chief of PHANTOM",
       "Permissions": {
         "AddEditDelOp": true,
         "viewDelOp": true,
         "AssgnRemDriv": true,
-        "addRemRoute": true,
-        "UpdateBusInfo": true,
-        "UpdateProf": true
-      }
+        "addRemRoute": false,
+        "UpdateBusInfo": false,
+        "UpdateProf": false
+      },
+      "id": 5
     }
   ]
 }

@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch } from 'react-redux';
-import user from '../img/random.jpg';
-import SuccefullPopup from '../succesfull';
-import { Route, Link, Routes, useLocation } from "react-router-dom";
-import ErrorPopup from "../error";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
-import AddRole from "./AddRole";
-import {setPermission} from "../../redux/actions/index";
-import { info } from "autoprefixer";
+import {setPermission,deleteRole} from "../../redux/actions/index";
 import TopNavbar from "../Dashboard/TopNavbar";
 function setRoles (){
-
-
   const dispatch = useDispatch();
+  const [loading,setLoading]=useState(true)
   const [Infos, setData] = useState(null);
   const [Permissions, setPermissions] = [{
     AddEditDelOp:useState(false),
@@ -32,13 +25,9 @@ function setRoles (){
       })
       .then(data => {
         setData(data);
+        setLoading(false);
       })
   }, [])
-//
-
-// Permissions.map((Perm)=>(
-//     loadForm()
-//   ))
 
 function loadForm(info) {
   const Perm= info.Permissions;
@@ -61,27 +50,7 @@ function loadForm(info) {
   if (Perm.UpdateProf == true) {
       document.getElementById('Six' + (info.id)).checked = true;
     }     
-    
-  // let i, j;
-  // for (i = 0; i < 3; i++) {
-  //   for (j = 0; j < 5; j++) {
-  //     if ( == 'true') {
-  //       if (j == 0) {
-  //         document.getElementById('read' + (i + 1)).checked = true;
-  //       }
-  //       else if (j == 1) {
-  //         document.getElementById('add' + (i + 1)).checked = true;
-  //       }
-  //       else if (j == 2) {
-  //         document.getElementById('edit' + (i + 1)).checked = true;
-  //       }
-  //       else if (j == 3) {
-  //         document.getElementById('delete' + (i + 1)).checked = true;
-  //       }
-
-  //     }
-  //   }
-  // }
+  
 }
 
 
@@ -120,42 +89,30 @@ if(Role!=''){
   })
 }
 else{
-  fetch('http://localhost:8000/Permissions/'+id, {
-    method: 'PATCH',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(
-      {
-        "Permissions": {"AddEditDelOp":Permissions.AddEditDelOp,"viewDelOp":Permissions.viewDelOp, "AssgnRemDriv":Permissions.AssgnRemDriv,"addRemRoute":Permissions.addRemRoute,"UpdateBusInfo":Permissions.UpdateBusInfo,"UpdateProf":Permissions.UpdateProf}
-      }
-    )
-  }).then(() => {
-    console.log('permissions updated');
-  })
+  var NPermissions ={
+    "Permissions": {"AddEditDelOp":Permissions.AddEditDelOp,"viewDelOp":Permissions.viewDelOp, "AssgnRemDriv":Permissions.AssgnRemDriv,"addRemRoute":Permissions.addRemRoute,"UpdateBusInfo":Permissions.UpdateBusInfo,"UpdateProf":Permissions.UpdateProf}
+  }
+dispatch(setPermission(NPermissions,id));
+window.reload()
 }
 }
 
 
 function Delete(id){
-  fetch('http://localhost:8000/Permissions/' + id, {
-    method: 'DELETE'
-  }).then(() => {
-    window.reload()
-  }) 
+  dispatch(deleteRole(id));
+  window.reload();
 }
 function Editable(id){
   document.getElementById('role'+id).readOnly = false;
   
 }
-const { loading } = useLoader();
+
   return (
     <>
     <TopNavbar goto={e=>window.location.assign('/dashboard/Roles/add')}/>
+      <div className="flex flex-col relative p-4">
 
-      {loading && <SkeletonUI />}
-        {!loading && (
-      <div className="flex flex-col relative">
-
-        <table id='Wtable' className=" table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
+        <table id='Wtable' className="table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
           <thead className="sm:text-sm">
             <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
               <th className="">Role</th>
@@ -164,13 +121,14 @@ const { loading } = useLoader();
             </tr>
           </thead>
           <tbody>
+          {loading && <SkeletonUI/>}
             {Infos && Infos.map((info) => (
               setTimeout(() => { 
                 loadForm(info)
               }, "1000"),
               <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
-                <td className="text-lg font-bold sm:text-sm sm:w-4 " onClick={()=>Editable(info.id)}><input type="text" id={'role'+info.id} placeholder={info.Role} readOnly />
-                  <h3 className="sm:text:sm">
+                <td className="text-lg font-bold  sm:text-sm sm:w-4 " onClick={()=>Editable(info.id)}><input type="text" id={'role'+info.id} placeholder={info.Role} className="font-bold placeholder-black" readOnly />
+                  <h3 className="sm:text:sm text-slate-600">
                     Description: <br />
                     {info.Description}
                   </h3>
@@ -200,9 +158,7 @@ const { loading } = useLoader();
             ))}
           </tbody>
         </table>
-      </div>
-      
-    )}  
+      </div> 
     </>
   )
 }

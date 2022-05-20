@@ -21,7 +21,7 @@ function Dashboard(props) {
               <Route path="Drivers/*" element={<Drivers />} />
               <Route path="Users/*" element={<Users />} />
               <Route path="Roles/" element={<SetRoles/>} />
-              <Route path="Roles/add" element={[<SetRoles/>,<AddRole/>]} />
+              <Route path="Roles/add" element={<AddRole/>} />
             </Routes>
       </section>
     </div>

@@ -5,7 +5,7 @@ import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
-import ErrorPopup from '../error';
+import ErrorPopup from './error';
 
 export default function resetPassword() {
   const { loading } = useLoader();

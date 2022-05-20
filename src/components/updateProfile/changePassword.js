@@ -53,7 +53,7 @@ function ChangePassword() {
       {loading && <SkeletonUI />}
       {!loading && (
         <div className="pt-32">
-          <h1 className="pl-[260px] sm:pl-[0] not-italic subpixel-antialiased font-sans text-xl text-blue-600 text-center font-bold ">Change your password</h1>
+          <h1 className="pl-[260px] sm:pl-[0] not-italic subpixel-antialiased  text-xl text-blue-600 text-center font-bold ">Change your password</h1>
           <div class="grid grid-cols-2  content-center">
             <div  className="flex flex-col md:hidden justify-center items-center  pt-0 flex flex-col justify-center items-center flex flex-col justify-center items-center  pt-10 flex flex-col justify-center items-center  pt-0 mb-24   ">
             <img className="h-64 w-64 rounded-full " src={user} alt="user icon"  />
@@ -78,7 +78,7 @@ function ChangePassword() {
   </span>
   <input type="password" id="Npassword2" class="mt-0 px-5 w-64 py-1 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1 sm: " placeholder="************" />
 </label>
-<p id='error' className="pl-0 md:not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold"></p>
+<p id='error' className="pl-0 md:not-italic subpixel-antialiased text-sm  text-ml text-red-500 text-center font-bold"></p>
 </div>
 <div class=" border-t-2 md:border-t-0   border-indigo-500 ...  mr-32 lg:mr-0"></div>
 <p className="p-8 flex text-sm sm:text-[8px]">

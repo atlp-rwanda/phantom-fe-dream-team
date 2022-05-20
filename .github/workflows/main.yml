@@ -19,8 +19,8 @@ jobs:
         node-version: ${{ matrix.node }}
     - run: npm install
     - run: npm install
-    - run: npm build
-    - run: npm test
+    - run: npm run build
+    - run: npm run test
   coverage:
     needs: [ test ]
     name: coverage
@@ -32,7 +32,7 @@ jobs:
          node-version: ${{ matrix.node }}
     - run: npm install 
     - run: npm install
-    - run: npm build
+    - run: npm run build
     - uses: paambaati/codeclimate-action@v2.2.4
       env:
         CC_TEST_REPORTER_ID: 3b83d5ce2de2c20057beb6a86114483a52f127baac5cf24ee254fd34b2c88c81

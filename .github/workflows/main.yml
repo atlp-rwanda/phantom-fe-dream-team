@@ -2,7 +2,7 @@ name: react CI/CD
 on:
   push:
     branches:
-      - develop , ch-configure-codeclimate-#27 
+      [ develop , ch-configure-codeclimate-#27]
  
 jobs:
   test:

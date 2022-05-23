@@ -4,23 +4,12 @@ import { Route, Link, Routes } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteRoute } from '../../redux/reducers/routesSlice';
-import UpdateRoute from './UpdateRoute';
-import AddnewRoutes from './AddnewRoutes';
-import DeleteRoute from './DeleteRoute';
 function RoutesDashboard() {
   const dispatch=useDispatch();
   const routeList = useSelector((state) => state.routesReducer.value);
 
   return (
     <div className='mt-20'>
-      <Routes>
-
-        <Route path="add" element={<AddnewRoutes />}></Route>
-        <Route path="update" element={<UpdateRoute />}></Route>
-        <Route path="delete" element={<DeleteRoute />}></Route>
-      </Routes>
-
-
       <table>
         <tr>
           <th>Route no</th>

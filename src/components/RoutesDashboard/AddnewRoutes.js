@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from "react";
 import { addRoute } from '../../redux/reducers/routesSlice';
-import routes from '../../assets/bus.png';
 import {  useDispatch } from "react-redux";
 function AddnewRoutes() {
   const dispatch = useDispatch();

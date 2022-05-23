@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1653301332264" clover="3.2.0">
-  <project timestamp="1653301332264" name="All files">
+<coverage generated="1653301632749" clover="3.2.0">
+  <project timestamp="1653301632750" name="All files">
     <metrics statements="15" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="1" elements="23" coveredelements="9" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
     <file name="AddnewRoutes.js" path="/Users/andelarwanda/Desktop/final-project/final-app/phantom-fe-dream-team/src/components/RoutesDashboard/AddnewRoutes.js">
       <metrics statements="15" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="1"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="33" count="0" type="stmt"/>
-      <line num="44" count="0" type="stmt"/>
-      <line num="55" count="0" type="stmt"/>
-      <line num="66" count="0" type="stmt"/>
-      <line num="78" count="0" type="stmt"/>
-      <line num="89" count="0" type="stmt"/>
-      <line num="103" count="0" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="77" count="0" type="stmt"/>
+      <line num="88" count="0" type="stmt"/>
+      <line num="102" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>

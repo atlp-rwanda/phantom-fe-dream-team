@@ -1,10 +1,11 @@
 import React from 'react'
+import BUSES from '../RegisterBuses/buses';
 
 
 function Buses() {
   return (
 
-    <div>Buses</div>
+   <BUSES/>
   )
 }
 

@@ -7,7 +7,7 @@ export default function emailSent() {
     <form className='relative w-full '>
     <div className='flex justify-center text-center mt-40 mb-20 lg:flex md:flex'>
      <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden' />
-     <div className='w-1/3 lg:w-1/3 xs:w-[300px] 2xl:shadow-b '>
+     <div className='w-1/3 xs:w-[300px] 2xl:shadow-b '>
      <p className='font-bold mt-5'>Email sent</p>
      <div className='flex justify-center'>
      <img src={sent} alt='sent'/>

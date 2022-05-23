@@ -10,6 +10,7 @@ test(' it should render Route no', () => {
     const linkElement = screen.getByText("Route no");
     expect(linkElement).toBeInTheDocument;
   });
+  
   test(' it should render From', () => {
     render(  <Provider store={store}> <Router><RoutesDashboard/></Router></Provider>);
     const linkElement = screen.getByText("From");
@@ -21,24 +22,19 @@ test(' it should render Route no', () => {
     expect(linkElement).toBeInTheDocument;
   });
 
-  test(' it should render To', () => {
+  test(' it should render N0 of stations', () => {
     render(  <Provider store={store}> <Router><RoutesDashboard/></Router></Provider>);
     const linkElement = screen.getByText("N0 of stations");
     expect(linkElement).toBeInTheDocument;
   });
-  test(' it should render To', () => {
-    render(  <Provider store={store}> <Router><RoutesDashboard/></Router></Provider>);
-    const linkElement = screen.getByText("stations");
-    expect(linkElement).toBeInTheDocument;
-  });
 
-  test(' it should render To', () => {
+  test(' it should render Price', () => {
     render(  <Provider store={store}> <Router><RoutesDashboard/></Router></Provider>);
     const linkElement = screen.getByText("Price");
     expect(linkElement).toBeInTheDocument;
   });
 
-  test(' it should render To', () => {
+  test(' it should render Action', () => {
     render(  <Provider store={store}> <Router><RoutesDashboard/></Router></Provider>);
     const linkElement = screen.getByText("Action");
     expect(linkElement).toBeInTheDocument;

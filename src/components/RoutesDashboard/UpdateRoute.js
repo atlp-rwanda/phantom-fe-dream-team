@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { updateRoute } from '../../redux/reducers/routesSlice';
 import {  useDispatch } from "react-redux";
-import routes from '../images/routes.png';
+import routes from '../../assets/routes.png';
 function UpdateRoute() {
  
     

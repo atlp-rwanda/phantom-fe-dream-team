@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from "react";
 import { addRoute } from '../../redux/reducers/routesSlice';
-import routes from '../images/routes.png';
 import {  useDispatch } from "react-redux";
+import routes from '../../assets/routes.png';
+import TopNavbar from '../Dashboard/TopNavbar';
 function AddnewRoutes() {
   const dispatch = useDispatch();
   const [routeno, setRouteno] = useState("");
@@ -14,7 +15,8 @@ function AddnewRoutes() {
   const [price, setPrice] = useState("");
   return (
 
-
+<>
+<TopNavbar goto={e=>window.location.assign('/dashboard/Routes/Add')}/>
     <div className='mt-20 justify-around'> <div className=''>
       <h1>add new route</h1>
     </div>
@@ -122,6 +124,7 @@ function AddnewRoutes() {
       </div>
 
     </div>
+    </>
   )
 }
 

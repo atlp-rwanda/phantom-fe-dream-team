@@ -4,12 +4,21 @@ import { Route, Link, Routes } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteRoute } from '../../redux/reducers/routesSlice';
+import TopNavbar from '../Dashboard/TopNavbar';
+import UpdateRoute from './UpdateRoute';
 function RoutesDashboard() {
   const dispatch=useDispatch();
   const routeList = useSelector((state) => state.routesReducer.value);
 
   return (
+    <>
+    <TopNavbar goto={e=>window.location.assign('/dashboard/Routes/Add')}/>
     <div className='mt-20'>
+      <Routes>
+        <Route path="update" element={<UpdateRoute />}></Route>
+      </Routes>
+
+
       <table>
         <tr>
           <th>Route no</th>
@@ -21,11 +30,6 @@ function RoutesDashboard() {
           <th> Action</th>
           <th>
           </th>
-          <Link to={"add"} >
-            addnewRoute
-          </Link>
-
-
         </tr>
         {routeList.map((route) => {
           return (
@@ -57,6 +61,7 @@ function RoutesDashboard() {
         })}
       </table>
     </div>
+  </>
   )
 }
 

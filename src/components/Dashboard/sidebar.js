@@ -37,23 +37,14 @@ function sidebar({ setRoute }) {
 
                         <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
 
-                            <Link className='flex' to="Drivers">
-                                <BsPersonBadgeFill className='h-6 w-6' />
-                                <h1 className='md:hidden'>Drivers</h1>
+                            <Link className='flex' to="Users">
+                                <FaUsers className='h-6 w-6' />
+                                <h1 className='md:hidden'>Users</h1>
                             </Link>
 
                         </div>
 
-                            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
-
-                                <Link className='flex' to="Users">
-                                    <FaUsers className='h-6 w-6' />
-                                    <h1 className='md:hidden'>Users</h1>
-                                </Link>
-
-                            </div>
-
-                                <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
+                                <div className='flex text-center pt-10 mt-[50px] hover:text-blue-600'>
 
                                     <Link className='flex' to="/Home">
                                         <RiLogoutBoxLine className='h-6 w-6' />

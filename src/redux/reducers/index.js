@@ -3,6 +3,7 @@ import changePassword from "./changepassword";
 import  {resetReducer}  from "./resetReducers"; 
 import LoginReducer from "./LoginReducer";
 import { authReducer } from './authReducer';
+
 //import other reducers
 import { combineReducers } from "redux";
 

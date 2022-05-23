@@ -72,7 +72,7 @@ export default function resetPassword() {
     {!loading && (
     <form className='relative w-full '>
     <div className='flex justify-center ml-auto text-center mt-40 mb-20  lg:flex md:flex'>
-     <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden lg:hidden' />
+     <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden' />
      <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
          <p className='mt-10'>Reset Password</p>
          <p className='mt-20'>find your phantom account</p>

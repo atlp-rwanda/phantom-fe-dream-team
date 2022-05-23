@@ -82,7 +82,7 @@ export default function resetPassword() {
              onChange={handleOnChange}
          type='text' 
          placeholder='Enter your email' 
-         className='border-2 border-black  mt-5 rounded-lg py-2 p-2'/>
+         className='border-2 border-black  mt-5 rounded-lg py-2 p-2 sm:w-[90%]'/>
           <p className="text-red-500">{message}</p>
           <p className="text-green-700">{success}</p>
          <div className='mt-5 md:mb-10 xs:flex xs:justify-center sm:mb-10 lg:mb-10 '>

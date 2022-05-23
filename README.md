@@ -1,4 +1,5 @@
 # Phantom
+
 ## Maintainability Badge
 <a href="https://codeclimate.com/github/atlp-rwanda/phantom-fe-dream-team/maintainability"><img src="https://api.codeclimate.com/v1/badges/4a2cb342ecae405be27c/maintainability" /></a>
 ## Tests

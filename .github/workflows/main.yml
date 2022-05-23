@@ -1,41 +1,44 @@
 name: react CI/CD
+
 on:
   push:
-    branches:
-      [ develop , ch-configure-codeclimate-#27]
- 
+    branches: [develop, ch-configure-codeclimate-#27]
+
 jobs:
-  test:
+  build:
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        platform: [ ubuntu-latest, macOS-latest ]
-        node: [16.x]
-    name: test/node ${{ matrix.node }}/${{ matrix.platform }}
-    runs-on: ${{ matrix.platform }}
+        node-version: [16.x]
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: ${{ matrix.node }}
-    - run: npm install
-    - run: npm install
-    - run: npm run build
-    - run: npm run test
+      - uses: actions/checkout@v2
+      - name: Use Node.js "16.x"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+      - run: npm i
+      - run: npm run build --if-present
+      
+
   coverage:
-    needs: [test]
+    needs: [build]
     name: coverage
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-         node-version: ${{ matrix.node }}
-    - run: npm install 
-    - run: npm install
-    - run: npm run build
-    - uses: paambaati/codeclimate-action@v2.5.0
-      env:
-        CC_TEST_REPORTER_ID: 3b83d5ce2de2c20057beb6a86114483a52f127baac5cf24ee254fd34b2c88c81
-      with:
-        coverageCommand: npm run coverage
+      - uses: actions/checkout@v3
+      - name: Use Node.js "16.x"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+      - run: npm i
+      - uses: paambaati/codeclimate-action@v2.5.0
+        env:
+          CI: "true"
+          CC_TEST_REPORTER_ID: 2e781478711b3224ae8d070f1a5500cb2c63b53007bb05d112a1db4eab5fff5c
+        with:
+          debug: true
+          coverageCommand: npm run coverage
 

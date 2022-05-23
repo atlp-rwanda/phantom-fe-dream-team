@@ -19,7 +19,6 @@ import { Outlet } from 'react-router-dom';
 import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
-import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
 function App() {
     const NavbarLayout = () => (

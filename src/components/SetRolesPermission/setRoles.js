@@ -7,7 +7,9 @@ import {setPermission,deleteRole} from "../../redux/actions/index";
 import TopNavbar from "../Dashboard/TopNavbar";
 function setRoles (){
   const dispatch = useDispatch();
+  const [confirm1, setConfirm1] = useState(true);
   const [loading,setLoading]=useState(true)
+  const [error, setError] = useState(null);
   const [Infos, setData] = useState(null);
   const [Permissions, setPermissions] = [{
     AddEditDelOp:useState(false),
@@ -21,13 +23,21 @@ function setRoles (){
   useEffect(() => {
     fetch('http://localhost:8000/Permissions')
       .then(res => {
+        if (!res.ok) { // get the error from server
+          throw Error('could not fetch the data for that resource');
+        } 
         return res.json();
       })
       .then(data => {
         setData(data);
         setLoading(false);
+        setError(null);
+      }).catch(err => {
+        // cathes Network/connection error
+        setLoading(false);
+        setError(err.message);
       })
-  }, [])
+      },[]);
 
 function loadForm(info) {
   const Perm= info.Permissions;
@@ -99,8 +109,10 @@ window.reload()
 
 
 function Delete(id){
-  dispatch(deleteRole(id));
-  window.reload();
+  if (confirm('Are you sure to delete this role?')) {
+    dispatch(deleteRole(id));
+     window.reload();
+    }
 }
 function Editable(id){
   document.getElementById('role'+id).readOnly = false;
@@ -115,12 +127,13 @@ function Editable(id){
         <table id='Wtable' className="table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
           <thead className="sm:text-sm">
             <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
-              <th className="">Role</th>
-              <th className=" colspan=4" >Permissions</th>
+              <th className="pr-[200px]">Role</th>
+              <th className=" colspan=4 pr-[300px]" >Permissions</th>
               <th className="colspan=2  sm:hidden" >Actions</th>
             </tr>
           </thead>
           <tbody>
+          { error && <div className="flex content center text-lg text-red-500 pl-8 " >{ error }</div> }
           {loading && <SkeletonUI/>}
             {Infos && Infos.map((info) => (
               setTimeout(() => { 
@@ -159,7 +172,8 @@ function Editable(id){
           </tbody>
         </table>
       </div> 
-    </>
+      {/* <Confirmation trigger={confirm1}/> */}
+      </>
   )
 }
 export default setRoles;

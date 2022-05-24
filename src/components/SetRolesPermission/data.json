@@ -25,19 +25,6 @@
         "UpdateBusInfo": false,
         "UpdateProf": true
       }
-    },
-    {
-      "Role": "President",
-      "Description": "Chief of PHANTOM",
-      "Permissions": {
-        "AddEditDelOp": true,
-        "viewDelOp": true,
-        "AssgnRemDriv": true,
-        "addRemRoute": false,
-        "UpdateBusInfo": false,
-        "UpdateProf": false
-      },
-      "id": 5
     }
   ]
 }

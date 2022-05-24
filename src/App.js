@@ -17,43 +17,50 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
+import RequireAuth from "./components/Auth";
 
 function App() {
-    const NavbarLayout = () => (
-        <>
-          <Navbar />
-          <Outlet />
-        </>
-      );
+  var loggedin =  localStorage.getItem("auth")
+  const NavbarLayout = () => (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
 
-    return (<div>
+  return (<div>
 
-        <BrowserRouter>
-            <Routes>
-            <Route element={<NavbarLayout/>}>
-                <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<NavbarLayout />}>
+          <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
 
-                <Route exact path="/Signin" element={<Signin />} />
-                <Route exact path="/Register" element={<Register />} />
-                <Route exact path="/Contact" element={<Contact />} />
-                <Route path="/ResetPassword" element={<Reset />}></Route>
-                <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
-                <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-                <Route exact path="/login" element={<Login />}></Route>
-                <Route exact path="/profile" element={[<Profile/>]}></Route>
-                <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
-              <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
-              </Route>  
-              <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} />      
-            </Routes>
+          <Route exact path="/Signin" element={<Signin />} />
+          <Route exact path="/Register" element={<Register />} />
+          <Route exact path="/Contact" element={<Contact />} />
+          <Route path="/ResetPassword" element={<Reset />}></Route>
+          <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
+          <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/profile" element={[<Profile />]}></Route>
+          <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
+          <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
+        </Route>
+        <Route exact path="/logout" element={<Logout />}></Route>
+        {/* <Route exact path="/dashboard/*" element={<Dashboard />} />   */}
+        <Route path="/dashboard/*" element={loggedin == 'true' ? <Dashboard /> : <Signin /> } />
 
-            <Footer />
-        </BrowserRouter>
+        {/* <Route element={<RequireAuth />}>
+          <Route path="/dashboard/*" element={<Dashboard />} />
+        </Route> */}
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
 
 
 
-    </div>)
+  </div>)
 }
 
 export default App;

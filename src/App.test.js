@@ -60,6 +60,8 @@ test('renders Users ', () => {
   render(<Router><Sidebar/></Router>);
 =======
 
+
+
 test('renders Users ', () => {
   render(<Router><Sidebar /></Router>);
 >>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
@@ -112,3 +114,4 @@ test('renders home', () => {
   const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument;
 });
+

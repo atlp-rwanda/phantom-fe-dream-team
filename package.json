@@ -7,7 +7,11 @@
     "dev:start": "webpack server --mode development",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
-    "coverage": "react-scripts test --coverage a"
+    "coverage1": "react-scripts test --coverage&& cat ./coverage/lcov.info | coveralls",
+    "coverage:badge": "coverage-badge-creator",
+    "coverage":"react-scripts test --coverage --watchAll=false"
+  
+
   },
   "keywords": [],
   "author": "",
@@ -38,7 +42,9 @@
     "@babel/preset-react": "^7.16.7",
     "@iconify/react": "^3.2.1",
     "autoprefixer": "^10.4.4",
-    "babel-loader": "^8.2.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.2.4",
+    "coveralls": "^3.1.1",
     "css-loader": "^6.7.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",

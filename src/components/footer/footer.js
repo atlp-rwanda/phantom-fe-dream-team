@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 function Footer() {
   return (
     <div>
-      <footer className="bg-gray-700 md: sm:text-xl text-ceneter px-0 sm:px-0 lg:px-8">
+      <footer className="bg-gray-700 sm:text-sm text-ceneter px-0 sm:px-0 lg:px-8">
         <div className="text-center text-3xl text-white  pb-4 sm:text-xl">
           <h1>Let’s connect!</h1>
 

@@ -69,7 +69,7 @@ function AddRole() {
         <SetRoles />
       </div>
       <div className=" w-[500px] h-[440px] md: block justify-start sm:text-sm bg-gray-200  absolute right-[400px] top-[80px] sm:right-0 border-2 ring-2 ring-blue-600 ring-inset">
-        <div className="flex pt-8">
+        <div className="flex pt-8 sm:text-sm sm:flex-col sm:ml-36">
           <div className="flex-col ml-12 font-bold text-black text-lg">
             <h3 className="mt-2">User Role:</h3>
             <h3 className="mt-2">Description:</h3>
@@ -82,27 +82,7 @@ function AddRole() {
               <textarea
                 value={Description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="
-        form-control
-        block
-        resize-none
-        w-full
-        px-2
-        mt-4
-        h-[60px]
-        w-[220px]
-        sm:w-[195px]
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
+                className="form-control block  resize-none w-full px-2 mt-4 h-[60px] w-[220px] sm:w-[195px] text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "
                 id="exampleFormControlTextarea1"
                 rows="3"
                 placeholder="description for the role"
@@ -112,17 +92,17 @@ function AddRole() {
 
               <h1 className="font-bold text-blue-700"> Select Permissions</h1>
               <table>
-             
-                  <tr className='flex flex-col sm:text-sm'>
 
-                    <td className="flex"><input type="checkbox" id={'One'} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
-                    <td className="flex"><input type="checkbox" id={'Two'} className="mt-2 mr-2" />View Operators</td>
-                    <td className="flex"><input type="checkbox" id={'Three'} className="mt-2 mr-2" />Assign,Remove Driver to bus</td>
-                    <td className="flex"><input type="checkbox" id={'Four'} className="mt-2 mr-2" />Add,Remove route </td>
-                    <td className="flex"><input type="checkbox" id={'Five'} className="mt-2 mr-2" />Update Bus status</td>
-                    <td className="flex"><input type="checkbox" id={'Six'} className="mt-2 mr-2" />Update profile</td>
-                  </tr>
-           
+                <tr className='flex flex-col sm:text-sm'>
+
+                  <td className="flex"><input type="checkbox" id={'One'} className="mt-2 mr-2 " />Add,Edit,Delete Operator</td>
+                  <td className="flex"><input type="checkbox" id={'Two'} className="mt-2 mr-2" />View Operators</td>
+                  <td className="flex"><input type="checkbox" id={'Three'} className="mt-2 mr-2" />Assign,Remove Driver to bus</td>
+                  <td className="flex"><input type="checkbox" id={'Four'} className="mt-2 mr-2" />Add,Remove route </td>
+                  <td className="flex"><input type="checkbox" id={'Five'} className="mt-2 mr-2" />Update Bus status</td>
+                  <td className="flex"><input type="checkbox" id={'Six'} className="mt-2 mr-2" />Update profile</td>
+                </tr>
+
               </table>
             </div>
 

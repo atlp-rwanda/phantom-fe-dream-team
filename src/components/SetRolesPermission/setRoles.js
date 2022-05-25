@@ -121,10 +121,7 @@ function setRoles() {
   return (
     <>
       <TopNavbar goto={e => window.location.assign('/dashboard/Roles/add')} />
-      <div className="flex flex-col relative p-4">
-        <div className="flex flex-col relative p-4">
-
-
+      <div className="flex flex-col relative p-4 sm:p-2 sm:w-full">
           <table id='Wtable' className="table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
             <thead className="sm:text-sm">
               <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
@@ -172,7 +169,6 @@ function setRoles() {
               ))}
             </tbody>
           </table>
-        </div>
       </div>
     </>
   )

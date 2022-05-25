@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { act } from "react-dom/test-utils";
 const PermissionReducer = (state=1, action) => {
  const Npermissions=action.permissions                                          ;
  const id =action.ID;//for update

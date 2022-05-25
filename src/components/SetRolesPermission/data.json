@@ -25,6 +25,19 @@
         "UpdateBusInfo": true,
         "UpdateProf": true
       }
+    },
+    {
+      "Role": "Operator",
+      "Description": "Operator descr",
+      "Permissions": {
+        "AddEditDelOp": false,
+        "viewDelOp": false,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": false,
+        "UpdateProf": false
+      },
+      "id": 5
     }
   ]
 }

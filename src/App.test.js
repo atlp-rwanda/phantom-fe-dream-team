@@ -36,6 +36,11 @@ test('renders Buses', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> develop
 
 test('renders Users ', () => {
   render(<Router><Sidebar /></Router>);
@@ -79,4 +84,9 @@ test('renders home', () => {
   render(<Router><Home/></Router>);
   const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument;
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> develop

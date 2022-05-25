@@ -8,7 +8,7 @@ const RequireAuth = () =>{
     var loggedin =  localStorage.getItem("auth")
     console.log('loggedin',loggedin)
     if (loggedin =='false'){
-        // console.log("welcome home")
+        console.log("welcome home")
         window.location.href = '/signin'
 
         // navigate("/login");

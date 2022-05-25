@@ -3,9 +3,11 @@ import username from '../../assets/Dashboard-images/username.png';
 import route from '../../assets/Dashboard-images/routes.png';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 import { BiBus } from 'react-icons/bi';
+import { GrWorkshop } from 'react-icons/gr'
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+
 
 function sidebar({ setRoute }) {
     return (
@@ -43,6 +45,15 @@ function sidebar({ setRoute }) {
                             </Link>
 
                         </div>
+
+                        <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+
+                        <Link className='flex' to="Assign">
+                            <GrWorkshop className='h-6 w-6 text-blue-600' />
+                            <h1 className='md:hidden'>Assign</h1>
+                        </Link>
+
+                    </div>
 
                                 <div className='flex text-center pt-10 mt-[50px] hover:text-blue-600'>
 

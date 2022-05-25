@@ -17,7 +17,8 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
-import RegisterUser from "./components/RegisterUser/registerUser"
+import RegisterUser from "./components/RegisterUser/registerUser";
+import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
 function App() {
     const NavbarLayout = () => (
         <>
@@ -34,6 +35,7 @@ function App() {
                 <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
 
                 <Route exact path="/Signin" element={<Signin />} />
+                
                 <Route exact path="/Register" element={<Register />} />
                 <Route exact path="/Contact" element={<Contact />} />
                 <Route path="/ResetPassword" element={<Reset />}></Route>
@@ -42,12 +44,15 @@ function App() {
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/profile" element={[<Profile/>]}></Route>
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
-              <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
+                <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
            
               </Route>  
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} />      
+              <Route exact path="/dashboard/*" element={<Dashboard />} />
+              <Route exact path="/dashboard/AddAssign" element={<AddAssign />} />
+ 
+
             </Routes>
 
             <Footer />

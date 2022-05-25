@@ -4,6 +4,7 @@ import Sidebar from './sidebar';
 import RoutesDashboard from './RoutesDashboard';
 import Buses from './Buses';
 import Users from './User';
+import AssignDashboard from './AssignDashboard';
 
 
 
@@ -20,6 +21,7 @@ function Dashboard(props) {
               <Route path="Routes/*" element={<RoutesDashboard />} />
               <Route path="Buses/*" element={<Buses />} />
               <Route path="Users/" element={<Users />} />
+              <Route path="Assign/" element={<AssignDashboard />} />
             </Routes>
   
       </section>

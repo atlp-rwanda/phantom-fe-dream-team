@@ -17,10 +17,7 @@ import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
-<<<<<<< HEAD
 import RegisterBuses from "./components/RegisterBuses/registerBus"
-=======
->>>>>>> develop
 function App() {
     const NavbarLayout = () => (
         <>
@@ -49,10 +46,7 @@ function App() {
            
               </Route>  
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
-<<<<<<< HEAD
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
-=======
->>>>>>> develop
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>

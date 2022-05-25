@@ -2,7 +2,7 @@
   "Permissions": [
     {
       "id": 1,
-      "Role": "ADMIN",
+      "Role": "Admin",
       "Description": "Admin Description",
       "Permissions": {
         "AddEditDelOp": true,
@@ -15,14 +15,14 @@
     },
     {
       "id": 4,
-      "Role": "MANAGER",
-      "Description": "Driver Description",
+      "Role": "Manager",
+      "Description": "Manager Description",
       "Permissions": {
         "AddEditDelOp": false,
         "viewDelOp": true,
         "AssgnRemDriv": true,
         "addRemRoute": true,
-        "UpdateBusInfo": false,
+        "UpdateBusInfo": true,
         "UpdateProf": true
       }
     }

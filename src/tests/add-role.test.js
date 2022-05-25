@@ -17,13 +17,6 @@ test('renders User Role:', () => {
 });
 })
 
-test('renders Permissions:', () => {
-    act(() => {
-    render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);
-    const linkElement = screen.getByText("Permissions:");
-    expect(linkElement).toBeInTheDocument;
-});
-})
 test('renders Select Permissions', () => {
     act(() => {
     render(<Provider store={store}> <Router><AddRole /> </Router></Provider>);

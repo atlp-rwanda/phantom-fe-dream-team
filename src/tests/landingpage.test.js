@@ -4,8 +4,7 @@ import React from 'react';
 import Landingpage from '../components/Landingpage/Landingpage';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-
-
+import Footer from '../components/Footer/Footer'
 
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -27,11 +26,7 @@ expect(linkElement).toBeInTheDocument;
 
 test('renders contact@phantom.com', () => {
 render(<Contact />);
-<<<<<<< HEAD
-const linkElement = screen.getByText("contact@phanthom.com");
-=======
 const linkElement = screen.getByText("contact@phantom.com");
->>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 });
 test('renders FullNames', () => {
 render(<Contact />);
@@ -59,33 +54,33 @@ const linkElement = screen.getByText("Send");
 });
 
 
-// test('renders Let’s connect!', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Let’s connect!");
-// });
+test('renders Let’s connect!', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Let’s connect!");
+});
 
-// test('renders Follow Us to Get Updates !', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Follow Us to Get Updates !");
-// });
-// test('renders Privacy Policy', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Privacy Policy");
-// });
+test('renders Follow Us to Get Updates !', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Follow Us to Get Updates !");
+});
+test('renders Privacy Policy', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Privacy Policy");
+});
 
-// test('renders Terms of Services', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Terms of Services");
-// });
-// test('renders Contact', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Contact");
-// });
+test('renders Terms of Services', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Terms of Services");
+});
+test('renders Contact', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Contact");
+});
 
-// test('renders Contact', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Contact");
-// });
+test('renders Contact', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Contact");
+});
 
 
 
@@ -98,27 +93,19 @@ render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");
 expect(linkElement).toBeInTheDocument;
 });
-<<<<<<< HEAD
-test(' it should render phantom first step', () => {
-=======
 
 
 
 test(' it should render phantom first Step', () => {
->>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 render(<Services />);
 const linkElement = screen.getByText("Step1");
 expect(linkElement).toBeInTheDocument;
 });
 
-<<<<<<< HEAD
-test(' it should render phantom step2 ', () => {
-=======
 
 
 
 test(' it should render phantom Step2 ', () => {
->>>>>>> 15bafde77c38d9d70c5b60575b066cb4b707a302
 render(<Services/>);
 const linkElement =screen.getByText("Step2");
 expect(linkElement).toBeInTheDocument;

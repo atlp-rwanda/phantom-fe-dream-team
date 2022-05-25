@@ -1,28 +1,44 @@
-name: CI
+name: react CI/CD
 
 on:
   push:
-    branches: [ develop, ch-setup-testing-#27]
-  pull_request:
-    branches: [ ch-setup-testing-#27 ]
+    branches: [develop, ch-configure-codeclimate-#27]
 
-
-  workflow_dispatch:
 jobs:
-  
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js "16.x"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+      - run: npm i
+      - run: npm run build --if-present
+      
 
+  coverage:
+    needs: [build]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with: 
-              node-version: '16.x'
+      - name: Use Node.js "16.x"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          cache: "npm"
+      - run: npm i
+      - uses: paambaati/codeclimate-action@v2.5.0
+        env:
+          CI: "true"
+          CC_TEST_REPORTER_ID: 3b83d5ce2de2c20057beb6a86114483a52f127baac5cf24ee254fd34b2c88c81
+        with:
+          debug: true
+          coverageCommand: npm run coverage
 
-
-      - name: install all dependence
-        run: npm install
-      - name:  run tests
-        run: npm test
-      - name: run build
-        run: npm run build --if-present

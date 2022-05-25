@@ -8,16 +8,6 @@ const busesReducer = createSlice({
     name: 'posts',
     initialState,
     reducers: {
-        // postAdded: {
-        //     reducer(state, action) {
-        //         state.push(action.payload)
-        //         localStorage.setItem(
-        //             'buses',
-        //             JSON.stringify({
-        //              state
-        //             })
-        //           );
-        //     },
         addBus: (state, action) => {
             state.value.push(action.payload);
           },

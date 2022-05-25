@@ -2,30 +2,27 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom';
 import buses from '../../assets/buses.png'
 import LOGOUT from '../Logout/logout'
-import { useDispatch,useSelector} from "react-redux";
-import { selectAllPosts } from "../../redux/reducers/busesReducer";
-import { postAdded } from '../../redux/reducers/busesReducer';
+import { useDispatch} from "react-redux";
+import { addBus} from "../../redux/reducers/busesReducer"
 import { nanoid } from '@reduxjs/toolkit';
-
+import SuccefullPopup from '../Logout/success'
+import {useNavigate } from 'react-router-dom';
 export default function register() {
-const dispatch = useDispatch()
-const posts = useSelector(selectAllPosts)
 
-// const [buses,setBuses]=useState([])
+const navigate = useNavigate()
+const dispatch = useDispatch()
+
 const [plateNo,setPlateNo]=useState('')
 const [routeNo,setRouteNo]=useState('')
 const [busType,setBusType]=useState('')
 const [seats,setSeats]=useState('')
 
+
+//onsubmit
 const handleOnSubmit = () => {
   if (plateNo && routeNo && busType && seats) {
-    // console.log(plateNo)
-    // console.log(routeNo)
-    // console.log(busType)
-    // console.log(seats)
-
       dispatch(
-          postAdded({
+        addBus({
             id:nanoid(),
             plateNo,
             routeNo, 
@@ -36,16 +33,32 @@ const handleOnSubmit = () => {
       setRouteNo('')
       setBusType('')
       setSeats('')
+      setSucceed(true)
   }
-  console.log(posts)
 }
-
+//check all input field
 const canSave = Boolean(plateNo) && Boolean(routeNo) && Boolean(busType) && Boolean(seats)
+
+  //success popup
+  const [succeed, setSucceed] = useState(false);
+   
+  function close(){
+    setSucceed(false)
+  }
+  if (succeed==true){
+    setTimeout(() => {
+      setSucceed(false)
+      navigate('/dashboard/Buses')
+    }, "2000")
+  }
 
   return (
     <>
     <LOGOUT/>
-      
+    <SuccefullPopup trigger={succeed}>
+        <button onClick={()=>close()} className="absolute top-0 right-2">X</button>               
+        <h3 className="px-10">New Bus Added</h3>
+        </SuccefullPopup> 
      <h1 className='text-center mt-[10px] text-2xl text-blue-700 font-Poppins'>Add a new Bus</h1>
 
     <div className='flex justify-center ml-auto text-center mt-10 mb-10  lg:flex md:flex sm:flex-col items-center sm:mt-[-20px]'>
@@ -68,7 +81,7 @@ const canSave = Boolean(plateNo) && Boolean(routeNo) && Boolean(busType) && Bool
          <label htmlFor="route_no" className="text-blue-700 text-xl mt-6 sm:sr-only">Route No:</label>
          <input 
          type='text' 
-         placeholder='Plate Number' 
+         placeholder='Route Number' 
          className='border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-2 focus:outline-none sm:w-[250px] sm:ml-4'
          value={routeNo}
          onChange={ (e) => setRouteNo(e.target.value)}

@@ -21,7 +21,7 @@ export default function readonlyrow({item,handleEditClick}) {
    <td className="px-12 py-4">
    <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"onClick={(event)=>handleEditClick(event,item)}>Edit</p>
    </td>
-   <td class="px-12 py-4">
+   <td className="px-12 py-4">
        <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
            onClick={() => {
              dispatch(deleteBus({ id: item.id }));

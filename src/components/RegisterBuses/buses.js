@@ -63,7 +63,6 @@ const handleCancelClick=()=>{
 }
   //on large screen
   const cardElements = posts.map((item) => {
-    console.log(item.id)
     return (
     <Fragment>
     {/* <ReadOnlyRow item={item}/>

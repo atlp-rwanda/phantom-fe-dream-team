@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 var addSorting = (function () {
     "use strict";
-=======
-/* eslint-disable */
-var addSorting = (function() {
-    'use strict';
->>>>>>> develop
     var cols,
         currentSort = {
             index: 0,
@@ -13,7 +7,6 @@ var addSorting = (function() {
         };
 
     // returns the summary table element
-<<<<<<< HEAD
     function getTable() { return document.querySelector('.coverage-summary'); }
     // returns the thead element of the summary table
     function getTableHeader() { return getTable().querySelector('thead tr'); }
@@ -21,48 +14,6 @@ var addSorting = (function() {
     function getTableBody() { return getTable().querySelector('tbody'); }
     // returns the th element for nth column
     function getNthColumn(n) { return getTableHeader().querySelectorAll('th')[n]; }
-=======
-    function getTable() {
-        return document.querySelector('.coverage-summary');
-    }
-    // returns the thead element of the summary table
-    function getTableHeader() {
-        return getTable().querySelector('thead tr');
-    }
-    // returns the tbody element of the summary table
-    function getTableBody() {
-        return getTable().querySelector('tbody');
-    }
-    // returns the th element for nth column
-    function getNthColumn(n) {
-        return getTableHeader().querySelectorAll('th')[n];
-    }
-
-    function onFilterInput() {
-        const searchValue = document.getElementById('fileSearch').value;
-        const rows = document.getElementsByTagName('tbody')[0].children;
-        for (let i = 0; i < rows.length; i++) {
-            const row = rows[i];
-            if (
-                row.textContent
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase())
-            ) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        }
-    }
-
-    // loads the search box
-    function addSearchBox() {
-        var template = document.getElementById('filterTemplate');
-        var templateClone = template.content.cloneNode(true);
-        templateClone.getElementById('fileSearch').oninput = onFilterInput;
-        template.parentElement.appendChild(templateClone);
-    }
->>>>>>> develop
 
     // loads all columns
     function loadColumns() {
@@ -82,12 +33,7 @@ var addSorting = (function() {
             cols.push(col);
             if (col.sortable) {
                 col.defaultDescSort = col.type === 'number';
-<<<<<<< HEAD
                 colNode.innerHTML = colNode.innerHTML + '<span class="sorter"></span>';
-=======
-                colNode.innerHTML =
-                    colNode.innerHTML + '<span class="sorter"></span>';
->>>>>>> develop
             }
         }
         return cols;
@@ -124,11 +70,7 @@ var addSorting = (function() {
     // sorts the table using the data for the ith column
     function sortByIndex(index, desc) {
         var key = cols[index].key,
-<<<<<<< HEAD
             sorter = function (a, b) {
-=======
-            sorter = function(a, b) {
->>>>>>> develop
                 a = a.data[key];
                 b = b.data[key];
                 return a < b ? -1 : a > b ? 1 : 0;
@@ -140,11 +82,7 @@ var addSorting = (function() {
             i;
 
         if (desc) {
-<<<<<<< HEAD
             finalSorter = function (a, b) {
-=======
-            finalSorter = function(a, b) {
->>>>>>> develop
                 return -1 * sorter(a, b);
             };
         }
@@ -170,13 +108,7 @@ var addSorting = (function() {
     }
     // adds sort indicators for current column being sorted
     function addSortIndicators() {
-<<<<<<< HEAD
         getNthColumn(currentSort.index).className += currentSort.desc ? ' sorted-desc' : ' sorted';
-=======
-        getNthColumn(currentSort.index).className += currentSort.desc
-            ? ' sorted-desc'
-            : ' sorted';
->>>>>>> develop
     }
     // adds event listeners for all sorter widgets
     function enableUI() {
@@ -185,11 +117,7 @@ var addSorting = (function() {
             ithSorter = function ithSorter(i) {
                 var col = cols[i];
 
-<<<<<<< HEAD
                 return function () {
-=======
-                return function() {
->>>>>>> develop
                     var desc = col.defaultDescSort;
 
                     if (currentSort.index === i) {
@@ -202,11 +130,7 @@ var addSorting = (function() {
                     addSortIndicators();
                 };
             };
-<<<<<<< HEAD
         for (i =0 ; i < cols.length; i += 1) {
-=======
-        for (i = 0; i < cols.length; i += 1) {
->>>>>>> develop
             if (cols[i].sortable) {
                 // add the click event handler on the th so users
                 // dont have to click on those tiny arrows
@@ -220,21 +144,12 @@ var addSorting = (function() {
         }
     }
     // adds sorting functionality to the UI
-<<<<<<< HEAD
     return function () {
-=======
-    return function() {
->>>>>>> develop
         if (!getTable()) {
             return;
         }
         cols = loadColumns();
-<<<<<<< HEAD
         loadData(cols);
-=======
-        loadData();
-        addSearchBox();
->>>>>>> develop
         addSortIndicators();
         enableUI();
     };

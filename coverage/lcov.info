@@ -1,18 +1,11 @@
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/App.js
-FN:22,App
-FN:23,(anonymous_1)
-=======
-SF:src/App.js
-FN:20,App
-FN:21,(anonymous_1)
->>>>>>> develop
+FN:21,App
+FN:22,(anonymous_1)
 FNF:2
 FNH:0
 FNDA:0,App
 FNDA:0,(anonymous_1)
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:3,0
@@ -26,29 +19,21 @@ DA:10,0
 DA:11,0
 DA:12,0
 DA:13,0
-DA:14,0
+DA:15,0
 DA:16,0
 DA:17,0
 DA:18,0
 DA:19,0
 DA:20,0
-DA:21,0
-DA:23,0
-DA:24,0
-DA:30,0
-LF:23
-=======
-DA:21,0
 DA:22,0
-DA:28,0
-LF:3
->>>>>>> develop
+DA:23,0
+DA:29,0
+LF:22
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/index.js
 FNF:0
 FNH:0
@@ -60,50 +45,29 @@ DA:5,0
 DA:6,0
 DA:10,0
 LF:7
-=======
-SF:src/index.js
-FNF:0
-FNH:0
-DA:10,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Register.js
-=======
-SF:src/components/Register.js
->>>>>>> develop
 FN:3,Register
 FNF:1
 FNH:0
 FNDA:0,Register
-<<<<<<< HEAD
 DA:1,0
 DA:4,0
 LF:2
-=======
-DA:4,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/error.js
-=======
-SF:src/components/error.js
->>>>>>> develop
 FN:3,ErrorPopup
 FNF:1
 FNH:0
 FNDA:0,ErrorPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -111,50 +75,29 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/skeletonUI.js
-=======
-SF:src/components/skeletonUI.js
->>>>>>> develop
 FN:3,skeletonUI
 FNF:1
 FNH:0
 FNDA:0,skeletonUI
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
 LF:3
-=======
-DA:4,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/succesfull.js
-=======
-SF:src/components/succesfull.js
->>>>>>> develop
 FN:3,SuccefullPopup
 FNF:1
 FNH:0
 FNDA:0,SuccefullPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -162,22 +105,11 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/useLoader.js
-=======
-SF:src/components/useLoader.js
->>>>>>> develop
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:8,(anonymous_2)
@@ -188,10 +120,7 @@ FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
 FNDA:0,(anonymous_3)
-<<<<<<< HEAD
 DA:1,0
-=======
->>>>>>> develop
 DA:3,0
 DA:4,0
 DA:6,0
@@ -200,75 +129,52 @@ DA:8,0
 DA:9,0
 DA:12,0
 DA:15,0
-<<<<<<< HEAD
 LF:9
-=======
-LF:8
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Contact/Contact.js
-=======
-SF:src/components/Contact/Contact.js
->>>>>>> develop
 FN:5,Contact
 FNF:1
 FNH:1
-FNDA:10,Contact
-DA:6,10
+FNDA:1,Contact
+DA:6,1
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Buses.js
-=======
-SF:src/components/Dashboard/Buses.js
->>>>>>> develop
-FN:4,Buses
+FN:5,Buses
 FNF:1
-FNH:1
-FNDA:1,Buses
-DA:5,1
-LF:1
-LH:1
+FNH:0
+FNDA:0,Buses
+DA:1,0
+DA:2,0
+DA:6,0
+LF:3
+LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Drivers.js
-=======
-SF:src/components/Dashboard/Drivers.js
->>>>>>> develop
 FN:3,driver
 FNF:1
 FNH:0
 FNDA:0,driver
-<<<<<<< HEAD
 DA:1,0
 DA:4,0
 LF:2
-=======
-DA:4,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/Home.js
-=======
-SF:src/components/Dashboard/Home.js
->>>>>>> develop
 FN:4,Home
 FNF:1
 FNH:1
@@ -280,11 +186,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/RoutesDashboard.js
-=======
-SF:src/components/Dashboard/RoutesDashboard.js
->>>>>>> develop
 FN:3,RoutesDashboard
 FNF:1
 FNH:1
@@ -296,51 +198,34 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/TopNavbar.js
-=======
-SF:src/components/Dashboard/TopNavbar.js
->>>>>>> develop
 FN:7,TopNavbar
 FNF:1
 FNH:1
-FNDA:7,TopNavbar
-DA:8,7
-DA:9,7
+FNDA:11,TopNavbar
+DA:8,11
+DA:9,11
 LF:2
 LH:2
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/User.js
-=======
-SF:src/components/Dashboard/User.js
->>>>>>> develop
 FN:5,User
 FNF:1
 FNH:0
 FNDA:0,User
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:6,0
 LF:3
-=======
-DA:6,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/add.js
-=======
-SF:src/components/Dashboard/add.js
->>>>>>> develop
 FN:3,add
 FNF:1
 FNH:1
@@ -352,16 +237,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/dashboard.js
-=======
-SF:src/components/Dashboard/dashboard.js
->>>>>>> develop
 FN:11,Dashboard
 FNF:1
 FNH:0
 FNDA:0,Dashboard
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:3,0
@@ -370,20 +250,12 @@ DA:5,0
 DA:6,0
 DA:12,0
 LF:7
-=======
-DA:12,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Dashboard/sidebar.js
-=======
-SF:src/components/Dashboard/sidebar.js
->>>>>>> develop
 FN:10,sidebar
 FNF:1
 FNH:1
@@ -395,68 +267,45 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Footer/Footer.js
-FN:3,Footer
-FNF:1
-FNH:1
-FNDA:6,Footer
-DA:4,6
-LF:1
-LH:1
-BRF:0
-BRH:0
-end_of_record
-TN:
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Landingpage/Landingpage.js
-=======
-SF:src/components/Landingpage/Landingpage.js
->>>>>>> develop
 FN:7,Landingpage
 FNF:1
-FNH:1
-FNDA:1,Landingpage
-DA:8,1
-LF:1
-LH:1
+FNH:0
+FNDA:0,Landingpage
+DA:1,0
+DA:4,0
+DA:8,0
+LF:3
+LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Landingpage/Services.js
-=======
-SF:src/components/Landingpage/Services.js
->>>>>>> develop
 FN:5,Services
 FNF:1
-FNH:1
-FNDA:5,Services
-DA:6,5
-LF:1
-LH:1
+FNH:0
+FNDA:0,Services
+DA:1,0
+DA:2,0
+DA:6,0
+LF:3
+LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/login.js
-=======
-SF:src/components/Logout/login.js
->>>>>>> develop
 FN:5,login
 FN:13,(anonymous_1)
 FNF:2
 FNH:0
 FNDA:0,login
 FNDA:0,(anonymous_1)
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:3,0
 DA:4,0
-=======
->>>>>>> develop
 DA:7,0
 DA:8,0
 DA:9,0
@@ -465,17 +314,12 @@ DA:13,0
 DA:14,0
 DA:15,0
 DA:18,0
-<<<<<<< HEAD
 LF:12
-=======
-LF:8
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/logout.js
 FN:13,logout
 FN:16,(anonymous_4)
@@ -508,29 +352,6 @@ DA:10,0
 DA:11,0
 DA:12,0
 DA:13,0
-=======
-SF:src/components/Logout/logout.js
-FN:13,logout
-FN:16,(anonymous_1)
-FN:20,(anonymous_2)
-FN:26,(anonymous_3)
-FN:35,close
-FN:40,(anonymous_5)
-FN:51,(anonymous_6)
-FN:70,(anonymous_7)
-FN:124,(anonymous_8)
-FNF:9
-FNH:0
-FNDA:0,logout
-FNDA:0,(anonymous_1)
-FNDA:0,(anonymous_2)
-FNDA:0,(anonymous_3)
-FNDA:0,close
-FNDA:0,(anonymous_5)
-FNDA:0,(anonymous_6)
-FNDA:0,(anonymous_7)
-FNDA:0,(anonymous_8)
->>>>>>> develop
 DA:15,0
 DA:16,0
 DA:17,0
@@ -553,11 +374,7 @@ DA:45,0
 DA:51,0
 DA:70,0
 DA:125,0
-<<<<<<< HEAD
 LF:33
-=======
-LF:22
->>>>>>> develop
 LH:0
 BRDA:21,0,0,0
 BRDA:21,0,1,0
@@ -567,27 +384,17 @@ BRDA:47,2,0,0
 BRDA:47,2,1,0
 BRDA:48,3,0,0
 BRDA:48,3,1,0
-<<<<<<< HEAD
 BRDA:78,4,0,0
 BRDA:78,4,1,0
-=======
-BRDA:77,4,0,0
-BRDA:77,4,1,0
->>>>>>> develop
 BRF:10
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Logout/success.js
-=======
-SF:src/components/Logout/success.js
->>>>>>> develop
 FN:3,SuccefullPopup
 FNF:1
 FNH:0
 FNDA:0,SuccefullPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -595,18 +402,10 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Navbar/Navbar.js
 FN:5,Navbar
 FN:48,(anonymous_4)
@@ -621,37 +420,18 @@ DA:2,0
 DA:3,0
 DA:4,0
 DA:5,0
-=======
-SF:src/components/Navbar/Navbar.js
-FN:5,Navbar
-FN:48,(anonymous_1)
-FN:102,(anonymous_2)
-FNF:3
-FNH:0
-FNDA:0,Navbar
-FNDA:0,(anonymous_1)
-FNDA:0,(anonymous_2)
->>>>>>> develop
 DA:6,0
 DA:7,0
 DA:48,0
 DA:103,0
-<<<<<<< HEAD
 LF:9
 LH:0
 BRDA:56,0,0,0
 BRDA:56,0,1,0
-=======
-LF:4
-LH:0
-BRDA:55,0,0,0
-BRDA:55,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Navbar/operatorNav.js
 FN:5,OperatorNavbar
 FN:43,(anonymous_4)
@@ -666,22 +446,10 @@ DA:2,0
 DA:3,0
 DA:4,0
 DA:5,0
-=======
-SF:src/components/Navbar/operatorNav.js
-FN:5,OperatorNavbar
-FN:43,(anonymous_1)
-FN:97,(anonymous_2)
-FNF:3
-FNH:0
-FNDA:0,OperatorNavbar
-FNDA:0,(anonymous_1)
-FNDA:0,(anonymous_2)
->>>>>>> develop
 DA:6,0
 DA:7,0
 DA:43,0
 DA:98,0
-<<<<<<< HEAD
 LF:9
 LH:0
 BRDA:51,0,0,0
@@ -690,92 +458,184 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/buses.js
-FN:4,management
-FN:6,(anonymous_4)
-FN:18,(anonymous_5)
-FN:34,(anonymous_6)
-FN:41,(anonymous_7)
-FN:46,(anonymous_8)
-FN:70,(anonymous_9)
-FN:78,(anonymous_10)
-FN:79,(anonymous_11)
-FN:85,(anonymous_12)
-FN:91,(anonymous_13)
-FNF:11
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/FakeData.js
+FNF:0
 FNH:0
-FNDA:0,management
+DA:1,2
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/buses.js
+FN:8,buses
+FN:22,(anonymous_1)
+FN:33,(anonymous_2)
+FN:48,(anonymous_3)
+FN:61,(anonymous_4)
+FN:65,(anonymous_5)
+FN:88,(anonymous_6)
+FN:113,(anonymous_7)
+FN:124,(anonymous_8)
+FNF:9
+FNH:3
+FNDA:5,buses
+FNDA:0,(anonymous_1)
+FNDA:0,(anonymous_2)
+FNDA:0,(anonymous_3)
 FNDA:0,(anonymous_4)
-FNDA:0,(anonymous_5)
+FNDA:12,(anonymous_5)
+FNDA:12,(anonymous_6)
+FNDA:0,(anonymous_7)
+FNDA:0,(anonymous_8)
+DA:9,5
+DA:10,4
+DA:12,4
+DA:14,4
+DA:22,4
+DA:23,0
+DA:25,0
+DA:26,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:33,4
+DA:34,0
+DA:35,0
+DA:42,0
+DA:48,4
+DA:49,0
+DA:50,0
+DA:52,0
+DA:58,0
+DA:61,4
+DA:62,0
+DA:65,4
+DA:66,12
+DA:88,4
+DA:89,12
+DA:114,0
+DA:122,4
+DA:124,0
+LF:29
+LH:13
+BRDA:70,0,0,0
+BRDA:70,0,1,12
+BRF:2
+BRH:1
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/editablerow.js
+FN:4,editablerow
+FN:54,(anonymous_1)
+FNF:2
+FNH:0
+FNDA:0,editablerow
+FNDA:0,(anonymous_1)
+DA:6,0
+DA:54,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/readonlyrow.js
+FN:5,readonlyrow
+FN:22,(anonymous_1)
+FN:26,(anonymous_2)
+FNF:3
+FNH:1
+FNDA:12,readonlyrow
+FNDA:0,(anonymous_1)
+FNDA:0,(anonymous_2)
+DA:6,12
+DA:7,12
+DA:22,0
+DA:27,0
+LF:4
+LH:2
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/registerBus.js
+FN:10,register
+FN:22,(anonymous_4)
+FN:45,close
+FN:49,(anonymous_6)
+FN:59,(anonymous_7)
+FN:76,(anonymous_8)
+FN:87,(anonymous_9)
+FN:97,(anonymous_10)
+FN:108,(anonymous_11)
+FNF:9
+FNH:0
+FNDA:0,register
+FNDA:0,(anonymous_4)
+FNDA:0,close
 FNDA:0,(anonymous_6)
 FNDA:0,(anonymous_7)
 FNDA:0,(anonymous_8)
 FNDA:0,(anonymous_9)
 FNDA:0,(anonymous_10)
 FNDA:0,(anonymous_11)
-FNDA:0,(anonymous_12)
-FNDA:0,(anonymous_13)
 DA:1,0
 DA:2,0
+DA:3,0
 DA:4,0
+DA:5,0
 DA:6,0
 DA:7,0
 DA:8,0
-DA:9,0
-DA:11,0
-DA:14,0
+DA:10,0
+DA:12,0
+DA:13,0
+DA:15,0
 DA:16,0
+DA:17,0
 DA:18,0
-DA:19,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:32,0
+DA:33,0
 DA:34,0
-DA:41,0
+DA:35,0
+DA:36,0
+DA:40,0
+DA:43,0
 DA:46,0
-DA:47,0
-DA:70,0
-DA:78,0
-DA:79,0
-DA:81,0
-DA:82,0
-DA:84,0
-DA:85,0
-DA:86,0
-DA:89,0
-DA:91,0
-LF:26
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:55,0
+DA:59,0
+DA:76,0
+DA:87,0
+DA:97,0
+DA:108,0
+LF:36
 LH:0
-BRDA:8,0,0,0
-BRDA:8,0,1,0
-=======
-LF:4
-LH:0
-BRDA:50,0,0,0
-BRDA:50,0,1,0
->>>>>>> develop
-BRF:2
-BRH:0
-end_of_record
-TN:
-<<<<<<< HEAD
-SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterBuses/registerBus.js
-FN:9,register
-FNF:1
-FNH:0
-FNDA:0,register
-DA:1,0
-DA:2,0
-DA:4,0
-DA:7,0
-DA:179,0
-LF:5
-LH:0
-BRF:0
+BRDA:23,0,0,0
+BRDA:23,0,1,0
+BRDA:23,1,0,0
+BRDA:23,1,1,0
+BRDA:23,1,2,0
+BRDA:23,1,3,0
+BRDA:40,2,0,0
+BRDA:40,2,1,0
+BRDA:40,2,2,0
+BRDA:40,2,3,0
+BRDA:48,3,0,0
+BRDA:48,3,1,0
+BRF:12
 BRH:0
 end_of_record
 TN:
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/Users.js
-=======
-SF:src/components/RegisterUser/Users.js
->>>>>>> develop
 FN:4,management
 FN:6,(anonymous_1)
 FN:18,(anonymous_2)
@@ -831,7 +691,6 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/RegisterUser/registerUser.js
 FN:10,register
 FN:15,close
@@ -853,47 +712,14 @@ FN:175,(anonymous_19)
 FN:184,(anonymous_20)
 FN:188,(anonymous_21)
 FN:247,(anonymous_22)
-=======
-SF:src/components/RegisterUser/registerUser.js
-FN:10,register
-FN:15,close
-FN:19,(anonymous_2)
-FN:26,close
-FN:30,(anonymous_4)
-FN:35,Upload
-FN:51,(anonymous_6)
-FN:87,(anonymous_7)
-FN:92,(anonymous_8)
-FN:101,(anonymous_9)
-FN:114,(anonymous_10)
-FN:131,(anonymous_11)
-FN:148,(anonymous_12)
-FN:163,(anonymous_13)
-FN:167,(anonymous_14)
-FN:171,(anonymous_15)
-FN:175,(anonymous_16)
-FN:184,(anonymous_17)
-FN:188,(anonymous_18)
-FN:247,(anonymous_19)
->>>>>>> develop
 FNF:20
 FNH:0
 FNDA:0,register
 FNDA:0,close
-<<<<<<< HEAD
 FNDA:0,(anonymous_5)
 FNDA:0,close
 FNDA:0,(anonymous_7)
 FNDA:0,Upload
-=======
-FNDA:0,(anonymous_2)
-FNDA:0,close
-FNDA:0,(anonymous_4)
-FNDA:0,Upload
-FNDA:0,(anonymous_6)
-FNDA:0,(anonymous_7)
-FNDA:0,(anonymous_8)
->>>>>>> develop
 FNDA:0,(anonymous_9)
 FNDA:0,(anonymous_10)
 FNDA:0,(anonymous_11)
@@ -905,7 +731,6 @@ FNDA:0,(anonymous_16)
 FNDA:0,(anonymous_17)
 FNDA:0,(anonymous_18)
 FNDA:0,(anonymous_19)
-<<<<<<< HEAD
 FNDA:0,(anonymous_20)
 FNDA:0,(anonymous_21)
 FNDA:0,(anonymous_22)
@@ -917,9 +742,6 @@ DA:6,0
 DA:7,0
 DA:9,0
 DA:10,0
-=======
-DA:9,0
->>>>>>> develop
 DA:11,0
 DA:13,0
 DA:16,0
@@ -1034,11 +856,7 @@ DA:180,0
 DA:184,0
 DA:188,0
 DA:247,0
-<<<<<<< HEAD
 LF:122
-=======
-LF:115
->>>>>>> develop
 LH:0
 BRDA:18,0,0,0
 BRDA:18,0,1,0
@@ -1096,11 +914,7 @@ BRF:52
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailExist.js
-=======
-SF:src/components/ResetPassword/emailExist.js
->>>>>>> develop
 FN:5,emailExist
 FN:6,(anonymous_1)
 FNF:2
@@ -1115,11 +929,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/emailSent.js
-=======
-SF:src/components/ResetPassword/emailSent.js
->>>>>>> develop
 FN:5,emailSent
 FNF:1
 FNH:1
@@ -1131,16 +941,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/error.js
-=======
-SF:src/components/ResetPassword/error.js
->>>>>>> develop
 FN:3,ErrorPopup
 FNF:1
 FNH:0
 FNDA:0,ErrorPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -1148,18 +953,10 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/ResetPassword/resetPassword.js
 FN:10,resetPassword
 FN:12,(anonymous_4)
@@ -1185,25 +982,6 @@ DA:6,0
 DA:7,0
 DA:8,0
 DA:10,0
-=======
-SF:src/components/ResetPassword/resetPassword.js
-FN:10,resetPassword
-FN:12,(anonymous_1)
-FN:20,(anonymous_2)
-FN:49,(anonymous_3)
-FN:56,close
-FN:61,(anonymous_5)
-FN:68,(anonymous_6)
-FNF:7
-FNH:0
-FNDA:0,resetPassword
-FNDA:0,(anonymous_1)
-FNDA:0,(anonymous_2)
-FNDA:0,(anonymous_3)
-FNDA:0,close
-FNDA:0,(anonymous_5)
-FNDA:0,(anonymous_6)
->>>>>>> develop
 DA:11,0
 DA:12,0
 DA:13,0
@@ -1239,11 +1017,7 @@ DA:61,0
 DA:62,0
 DA:65,0
 DA:68,0
-<<<<<<< HEAD
 LF:43
-=======
-LF:35
->>>>>>> develop
 LH:0
 BRDA:22,0,0,0
 BRDA:22,0,1,0
@@ -1265,7 +1039,6 @@ BRF:16
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/Signin.js
 FN:14,(anonymous_3)
 FN:17,(anonymous_4)
@@ -1292,25 +1065,6 @@ DA:6,0
 DA:7,0
 DA:8,0
 DA:9,0
-=======
-SF:src/components/Signin/Signin.js
-FN:14,(anonymous_0)
-FN:17,(anonymous_1)
-FN:33,check
-FN:41,formSubmit
-FN:77,(anonymous_4)
-FN:84,(anonymous_5)
-FN:96,(anonymous_6)
-FNF:7
-FNH:0
-FNDA:0,(anonymous_0)
-FNDA:0,(anonymous_1)
-FNDA:0,check
-FNDA:0,formSubmit
-FNDA:0,(anonymous_4)
-FNDA:0,(anonymous_5)
-FNDA:0,(anonymous_6)
->>>>>>> develop
 DA:14,0
 DA:15,0
 DA:16,0
@@ -1355,11 +1109,7 @@ DA:86,0
 DA:87,0
 DA:91,0
 DA:96,0
-<<<<<<< HEAD
 LF:53
-=======
-LF:44
->>>>>>> develop
 LH:0
 BRDA:34,0,0,0
 BRDA:34,0,1,0
@@ -1389,16 +1139,11 @@ BRF:24
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/Successful.js
-=======
-SF:src/components/Signin/Successful.js
->>>>>>> develop
 FN:3,SuccefullPopup
 FNF:1
 FNH:0
 FNDA:0,SuccefullPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -1406,27 +1151,15 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/error.js
-=======
-SF:src/components/Signin/error.js
->>>>>>> develop
 FN:3,ErrorPopup
 FNF:1
 FNH:0
 FNDA:0,ErrorPopup
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
@@ -1434,45 +1167,25 @@ LF:3
 LH:0
 BRDA:5,0,0,0
 BRDA:5,0,1,0
-=======
-DA:4,0
-LF:1
-LH:0
-BRDA:4,0,0,0
-BRDA:4,0,1,0
->>>>>>> develop
 BRF:2
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/skeletonUI.js
-=======
-SF:src/components/Signin/skeletonUI.js
->>>>>>> develop
 FN:3,skeletonUI
 FNF:1
 FNH:0
 FNDA:0,skeletonUI
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
 LF:3
-=======
-DA:4,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/Signin/useLoader.js
-=======
-SF:src/components/Signin/useLoader.js
->>>>>>> develop
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:8,(anonymous_2)
@@ -1483,10 +1196,7 @@ FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
 FNDA:0,(anonymous_3)
-<<<<<<< HEAD
 DA:1,0
-=======
->>>>>>> develop
 DA:3,0
 DA:4,0
 DA:6,0
@@ -1495,40 +1205,26 @@ DA:8,0
 DA:9,0
 DA:12,0
 DA:15,0
-<<<<<<< HEAD
 LF:9
-=======
-LF:8
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/footer/footer.js
-=======
-SF:src/components/footer/footer.js
->>>>>>> develop
 FN:3,Footer
 FNF:1
 FNH:0
 FNDA:0,Footer
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:4,0
 LF:3
-=======
-DA:4,0
-LF:1
->>>>>>> develop
 LH:0
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/changePassword.js
 FN:11,ChangePassword
 FN:12,(anonymous_4)
@@ -1559,27 +1255,6 @@ DA:8,0
 DA:9,0
 DA:10,0
 DA:11,0
-=======
-SF:src/components/updateProfile/changePassword.js
-FN:11,ChangePassword
-FN:12,(anonymous_1)
-FN:17,Submit
-FN:40,close
-FN:45,(anonymous_4)
-FN:85,(anonymous_5)
-FN:92,(anonymous_6)
-FN:96,(anonymous_7)
-FNF:8
-FNH:0
-FNDA:0,ChangePassword
-FNDA:0,(anonymous_1)
-FNDA:0,Submit
-FNDA:0,close
-FNDA:0,(anonymous_4)
-FNDA:0,(anonymous_5)
-FNDA:0,(anonymous_6)
-FNDA:0,(anonymous_7)
->>>>>>> develop
 DA:12,0
 DA:13,0
 DA:14,0
@@ -1609,11 +1284,7 @@ DA:51,0
 DA:85,0
 DA:92,0
 DA:96,0
-<<<<<<< HEAD
 LF:40
-=======
-LF:29
->>>>>>> develop
 LH:0
 BRDA:21,0,0,0
 BRDA:21,0,1,0
@@ -1636,16 +1307,11 @@ BRF:17
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/currentMap.js
-=======
-SF:src/components/updateProfile/currentMap.js
->>>>>>> develop
 FN:5,CurrentMap
 FNF:1
 FNH:0
 FNDA:0,CurrentMap
-<<<<<<< HEAD
 DA:1,0
 DA:2,0
 DA:3,0
@@ -1654,11 +1320,6 @@ DA:5,0
 DA:6,0
 DA:7,0
 LF:7
-=======
-DA:6,0
-DA:7,0
-LF:2
->>>>>>> develop
 LH:0
 BRDA:9,0,0,0
 BRDA:9,0,1,0
@@ -1668,21 +1329,14 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/editProfile.js
 FN:11,EditProfile
 FN:15,(anonymous_4)
-=======
-SF:src/components/updateProfile/editProfile.js
-FN:11,EditProfile
-FN:15,(anonymous_1)
->>>>>>> develop
 FN:23,ValidateEmail
 FN:35,removeReadonly
 FN:50,Buttons1
 FN:72,Buttons2
 FN:80,close
-<<<<<<< HEAD
 FN:85,(anonymous_10)
 FN:126,(anonymous_11)
 FN:128,(anonymous_12)
@@ -1692,23 +1346,11 @@ FNF:12
 FNH:0
 FNDA:0,EditProfile
 FNDA:0,(anonymous_4)
-=======
-FN:85,(anonymous_7)
-FN:126,(anonymous_8)
-FN:128,(anonymous_9)
-FN:136,(anonymous_10)
-FN:140,(anonymous_11)
-FNF:12
-FNH:0
-FNDA:0,EditProfile
-FNDA:0,(anonymous_1)
->>>>>>> develop
 FNDA:0,ValidateEmail
 FNDA:0,removeReadonly
 FNDA:0,Buttons1
 FNDA:0,Buttons2
 FNDA:0,close
-<<<<<<< HEAD
 FNDA:0,(anonymous_10)
 FNDA:0,(anonymous_11)
 FNDA:0,(anonymous_12)
@@ -1725,13 +1367,6 @@ DA:8,0
 DA:9,0
 DA:10,0
 DA:11,0
-=======
-FNDA:0,(anonymous_7)
-FNDA:0,(anonymous_8)
-FNDA:0,(anonymous_9)
-FNDA:0,(anonymous_10)
-FNDA:0,(anonymous_11)
->>>>>>> develop
 DA:15,0
 DA:16,0
 DA:17,0
@@ -1785,11 +1420,7 @@ DA:126,0
 DA:128,0
 DA:136,0
 DA:140,0
-<<<<<<< HEAD
 LF:64
-=======
-LF:53
->>>>>>> develop
 LH:0
 BRDA:26,0,0,0
 BRDA:26,0,1,0
@@ -1817,7 +1448,6 @@ BRF:22
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/components/updateProfile/profile.js
 FN:10,Profile
 FN:11,(anonymous_4)
@@ -1835,26 +1465,13 @@ DA:7,0
 DA:8,0
 DA:9,0
 DA:10,0
-=======
-SF:src/components/updateProfile/profile.js
-FN:10,Profile
-FN:11,(anonymous_1)
-FNF:2
-FNH:0
-FNDA:0,Profile
-FNDA:0,(anonymous_1)
->>>>>>> develop
 DA:11,0
 DA:12,0
 DA:13,0
 DA:14,0
 DA:15,0
 DA:16,0
-<<<<<<< HEAD
 LF:16
-=======
-LF:6
->>>>>>> develop
 LH:0
 BRDA:18,0,0,0
 BRDA:18,0,1,0
@@ -1864,36 +1481,28 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/store.js
-=======
-SF:src/redux/store.js
->>>>>>> develop
 FNF:0
 FNH:0
-DA:5,1
+DA:5,2
 LF:1
 LH:1
-BRDA:5,0,0,1
+BRDA:5,0,0,2
 BRDA:5,0,1,0
 BRF:2
 BRH:1
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/index.js
-=======
-SF:src/redux/actions/index.js
->>>>>>> develop
 FN:1,(anonymous_0)
 FN:6,(anonymous_1)
 FNF:2
 FNH:0
 FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
-DA:1,2
+DA:1,1
 DA:2,0
-DA:6,2
+DA:6,1
 DA:7,0
 LF:4
 LH:2
@@ -1901,16 +1510,12 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/loginActions.js
-=======
-SF:src/redux/actions/loginActions.js
->>>>>>> develop
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
 FNDA:0,(anonymous_0)
-DA:1,1
+DA:1,2
 DA:2,0
 LF:2
 LH:1
@@ -1918,20 +1523,12 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/actions/resetAction.js
-=======
-SF:src/redux/actions/resetAction.js
->>>>>>> develop
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
 FNDA:0,(anonymous_0)
-<<<<<<< HEAD
 DA:1,0
-=======
-DA:3,0
->>>>>>> develop
 DA:5,0
 DA:6,0
 LF:3
@@ -1940,36 +1537,28 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/constants/resetActionType.js
-=======
-SF:src/redux/constants/resetActionType.js
->>>>>>> develop
 FNF:0
 FNH:0
-DA:1,2
+DA:1,3
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/LoginReducer.js
-=======
-SF:src/redux/reducers/LoginReducer.js
->>>>>>> develop
 FN:9,(anonymous_0)
 FNF:1
 FNH:1
-FNDA:3,(anonymous_0)
-DA:3,1
-DA:4,1
-DA:7,1
-DA:9,1
-DA:10,3
-DA:11,3
-DA:12,3
+FNDA:6,(anonymous_0)
+DA:3,2
+DA:4,2
+DA:7,2
+DA:9,2
+DA:10,6
+DA:11,6
+DA:12,6
 DA:14,0
 DA:15,0
 DA:16,0
@@ -1977,14 +1566,14 @@ DA:17,0
 DA:18,0
 DA:20,0
 DA:21,0
-DA:25,3
+DA:25,6
 LF:15
 LH:8
-BRDA:3,0,0,1
+BRDA:3,0,0,2
 BRDA:3,0,1,0
-BRDA:9,1,0,3
+BRDA:9,1,0,6
 BRDA:12,2,0,0
-BRDA:12,2,1,3
+BRDA:12,2,1,6
 BRDA:14,3,0,0
 BRDA:14,3,1,0
 BRDA:14,4,0,0
@@ -1993,24 +1582,20 @@ BRF:9
 BRH:3
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/authReducer.js
-=======
-SF:src/redux/reducers/authReducer.js
->>>>>>> develop
 FN:11,(anonymous_0)
 FN:13,(anonymous_1)
 FN:24,(anonymous_2)
 FNF:3
 FNH:1
-FNDA:1,(anonymous_0)
+FNDA:2,(anonymous_0)
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
-DA:3,1
-DA:4,1
-DA:6,1
-DA:11,1
-DA:12,1
+DA:3,2
+DA:4,2
+DA:6,2
+DA:11,2
+DA:12,2
 DA:14,0
 DA:15,0
 DA:16,0
@@ -2019,43 +1604,70 @@ DA:26,0
 DA:27,0
 LF:11
 LH:5
-BRDA:6,0,0,1
-BRDA:6,0,1,1
+BRDA:6,0,0,2
+BRDA:6,0,1,2
 BRF:2
 BRH:2
 end_of_record
 TN:
-<<<<<<< HEAD
+SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/busesReducer.js
+FN:11,(anonymous_0)
+FN:14,(anonymous_1)
+FN:15,(anonymous_2)
+FN:17,(anonymous_3)
+FN:18,(anonymous_4)
+FN:30,(anonymous_5)
+FNF:6
+FNH:1
+FNDA:0,(anonymous_0)
+FNDA:0,(anonymous_1)
+FNDA:0,(anonymous_2)
+FNDA:0,(anonymous_3)
+FNDA:0,(anonymous_4)
+FNDA:4,(anonymous_5)
+DA:5,2
+DA:7,2
+DA:12,0
+DA:15,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:30,4
+DA:32,2
+LF:12
+LH:4
+BRDA:19,0,0,0
+BRDA:19,0,1,0
+BRF:2
+BRH:0
+end_of_record
+TN:
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/changepassword.js
-=======
-SF:src/redux/reducers/changepassword.js
->>>>>>> develop
 FN:4,(anonymous_0)
 FNF:1
 FNH:1
-FNDA:3,(anonymous_0)
-DA:3,1
-DA:4,1
-DA:5,3
-DA:6,3
+FNDA:6,(anonymous_0)
+DA:3,2
+DA:4,2
+DA:5,6
+DA:6,6
 DA:8,0
 DA:9,0
 DA:10,0
-DA:12,3
+DA:12,6
 LF:8
 LH:5
-BRDA:4,0,0,3
+BRDA:4,0,0,6
 BRDA:6,1,0,0
-BRDA:6,1,1,3
+BRDA:6,1,1,6
 BRF:3
 BRH:2
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/contactReducer.js
-=======
-SF:src/redux/reducers/contactReducer.js
->>>>>>> develop
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -2067,22 +1679,13 @@ DA:6,0
 LF:4
 LH:0
 BRDA:1,0,0,0
-<<<<<<< HEAD
 BRDA:3,1,0,0
 BRDA:3,1,1,0
-=======
-BRDA:2,1,0,0
-BRDA:2,1,1,0
->>>>>>> develop
 BRF:3
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/counterReducer.js
-=======
-SF:src/redux/reducers/counterReducer.js
->>>>>>> develop
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -2096,87 +1699,68 @@ DA:11,0
 LF:6
 LH:0
 BRDA:1,0,0,0
-<<<<<<< HEAD
 BRDA:4,1,0,0
 BRDA:4,1,1,0
 BRDA:4,1,2,0
 BRDA:4,1,3,0
-=======
-BRDA:3,1,0,0
-BRDA:3,1,1,0
-BRDA:3,1,2,0
-BRDA:3,1,3,0
->>>>>>> develop
 BRF:5
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/index.js
-=======
-SF:src/redux/reducers/index.js
->>>>>>> develop
 FNF:0
 FNH:0
-DA:10,1
+DA:11,2
 LF:1
 LH:1
 BRF:0
 BRH:0
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/resetReducers.js
-=======
-SF:src/redux/reducers/resetReducers.js
->>>>>>> develop
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
-FNDA:4,(anonymous_0)
-DA:2,2
-DA:3,2
-DA:7,2
-DA:8,4
+FNDA:7,(anonymous_0)
+DA:2,3
+DA:3,3
+DA:7,3
+DA:8,7
 DA:10,0
-DA:12,4
+DA:12,7
 LF:6
 LH:5
-BRDA:7,0,0,4
+BRDA:7,0,0,7
 BRDA:8,1,0,0
-BRDA:8,1,1,4
+BRDA:8,1,1,7
 BRF:3
 BRH:2
 end_of_record
 TN:
-<<<<<<< HEAD
 SF:/home/arthur/Desktop/Phantom App/phantom-fe-dream-team/src/redux/reducers/updateProfile.js
-=======
-SF:src/redux/reducers/updateProfile.js
->>>>>>> develop
 FN:6,(anonymous_0)
 FNF:1
 FNH:1
-FNDA:3,(anonymous_0)
-DA:3,1
-DA:4,1
-DA:5,1
-DA:6,1
-DA:7,3
-DA:8,3
-DA:9,3
-DA:10,3
+FNDA:6,(anonymous_0)
+DA:3,2
+DA:4,2
+DA:5,2
+DA:6,2
+DA:7,6
+DA:8,6
+DA:9,6
+DA:10,6
 DA:12,0
 DA:13,0
 DA:14,0
 DA:15,0
 DA:16,0
-DA:18,3
+DA:18,6
 LF:14
 LH:9
-BRDA:6,0,0,3
+BRDA:6,0,0,6
 BRDA:10,1,0,0
-BRDA:10,1,1,3
+BRDA:10,1,1,6
 BRF:3
 BRH:2
 end_of_record

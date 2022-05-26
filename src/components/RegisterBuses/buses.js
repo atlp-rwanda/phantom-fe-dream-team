@@ -64,7 +64,7 @@ const handleCancelClick=()=>{
   //on large screen
   const cardElements = posts.map((item) => {
     return (
-    <Fragment>
+    <Fragment key={item.key}>
     {/* <ReadOnlyRow item={item}/>
     <EditableRow/> */}
      {editbusid === item.id ? (
@@ -94,7 +94,7 @@ const handleCancelClick=()=>{
    <div className="flex items-center space-x-2 text-sm">
      <div className='flex flex-row'>
         <p className='mr-2'>PlateNo: </p>
-       <p className="text-blue-500 font-bold hover:underline">{item.plateNo}</p>
+       <p className="text-blue-500 font-bold hover:underline" >{item.plateNo}</p>
      </div>   
    </div>
    <div>
@@ -111,7 +111,7 @@ const handleCancelClick=()=>{
    </div>
    <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"  
    onClick={() => {
-                  dispatch(deleteBus(item.id));
+    dispatch(deleteBus({ id: item.id }));
                 }}>Delete</p>
  </div>
 </div>

@@ -37,6 +37,3 @@ test('it should display seats', () => {
   expect(linkElement).toBeInTheDocument;
 
 });
-
-
-

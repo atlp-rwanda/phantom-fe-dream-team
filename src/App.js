@@ -17,42 +17,52 @@ import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
+import Layout from "./components/Layout/Layout";
+import Missing from './components/Missing/Missing';
+import Unauthorized from "./components/Unauthorized/Unauthorized";
+import RequireAuth from "./components/RequireAuth/RequireAuth";
 function App() {
-    const NavbarLayout = () => (
-        <>
-          <Navbar />
-          <Outlet />
-        </>
-      );
+  const NavbarLayout = () => (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
 
-    return (<div>
+  return (<div>
 
-        <BrowserRouter>
-            <Routes>
-            <Route element={<NavbarLayout/>}>
-                <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
+    <Routes>
+      <Route path="/" element={<Layout />}>
 
-                <Route exact path="/Signin" element={<Signin />} />
-                <Route exact path="/Register" element={<Register />} />
-                <Route exact path="/Contact" element={<Contact />} />
-                <Route path="/ResetPassword" element={<Reset />}></Route>
-                <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
-                <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-                <Route exact path="/login" element={<Login />}></Route>
-                <Route exact path="/profile" element={[<Profile/>]}></Route>
-                <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
-              <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
-           
-              </Route>  
-              <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
-              <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} />      
-            </Routes>
-        </BrowserRouter>
+        <Route element={<NavbarLayout />}>
+          <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
+
+          <Route exact path="/Signin" element={<Signin />} />
+          <Route exact path="/Register" element={<Register />} />
+          <Route exact path="/Contact" element={<Contact />} />
+          <Route path="/ResetPassword" element={<Reset />}></Route>
+          <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
+          <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/profile" element={[<Profile />]}></Route>
+          <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
+          <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
+
+        </Route>
+        <Route path="unauthorized" element={<Unauthorized />} />
+        <Route path="dashboard/Users/AddUser" element={<RegisterUser />} />
+        <Route exact path="/logout" element={<Logout />}></Route>
+        <Route element={<RequireAuth/>}>
+        <Route exact path="/dashboard/*" element={<Dashboard />} />
+        </Route>
+        <Route path="*" element={<Missing />} />
+      </Route>
+    </Routes>
 
 
 
-    </div>)
+
+  </div>)
 }
 
 export default App;

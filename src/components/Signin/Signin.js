@@ -1,4 +1,4 @@
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useNavigate,useLocation} from 'react-router-dom';
 import React, {useState} from 'react'
 import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
@@ -8,11 +8,16 @@ import ErrorPopup from '../error';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/loginActions';
 
-
+import useAuth from '../../hooks/UseAuth';
 
 
 const Signin = () => {
-  let navigate = useNavigate();
+
+  const { setAuth } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const from = location.state?.from?.pathname || "/";
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
   
@@ -65,12 +70,9 @@ console.log('loggedin',loggedin)
     }
 
     Dispatch(login(inputEmail,inputPassword))
-    if (loginInfo[1] == true){
-      navigate("/dashboard");
-    }
-    else{
-      seterrorMessage('user can not found')
-    }
+   
+    setAuth({ inputEmail,inputPassword });
+    navigate(from, { replace: true });
   }
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import {useDispatch } from "react-redux";
 import { deleteBus} from "../../redux/reducers/busesReducer";
+import { Icon } from '@iconify/react';
 
 export default function readonlyrow({item,handleEditClick}) {
    const dispatch = useDispatch();
@@ -19,14 +20,16 @@ export default function readonlyrow({item,handleEditClick}) {
    {item.seats}
    </td>
    <td className="px-12 py-4">
-   <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"onClick={(event)=>handleEditClick(event,item)}>Edit</p>
+   <Icon 
+     onClick={(event)=>handleEditClick(event,item)}
+   icon="ci:edit" width="24" color="green"  />
    </td>
    <td className="px-12 py-4">
-       <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-           onClick={() => {
-             dispatch(deleteBus({ id: item.id }));
-           }}
-       >Delete</p>
+           <Icon 
+               onClick={() => {
+                dispatch(deleteBus({ id: item.id }));
+              }}
+           icon="fluent:delete-28-regular" width="24" color='red' />
    </td>
 </tr>
   )

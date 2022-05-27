@@ -4,6 +4,7 @@ import { useSelector,useDispatch } from "react-redux";
 import { deleteBus, selectAllPosts,updateBuses} from "../../redux/reducers/busesReducer";
 import ReadOnlyRow from "./readonlyrow"
 import EditableRow from './editablerow';
+import { Icon } from '@iconify/react';
 
 export default function buses() {
   const [editbusid,setEditbusid]=useState(null)
@@ -64,7 +65,7 @@ const handleCancelClick=()=>{
   //on large screen
   const cardElements = posts.map((item) => {
     return (
-    <Fragment key={item.key}>
+    <Fragment>
     {/* <ReadOnlyRow item={item}/>
     <EditableRow/> */}
      {editbusid === item.id ? (
@@ -109,10 +110,11 @@ const handleCancelClick=()=>{
    <p className='mr-2'>RouteNo: </p>
    {item.routeNo}
    </div>
-   <p className="font-medium text-blue-600 dark:text-blue-500 hover:underline"  
-   onClick={() => {
-    dispatch(deleteBus({ id: item.id }));
-                }}>Delete</p>
+   <Icon 
+      onClick={() => {
+      dispatch(deleteBus({ id: item.id }));
+              }}
+     icon="fluent:delete-28-regular" width="24" color='red' />
  </div>
 </div>
 </div>

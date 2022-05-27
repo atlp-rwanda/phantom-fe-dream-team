@@ -5,7 +5,6 @@ import TopNavbar from './components/Dashboard/TopNavbar';
 import { MemoryRouter as Router } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
 import Buses from './components/Dashboard/Buses';
-import RoutesDashboard from './components/Dashboard/RoutesDashboard';
 import Add from './components/Dashboard/add';
 import Home from './components/Dashboard/Home'
 
@@ -63,11 +62,7 @@ test('renders buses', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
-test('renders routes', () => {
-  render(<Router><RoutesDashboard/></Router>);
-  const linkElement = screen.getByText("Routes");
-  expect(linkElement).toBeInTheDocument;
-});
+
 
 test('renders add', () => {
   render(<Router><Add/></Router>);

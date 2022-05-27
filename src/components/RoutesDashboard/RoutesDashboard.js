@@ -3,12 +3,16 @@ import { Icon } from '@iconify/react';
 import { Route, Link, Routes } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteRoute } from '../../redux/reducers/routesSlice';
+import { DeleteRoute } from '../../redux/reducers/routesSlice';
 import TopNavbar from '../Dashboard/TopNavbar';
 import UpdateRoute from './UpdateRoute';
+
+
 function RoutesDashboard() {
+
   const dispatch=useDispatch();
-  const routeList = useSelector((state) => state.routesReducer.value);
+  const routeList = useSelector( (state) => state.routesReducer.value);
+
 
   return (
     <>
@@ -18,41 +22,42 @@ function RoutesDashboard() {
         <Route path="update" element={<UpdateRoute />}></Route>
       </Routes>
 
-
-      <table>
+       
+      <table className='border-1 '>
         <tr>
-          <th>Route no</th>
-          <th>From</th>
-          <th>To</th>
-          <th>N0 of stations</th>
-          <th>stations</th>
-          <th>Price</th>
-          <th> Action</th>
+          <th className='px-10 py-6 sm:text-sm' >Route no</th>
+          <th className='px-10 py-6 sm:text-sm' >From</th>
+          <th className='px-10 py-6 sm:text-sm'>To</th>
+          <th className='px-10 py-6 sm:text-sm'>N0 of stations</th>
+          <th className='px-10 py-6 sm:text-sm'>stations</th>
+          <th className='px-10 py-6 sm:text-sm'>Price</th>
+          <th className='px-10 py-6 sm:text-sm'> Action</th>
           <th>
           </th>
         </tr>
         {routeList.map((route) => {
           return (
             <tr>
-              <td>{route.Routeno}</td>
-              <td>{route.from}</td>
-              <td>{route.to}</td>
-              <td>{route.no_of_stations}</td>
-              <td>{route.stations}</td>
-              <td>{route.price}</td>
-              <td className='flex'>
+              <td className='px-10 py-6 sm:text-xs'>{route.routeno}</td>
+              <td className='px-10 py-6 sm:text-xs'>{route.from}</td>
+              <td className='px-10 py-6 sm:text-xs'>{route.to}</td>
+              <td className='px-10 py-6 sm:text-xs'>{route.no_of_stations}</td>
+              <td className='px-10 py-6 sm:text-xs'>{route.stations}</td>
+              <td className='px-10 py-6 sm:text-xs'>{route.price}</td>
+              <td className='flex px-10 py-6 sm:text-xs'>
                 <Link to={"update"} >
-                  <Icon icon="ci:edit" width="24" className='text-green' />
+                  <Icon icon="ci:edit" width="24"  color='green' />
                 </Link>
 
-                <Link to={"delete"} >
+              
                   <Icon
                     onClick={() => {
-                      dispatch(deleteRoute({ id: route.id }));
+                       dispatch(DeleteRoute({ id: route.id }));
+                 
                     }}
 
-                    icon="fluent:delete-28-regular" width="24" className='text-red' />
-                </Link>
+                    icon="fluent:delete-28-regular" width="24" color='red' />
+            
 
 
               </td>
@@ -60,6 +65,7 @@ function RoutesDashboard() {
           )
         })}
       </table>
+    
     </div>
   </>
   )

@@ -18,7 +18,7 @@ function Dashboard(props) {
       <section className='flex flex-col basis-4/5'>
 
         <Routes>
-          <Route path="Routes/*" element={<RoutesDashboard />} />
+       
           <Route path="Buses/*" element={<Buses />} />
           <Route path="Users/" element={<Users />} />
           <Route path="Routes/" element={<RoutesDashboard />}> </Route>

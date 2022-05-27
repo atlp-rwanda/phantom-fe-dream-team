@@ -10,7 +10,7 @@ export default function editablerow({handleCancelClick,editFormData,item,handleE
         required="required"
         placeholder="Enter PlateNo..."
         name="plateNo"
-        className='w-[100px]'
+        className='w-[100px] border-2 border-black'
         value={editFormData.plateNo}
         onChange={handleEditFormChange}
       ></input>
@@ -21,7 +21,7 @@ export default function editablerow({handleCancelClick,editFormData,item,handleE
         required="required"
         placeholder="Enter RouteNo..."
         name="routeNo"
-        className='w-[70px]'
+        className='w-[70px] border-2 border-black'
         value={editFormData.routeNo}
         onChange={handleEditFormChange}
       ></input>
@@ -32,7 +32,7 @@ export default function editablerow({handleCancelClick,editFormData,item,handleE
         required="required"
         placeholder="Enter Bus Type..."
         name="busType"
-        className='w-[70px]'
+        className='w-[70px] border-2 border-black'
         value={editFormData.busType}
         onChange={handleEditFormChange}
       ></input>
@@ -43,7 +43,7 @@ export default function editablerow({handleCancelClick,editFormData,item,handleE
         required="required"
         placeholder="Enter Seats..."
         name="seats"
-        className='w-[70px]'
+        className='w-[70px] border-2 border-black'
         value={editFormData.seats}
         onChange={handleEditFormChange}
       ></input>

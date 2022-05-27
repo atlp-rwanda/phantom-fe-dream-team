@@ -55,43 +55,6 @@ const linkElement = screen.getByText("Send");
 });
 
 
-// test('renders Let’s connect!', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Let’s connect!");
-// });
-
-// test('renders Follow Us to Get Updates !', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Follow Us to Get Updates !");
-// });
-// test('renders Privacy Policy', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Privacy Policy");
-// });
-
-// test('renders Terms of Services', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Terms of Services");
-// });
-// test('renders Contact', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Contact");
-// });
-
-// test('renders Contact', () => {
-// render(<Footer />);
-// const linkElement = screen.getByText("Contact");
-// });
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> develop
 test(' it should render paragraph', () => {
 render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");
@@ -131,11 +94,4 @@ test(' it should render phantom Step3 detail ', () => {
 render(<Services/>);
 const linkElement =screen.getByText("Find the nearest bus");
 expect(linkElement).toBeInTheDocument;
-<<<<<<< HEAD
 });
-=======
-});
-
-
-
->>>>>>> develop

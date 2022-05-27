@@ -4,7 +4,7 @@ import React from 'react';
 import Landingpage from '../components/Landingpage/Landingpage';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/footer/footer'
 
 test('renders Get in touch with us', () => {
 render(<Contact />);

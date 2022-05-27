@@ -35,7 +35,7 @@ function UpdateRoute() {
         const handlesetStations=(e)=>{
             setStations(e.target.value)
               }
-         const handlesetPrice=(e)=>{
+         const handlesetPrice=(e)=> {
             setPrice(e.target.value)
                 }
 

@@ -18,7 +18,6 @@ import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser";
 import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
-import RegisterUser from "./components/RegisterUser/registerUser"
 import Footer from "./components/footer/footer";
 
 function App() {

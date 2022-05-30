@@ -7,9 +7,7 @@ import Contact from './components/Contact/Contact';
 import Buses from './components/Dashboard/Buses';
 import RoutesDashboard from './components/Dashboard/RoutesDashboard';
 import Add from './components/Dashboard/add';
-import Home from './components/Dashboard/Home';
-
-
+import Home from './components/Dashboard/Home'
 test('renders Get in touch with us', () => {
 render(<Contact />);
 const linkElement = screen.getByText("Get in touch with us");
@@ -35,6 +33,8 @@ test('renders Buses', () => {
   const linkElement = screen.getByText("Buses");
   expect(linkElement).toBeInTheDocument;
 });
+
+
 
 
 test('renders Users ', () => {
@@ -80,3 +80,4 @@ test('renders home', () => {
   const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument;
 });
+

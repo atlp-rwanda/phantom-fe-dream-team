@@ -2,12 +2,9 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import Landingpage from '../components/Landingpage/Landingpage';
-import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-
-
-
+import Footer from '../components/footer/footer'
 
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -86,6 +83,11 @@ const linkElement = screen.getByText("Contact");
 });
 
 
+
+
+
+
+
 test(' it should render paragraph', () => {
 render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");
@@ -126,3 +128,6 @@ render(<Services/>);
 const linkElement =screen.getByText("Find the nearest bus");
 expect(linkElement).toBeInTheDocument;
 });
+
+
+

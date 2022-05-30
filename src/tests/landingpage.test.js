@@ -4,8 +4,7 @@ import React from 'react';
 import Landingpage from '../components/Landingpage/Landingpage';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-
-
+import Footer from '../components/footer/footer'
 
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -55,6 +54,43 @@ const linkElement = screen.getByText("Send");
 });
 
 
+<<<<<<< HEAD
+=======
+test('renders Let’s connect!', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Let’s connect!");
+});
+
+test('renders Follow Us to Get Updates !', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Follow Us to Get Updates !");
+});
+test('renders Privacy Policy', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Privacy Policy");
+});
+
+test('renders Terms of Services', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Terms of Services");
+});
+test('renders Contact', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Contact");
+});
+
+test('renders Contact', () => {
+render(<Footer />);
+const linkElement = screen.getByText("Contact");
+});
+
+
+
+
+
+
+
+>>>>>>> develop
 test(' it should render paragraph', () => {
 render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");

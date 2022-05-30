@@ -1,9 +1,10 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+
 function Footer() {
   return (
     <div>
-      <footer className="bg-gray-700 md: sm:text-xl text-ceneter px-0 sm:px-0 lg:px-8">
+      <footer className="bg-gray-700 sm:text-sm text-ceneter px-0 sm:px-0 lg:px-8">
         <div className="text-center text-3xl text-white  pb-4 sm:text-xl">
           <h1>Let’s connect!</h1>
 
@@ -14,7 +15,7 @@ function Footer() {
             <Icon icon="el:map-marker" width="36" />
             </div>
            <div className=" flex flex-col items-center space-y-4 ">
-           <h3>Kigali, Rwanda</h3>
+           <h3>kigali,Rwanda</h3>
             <h3>KN 20 Ave</h3>
            </div>
             
@@ -44,12 +45,11 @@ function Footer() {
 
         <div className='bg-blue-700'> 
 
-          <h2 className="text-center text-white text-md mt-5 pb-4 sm:text-sm"><span>&copy;</span>All Rights Reserved By Phantom 2022</h2>
+          <h2 className="text-center text-white text-md mt-5 pb-4 sm:text-sm"><span>&copy;</span>All Rights Reserved By Phantmom 2022</h2>
 
         </div>
       </footer>
     </div>
   )
 }
-
 export default Footer;

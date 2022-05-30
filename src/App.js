@@ -18,6 +18,7 @@ import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
 import RegisterBuses from "./components/RegisterBuses/registerBus"
+import Simulate from "./components/Simulate/Simulate";
 function App() {
     const NavbarLayout = () => (
         <>
@@ -43,7 +44,7 @@ function App() {
                 <Route exact path="/profile" element={[<Profile/>]}></Route>
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
-           
+              <Route exact path="/simulate" element={<Simulate />}></Route>
               </Route>  
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />

@@ -45,7 +45,7 @@ function App() {
               <Route exact path="/dashboard/*" element={<Dashboard />} />      
             </Routes>
 
-            <Footer />
+             <Footer /> 
         </BrowserRouter>
 
 

@@ -14,10 +14,10 @@ function AddnewRoutes() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [routeno, setRouteno] = useState("");
+  const [routeNo, setRouteno] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [no_of_stations,setNoofstations]=useState("");
+  const [noOfStations,setNoofstations]=useState("");
 
   const [stations, setStations] = useState("");
   const [price, setPrice] = useState("");
@@ -37,7 +37,7 @@ function AddnewRoutes() {
     }, "2000")
   }
 
-  const save = Boolean(routeno)&& Boolean(from)&&Boolean(to)&&Boolean( no_of_stations)&&Boolean(stations)&&Boolean(stations)&&Boolean( price)
+  const save = Boolean(routeNo)&& Boolean(from)&&Boolean(to)&&Boolean( noOfStations)&&Boolean(stations)&&Boolean(stations)&&Boolean( price)
 
 
 
@@ -60,74 +60,74 @@ function AddnewRoutes() {
     <div className='mt-20 justify-around '> <div className=''>
       <h1 className='text-center mt-[8px] text-2xl text-blue-700 font-Poppins text-3xl sm:text-lg'>Add a New Route</h1>
      </div>
-      <section className='flex m-10 justify-items-center text-center mt-10 mb-10 '>
-        <div className='mr-10 w-1/3  sm:hidden'>
-          <img alt="photo"
+      <section className='flex justify-center ml-auto text-center mt-10 mb-10  lg:flex md:flex sm:flex-col mb-5 items-center sm:mt-[-20px] '>
+        <div className='w-1/3 mt-[70px]'>
+          <img alt="photo" className='w-[60%] sm:w-[100%]'
           src={routes}
           />
         </div>
-        <div className=' flex flex-col  border-b-2 border-blue-400 p-10  w-[500px]  2xl:shadow-b '>
-          <div className=" flex  ">
-            <label className=" text-blue-700 text-lg  sm:text-sm "><span>Route no </span></label>
-            <div className="ml-16 sm:ml-12  ">
-              <input type="text" name="name" placeholder="504" value={routeno}
+        <div className=' w-[500px] xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] sm:pb-5 pb-5 '>
+          <div className=" flex   ">
+            <label className=" text-blue-700 text-xl mt-[55px] sm:sr-only "><span>Route no </span></label>
+            <div className="ml-16  w-24 sm:ml-1 w-8  ">
+              <input type="text" name="name" placeholder="504" value={routeNo}
               
                 onChange={(event) => {
                   setRouteno(event.target.value);
                 }}
-                className='border-2 border-blue-500 ml-5  rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none sm:w-1/2 ml-0'
+                className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
               />
             </div>
           </div>
-          <div className=" flex  mt-5  ">
-            <label className=" text-blue-700 text-lg font-bold  sm:text-sm  "><span>From</span></label>
-            <div className="ml-24 sm:ml-12">
-              <input type="text" name="name" placeholder="Nyabugogo" 
+          <div className=" flex   ">
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>From</span></label>
+            <div className="ml-28  sm:ml-1 w-8">
+              <input type="text" name="name" placeholder="Nyabugogo" value={from}
                onChange={(event) => {
                 setFrom(event.target.value);
               }}
-              className="border-2 border-blue-500   rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none sm:w-1/2"/>
+              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-2 focus:outline-none sm:w-[250px] sm:ml-4"/>
             </div>
           </div>
-          <div className="flex mt-5">
-            <label className=" text-blue-700  text-lg font-bold  sm:text-sm "><span>To</span></label>
-            <div className="ml-32 sm:ml-12">
-              <input type="text" name="name" placeholder="Remera" 
+          <div className="flex sm:justify-center">
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>To</span></label>
+            <div className="ml-[134px]  sm:ml-1 w-8">
+              <input type="text" name="name" placeholder="Remera" value={to}
              onChange={(event) => {
               setTo(event.target.value);
             }}
-              className="border-2 border-blue-500  ml-5 rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none  sm:w-1/2"/>
+              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
-          <div className=" flex mt-5 ">
-            <label className=" text-blue-700  text-lg font-bold  sm:text-sm "><span>No of stations</span></label>
-            <div className="ml-6 sm:ml-0">
-              <input type="text" name="name" placeholder="10"
+          <div className=" flex sm:justify-center ">
+            <label className="text-blue-700 text-xl mt-6 sm:sr-only"><span>No of stations</span></label>
+            <div className="ml-6  sm:ml-1 w-8">
+              <input type="text" name="name" placeholder="10" value={noOfStations}
                onChange={(event) => {
                 setNoofstations(event.target.value);
               }}
               
-              className="border-2 border-blue-500   rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none sm:w-1/2"/>
+              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
-          <div className=" flex  mt-5 ">
-            <label className=" text-blue-700 text-lg font-bold sm:text-sm  "><span>Stations</span></label>
-            <div className="ml-20 sm:ml-10">
-              <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube"
+          <div className=" flex sm:justify-center  ">
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>Stations</span></label>
+            <div className="ml-20  sm:ml-1 w-8">
+              <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube" value={stations}
                onChange={(event) => {
                 setStations(event.target.value);
               }}
-              className="border-2 border-blue-500   rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none  sm:w-1/2"/>
+              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
-          <div className=" flex mt-5  ">
-            <label className=" text-blue-700 text-lg font-bold sm:text-sm  "><span>Price</span></label>
-            <div className="ml-28 sm:ml-12">
-              <input type="text" name="name" placeholder="325" 
+          <div className=" flex sm:justify-center  ">
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only  "><span>Price</span></label>
+            <div className="ml-28  sm:ml-1 w-8">
+              <input type="text" name="name" placeholder="325"  value={price}
                onChange={(event) => {
                 setPrice(event.target.value);
               }}
-              className="border-2 border-blue-500   rounded-lg py-2 px-8 shadow-b ml-4 focus:outline-none sm:w-1/2"/>
+              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
         </div>
@@ -140,10 +140,10 @@ function AddnewRoutes() {
          onClick={() => {
           dispatch(
             addRoute({
-              routeno,
+              routeNo,
               from,
               to,
-              no_of_stations,
+              noOfStations,
               stations,
               price
             }),

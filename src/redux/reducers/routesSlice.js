@@ -13,22 +13,27 @@ const routesSlice = createSlice({
     DeleteRoute:(state, action) => {
       state.value = state.value.filter((route) => route.id !== action.payload.id);
     },
-    updateRoute: (state, action) => {
-      state.value.map((route) => {
-        if (route.id === action.payload.id) {
-          route.routeno = action.payload.routeno;
+    updateRoute:(state, action) => {
+      state.value.map((route) =>{
+        if(route.id === action.payload.id) {
+          route.routeNo = action.payload.routeNo;
           route.from = action.payload.from;
           route.to = action.payload.to;
-          route.no_of_stations=action.payload.no_of_stations;
-          route.stations=action.payload.no_of_stations;
-          route.price=action.payload.no_of_stations;
-
+          route.noOfStations=action.payload.noOfStations;
+          route.stations=action.payload.stations;
+          route.price=action.payload.price;
         }
       });
     },
   },
 });
 
+
+
 export const {addRoute,updateRoute,DeleteRoute } = routesSlice.actions;
 
 export default routesSlice.reducer;
+
+
+
+

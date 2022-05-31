@@ -7,8 +7,6 @@ import Contact from './components/Contact/Contact';
 import RoutesDashboard from './components/Dashboard/RoutesDashboard';
 import Add from './components/Dashboard/add';
 import Home from './components/Dashboard/Home'
-
-
 test('renders Get in touch with us', () => {
 render(<Contact />);
 const linkElement = screen.getByText("Get in touch with us");

@@ -1,0 +1,43 @@
+{
+  "Permissions": [
+    {
+      "id": 1,
+      "Role": "Admin",
+      "Description": "Admin Description",
+      "Permissions": {
+        "AddEditDelOp": true,
+        "viewDelOp": true,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": true,
+        "UpdateProf": true
+      }
+    },
+    {
+      "id": 4,
+      "Role": "Manager",
+      "Description": "Manager Description",
+      "Permissions": {
+        "AddEditDelOp": false,
+        "viewDelOp": true,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": true,
+        "UpdateProf": true
+      }
+    },
+    {
+      "Role": "Operator",
+      "Description": "Operator descr",
+      "Permissions": {
+        "AddEditDelOp": false,
+        "viewDelOp": false,
+        "AssgnRemDriv": true,
+        "addRemRoute": true,
+        "UpdateBusInfo": false,
+        "UpdateProf": false
+      },
+      "id": 5
+    }
+  ]
+}

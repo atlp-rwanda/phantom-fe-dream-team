@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "plateNo": "RAF 105 U",
+        "routeNo": "600",
+        "busType": "Yutong",
+        "seats":"40"
+     
+    },
+    {
+        "id": "2",
+        "plateNo": "RAC 705 c",
+        "routeNo": "800",
+        "busType": "Yutong",
+        "seats":"30"
+     
+    },
+    {
+        "id": "3",
+        "plateNo": "RAA 505 x",
+        "routeNo": "840",
+        "busType": "Toyota",
+        "seats":"50"
+     
+    }
+]

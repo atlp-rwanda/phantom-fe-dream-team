@@ -41,7 +41,7 @@ export default function Simulate() {
 
 </div>
 
-<div className="relative overflow-hidden rounded-lg grid-cols-3 grid-rows-1 shadow-2xl  lg:pb-0 grid gap-1.5 md:grid-cols-3 h-auto shadow-b w-[98%]">
+<div className="relative overflow-hidden rounded-lg grid-cols-3 grid-rows-1 shadow-2xl  lg:pb-0 grid gap-1.5 md:grid-cols-3 h-auto shadow-b w-[98%] sm:grid-cols-1">
   {/* Control section */}
   <div className=" p-6 bg-gray-100 rounded ml-4">
     <div className="flex flex-col justify-end m-2 lg:m-6">

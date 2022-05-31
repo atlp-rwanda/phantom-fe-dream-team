@@ -44,12 +44,13 @@ function App() {
                 <Route exact path="/profile" element={[<Profile/>]}></Route>
                 <Route exact path="/profile/editprofile" element={[<EditProfile/>]}></Route>
               <Route exact path="/profile/changepassword" element={[<ChangePassword/>]}></Route>  
-              <Route exact path="/simulate" element={<Simulate />}></Route>
+             
               </Route>  
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} />      
+              <Route exact path="/dashboard/*" element={<Dashboard />} /> 
+              <Route exact path="/dashboard/simulate" element={<Simulate />}></Route>     
             </Routes>
         </BrowserRouter>
 

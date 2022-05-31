@@ -34,7 +34,8 @@ export default function buses() {
   const handleEditFormSubmit = (event,item) => {
     event.preventDefault();
     dispatch(updateBuses(
-      {id:item.id ,
+      {
+      id:item.id ,
       plateNo:editFormData.plateNo,
       routeNo:editFormData.routeNo,
       busType:editFormData.busType,

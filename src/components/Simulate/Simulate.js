@@ -1,9 +1,12 @@
 import React from 'react'
 import './App.css'
 import { MapContainer, TileLayer, Popup,Marker } from 'react-leaflet'
+import Logout from '../Logout/logout'
 
 export default function Simulate() {
   return (
+    <>
+    <Logout/>
     <MapContainer center={[-1.985070, 30.031855]} zoom={13} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -15,5 +18,6 @@ export default function Simulate() {
       </Popup>
     </Marker>
   </MapContainer>
+  </>
   )
 }

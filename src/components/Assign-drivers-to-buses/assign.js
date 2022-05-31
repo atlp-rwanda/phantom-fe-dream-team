@@ -14,17 +14,17 @@ function AssignDrivers() {
     const assignList = useSelector((state) => state.AssignReducer.value);
     const [editdriverid, setEditbusid] = useState(null)
 
-    // function Deleted() {
-    //     console.log("hey")
-    //     // fetch('http://localhost:8000/assignDrivers/' + ID, {
-    //     //     method: 'DELETE'
-    //     // }).then(() => {
-    //     // })
-    // }
-
-    function DeleteAssign() {
-        alert("deleted")
+    function Deleted(ID) {
+        console.log("ID:",ID)
+        fetch('http://localhost:8000/assignDrivers/' + ID, {
+            method: 'DELETE'
+        }).then(() => {
+            window.location.reload()
+        })
     }
+  
+
+    
 
     useEffect(() => {
         fetch('http://localhost:8000/assignDrivers')
@@ -93,9 +93,9 @@ function AssignDrivers() {
                                         <button
                                             onClick={(event) => handleEditClick(event, item)}
                                             scope="col" className="px-16 py-3">EDIT</button>
-                                        <button
-                                            onClick={
-                                                DeleteAssign()
+                                        <button onClick={ () => Deleted(bus.id)
+                                           
+                                            
                                             }
                                         >DELETE</button>
                                     </td>
@@ -128,7 +128,9 @@ function AssignDrivers() {
                                         <td>
                                             <button className="text-xs">EDIT</button>
                                             <button className="text-xs"
-                                                onClick={ Deleted}>DELETE</button>
+                                            onClick={
+                                                Deleted()
+                                            } >DELETE</button>
 
 
 
@@ -150,5 +152,5 @@ function AssignDrivers() {
 
                                               
                                     
-}
+)}
 export default AssignDrivers;

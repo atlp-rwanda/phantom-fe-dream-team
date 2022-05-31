@@ -49,7 +49,7 @@ function App() {
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} /> 
+              <Route exact path="/dashboard/" element={<Dashboard />} /> 
               <Route exact path="/dashboard/simulate" element={<Simulate />}></Route>     
             </Routes>
         </BrowserRouter>

@@ -19,7 +19,7 @@ function Landingpage() {
 
 
                 </div>
-                <div className='mt-20 mr-10 xs:m-4'>
+                <div className='mt-20 mr-10 xs:m-4 sm:hiden'>
                     <img src={bus} />
 
                 </div>

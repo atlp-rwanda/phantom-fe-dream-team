@@ -7,12 +7,12 @@ import { addAssign } from '../../redux/reducers/AssignSlice';
 import {  useDispatch } from "react-redux";
 import SuccefullPopup from '../Logout/success';
 import {useNavigate } from 'react-router-dom';
-import add from '../Dashboard/add';
 function AddAssign() {
 
+    
     function add(Driver,Plate) {
         console.log("add")
-        fetch('http://localhost:8000/assignDrivers/', {
+        fetch('http://localhost:8000/assignDrivers', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({Driver,Plate})
@@ -110,21 +110,19 @@ function AddAssign() {
                                         </div>
                                     </div>
                                             <div className='flex justify-center mb-10'>
-                                            <button
-                                            onClick={() => 
-                                                add(
-                                                    Plate,
-                                                    Driver
-                                                )
-                                            
-                                                
-                                                
-                                            }
-                                            
-                                            className='bg-blue-700 text-white py-2.5 px-8 rounded-lg' > {" "} Assign</button>
-                                            <Link to="/dashboard/Assign">
-                                            <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-5'>Cancel</button>
-                                            </Link>
+                                                <button
+                                                    onClick={() => 
+                                                        add(
+                                                            Plate,
+                                                            Driver,
+                                                        )  
+                                                        
+                                                    }
+                                                    
+                                                    className='bg-blue-700 text-white py-2.5 px-8 rounded-lg' > {" "} Assign</button>
+                                                    <Link to="/dashboard/Assign">
+                                                <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-5'>Cancel</button>
+                                                </Link>
                                         </div>
                     </>
   )

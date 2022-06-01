@@ -6,12 +6,13 @@ import LoginReducer from "./LoginReducer";
 import { authReducer } from './authReducer';
 
 
+import PermissionReducer from "./PermissionReducer";
 //import other reducers
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   
-    resetReducer,
+  
     routesReducer,
 
     LoginReducer,
@@ -19,6 +20,7 @@ const allReducers = combineReducers({
     resetReducer,authReducer,
 
     
+    PermissionReducer
     //other reducers
 });
 

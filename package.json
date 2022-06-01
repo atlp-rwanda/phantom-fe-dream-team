@@ -7,7 +7,11 @@
     "dev:start": "webpack server --mode development",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
-    "coverage": "react-scripts test --coverage a"
+    "coverage1": "react-scripts test --coverage&& cat ./coverage/lcov.info | coveralls",
+    "coverage:badge": "coverage-badge-creator",
+    "coverage":"react-scripts test --coverage --watchAll=false"
+  
+
   },
   "keywords": [],
   "author": "",
@@ -21,6 +25,7 @@
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.1.2",
+    "axios": "^0.27.2",
     "google-maps-react": "^2.0.6",
     "json-server": "^0.17.0",
     "react": "^17.0.2",
@@ -29,7 +34,8 @@
     "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
-    "redux": "^4.1.2"
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -37,7 +43,9 @@
     "@babel/preset-react": "^7.16.7",
     "@iconify/react": "^3.2.1",
     "autoprefixer": "^10.4.4",
-    "babel-loader": "^8.2.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.2.4",
+    "coveralls": "^3.1.1",
     "css-loader": "^6.7.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",

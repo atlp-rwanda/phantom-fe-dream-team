@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
- import { Roadsdata } from "../../components/RoutesDashboard/dummydata";
+ import  Roadsdata  from "../../components/RoutesDashboard/dummydata.json";
 
 const routesSlice = createSlice({
   name: "routes",

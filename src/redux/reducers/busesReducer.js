@@ -1,8 +1,8 @@
 import { createSlice} from "@reduxjs/toolkit";
-import { BusesData } from "../../components/RegisterBuses/FakeData";
+import data from "../../components/RegisterBuses/database.json";
 
 
-const initialState = { value: BusesData }
+const initialState = { value: data }
 
 const busesReducer = createSlice({
     name: 'posts',

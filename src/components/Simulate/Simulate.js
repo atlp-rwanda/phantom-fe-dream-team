@@ -8,7 +8,7 @@ export default function Simulate() {
   const [duration, setDuration] = useState('');
   const [source, setSource] = useState('');
   const [destination, setDestination] = useState('');
-  const [start, setStart] = useState(false);
+  const [Start, setStart] = useState(false);
 
   const originRef = useRef()
   const destinationRef = useRef();
@@ -120,7 +120,11 @@ export default function Simulate() {
   {/* Map section */}
 
   <div className="ml-auto text-center h-[450px]">
-    <LeafMap/>
+    <LeafMap
+     source={source} 
+     destination={destination}
+     Start={Start} 
+    />
   </div>
 </div>
 

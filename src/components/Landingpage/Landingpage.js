@@ -1,8 +1,6 @@
 import React from 'react';
-
-
 import bus from '../../assets/landing.png';
-
+ 
 
 function Landingpage() {
     return (
@@ -28,8 +26,12 @@ function Landingpage() {
 
             </div>
 
+         
+   
 
         </div>
+
+        
     )
 }
 

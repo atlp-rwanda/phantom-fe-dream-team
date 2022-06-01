@@ -9,9 +9,7 @@
     "test": "react-scripts test",
     "coverage1": "react-scripts test --coverage&& cat ./coverage/lcov.info | coveralls",
     "coverage:badge": "coverage-badge-creator",
-    "coverage":"react-scripts test --coverage --watchAll=false"
-  
-
+    "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +31,7 @@
     "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-slideshow-image": "^3.7.5",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1"
   },

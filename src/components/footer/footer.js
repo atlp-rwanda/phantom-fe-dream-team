@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import {Link} from 'react-router-dom';
 
 function Footer() {
   return (
@@ -26,10 +27,14 @@ function Footer() {
             </div>
           
             <div className=" flex mt-3 space-x-4 space-y-1 items-center">
-            <Icon icon="et:facebook" width="36" />
-            <Icon icon="et:twitter" width="36" />
-            <Icon icon="et:linkedin" width="36" />
-            <Icon icon="akar-icons:github-outline-fill" width="36" />
+            <Link to={"/"} className=" hover:text-blue-700">
+            <Icon icon="et:facebook" width="36" /></Link>
+            <Link to={"/"} className=" hover:text-blue-700">
+            <Icon icon="et:twitter" width="36" /></Link>
+            <Link to={"/"} className=" hover:text-blue-700">
+            <Icon icon="et:linkedin" width="36" /></Link>
+            <Link to={"/"} className=" hover:text-blue-700">
+            <Icon icon="akar-icons:github-outline-fill" width="36" /></Link>
           
             </div>
              
@@ -38,7 +43,6 @@ function Footer() {
           <div className="text-white flex flex-col space-y-4 items-center md:hidden xs:hidden">
             <h3>Terms of Services</h3>
             <h3>Privacy Policy</h3>
-            <h3>Contact</h3>
             <h3>FAQ</h3>
           </div>
         </div>

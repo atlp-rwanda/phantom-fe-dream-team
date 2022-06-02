@@ -19,20 +19,21 @@ import RegisterUser from "./components/RegisterUser/registerUser"
 import Footer from "./components/footer/footer";
 import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
 
+import RegisterBuses from "./components/RegisterBuses/registerBus"
 function App() {
-  const NavbarLayout = () => (
-    <>
-      <Navbar />
-      <Outlet />
-    </>
-  );
+    const NavbarLayout = () => (
+        <>
+          <Navbar />
+          <Outlet />
+        </>
+      );
 
-  return (<div>
+    return (<div>
 
-    <BrowserRouter>
-      <Routes>
-        <Route element={<NavbarLayout />}>
-          <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
+        <BrowserRouter>
+            <Routes>
+            <Route element={<NavbarLayout/>}>
+                <Route exact path="/" element={[<Landingpage />, <Services />, <Contact />]}></Route>
 
           <Route exact path="/Signin" element={<Signin />} />
           <Route exact path="/Contact" element={<Contact />} />
@@ -46,16 +47,18 @@ function App() {
         </Route>
         <Route path="dashboard/Users/AddUser" element={<RegisterUser />} />
         <Route path="dashboard/Routes/add" element={<AddnewRoutes />}></Route>
+        <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
         <Route exact path="/logout" element={<Logout />}></Route>
         <Route exact path="/Dashboard/*" element={<Dashboard />} />
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+
+        </BrowserRouter>
 
 
 
-  </div>)
+    </div>)
 }
 
 export default App;

@@ -14,14 +14,6 @@ function AssignDrivers() {
     const assignList = useSelector((state) => state.AssignReducer.value);
     const [editdriverid, setEditbusid] = useState(null)
 
-    function Deleted(ID) {
-        console.log("ID:",ID)
-        fetch('http://localhost:8000/assignDrivers/' + ID, {
-            method: 'DELETE'
-        }).then(() => {
-            window.location.reload()
-        })
-    }
   
 
     
@@ -79,7 +71,7 @@ function AssignDrivers() {
 
                             <th scope="col" className="px-16 py-3">Drivers</th>
                             <th scope="col" className="px-16 py-3">Buses</th>
-                            <th scope="col" className="px-16 py-3">Action</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -89,16 +81,7 @@ function AssignDrivers() {
                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <td scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">{bus.Driver}</td>
                                     <td scope="col" className="px-16 py-3">{bus.Plate}</td>
-                                    <td>
-                                        <button
-                                            onClick={(event) => handleEditClick(event, item)}
-                                            scope="col" className="px-16 py-3">EDIT</button>
-                                        <button onClick={ () => Deleted(bus.id)
-                                           
-                                            
-                                            }
-                                        >DELETE</button>
-                                    </td>
+                                    
                                 </tr>
                             )
                         }
@@ -125,16 +108,7 @@ function AssignDrivers() {
                                     <tr>
                                         <td className="text-xs">{bus.Driver}</td>
                                         <td className="text-xs">{bus.Plate}</td>
-                                        <td>
-                                            <button className="text-xs">EDIT</button>
-                                            <button className="text-xs"
-                                            onClick={
-                                                Deleted()
-                                            } >DELETE</button>
-
-
-
-                                        </td>
+                                        
                                     </tr>
                                 )
                             }

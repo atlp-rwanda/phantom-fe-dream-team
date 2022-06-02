@@ -9,6 +9,7 @@ import SuccefullPopup from '../Logout/success'
 import { Link } from 'react-router-dom';
 import{useLoader} from "../useLoader";
 import SkeletonUI from '../skeletonUI';
+import Logout from '../Logout/logout';
 function AddnewRoutes() {
   const {loading}=useLoader();
 
@@ -44,7 +45,7 @@ function AddnewRoutes() {
   return (
 
 <>
-<TopNavbar goto={e=>window.location.assign('/dashboard/Routes/Add')}/>
+ <Logout/>
 
 
 

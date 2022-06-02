@@ -17,6 +17,7 @@ import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import RegisterUser from "./components/RegisterUser/registerUser"
 import Footer from "./components/footer/footer";
+import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
 
 function App() {
   const NavbarLayout = () => (
@@ -44,6 +45,7 @@ function App() {
           <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
         </Route>
         <Route path="dashboard/Users/AddUser" element={<RegisterUser />} />
+        <Route path="dashboard/Routes/add" element={<AddnewRoutes />}></Route>
         <Route exact path="/logout" element={<Logout />}></Route>
         <Route exact path="/Dashboard/*" element={<Dashboard />} />
       </Routes>

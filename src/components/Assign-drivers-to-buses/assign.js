@@ -76,9 +76,9 @@ function deleted(ID) {
                 <table className="w-full  text-left text-gray-700 dark:text-gray-400 sm:hidden lg:block md:block 2xl:block">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" className="px-16 py-3">DRIVERS</th>
-                            <th scope="col" className="px-16 py-3">BUSES</th>
-                            <th scope="col" className="px-16 py-3">ACTION</th>                        
+                            <th scope="col" className="px-16 py-3">DRIVER</th>
+                            <th scope="col" className="px-16 py-3">BUS</th>
+                            <th scope="col" className="px-16 py-3">ACTIONS</th>                        
                         </tr>
                     </thead>
                     <tbody>
@@ -103,7 +103,7 @@ function deleted(ID) {
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:block lg:hidden md:hidden 2xl:hidden'>
                         <div className=' space-y-3 p-4 rounded-lg shadow sm:hidden'>
                             <div className="flex items-center text-xs">
-                                <p className="text-sm font-medium text-black flex flex-row">DRIVERS</p>
+                                <p className="text-sm font-medium text-black flex flex-row">Drivers</p>
                                 <p className="text-sm font-medium text-black flex flex-row">BUSES</p>
                                 <p className="text-sm font-medium text-black flex flex-row">ACTION</p>
                             </div>

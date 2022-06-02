@@ -9,27 +9,27 @@ import { act } from "react-dom/test-utils";
 
 
 
-test('renders DRIVERS',() => {
+test('renders DRIVER',() => {
     act(() => {
     render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-    const linkElement =  screen.getByText("DRIVERS");
+    const linkElement =  screen.getByText("DRIVER");
     expect(linkElement).toBeInTheDocument;
 });
 })
 
-test('renders BUSES',() => {
+test('renders BUS',() => {
   act(() => {
   render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("BUSES");
+  const linkElement =  screen.getByText("BUS");
   expect(linkElement).toBeInTheDocument;
 });
 })
 
 
-test('renders ACTION',() => {
+test('renders ACTIONS',() => {
   act(() => {
   render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("ACTION");
+  const linkElement =  screen.getByText("ACTIONS");
   expect(linkElement).toBeInTheDocument;
 });
 })

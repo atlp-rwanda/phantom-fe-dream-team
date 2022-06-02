@@ -19,6 +19,7 @@ import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
 import RegisterBuses from "./components/RegisterBuses/registerBus"
 import Simulate from "./components/Simulate/Simulate";
+import Track from "./components/test-bus/TrackingPage"
 function App() {
     const NavbarLayout = () => (
         <>
@@ -51,6 +52,7 @@ function App() {
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} /> 
               <Route exact path="/dashboard/simulate" element={<Simulate />}></Route>     
+              <Route exact path="/bus" element={<Track />}></Route>  
             </Routes>
         </BrowserRouter>
 

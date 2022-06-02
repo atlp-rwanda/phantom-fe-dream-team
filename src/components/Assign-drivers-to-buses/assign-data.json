@@ -1,34 +1,29 @@
 {
   "assignDrivers": [
     {
-      "id": "4",
-      "Plate": "RAD 753 K",
-      "Driver": "Kalisa John"
-    },
-    {
-      "id": "5",
-      "Plate": "RAB 356 S",
-      "Driver": "Ishimwe Charles"
-    },
-    {
-      "Driver": "Kwizera Christian",
-      "Plate": "RAC 356 P",
-      "id": "TqVbWbP"
-    },
-    {
-      "Driver": "Kirenga Frank",
-      "Plate": "RAC 356 P",
-      "id": "XOa_9e8"
+      "Driver": "Ishimwe Bruno",
+      "Plate": "RAC 705 X",
+      "id": "vsvOcZ0"
     },
     {
       "Driver": "Ishimwe Bruno",
-      "Plate": "RAA 356 W",
-      "id": "R0stFjA"
+      "Plate": "RAF 105 U",
+      "id": "XRNa2Xw"
     },
     {
-      "Driver": "Ishimwe Bruno",
-      "Plate": "RAC 356 P",
-      "id": "BUDseQo"
+      "Driver": "Ishimwe Fabrice",
+      "Plate": "RAA 505 G",
+      "id": "GmaZLnL"
+    },
+    {
+      "Driver": "Ishimwe Fabrice",
+      "Plate": "RAC 705 X",
+      "id": "SKOr9nb"
+    },
+    {
+      "Driver": "Kalisa John",
+      "Plate": "RAF 105 U",
+      "id": "rvxF6pA"
     }
   ]
 }

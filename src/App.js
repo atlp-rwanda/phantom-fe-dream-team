@@ -18,6 +18,7 @@ import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
 import RegisterBuses from "./components/RegisterBuses/registerBus"
+import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
 function App() {
     const NavbarLayout = () => (
         <>
@@ -48,7 +49,8 @@ function App() {
               <Route path="dashboard/Users/AddUser" element={<RegisterUser/>} />
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
-              <Route exact path="/dashboard/*" element={<Dashboard />} />      
+              <Route exact path="/dashboard/*" element={<Dashboard />} />
+              <Route exact path="/dashboard/AddAssign" element={<AddAssign />} />  
             </Routes>
         </BrowserRouter>
 

@@ -9,39 +9,30 @@ import { act } from "react-dom/test-utils";
 
 
 
-test('renders Drivers',() => {
+test('renders DRIVERS',() => {
     act(() => {
     render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-    const linkElement =  screen.getByText("Drivers");
+    const linkElement =  screen.getByText("DRIVERS");
     expect(linkElement).toBeInTheDocument;
 });
 })
 
-test('renders Buses',() => {
+test('renders BUSES',() => {
   act(() => {
   render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("Buses");
+  const linkElement =  screen.getByText("BUSES");
   expect(linkElement).toBeInTheDocument;
 });
 })
 
 
-test('renders Action',() => {
+test('renders ACTION',() => {
   act(() => {
   render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("Action");
+  const linkElement =  screen.getByText("ACTION");
   expect(linkElement).toBeInTheDocument;
 });
 })
-
-test('renders EDIT',() => {
-  act(() => {
-  render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("EDIT");
-  expect(linkElement).toBeInTheDocument;
-});
-})
-
 
 
 test('renders DELETE',() => {

@@ -1,12 +1,4 @@
-// import React from 'react'
 
-// function fetchDrivers() {
-//   return (
-    
-//   )
-// }
-
-// export default fetchDrivers
 import axios from "axios";
 import { FetchDriversAction, AddDriversAction } from "./DriversAssign";
 

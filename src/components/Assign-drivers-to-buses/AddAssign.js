@@ -7,6 +7,8 @@ import { addAssign } from '../../redux/reducers/AssignSlice';
 import {  useDispatch } from "react-redux";
 import SuccefullPopup from '../Logout/success';
 import {useNavigate } from 'react-router-dom';
+import buses from '../RegisterBuses/database.json'
+
 function AddAssign() {
 
     
@@ -51,10 +53,10 @@ function AddAssign() {
         )
     })
 
-        const Buses = dataBus.map((bus) => {
+        const Buses = buses.map((bus) => {
             return (
                 <option>
-                {bus.Plate}
+                {bus.plateNo}
                 </option>
                 
             )

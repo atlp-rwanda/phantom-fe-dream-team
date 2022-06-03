@@ -1,4 +1,5 @@
 import { login } from "../actions/loginActions"
+import Data from '../../components/RegisterUser/Users.json'
 
 if (localStorage.getItem('auth')== null){
     localStorage.setItem('auth',false)
@@ -11,16 +12,19 @@ const LoginReducer =(state = loggedin,action) =>{
     var userPassword = action.Password
      switch(action.type){
          case 'login':
-            if(userEmail === 'gerukundo14@gmail.com' && userPassword === 'demo'){
-                state =[userEmail,true]
-                localStorage.setItem('auth',true)
-                localStorage.setItem('login',[userEmail,true])
-                return state
-            }else{
-                state= [userEmail,false]
-                return state
-                                
+            Data.map((Info)=>{
+            if(userEmail === Info.email && userPassword === Info.password){
+                    state =[userEmail,true]
+                    localStorage.setItem('auth',"00psgwwj7819012n#%$hj18*&")
+                    localStorage.setItem('login',[userEmail,"00psgwwj7819012n#%$hj18*&"])
+                    return state
+                }else{
+                    state= [userEmail,false]
+                    return state
+                                    
+                }
             }
+            )
         default:
             return state
 

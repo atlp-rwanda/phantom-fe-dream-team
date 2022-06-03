@@ -1,3 +1,4 @@
+
 import updateProfile from "./updateProfile";
 import changePassword from "./changepassword";
 import  {resetReducer}  from "./resetReducers"; 
@@ -8,11 +9,11 @@ import PermissionReducer from "./PermissionReducer";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
+    
   
     resetReducer,
-    LoginReducer,
     updateProfile,changePassword,
-    resetReducer,authReducer,PermissionReducer
+    resetReducer,authReducer,PermissionReducer,LoginReducer
     //other reducers
 });
 

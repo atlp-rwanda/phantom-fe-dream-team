@@ -1,19 +1,14 @@
 {
   "assignDrivers": [
     {
-      "Driver": "Ishimwe Bruno",
-      "Plate": "RAC 705 X",
-      "id": "vsvOcZ0"
+      "Driver": "MAHORO HYACINTHE",
+      "Plate": "RAF 105 U",
+      "id": 2
     },
     {
-      "Driver": "Ishimwe Fabrice",
+      "Driver": "SHEMA LUCIEN",
       "Plate": "RAA 505 G",
-      "id": "nXJ_qGO"
-    },
-    {
-      "Driver": "Kwizera Christian",
-      "Plate": "RAA 505 G",
-      "id": "gtvyhIW"
+      "id": 3
     }
   ]
 }

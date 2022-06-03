@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 import { act } from "react-dom/test-utils";
 
 
-
 test('renders DRIVER',() => {
     act(() => {
     render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
@@ -34,20 +33,3 @@ test('renders ACTIONS',() => {
 });
 })
 
-
-test('renders DELETE',() => {
-  act(() => {
-  render(<Provider store={store}> <Router><AssignDrivers /> </Router></Provider>);
-  const linkElement =  screen.getByText("DELETE");
-  expect(linkElement).toBeInTheDocument;
-});
- })
-
-
-
-
-
-
-
-
-  

@@ -1,7 +1,7 @@
 import React from 'react'
 import Logout from '../Logout/logout'
 import { Link } from 'react-router-dom';
-import dataBus from './buses-data.json'
+// import dataBus from './buses-data.json'
 import { useState } from "react";
 import { addAssign } from '../../redux/reducers/AssignSlice';
 import {  useDispatch } from "react-redux";
@@ -42,12 +42,25 @@ function AddAssign() {
      }, "2000")
    }
  
-   
+   const getDataform=()=>{
+    const data=localStorage.getItem('register')
+    if(data){
+        return JSON.parse(data);
+    }else{
+        return []
+    }
+}
 
-    const Drivers = dataBus.map((bus) => {
+
+const [users,setUsers]=useState(getDataform())
+
+    const Drivers = users.map((bus) => {
         return (
             <option>
-            {bus.Driver}
+            {bus.firstname}
+            {" "}
+            {bus.lastname}
+            
             </option>
             
         )

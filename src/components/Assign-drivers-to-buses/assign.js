@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import dataBus from "./buses-data.json";
 import TopNavbar from '../Dashboard/TopNavbar';
-import { useDispatch, useSelector } from "react-redux";
-import { DeleteAssign } from '../../redux/reducers/AssignSlice';
-import { Icon } from '@iconify/react';
+
 
 
 function AssignDrivers() {
 
     const [data, setData] = useState("");
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null);
-    const dispatch = useDispatch();
-    const assignList = useSelector((state) => state.AssignReducer.value);
-    const [editdriverid, setEditbusid] = useState(null)
+    
 
   
 function deleted(ID) {
@@ -44,28 +38,6 @@ function deleted(ID) {
                 setError(err.message);
             })
     }, []);
-
-
-    //edit form
-    const [editFormData, setEditFormData] = useState({
-        Drivers: "",
-        Plate: "",
-    });
-    //edit button
-    const handleEditClick = (event, item) => {
-        event.preventDefault();
-        setEditdriverid(item.id);
-        //get edit form data
-        const formValues = {
-            Drivers: item.Drivers,
-            Plate: item.Plate,
-
-        };
-        setEditFormData(formValues);
-    }
-
-
-
 
     return (
         <>

@@ -44,6 +44,39 @@ function deleted(ID) {
 
             <TopNavbar goto={e => window.location.assign('/dashboard/AddAssign')} />
 
+            {/*On Phone */}
+                
+            {data && data.map((bus) => {
+                return (
+                    <div className="p-5 bg-gray-100 sm:block lg:hidden md:hidden 2xl:hidden mt-5 sm:flex-col">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:block lg:hidden md:hidden 2xl:hidden">
+                            <div className="bg-white space-y-3 p-4 rounded-lg shadow">
+                                <div className="flex items-center space-x-2 text-sm">
+                                    <div className='flex flex-row'>
+                                        <p className='mr-2'>Drivers: </p>
+                                        <p className="text-blue-500 font-bold hover:underline" >{bus.Driver}</p>
+                                    </div>   
+                                </div>
+                                
+                                <div className="text-sm text-gray-700 flex flex-row">
+                                    <p className='mr-2'>BUSES: </p>
+                                    {bus.Plate}
+                                </div>
+                                <div className="text-sm font-medium text-black flex flex-row">
+                                    <p className='mr-2'>ACTION: </p>
+                                    <p className="text-sm font-medium text-black flex flex-row"> <button onClick={
+                                        () => deleted(bus.id)
+                                    }>DELETE</button></p>
+                                </div>
+                            </div>
+                    </div>
+                   </div>
+                )
+            }
+            )}
+
+            {/*On large screen */}
+
             <div className="relative overflow-x-auto  justify-center text-center flex mt-10 mb-40 ">
                 <table className="w-full  text-left text-gray-700 dark:text-gray-400 sm:hidden lg:block md:block 2xl:block">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
@@ -70,40 +103,9 @@ function deleted(ID) {
                         )}
                     </tbody>
                 </table>
-                {/*On Phone */}
-                <div className=" p-5 sm:block lg:hidden md:hidden 2xl:hidden mt-5">
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:block lg:hidden md:hidden 2xl:hidden'>
-                        <div className=' space-y-3 p-4 rounded-lg shadow sm:hidden'>
-                            <div className="flex items-center text-xs">
-                                <p className="text-sm font-medium text-black flex flex-row">Drivers</p>
-                                <p className="text-sm font-medium text-black flex flex-row">BUSES</p>
-                                <p className="text-sm font-medium text-black flex flex-row">ACTION</p>
-                            </div>
-                        </div>
 
-                        <div>
-
-                            {data && data.map((bus) => {
-                                return (
-                                    <div>
-                                        <p className="text-sm font-medium text-black flex flex-row">{bus.Driver}</p>
-                                        <p className="text-sm font-medium text-black flex flex-row">{bus.Plate}</p>
-                                        <p className="text-sm font-medium text-black flex flex-row"> <button onClick={
-                                            () => deleted(bus.id)
-                                        }>DELETE</button></p>
-                                    </div>
-                                )
-                            }
-                            )}
-                        </div>
-
-                    </div>
-                   
-                
-                 </div>
                 </div>
 
-    
         </>
 
                                               

@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 import RoutesDashboard from './RoutesDashboard';
-import Buses from './Buses';
-import Drivers from './Drivers';
 import  SetRoles from '../SetRolesPermission/setRoles';
 import AddRole from '../SetRolesPermission/AddRole';
 import Users from './User';
-import AssignDashboard from './AssignDashboard';
+import AssignDrivers from '../Assign-drivers-to-buses/assign';
+import Buses from '../RegisterBuses/buses';
 
 
 
@@ -23,12 +22,11 @@ function Dashboard(props) {
             <Route path="/" element={<RoutesDashboard />} />
               <Route path="Routes/*" element={<RoutesDashboard />} />
               <Route path="Buses/*" element={<Buses />} />
-              <Route path="Drivers/*" element={<Drivers />} />
               <Route path="Users/*" element={<Users />} />
               <Route path="Roles/" element={<SetRoles/>} />
               <Route path="Roles/add" element={<AddRole/>} />
               <Route path="Users/" element={<Users />} />
-              <Route path="Assign/" element={<AssignDashboard />} />
+              <Route path="Assign/" element={<AssignDrivers />} />
             </Routes>
       </section>
     </div>

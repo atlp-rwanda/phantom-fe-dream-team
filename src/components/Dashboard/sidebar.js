@@ -52,7 +52,7 @@ function Sidebar({ setRoute }) {
 
 <Link className='flex' to="Assign">
     <GrWorkshop className='h-6 w-6 text-blue-600' />
-    <h1 className='md:hidden'>Assign</h1>
+    <h1 className='md:hidden'>Assign Driver to Buses</h1>
 </Link>
 
 </div>

@@ -61,7 +61,27 @@ const TrackingPage = () => {
   useEffect(() => {
     if (origin && destination && rMachine.current) {
       rMachine.current.setWaypoints([L.latLng(origin), L.latLng(destination)]);
-      rMachine.current.on('routeselected', (e) => {
+      // rMachine.current.on('routeselected', (e) => {
+      //   window.clearInterval();
+      //   const coor = e.route.coordinates;
+      //   toast('Route selected');
+      //   setcurrentTrack(coor[cursor]);
+      //   setInterval(() => {
+      //     if (cursor === coor.length - 1) {
+      //       setTimeout(() => {
+      //         cursor = 0;
+      //         setcurrentTrack(coor[cursor]);
+      //       }, 5000);
+      //     }
+      //     cursor++;
+      //     setcurrentTrack(coor[cursor]);
+      //   }, 2000);
+      // });
+    }
+  }, [origin, destination]);
+
+  const handlestart=()=>{
+       rMachine.current.on('routeselected', (e) => {
         window.clearInterval();
         const coor = e.route.coordinates;
         toast('Route selected');
@@ -77,8 +97,25 @@ const TrackingPage = () => {
           setcurrentTrack(coor[cursor]);
         }, 2000);
       });
-    }
-  }, [origin, destination]);
+  }
+  const handlestop=()=>{
+    rMachine.current.off('routeselected', (e) => {
+     window.clearInterval();
+     const coor = e.route.coordinates;
+     toast('Route selected');
+     setcurrentTrack(coor[cursor]);
+  //    setInterval(() => {
+  //      if (cursor === coor.length + 1) {
+  //        setTimeout(() => {
+  //          cursor = 0;
+  //          setcurrentTrack(coor[cursor]);
+  //        }, 5000);
+  //      }
+  //      cursor--;
+  //      setcurrentTrack(coor[cursor]);
+  //    }, 2000);
+  //  });
+}
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -200,11 +237,13 @@ const TrackingPage = () => {
               </div>
               <div className="flex justify-center gap-4">
       <button
+      onClick={handlestart}
         data-tip="Move Bus"
         className="bg-green-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
       >Start
       </button>
       <button
+      onClick={handlestop}
         data-tip="Stop Bus"
         className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
         >Stop

@@ -1,6 +1,7 @@
 import updateProfile from "./updateProfile";
 import changePassword from "./changepassword";
 import  {resetReducer}  from "./resetReducers"; 
+import routesReducer from "./routesSlice";
 import LoginReducer from "./LoginReducer";
 import { authReducer } from './authReducer';
 import busesReducer from "./busesReducer";
@@ -11,7 +12,9 @@ import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   
-    resetReducer,
+  
+    routesReducer,
+
     LoginReducer,
     updateProfile,
     changePassword,
@@ -19,7 +22,10 @@ const allReducers = combineReducers({
     authReducer,
     busesReducer,
     updateProfile,changePassword,
-    resetReducer,authReducer,PermissionReducer
+    resetReducer,authReducer,
+
+    
+    PermissionReducer
     //other reducers
 });
 

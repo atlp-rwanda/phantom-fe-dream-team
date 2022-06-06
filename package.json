@@ -9,9 +9,7 @@
     "test": "react-scripts test",
     "coverage1": "react-scripts test --coverage&& cat ./coverage/lcov.info | coveralls",
     "coverage:badge": "coverage-badge-creator",
-    "coverage":"react-scripts test --coverage --watchAll=false"
-  
-
+    "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +24,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.1.2",
     "axios": "^0.27.2",
-    "google-maps-react": "^2.0.6",
+    "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -47,7 +45,6 @@
     "coveralls": "^3.1.1",
     "css-loader": "^6.7.1",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
     "file-loader": "^6.2.0",
     "handlebars": "^4.5.0",

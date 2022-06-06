@@ -1,5 +1,5 @@
 import { login } from "../actions/loginActions"
-import Data from '../../components/RegisterUser/Users.json'
+import Data from '../../components/RegisterUser/users.json'
 
 if (localStorage.getItem('auth')== null){
     localStorage.setItem('auth',false)

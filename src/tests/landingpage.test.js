@@ -77,10 +77,7 @@ render(<Footer />);
 const linkElement = screen.getByText("Contact");
 });
 
-test('renders Contact', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Contact");
-});
+
 
 
 
@@ -128,6 +125,3 @@ render(<Services/>);
 const linkElement =screen.getByText("Find the nearest bus");
 expect(linkElement).toBeInTheDocument;
 });
-
-
-

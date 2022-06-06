@@ -18,8 +18,9 @@ import ChangePassword from "./components/updateProfile/changePassword";
 import Dashboard from "./components/Dashboard/dashboard";
 import RegisterUser from "./components/RegisterUser/registerUser"
 import RegisterBuses from "./components/RegisterBuses/registerBus"
-import Simulate from "./components/Simulate/Simulate";
-import Track from "./components/test-bus/TrackingPage"
+import Track from "./components/simulate/TrackingPage"
+import UserSimulation from "./components/simulate/UserSimulation";
+import Footer from "./components/footer/footer"
 function App() {
     const NavbarLayout = () => (
         <>
@@ -51,9 +52,10 @@ function App() {
               <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
               <Route exact path="/logout" element={<Logout />}></Route>  
               <Route exact path="/dashboard/*" element={<Dashboard />} /> 
-              <Route exact path="/dashboard/simulate" element={<Simulate />}></Route>     
-              <Route exact path="/bus" element={<Track />}></Route>  
+              <Route exact path="/dashboard/simulate" element={<Track/>}></Route>     
+              <Route exact path="/trackbus" element={<UserSimulation/>}></Route>   
             </Routes>
+            <Footer/>
         </BrowserRouter>
 
 

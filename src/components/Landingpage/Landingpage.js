@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import { Link } from 'react-router-dom';
 import bus from '../../assets/landing.png';
 
 
@@ -14,7 +14,10 @@ function Landingpage() {
                         Track Bus Location
                     </h1>
                     <p className=' py-10 text-blue-500 text-xl xl:text-base lg:text-base md:text-base sm:text-xs xs:text-xs xs:mt-2 xs:py-2' >Choose Your Route Track your bus live .</p>
-                    <button className='mt-3 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'>Track Bus</button>
+<Link to="/trackbus">
+<button className='mt-3 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'>Track Bus</button>
+</Link>
+                   
 
 
 

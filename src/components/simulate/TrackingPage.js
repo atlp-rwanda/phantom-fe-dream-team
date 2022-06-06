@@ -114,7 +114,7 @@ const TrackingPage = () => {
   //      cursor--;
   //      setcurrentTrack(coor[cursor]);
   //    }, 2000);
-  //  });
+    });
 }
 
   const handleChange = (e) => {

@@ -46,6 +46,12 @@ function Sidebar({ setRoute }) {
                     <h1 className='md:hidden'>Roles</h1>
                 </Link>
             </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Simulate">
+                    <FaUsers className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Simulate</h1>
+                </Link>
+            </div>
             <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
                 <Link className='flex' to="/Home">
                     <RiLogoutBoxLine className='h-6 w-6 mr-2' />

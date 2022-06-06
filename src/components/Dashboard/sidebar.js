@@ -6,11 +6,19 @@ import { BiBus } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+
+function logout(){
+    localStorage.removeItem("auth"); 
+    location.assign("../");
+}
+
+
 function Sidebar({ setRoute }) {
+    
     return (
         <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-full gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
             <div className='flex flex-wrap mt-3'>
-                <img className='h-12 w-12 gap-2 '
+                <img classNam e='h-12 w-12 gap-2 '
                     src={username} />
                 <h1 className='text-blue-600 flex text-center pt-2 hover:text-black md:hidden'>Username</h1>
             </div>
@@ -47,10 +55,13 @@ function Sidebar({ setRoute }) {
                 </Link>
             </div>
             <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
-                <Link className='flex' to="/Home">
+                {/* <Link className='flex' to="/Home"> */}
                     <RiLogoutBoxLine className='h-6 w-6 mr-2' />
-                    <h1 className='md:hidden'>Logout</h1>
-                </Link>
+                    {/* <h1 onclick="logout()" className='md:hidden'>Logout</h1> */}
+                    <button onClick={logout}>
+                   Logout
+                    </button>
+                {/* </Link> */}
             </div>
             </div>
            

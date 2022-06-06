@@ -40,7 +40,6 @@ function App() {
           <Route path="/ResetPassword" element={<Reset />}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/profile" element={[<Profile />]}></Route>
           <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
           <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>

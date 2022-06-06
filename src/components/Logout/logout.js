@@ -18,9 +18,9 @@ export default function logout() {
     const navigate = useNavigate();
 
     window.addEventListener("load", function () {
-      if (!localStorage.getItem("auth")) {
-        navigate('/login');
-      }
+        if (Username==null) {
+            navigate('/login');
+          }
     });
 
     const logout = () => {
@@ -43,7 +43,7 @@ export default function logout() {
         }, "2000")
       }
   return (
-    <div className='mb-80'>
+    <div className='mb-20'>
     {loading && <SkeletonUI />}
     {!loading && (
       <div>

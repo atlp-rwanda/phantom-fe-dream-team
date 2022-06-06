@@ -5,7 +5,7 @@ import bus from '../../assets/bus.png';
 import { useSelector } from 'react-redux';
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
-import ErrorPopup from '../error';
+import ErrorPopup from './error';
 
 export default function resetPassword() {
   const { loading } = useLoader();
@@ -72,7 +72,7 @@ export default function resetPassword() {
     {!loading && (
     <form className='relative w-full '>
     <div className='flex justify-center ml-auto text-center mt-40 mb-20  lg:flex md:flex'>
-     <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden lg:hidden' />
+     <img src={bus} alt='bus' className='w-1/3 shadow-a lg:block md:hidden' />
      <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
          <p className='mt-10'>Reset Password</p>
          <p className='mt-20'>find your phantom account</p>
@@ -82,7 +82,7 @@ export default function resetPassword() {
              onChange={handleOnChange}
          type='text' 
          placeholder='Enter your email' 
-         className='border-2 border-black  mt-5 rounded-lg py-2 p-2'/>
+         className='border-2 border-black  mt-5 rounded-lg py-2 p-2 sm:w-[90%]'/>
           <p className="text-red-500">{message}</p>
           <p className="text-green-700">{success}</p>
          <div className='mt-5 md:mb-10 xs:flex xs:justify-center sm:mb-10 lg:mb-10 '>

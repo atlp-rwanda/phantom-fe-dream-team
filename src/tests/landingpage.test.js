@@ -2,12 +2,9 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import Landingpage from '../components/Landingpage/Landingpage';
-import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-
-
-
+import Footer from '../components/footer/footer'
 
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -80,16 +77,8 @@ render(<Footer />);
 const linkElement = screen.getByText("Contact");
 });
 
-test('renders Contact', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Contact");
-});
 
 
-test('renders All Rights Reserved By Phantom 2022', () => {
-render(<Footer />);
-const linkElement = screen.getByText("All Rights Reserved By Phantom 2022");
-});
 
 
 
@@ -136,5 +125,3 @@ render(<Services/>);
 const linkElement =screen.getByText("Find the nearest bus");
 expect(linkElement).toBeInTheDocument;
 });
-
-

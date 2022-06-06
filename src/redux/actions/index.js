@@ -8,3 +8,18 @@
       type: "CHANGE", NewPassword:Password,
     };
   }
+  export const setPermission= (NPermissions,Id)=>{
+    return {
+      type:"UpdatePermission",permissions:NPermissions,ID:Id
+    };
+    }
+  export const deleteRole= (Id)=>{
+      return {
+        type:"DeleteRole",ID:Id
+      };
+      }
+export const addRole= (role)=>{
+        return {
+          type:"AddRole",ROLE:role
+    };
+  }    

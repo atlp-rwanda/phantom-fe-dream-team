@@ -42,7 +42,7 @@ function deleted(ID) {
     return (
         <>
 
-            <TopNavbar goto={e => window.location.assign('/dashboard/AddAssign')} />
+            <TopNavbar goto={e => window.location.assign('/dashboard/Drivers/Assign')} />
 
             {/*On Phone */}
                 

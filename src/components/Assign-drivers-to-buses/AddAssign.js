@@ -1,15 +1,13 @@
 import React from 'react'
 import Logout from '../Logout/logout'
 import { Link } from 'react-router-dom';
-// import dataBus from './buses-data.json'
 import { useState } from "react";
-import { addAssign } from '../../redux/reducers/AssignSlice';
 import {  useDispatch } from "react-redux";
 import SuccefullPopup from '../Logout/success';
 import {useNavigate } from 'react-router-dom';
 import buses from '../RegisterBuses/database.json'
 
-function AddAssign() {
+function Assign() {
 
     
     function add(Driver,Plate) {
@@ -19,7 +17,7 @@ function AddAssign() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({Driver,Plate})
       }).then(() => {
-        window.location.assign("./Assign")
+        window.location.assign("./")
         setSucceed(true);
       })
     }
@@ -144,4 +142,4 @@ const [users,setUsers]=useState(getDataform())
   )
 }
 
-export default AddAssign
+export default Assign

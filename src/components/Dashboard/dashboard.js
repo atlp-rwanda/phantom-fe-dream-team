@@ -32,7 +32,7 @@ function Dashboard(props) {
               <Route path="Roles/" element={<SetRoles/>} />
               <Route path="Roles/add" element={<AddRole/>} />
               <Route path="Users/" element={<Users />} />
-              <Route path="Assign/" element={<AssignDrivers />} />
+              <Route path="Drivers/" element={<AssignDrivers />} />
             </Routes>
       </section>
     </div>

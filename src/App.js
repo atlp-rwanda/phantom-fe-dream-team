@@ -51,7 +51,7 @@ function App() {
         <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
         <Route exact path="/logout" element={<Logout />}></Route>
         <Route exact path="/Dashboard/*" element={<Dashboard />} />
-        <Route exact path="/dashboard/AddAssign" element={<AddAssign />} />  
+        <Route exact path="/dashboard/Drivers/Assign" element={<AddAssign />} />  
 
       </Routes>
 

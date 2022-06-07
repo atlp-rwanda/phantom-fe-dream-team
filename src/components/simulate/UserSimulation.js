@@ -1,7 +1,6 @@
 import L from 'leaflet';
 import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
-import { toast } from 'react-toastify';
 import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
 import Button from './Buttons';
@@ -64,7 +63,7 @@ const UserSimulation = () => {
       // rMachine.current.on('routeselected', (e) => {
       //   window.clearInterval();
       //   const coor = e.route.coordinates;
-      //   toast('Route selected');
+      //   alert('Route selected');
       //   setcurrentTrack(coor[cursor]);
       //   setInterval(() => {
       //     if (cursor === coor.length - 1) {
@@ -84,7 +83,7 @@ const UserSimulation = () => {
        rMachine.current.on('routeselected', (e) => {
         window.clearInterval();
         const coor = e.route.coordinates;
-        toast('Route selected');
+        alert('Route selected');
         setcurrentTrack(coor[cursor]);
         setInterval(() => {
           if (cursor === coor.length - 1) {
@@ -102,7 +101,7 @@ const UserSimulation = () => {
     rMachine.current.off('routeselected', (e) => {
      window.clearInterval();
      const coor = e.route.coordinates;
-     toast('Route selected');
+     alert('Route selected');
      setcurrentTrack(coor[cursor]);
   //    setInterval(() => {
   //      if (cursor === coor.length + 1) {

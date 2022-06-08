@@ -4,7 +4,9 @@ import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 const slides = [
     "/images/bus3.png",
     "/images/bus2.png",
-    "/images/bus1.png",
+    "/images/bus4.png",
+    "/images/bus5.png",
+    "/images/bus6.png",
   ];
     
 

@@ -110,9 +110,7 @@ function Navbar() {
                                         SignIn
                                     </Link>
 
-                                    <Link to={"/Register"} className="hover:bg-blue-700 hover:text-white  text-blue-400 block px-3 py-2 rounded-md text-sm">
-                                        Register
-                                    </Link>
+                                    
 
                                
                             </div>

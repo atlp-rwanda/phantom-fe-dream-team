@@ -4,6 +4,7 @@ import  {resetReducer}  from "./resetReducers";
 import routesReducer from "./routesSlice";
 import LoginReducer from "./LoginReducer";
 import { authReducer } from './authReducer';
+import AssignReducer from "./AssignSlice"
 import busesReducer from "./busesReducer";
 
 import PermissionReducer from "./PermissionReducer";
@@ -23,9 +24,9 @@ const allReducers = combineReducers({
     busesReducer,
     updateProfile,changePassword,
     resetReducer,authReducer,
+    AssignReducer,authReducer,PermissionReducer
 
     
-    PermissionReducer
     //other reducers
 });
 

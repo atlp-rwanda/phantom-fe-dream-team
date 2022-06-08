@@ -5,7 +5,6 @@ import TopNavbar from './components/Dashboard/TopNavbar';
 import { MemoryRouter as Router } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
 import RoutesDashboard from './components/Dashboard/RoutesDashboard';
-import Add from './components/Dashboard/add';
 import Home from './components/Dashboard/Home'
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -60,11 +59,7 @@ test('renders routes', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
-test('renders add', () => {
-  render(<Router><Add/></Router>);
-  const linkElement = screen.getByText("add new ......");
-  expect(linkElement).toBeInTheDocument;
-});
+
 
 test('renders home', () => {
   render(<Router><Home/></Router>);

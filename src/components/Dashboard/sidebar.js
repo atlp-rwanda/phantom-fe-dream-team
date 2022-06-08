@@ -3,6 +3,7 @@ import username from '../../assets/Dashboard-images/username.png';
 import route from '../../assets/Dashboard-images/routes.png';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 import { BiBus } from 'react-icons/bi';
+import { GrWorkshop } from 'react-icons/gr'
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,7 @@ function Sidebar({ setRoute }) {
             <div className='flex flex-wrap mt-3'>
                 <img className='h-12 w-12 gap-2 '
                     src={username} />
+
                 <h1 className='text-blue-600 flex text-center pt-2 hover:text-black md:hidden'>Username</h1>
             </div>
             <div>
@@ -46,6 +48,7 @@ function Sidebar({ setRoute }) {
                     <h1 className='md:hidden'>Roles</h1>
                 </Link>
             </div>
+            
             <div className='flex text-center pt-10 mt-40 hover:text-blue-600'>
                 <Link className='flex' to="/Home">
                     <RiLogoutBoxLine className='h-6 w-6 mr-2' />
@@ -54,6 +57,7 @@ function Sidebar({ setRoute }) {
             </div>
             </div>
            
+
         </section>
     )
 }

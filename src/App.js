@@ -20,6 +20,7 @@ import Footer from "./components/footer/footer";
 import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
 
 import RegisterBuses from "./components/RegisterBuses/registerBus"
+import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
 function App() {
     const NavbarLayout = () => (
         <>
@@ -49,6 +50,8 @@ function App() {
         <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
         <Route exact path="/logout" element={<Logout />}></Route>
         <Route exact path="/Dashboard/*" element={<Dashboard />} />
+        <Route exact path="/dashboard/Drivers/Assign" element={<AddAssign />} />  
+
       </Routes>
 
       <Footer />

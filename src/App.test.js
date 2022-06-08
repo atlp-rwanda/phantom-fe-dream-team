@@ -4,9 +4,7 @@ import Sidebar from './components/Dashboard/sidebar';
 import TopNavbar from './components/Dashboard/TopNavbar';
 import { MemoryRouter as Router } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
-import Buses from './components/Dashboard/Buses';
 import RoutesDashboard from './components/Dashboard/RoutesDashboard';
-import Add from './components/Dashboard/add';
 import Home from './components/Dashboard/Home'
 test('renders Get in touch with us', () => {
 render(<Contact />);
@@ -35,8 +33,6 @@ test('renders Buses', () => {
 });
 
 
-
-
 test('renders Users ', () => {
   render(<Router><Sidebar /></Router>);
   const linkElement = screen.getByText("Users");
@@ -57,27 +53,16 @@ test('renders ADMIN DASHBOARD', () => {
   expect(linkElement).toBeInTheDocument;
 });
 
-test('renders buses', () => {
-  render(<Router><Buses/></Router>);
-  const linkElement = screen.getByText("Buses");
-  expect(linkElement).toBeInTheDocument;
-});
-
 test('renders routes', () => {
   render(<Router><RoutesDashboard/></Router>);
   const linkElement = screen.getByText("Routes");
   expect(linkElement).toBeInTheDocument;
 });
 
-test('renders add', () => {
-  render(<Router><Add/></Router>);
-  const linkElement = screen.getByText("add new ......");
-  expect(linkElement).toBeInTheDocument;
-});
+
 
 test('renders home', () => {
   render(<Router><Home/></Router>);
   const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument;
 });
-

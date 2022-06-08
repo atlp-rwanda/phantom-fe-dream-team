@@ -1,0 +1,19 @@
+{
+  "assignDrivers": [
+    {
+      "Driver": "SHEMA LUCIEN",
+      "Plate": "RAA 505 G",
+      "id": 7
+    },
+    {
+      "Driver": "KWIZERA Steven",
+      "Plate": "RAC 705 X",
+      "id": 8
+    },
+    {
+      "Driver": "NDAYAMBAJE Jean de Dieu",
+      "Plate": "RAA 505 G",
+      "id": 9
+    }
+  ]
+}

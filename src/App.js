@@ -9,7 +9,6 @@ import Email from './components/ResetPassword/emailExist'
 import Sent from './components/ResetPassword/emailSent'
 import Reset from './components/ResetPassword/resetPassword';
 import Dashboard from "./components/Dashboard/dashboard";
-import Login from "./components/Logout/login"
 import Logout from "./components/Logout/logout"
 import { Outlet } from 'react-router-dom';
 import EditProfile from "./components/updateProfile/editProfile";
@@ -21,10 +20,13 @@ import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
 
 import RegisterBuses from "./components/RegisterBuses/registerBus"
 import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
+
+const user = localStorage.getItem('user')
+
 function App() {
     const NavbarLayout = () => (
         <>
-          <Navbar />
+       {  user ? < Logout /> : <Navbar />}
           <Outlet />
         </>
       );
@@ -41,7 +43,6 @@ function App() {
           <Route path="/ResetPassword" element={<Reset />}></Route>
           <Route exact path="/ResetPassword/EmailExists" element={<Email />}></Route>
           <Route exact path="/ResetPassword/EmailSentSuccessful" element={<Sent />}></Route>
-          <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/profile" element={[<Profile />]}></Route>
           <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
           <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
@@ -49,7 +50,6 @@ function App() {
         <Route path="dashboard/Users/AddUser" element={<RegisterUser />} />
         <Route path="dashboard/Routes/add" element={<AddnewRoutes />}></Route>
         <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
-        <Route exact path="/logout" element={<Logout />}></Route>
         <Route exact path="/Dashboard/*" element={<Dashboard />} />
         <Route exact path="/dashboard/Drivers/Assign" element={<AddAssign />} />  
 

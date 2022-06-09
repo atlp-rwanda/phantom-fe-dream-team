@@ -9,7 +9,7 @@ import { BsPersonBadgeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 function logout(){
-    localStorage.removeItem("auth"); 
+    localStorage.clear(); 
     location.assign("../");
 }
 

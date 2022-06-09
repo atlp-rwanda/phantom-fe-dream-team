@@ -1,32 +1,34 @@
-import React from 'react'
-import { useDispatch} from 'react-redux';
-import { logoutUser  } from '../../redux/reducers/authReducer';
+import React,{ useState, useEffect}from 'react'
 import {useNavigate } from 'react-router-dom';
-import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import logo from '../../assets/logo2.png';
 import { Icon } from '@iconify/react';
-import { useSelector } from 'react-redux';
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 import SuccefullPopup from './success';
 export default function logout() {
-   
+
+    const UserEmail = localStorage.getItem('user')
+    const [user,setUsers] = useState(UserEmail)
+    
+    
     const { loading } = useLoader();
-    const Username = useSelector( state => state.authReducer.user )
-    const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    window.addEventListener("load", function () {
-        if (Username==null) {
-            navigate('/login');
-          }
-    });
+useEffect(()=> {
+if (!user){
+    window.location.assign('/')
+
+} 
+},[user]
+)
+
+ 
 
     const logout = () => {
-        dispatch(logoutUser ());
-        setSucceed(true);
-        // navigate('/login');
+       localStorage.clear()
+       setUsers('')
+        navigate('/');
       };
       //BURGER MENU
       const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +67,7 @@ export default function logout() {
                
                         <div className="-mr-2 flex">
                         <Icon icon="bxs:user" color="#1442a7" className='mt-3 mr-2'/>
-                        <h1 className='mr-5 mt-2 text-blue'>{Username}</h1>
+                        <h1 className='mr-5 mt-2 text-blue'>{user}</h1>
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"

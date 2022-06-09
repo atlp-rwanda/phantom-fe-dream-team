@@ -17,6 +17,7 @@ const LoginReducer =(state = loggedin,action) =>{
                     state =[userEmail,true]
                     localStorage.setItem('auth',"00psgwwj7819012n#%$hj18*&")
                     localStorage.setItem('login',[userEmail,"00psgwwj7819012n#%$hj18*&"])
+                    localStorage.setItem('user',[userEmail])
                     return state
                 }else{
                     state= [userEmail,false]

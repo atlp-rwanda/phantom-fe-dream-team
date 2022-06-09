@@ -12,6 +12,10 @@ import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
 
 
 function Dashboard(props) {
+  if (localStorage.getItem('auth')!="00psgwwj7819012n#%$hj18*&"){
+    window.location.assign("../");
+    console.log("Not loggedin");
+  }
   return (
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />

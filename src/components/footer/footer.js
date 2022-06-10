@@ -7,7 +7,7 @@ function Footer() {
     <div>
       <footer className="bg-slate-600 sm:text-sm text-ceneter px-0 sm:px-0 lg:px-8">
         <div className="text-center text-3xl text-white  sm:text-xl">
-          <h1 className='mt-10'>Let’s connect!</h1>
+          <h1 className='mt-10 pt-10'>Let’s connect!</h1>
 
         </div>
         <div className="flex justify-around mt-5 ">
@@ -16,7 +16,7 @@ function Footer() {
             <Icon icon="el:map-marker" width="36" />
             </div>
            <div className=" flex flex-col items-center space-y-4 ">
-           <h3>kigali,Rwanda</h3>
+           <h3>Kigali, Rwanda</h3>
             <h3>KN 20 Ave</h3>
            </div>
             

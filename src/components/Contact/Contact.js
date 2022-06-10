@@ -40,13 +40,13 @@ function Contact() {
           <div className="border-gray-50 flex flex-col">
             <label className=" text-blue-700 font-bold text-base mt-5 "><span>Names</span><span className=" text-red-600 ml-5">*</span></label>
             
-              <input type="text" name="name" placeholder="Full Names..." className="w-3/3 px-4 py-3 mt-5 rounded-lg bg-white mt-2 border-blue-500 border-2 h-10 focus:border-blue-500 sm:w-[100%] focus:bg-white focus:outline-none"/>
+              <input type="text" name="name" placeholder="Full Names..." className="w-3/3 px-4 py-3 mt-5 rounded-lg bg-white mt-2 border-blue-500 border-2 h-10 focus:border-blue-500 sm:w-[100%] focus:bg-white focus:outline-none" required/>
            
           </div>
           <div className="border-gray-50 flex flex-col">
             <label className=" text-blue-700 mt-5 font-bold text-base"><span>E-mail</span><span className="text-red-600 ml-5 text-base">*</span></label>
             <div className="border-gray-50">
-              <input type="email" name="email" placeholder="Email..." className="w-3/3 px-4 py-3 mt-5 rounded-lg bg-white mt-2 border-blue-500 border-2 h-10 focus:border-blue-500 sm:w-[100%] focus:bg-white focus:outline-none"/>
+              <input type="email" name="email" placeholder="Email..." className="w-3/3 px-4 py-3 mt-5 rounded-lg bg-white mt-2 border-blue-500 border-2 h-10 focus:border-blue-500 sm:w-[100%] focus:bg-white focus:outline-none" required/>
             </div>
 
           </div>
@@ -60,7 +60,7 @@ function Contact() {
             </div>
 
             <div className="flex">
-              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="22" rows="10" className="rounded-md mt-5 mt-3 h-20 w-3/3 sm:w-[100%] border-blue-500 border-2 Class Properties resize-none"></textarea>
+              <textarea name="message" placeholder="Type Your Message Here..." id="message" cols="22" rows="10" className="rounded-md mt-5 mt-3 h-20 w-3/3 sm:w-[100%] border-blue-500 border-2 Class Properties resize-none"required></textarea>
             </div>
             <div className="flex">
               <button type="button" className="mt-5 mb-10 lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs ">Send</button>

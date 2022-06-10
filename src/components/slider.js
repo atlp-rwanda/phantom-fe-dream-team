@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 
 const slides = [
-    "/images/bus3.png",
+   
     "/images/bus2.png",
     "/images/bus4.png",
     "/images/bus5.png",
@@ -57,27 +57,14 @@ export default function Slider() {
   };
 
   return (
-    <div ref={slideRef} className=" select-none relative ">
-      <center>
+    <div ref={slideRef} className="flex items-center justfy-center w-full select-none relative ">
+      
       <div className="aspect-w-16 aspect-h-9">
-        <img src={slides[currentIndex]} alt="" className="h-40 w-50  xs:h-20 xs:w-20" />
+        <img src={slides[currentIndex]} alt="" className="h-70 xs:w-20 " />
       </div>
 
-      {/* <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
-        <button
-          className="bg-black text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
-          onClick={handleOnPrevClick}
-        >
-          <AiOutlineVerticalRight size={20} />
-        </button>
-        <button
-          className="bg-black text-white p-1 m-80 xs:m-40 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
-          onClick={handleOnNextClick}
-        >
-          <AiOutlineVerticalLeft size={20} />
-        </button>
-      </div> */}
-      </center>
+     
+      
     </div>
   );
 }

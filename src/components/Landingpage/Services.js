@@ -8,7 +8,7 @@ function Services() {
 
             <div className="bg-blue-800 pb-20" >
 
-                <h1 className="text-center   text-3xl text-white font-bold mt-10 mb-10  lg:text-2xl  md:text-xl   " >How it works</h1>
+                <h1 className="text-center   text-3xl text-white font-bold mt-10 mb-10 pt-10 lg:text-2xl  md:text-xl   " >How it works</h1>
 
                 <div className="flex flex    md:flex-col  mx-5 items-center">
                     <div className="bg-[#fafaf9] w-[100%] text-blue-500 flex flex-col items-center p-5 xs:w-full mb-5 md:w-full  rounded-xl">

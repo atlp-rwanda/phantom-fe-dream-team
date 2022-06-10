@@ -4,8 +4,6 @@ import React from 'react';
 import Landingpage from '../components/Landingpage/Landingpage';
 import Contact from '../components/Contact/Contact';
 import Services from '../components/Landingpage/Services';
-import Footer from '../components/footer/footer'
-
 test('renders Get in touch with us', () => {
 render(<Contact />);
 const linkElement = screen.getByText("Get in touch with us");
@@ -28,19 +26,23 @@ test('renders contact@phantom.com', () => {
 render(<Contact />);
 const linkElement = screen.getByText("contact@phantom.com");
 });
-test('renders FullNames', () => {
+test('renders +250-788-888-887', () => {
+    render(<Contact />);
+    const linkElement = screen.getByText("+250-788-888-887");
+    });
+test('renders Names', () => {
 render(<Contact />);
-const linkElement = screen.getByText("FullNames");
+const linkElement = screen.getByText("Names");
 });
 
-test('renders Email', () => {
+test('renders E-mail', () => {
 render(<Contact />);
-const linkElement = screen.getByText("Email");
+const linkElement = screen.getByText("E-mail");
 });
 
-test('renders Leave us a message...', () => {
+test('renders Message', () => {
 render(<Contact />);
-const linkElement = screen.getByText("Leave us a message...");
+const linkElement = screen.getByText("Message");
 });
 
 test('renders Type Your Message Here...', () => {
@@ -52,36 +54,6 @@ test('renders Send', () => {
 render(<Contact />);
 const linkElement = screen.getByText("Send");
 });
-
-
-test('renders Let’s connect!', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Let’s connect!");
-});
-
-test('renders Follow Us to Get Updates !', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Follow Us to Get Updates !");
-});
-test('renders Privacy Policy', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Privacy Policy");
-});
-
-test('renders Terms of Services', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Terms of Services");
-});
-test('renders Contact', () => {
-render(<Footer />);
-const linkElement = screen.getByText("Contact");
-});
-
-
-
-
-
-
 
 
 

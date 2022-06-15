@@ -36,7 +36,9 @@ const TrackingPage = () => {
   const selectOne = useRef();
   const selectDes = useRef();
   const [position, setposition] = useState(null);
+  const [start, seStart] = useState(false);  
   const [passengers, setPassengers] = useState(0);
+  const [speed, setSpeed] = useState(1000);
   const handleRoute = (e) => {
 
 
@@ -85,7 +87,8 @@ const TrackingPage = () => {
     rMachine.current.on('routeselected', (e) => {
       window.clearInterval();
       const coor = e.route.coordinates;
-      alert('Route selected');
+      seStart(true);
+      alert('Car Started');
       setcurrentTrack(coor[cursor]);
       setInterval(() => {
         if (cursor === coor.length - 1) {
@@ -103,18 +106,19 @@ const TrackingPage = () => {
     rMachine.current.off('routeselected', (e) => {
       window.clearInterval();
       const coor = e.route.coordinates;
-      alert('Route selected');
+      seStart(false);
+      alert('Car Stopped');
       setcurrentTrack(coor[cursor]);
-      //    setInterval(() => {
-      //      if (cursor === coor.length + 1) {
-      //        setTimeout(() => {
-      //          cursor = 0;
-      //          setcurrentTrack(coor[cursor]);
-      //        }, 5000);
-      //      }
-      //      cursor--;
-      //      setcurrentTrack(coor[cursor]);
-      //    }, 2000);
+        //  setInterval(() => {
+        //    if (cursor === coor.length + 1) {
+        //      setTimeout(() => {
+        //        cursor = 0;
+        //        setcurrentTrack(coor[cursor]);
+        //      }, 5000);
+        //    }
+        //    cursor--;
+        //    setcurrentTrack(coor[cursor]);
+        //  }, 2000);
     });
   }
 
@@ -145,19 +149,39 @@ const TrackingPage = () => {
   };
 
   const addPassenger = () => {
-    setPassengers((prev) => prev + 1);
-    alert("Added one Passenger");
+    if(start==false){
+      setPassengers((prev) => prev + 1);
+      alert("Added one Passenger");
+    }
+    else{
+      alert("The bus is moving");
+    }
+   
   };
 
   const removePassenger = () => {
-    if (passengers !== 0) {
+    if (passengers !== 0 && start==false){
       setPassengers((prev) => prev - 1);
       alert("Removed one Passenger");
-    } else {
+    }
+    else if(start==true)
+    {
+      alert("The bus is moving");
+    }
+    else {
       alert("No Passengers To Remove");
     }
   };
 
+
+  const handleAccelerate = () => {
+    alert("Speeding up the Bus.");
+    setSpeed((prev) => prev - 100);
+  };
+  const handleDecelerate = () => {
+    alert("Speeding down the Bus.");
+    setSpeed((prev) => prev + 100);
+  };
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((pos) => {
@@ -248,6 +272,21 @@ const TrackingPage = () => {
               >Stop
               </button>
             </div>
+
+
+
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={handleAccelerate}
+                className="bg-green-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
+              >Accelerate
+              </button>
+              <button
+                onClick={handleDecelerate}
+                className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
+              >Decelerate
+              </button>
+            </div>
             <div className="flex justify-center gap-4">
               <button
                 onClick={addPassenger}
@@ -262,10 +301,10 @@ const TrackingPage = () => {
             </div>
             
           </div>
-          <div>
+          <div className=" flex justify-center gap-4">
               <span>PASSENGERS</span>
             </div>
-            <div>
+            <div className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4" >
               <span>{passengers}</span>
             </div>
         </form>

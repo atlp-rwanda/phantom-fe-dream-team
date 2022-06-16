@@ -1,9 +1,10 @@
 import L from 'leaflet';
 import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
+import { Icon } from '@iconify/react';
+import { useDispatch, useSelector } from "react-redux";
 import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
-import Button from './Buttons';
 import Logout from '../Logout/logout';
 
 const TrackingPage = () => {
@@ -29,16 +30,18 @@ const TrackingPage = () => {
       coordinates: { lat: -1.9433247022379925, lng: 30.057306224487732 }
     }
   ];
-
+  const dispatch = useDispatch();
+const passengers= useSelector( (state) => state.PassengerReducer.value);
+const speed = useSelector( (state) => state.SpeedReducer.value);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const rMachine = useRef();
   const selectOne = useRef();
   const selectDes = useRef();
   const [position, setposition] = useState(null);
-  const [start, seStart] = useState(false);  
-  const [passengers, setPassengers] = useState(0);
-  const [speed, setSpeed] = useState(1000);
+  const [start, seStart] = useState(false);
+  const [setPassengers] = useState("");
+  const [setSpeed] = useState("");
   const handleRoute = (e) => {
 
 
@@ -109,16 +112,16 @@ const TrackingPage = () => {
       seStart(false);
       alert('Car Stopped');
       setcurrentTrack(coor[cursor]);
-        //  setInterval(() => {
-        //    if (cursor === coor.length + 1) {
-        //      setTimeout(() => {
-        //        cursor = 0;
-        //        setcurrentTrack(coor[cursor]);
-        //      }, 5000);
-        //    }
-        //    cursor--;
-        //    setcurrentTrack(coor[cursor]);
-        //  }, 2000);
+      //  setInterval(() => {
+      //    if (cursor === coor.length + 1) {
+      //      setTimeout(() => {
+      //        cursor = 0;
+      //        setcurrentTrack(coor[cursor]);
+      //      }, 5000);
+      //    }
+      //    cursor--;
+      //    setcurrentTrack(coor[cursor]);
+      //  }, 2000);
     });
   }
 
@@ -149,23 +152,22 @@ const TrackingPage = () => {
   };
 
   const addPassenger = () => {
-    if(start==false){
+    if (start == false) {
       setPassengers((prev) => prev + 1);
       alert("Added one Passenger");
     }
-    else{
+    else {
       alert("The bus is moving");
     }
-   
+
   };
 
   const removePassenger = () => {
-    if (passengers !== 0 && start==false){
+    if (passengers !== 0 && start == false) {
       setPassengers((prev) => prev - 1);
       alert("Removed one Passenger");
     }
-    else if(start==true)
-    {
+    else if (start == true) {
       alert("The bus is moving");
     }
     else {
@@ -174,14 +176,14 @@ const TrackingPage = () => {
   };
 
 
-  const handleAccelerate = () => {
-    alert("Speeding up the Bus.");
-    setSpeed((prev) => prev - 100);
-  };
-  const handleDecelerate = () => {
-    alert("Speeding down the Bus.");
-    setSpeed((prev) => prev + 100);
-  };
+  // const handleAccelerate = () => {
+  //   alert("Speeding up the Bus.");
+  //   setSpeed((prev) => prev +1);
+  // };
+  // const handleDecelerate = () => {
+  //   alert("Speeding down the Bus.");
+  //   setSpeed((prev) => prev - 1);
+  // };
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((pos) => {
@@ -202,9 +204,10 @@ const TrackingPage = () => {
         <form
           id="form"
           onSubmit={handleRoute}
-          className="fixed z-20 flex flex-col justify-center "
+          className="fixed z-20 justify-center "
+          bg-gray-500
         >
-          <div className="flex flex-col bg-background p-4 rounded-xl mt-2 ml-6 md:ml-10 md:items-baseline">
+          <div className="flex flex-col bg-blue-700 p-4 md:items-baseline opacity-75">
             <select
               type="text"
               id="origin"
@@ -212,7 +215,7 @@ const TrackingPage = () => {
               ref={selectOne}
               onChange={handleChange}
               placeholder="your current location"
-              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1  w-40 md:w-56 border-2"
+              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
             >
               <option id="origin-select">Select Origin</option>
               {options.map((option) => {
@@ -233,7 +236,7 @@ const TrackingPage = () => {
               id="destination"
               name="destination"
               placeholder="your destination"
-              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 md:w-56 border-2"
+              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
               ref={selectDes}
             >
               <option value="" hidden>
@@ -251,62 +254,83 @@ const TrackingPage = () => {
                 );
               })}
             </select>
-            <div type="submit" className="flex justify-center md:ml-16">
-              <Button
-                name="Track"
-                styles="bg-primary text-sm text-background py-1"
-              />
+            {/* <div type="submit" className="flex justify-center md:ml-16">
+             
 
-            </div>
-            <div className="flex justify-center gap-4">
+            </div> */}
+            <div className="flex justify-center m-2">
+            <button
+                type="submit"
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              >
+                <Icon icon="ic:outline-track-changes" />
+              </button>
               <button
                 onClick={handlestart}
                 data-tip="Move Bus"
-                className="bg-green-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >Start
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              >
+                <Icon icon="codicon:debug-start" />
+
               </button>
               <button
                 onClick={handlestop}
                 data-tip="Stop Bus"
-                className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >Stop
-              </button>
-            </div>
-
-
-
-            <div className="flex justify-center gap-4">
-              <button
-                onClick={handleAccelerate}
-                className="bg-green-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >Accelerate
+                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
+              ><Icon icon="bx:pause" />
               </button>
               <button
-                onClick={handleDecelerate}
-                className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >Decelerate
+                onClick={handlestop}
+                data-tip="Stop Bus"
+                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
+              ><Icon icon="bx:stop" />
               </button>
             </div>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center m-2">
+              <button
+             onClick={() => {
+              dispatch(
+                Accelerate
+              );}}
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="dashicons:controls-forward" />
+              </button>
+              <button
+  onClick={() => {
+    dispatch(
+      Decelerate
+    );}}
+                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="ant-design:backward-filled" />
+              </button>
+            </div>
+            <div className=" flex justify-center m-2">
+              <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >SPEED</span>
+            </div>
+            <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
+              <span>{speed}</span>
+            </div>
+            <div className="flex justify-center m-2 ">
               <button
                 onClick={addPassenger}
-                className="bg-green-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >addPassenger
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="akar-icons:person-add" />
               </button>
               <button
                 onClick={removePassenger}
-                className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4"
-              >Remove Passenger
+                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="eva:person-remove-fill" />
               </button>
             </div>
-            
-          </div>
-          <div className=" flex justify-center gap-4">
-              <span>PASSENGERS</span>
+            <div className=" flex justify-center  m-2">
+              <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >PASSENGERS</span>
             </div>
-            <div className="bg-red-600 text-white w-10 h-10 rounded-full flex justify-center items-center p-4" >
+            <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
               <span>{passengers}</span>
             </div>
+
+          </div>
+
         </form>
 
         <div className="ml-2 text-center z-10 mt-[-10px]">

@@ -2,7 +2,7 @@ import { createSlice} from "@reduxjs/toolkit";
 import data from "../../components/RegisterBuses/database.json"
 
 
-const initialState = { value:data}
+const initialState = { value: data }
 
 const busesReducer = createSlice({
     name: 'posts',

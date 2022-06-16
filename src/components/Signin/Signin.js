@@ -11,6 +11,7 @@ import { login } from '../../redux/actions/loginActions';
 
 
 
+
 const Signin = () => {
   let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);
@@ -25,13 +26,12 @@ const Signin = () => {
   const [successMessage, setsuccessMessage] = useState('');
   const [errorMessage, seterrorMessage] = useState('');
 
-// console.log('ggdgs',loginInfo)
+console.log('status: ',loginInfo)
 
 var loggedin =  localStorage.getItem("auth")
-console.log('loggedin',loggedin)
 // preventing a loggedin user to login again while the token is still active 
   function check (){
-    if (loggedin =='true'){
+    if (loggedin =='00psgwwj7819012n#%$hj18*&'){
       console.log("welcome")
       navigate("/dashboard");
     }
@@ -65,11 +65,11 @@ console.log('loggedin',loggedin)
     }
 
     Dispatch(login(inputEmail,inputPassword))
-    if (loginInfo[1] == true){
+    if (loginInfo[1] == "00psgwwj7819012n#%$hj18*&"){
       navigate("/dashboard");
     }
     else{
-      seterrorMessage('user can not found')
+      seterrorMessage('Email or password is wrong!')
     }
   }
 
@@ -97,8 +97,8 @@ console.log('loggedin',loggedin)
                 <h3 class="px-10">Hey ${loginInfo[0]} you have successfully loged in !</h3>
                 </SuccefullPopup>
 
-      <div >
-        <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1> 
+      <div className='mt-36' >
+        {/* <h1 className ="text-blue-500 font-bold text-center mt-20 text-[36px]">SignIn</h1>  */}
 
              {loading && <SkeletonUI />}
     {!loading && (
@@ -106,8 +106,8 @@ console.log('loggedin',loggedin)
             <div className='relative w-full'> 
               <div className='flex justify-center ml-auto text-center mt-5 mb-20  lg:flex md:flex'>
                 <img src={bus} alt='bus' className='w-1/3 shadow-xs lg:block md:hidden lg:hidden' />
-                <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] w-64 sm:border-none md:2xl-hidden' >
-                  <label className='block text-gray-700 text-center mt-2'>Sign in to your account</label>
+                <div className='w-1/3 xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] w-64 sm:border-none md:2xl-hidden mb-1' >
+                  <label className='block text-gray-700 text-center mt-2 font-bold'>Sign in to your account</label>
 
                   <div className=' text-center'>
 
@@ -145,7 +145,7 @@ console.log('loggedin',loggedin)
                     <Link to={"/ResetPassword"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>
                     </div>
 
-                      <hr className='my-1 border-gray-300 w-2/3 ml-20'/>
+                      <hr className='mt-3 my-1 border-gray-300 w-1/2 mx-20'/>
                   </div>
 
                 </div>

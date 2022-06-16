@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
-import Button from './Buttons';
 import Logout from '../Logout/logout';
 
 const UserSimulation = () => {
@@ -228,11 +227,12 @@ const UserSimulation = () => {
           </div>
           </div>
           <div className="flex justify-center space-x-3 m-3">
-            <Button
-              name="Track"
-              styles="bg-primary text-sm text-background py-1"
-              className="inline-flex items-center px-6 py-2 text-white bg-blue-700 border border-blue-700 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-            />
+          <button
+                type="submit"
+                className="inline-flex items-center px-6 py-2 text-white bg-blue-700 border border-blue-700 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+              >
+                <Icon icon="ic:outline-track-changes" />
+              </button>
               </div>
               <div className="flex justify-center gap-4">
     </div>

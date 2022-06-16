@@ -1,15 +1,12 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-import bus from '../../assets/landing.png';
-
-
+import {Link} from 'react-router-dom';
+import Slider from "../slider";
 function Landingpage() {
     return (
         <div>
-
-            <div className='flex  flex-row  mt-20 py-10 xs:flex-col-reverse md:mt-10'>
-                <div className='text-center mt-20 xs:m-4 px-20 lg:mt-10 '>
+ 
+            <div className='flex space-x-reverse flex-row mt-10 py-10 xs:flex-col-reverse h-4/5 w-full md:mt-10 items-center justify-between '>
+                <div className='text-start mt-20 ml-20 xs:m-4 px-20 lg:mt-10 '>
                     <h1 className='text-5xl text-blue-700  font-bold xl:text-5xl lg:text-5xl md:text-4xl sm:text-2xl xs:text-base xs:mt-2 xs:py-2'>
                         Track Bus Location
                     </h1>
@@ -22,8 +19,8 @@ function Landingpage() {
 
 
                 </div>
-                <div className='mt-20 mr-10 xs:m-4'>
-                    <img src={bus} />
+                <div className='p-10 xs:m-4 sm:hiden '>
+                <Slider />
 
                 </div>
 
@@ -31,8 +28,12 @@ function Landingpage() {
 
             </div>
 
+         
+   
 
         </div>
+
+        
     )
 }
 

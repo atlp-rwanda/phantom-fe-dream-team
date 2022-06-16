@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
 import Logout from '../Logout/logout';
+import { addPassenger, removePassenger } from '../../redux/reducers/PassengerSlice';
+
 
 const TrackingPage = () => {
   const options = [
@@ -32,6 +34,7 @@ const TrackingPage = () => {
   ];
   const dispatch = useDispatch();
 const passengers= useSelector( (state) => state.PassengerReducer.value);
+// const seats = useSelector(state => state.PassengerReducer.value)
 const speed = useSelector( (state) => state.SpeedReducer.value);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
@@ -40,7 +43,7 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
   const selectDes = useRef();
   const [position, setposition] = useState(null);
   const [start, seStart] = useState(false);
-  const [setPassengers] = useState("");
+  // const [setPassengers] = useState("");
   const [setSpeed] = useState("");
   const handleRoute = (e) => {
 
@@ -151,9 +154,10 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
     });
   };
 
-  const addPassenger = () => {
+  const addPassengers = () => {
     if (start == false) {
-      setPassengers((prev) => prev + 1);
+      // setPassengers((prev) => prev + 1);
+      dispatch(addPassenger());
       alert("Added one Passenger");
     }
     else {
@@ -161,10 +165,14 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
     }
 
   };
+//   const handleClick = () => {
+//     dispatch(logout());
+// }
 
-  const removePassenger = () => {
+  const removePassengers = () => {
     if (passengers !== 0 && start == false) {
-      setPassengers((prev) => prev - 1);
+      // setPassengers((prev) => prev - 1);
+      dispatch(removePassenger());
       alert("Removed one Passenger");
     }
     else if (start == true) {
@@ -312,20 +320,20 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
             </div>
             <div className="flex justify-center m-2 ">
               <button
-                onClick={addPassenger}
+                onClick={addPassengers}
                 className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               ><Icon icon="akar-icons:person-add" />
               </button>
               <button
-                onClick={removePassenger}
+                onClick={removePassengers}
                 className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               ><Icon icon="eva:person-remove-fill" />
               </button>
             </div>
             <div className=" flex justify-center  m-2">
-              <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >PASSENGERS</span>
+              <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >PASSENGERS</span>
             </div>
-            <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
+            <div className="  bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >
               <span>{passengers}</span>
             </div>
 

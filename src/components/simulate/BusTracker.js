@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Popup } from 'react-leaflet';
 import { LeafletTrackingMarker } from 'react-leaflet-tracking-marker';
 import icon from '../../assets/busIcon.png';
+import { connect, useDispatch, useSelector } from 'react-redux';
 
 const busIcon = L.icon({
   iconUrl: icon,
@@ -14,7 +15,8 @@ const busIcon = L.icon({
 function BusTracker({ data }) {
   const { lat, lng } = data;
   const [prevPos, setPrevPos] = useState([lat, lng]);
-
+  const Dispatch = useDispatch();
+  const seats = useSelector(state => state.PassengerReducer.value)
   useEffect(() => {
     if (prevPos[1] !== lng && prevPos[0] !== lat) setPrevPos([lat, lng]);
   }, [lat, lng, prevPos]);
@@ -28,7 +30,7 @@ function BusTracker({ data }) {
       duration={1000}
     >
       <Popup>
-        Bus: Coaster, RAC508E <br /> Remaining seats: 5 <br /> Driver:
+        Bus: Coaster, RAC508E <br /> Remaining seats: {seats} <br /> Driver:
         <Link to="/public-profile">Lucien</Link>
       </Popup>
     </LeafletTrackingMarker>

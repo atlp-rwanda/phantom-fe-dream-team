@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const data= 20;
 
 const SpeedSlice= createSlice({
-  name: "spedd",
+  name: "speed",
   initialState:{value:data},
   reducers: {
      Accelerate(state, action) {

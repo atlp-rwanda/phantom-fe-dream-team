@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const data= 0;
+const data= 4;
 
 const PassengerSlice= createSlice({
   name: "passenger",

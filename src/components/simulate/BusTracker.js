@@ -13,6 +13,7 @@ const busIcon = L.icon({
 });
 
 function BusTracker({ data }) {
+  const UserEmail = localStorage.getItem('user')
   const { lat, lng } = data;
   const [prevPos, setPrevPos] = useState([lat, lng]);
   const Dispatch = useDispatch();
@@ -30,8 +31,8 @@ function BusTracker({ data }) {
       duration={1000}
     >
       <Popup>
-        Bus: Coaster, RAC508E <br /> Remaining seats: {seats} <br /> Driver:
-        <Link to="/public-profile">Lucien</Link>
+        Bus: Coaster, RAC508E <br /> Remaining seats: {30 - seats} <br /> Driver:
+        <Link to="/public-profile">{ UserEmail}</Link>
       </Popup>
     </LeafletTrackingMarker>
   );

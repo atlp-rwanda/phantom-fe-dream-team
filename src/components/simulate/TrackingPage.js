@@ -116,16 +116,16 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
       seStart(false);
       alert('Car Stopped');
       setcurrentTrack(coor[cursor]);
-      //  setInterval(() => {
-      //    if (cursor === coor.length + 1) {
-      //      setTimeout(() => {
-      //        cursor = 0;
-      //        setcurrentTrack(coor[cursor]);
-      //      }, 5000);
-      //    }
-      //    cursor--;
-      //    setcurrentTrack(coor[cursor]);
-      //  }, 2000);
+       setInterval(() => {
+         if (cursor === coor.length + 1) {
+           setTimeout(() => {
+             cursor = 0;
+             setcurrentTrack(coor[cursor]);
+           }, 5000);
+         }
+         cursor--;
+         setcurrentTrack(coor[cursor]);
+       }, 2000);
     });
   }
 
@@ -376,6 +376,6 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
 
     </>
   );
-};
+};  
 
 export default TrackingPage;

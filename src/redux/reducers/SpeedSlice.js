@@ -6,11 +6,11 @@ const SpeedSlice= createSlice({
   name: "speed",
   initialState:{value:data},
   reducers: {
-     Accelerate(state, action) {
-        state.value+1;
+     Accelerate(state) {
+        state.value+= 1;
         },
-        Decelerate(state, action) {
-            state.value-1;
+        Decelerate(state) {
+            state.value-= 1;
             }
   },
 });

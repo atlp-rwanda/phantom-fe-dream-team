@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const data= 4;
+const data= 0;
 
 const PassengerSlice= createSlice({
   name: "passenger",
   initialState:{value:data},
   reducers: {
-     addPassenger(state, action) {
-        state.value+1;
+     addPassenger(state) {
+        state.value+= 1;
         },
-        removePassenger(state, action) {
-            state.value-1;
+        removePassenger(state) {
+            state.value-= 1;
             }
   },
 });

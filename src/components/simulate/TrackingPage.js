@@ -7,6 +7,8 @@ import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
 import Logout from '../Logout/logout';
 import { addPassenger, removePassenger } from '../../redux/reducers/PassengerSlice';
+import { Decelerate, Accelerate} from '../../redux/reducers/SpeedSlice';
+
 
 
 const TrackingPage = () => {
@@ -34,7 +36,6 @@ const TrackingPage = () => {
   ];
   const dispatch = useDispatch();
 const passengers= useSelector( (state) => state.PassengerReducer.value);
-// const seats = useSelector(state => state.PassengerReducer.value)
 const speed = useSelector( (state) => state.SpeedReducer.value);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
@@ -298,7 +299,7 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
               <button
              onClick={() => {
               dispatch(
-                Accelerate
+                Accelerate()
               );}}
                 className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               ><Icon icon="dashicons:controls-forward" />
@@ -306,7 +307,7 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
               <button
   onClick={() => {
     dispatch(
-      Decelerate
+      Decelerate()
     );}}
                 className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               ><Icon icon="ant-design:backward-filled" />
@@ -331,7 +332,7 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
               </button>
             </div>
             <div className=" flex justify-center  m-2">
-              <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >PASSENGERS</span>
+              <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4  b " >PASSENGERS</span>
             </div>
             <div className="  bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >
               <span>{passengers}</span>

@@ -63,6 +63,12 @@ To run the app in production build of the app, use either of the following.
 ```bash
  npm start
 ```
+## Running the docker container
+
+```bash
+ npm run dockercompose
+
+```
 ## Collaborators
 -[Dodo](#https://github.com/mukunzidd)
 -[Achillesonga](#https://github.com/songa1)

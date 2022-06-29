@@ -1,9 +1,10 @@
 import L from 'leaflet';
 import React, { useEffect, useRef, useState } from 'react';
+import { Icon } from '@iconify/react';
+import { useDispatch, useSelector } from "react-redux";
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
-import BusTracker from './BusTracker';
+import UserBusTracker from './BusTrackerUser';
 import RoutingMachine from './RoutingMachine';
-import Logout from '../Logout/logout';
 
 const UserSimulation = () => {
   const options = [
@@ -28,33 +29,102 @@ const UserSimulation = () => {
       coordinates: { lat: -1.9433247022379925, lng: 30.057306224487732 }
     }
   ];
-
+  const [Infos, setData] = useState(null);
+  useEffect(() => {
+    fetch('http://localhost:8000/CarInRoad')
+      .then(res => {
+        if (!res.ok) { // get the error from server
+          throw Error('could not fetch the data for that resource');
+        }
+        return res.json();
+      })
+      .then(data => {
+        setData(data);
+        setLoading(false);
+        setError(null);
+      }).catch(err => {
+        // cathes Network/connection error
+        setLoading(false);
+        setError(err.message);
+      })
+  }, []);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const rMachine = useRef();
   const selectOne = useRef();
   const selectDes = useRef();
   const [position, setposition] = useState(null);
-
+  const movementInfo = useSelector(state => state.isMoving);
+  const speed = useSelector( (state) => state.SpeedReducer.value);
+  function FindAcar(org,dest){
+    console.log("Find car function")
+    Infos && Infos.map((info) => (
+      setTimeout(() => {
+        if(info.from==org && info.to==dest){
+          console.log("They are the time ",info.timeStart)
+          localStorage.setItem('UserD',info.email)
+          startBus(info.timeStart);
+        }
+      }, 100)))
+  }
+  var a,b
   const handleRoute = (e) => {
     e.preventDefault();
     options.filter((option) => {
       const startingPoint = option.name === e.target.origin.value;
       if (startingPoint) {
         setOrigin(option.coordinates);
+       a=option.name
       }
     });
     options.filter((option) => {
       const endingPoint = option.name === e.target.destination.value;
       if (endingPoint) {
         setDestination(option.coordinates);
+       b=option.name
       }
     });
+    FindAcar(a,b);
+  
   };
 
   let cursor = 0;
 
   const [currentTrack, setcurrentTrack] = useState(null);
+
+  function startBus(i){
+    
+  const d = new Date();
+    d.getTime()
+    const startI=(d.getTime()-i)/1000
+    console.log(startI)
+    console.log("The bus started at  ",i)
+    rMachine.current.on('routeselected', (e) => {
+      const coorPoints=e.route.coordinates;
+      const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0))/2;
+  
+      var moveBusOnMap = function() {
+        let a=Math.round(startI)
+        var i = a;
+        while(i<allPoints){
+          (function(i) {
+            setTimeout(() => {
+              setcurrentTrack(coorPoints[i]);
+              console.log(coorPoints[allPoints-1],' and ',coorPoints[i])
+              if(coorPoints[i]==coorPoints[allPoints-1]){
+                setTimeout(() => {
+                alert("Reached the destination 👍")
+                window.location.reload()
+                },1000)
+              }
+              console.log(speed)
+            }, (20000/speed )* (i-a))
+          })(i++)
+  
+        }
+      };   
+      moveBusOnMap();
+  })}
 
   useEffect(() => {
     if (origin && destination && rMachine.current) {
@@ -127,7 +197,6 @@ const UserSimulation = () => {
       }
     });
   };
-
   const handleChangeDes = (e) => {
     const { value } = e.target;
     const optionNames = selectOne.current.options;
@@ -154,128 +223,113 @@ const UserSimulation = () => {
   }, []);
   return (
     <>
-    <Logout/>
-    <section className="max-w-full md:w-5/6 mx-auto">
+     <div className='absolute flex flex-col'>
 
-<div className="flex flex-col items-center m-10 space-y-4 text-center">
-  <h1 className="text-3xl font-bold text-blue-700">Navigation Map</h1>
 
-</div>
+        <form
+          id="form"
+          onSubmit={handleRoute}
+          className="fixed z-20 justify-center "
+          bg-gray-500
+        >
+          <div className="flex flex-col bg-blue-700 p-4 md:items-baseline opacity-75">
+            <select
+              type="text"
+              id="origin"
+              name="origin"
+              ref={selectOne}
+              onChange={handleChange}
+              placeholder="your current location"
+              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
+            >
+              <option id="origin-select">Select Origin</option>
+              {options.map((option) => {
+                return (
+                  <option
+                    value={option.name}
+                    key={option.name}
+                    className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
+                  >
+                    {option.name}
+                  </option>
+                );
+              })}
+            </select>
+            <select
+              onChange={handleChangeDes}
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="your destination"
+              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
+              ref={selectDes}
+            >
+              <option value="" hidden>
+                Select Destination
+              </option>
+              {options.map((option) => {
+                return (
+                  <option
+                    value={option.name}
+                    key={option.name}
+                    className="cursor-pointer bg-transparent hover:bg-primary font-raleway font-bold disabled:text-gray-400 disabled:bg-gray-100"
+                  >
+                    {option.name}
+                  </option>
+                );
+              })}
+            </select>
+            {/* <div type="submit" className="flex justify-center md:ml-16">
+             
 
-<div className="relative overflow-hidden rounded-lg grid-cols-3 grid-rows-1 shadow-2xl  lg:pb-0 grid gap-1.5 md:grid-cols-3 h-auto shadow-b w-[98%] sm:grid-cols-1">
-<div className=" p-6 bg-gray-100 rounded ml-4">
-<div className="flex justify-center">
-      <form
-        id="form"
-        onSubmit={handleRoute}
-      >
-        <div className="w-80">
-        <label htmlFor="source" className="block text-sm font-medium text-gray-700">
-          Source
-        </label>
-          <select
-            type="text"
-            id="origin"
-            name="origin"
-            ref={selectOne}
-            onChange={handleChange}
-            placeholder="your current location"
-            className="w-full rounded-md px-9 py-2 mt-1 text-sm outline-none border-2 border-gray-200 focus:border-indigo-500"
-          >
-            <option id="origin-select">Select Origin</option>
-            {options.map((option) => {
-              return (
-                <option
-                  value={option.name}
-                  key={option.name}
-                  className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
-                >
-                  {option.name}
-                </option>
-              );
-            })}
-          </select>
-        <div className="flex justify-center">
-      <div className="w-80">
-        <label htmlFor="destination" className="block text-sm font-medium text-gray-700">
-          Destination
-        </label>
-          <select
-            onChange={handleChangeDes}
-            type="text"
-            id="destination"
-            name="destination"
-            placeholder="your destination"
-            className="w-full rounded-md px-4 py-2 mt-1 text-sm outline-none border-2 border-gray-200 focus:border-indigo-500"
-            ref={selectDes}
-          >
-            <option value="" hidden>
-              Select Destination
-            </option>
-            {options.map((option) => {
-              return (
-                <option
-                  value={option.name}
-                  key={option.name}
-                  className="cursor-pointer bg-transparent hover:bg-primary font-raleway font-bold disabled:text-gray-400 disabled:bg-gray-100"
-                >
-                  {option.name}
-                </option>
-              );
-            })}
-          </select>
-          </div>
-          </div>
-          <div className="flex justify-center space-x-3 m-3">
-          <button
+            </div> */}
+            <div className="flex justify-center m-2">
+            <button
                 type="submit"
-                className="inline-flex items-center px-6 py-2 text-white bg-blue-700 border border-blue-700 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               >
                 <Icon icon="ic:outline-track-changes" />
               </button>
-              </div>
-              <div className="flex justify-center gap-4">
-    </div>
-        </div>
-      </form>
 
-     
-    </div>
-    </div>
-    <div className="ml-auto text-center h-[450px]">
-        <MapContainer
-          center={{ lat: -1.936671, lng: 30.053524 }}
-          zoom={13}
-          zoomControl={false}
-          className="h-screen md:h-[88vh] w-[95vw]"
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <ZoomControl position="topright" />
-          {origin && destination && currentTrack ? (
-            <BusTracker data={currentTrack} />
-          ) : (
-            ''
-          )}
+          </div>
+          </div>
 
-          {origin && destination ? (
-            <RoutingMachine
-              ref={rMachine}
-              origin={origin}
-              destination={destination}
-              userPosition={position}
+        </form>
+
+        <div className="ml-2 text-center z-10 mt-[2px] h-screen">
+          <MapContainer
+            center={{ lat: -1.936671, lng: 30.053524 }}
+            zoom={13}
+            zoomControl={false}
+            className="h-[88vh] w-[100vw]"
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-          ) : (
-            ''
-          )}
-        </MapContainer>
+            <ZoomControl position="topright" />
+            {origin && destination && currentTrack ? (
+              <UserBusTracker data={currentTrack} />
+            ) : (
+              ''
+            )}
+
+            {origin && destination ? (
+              <RoutingMachine
+                ref={rMachine}
+                origin={origin}
+                destination={destination}
+                userPosition={position}
+              />
+            ) : (
+              ''
+            )}
+          </MapContainer>
+        </div>
       </div>
-    </div>
-    </section>
+
     </>
   );
-};
+};  
 
 export default UserSimulation;

@@ -7,7 +7,9 @@ const PassengerSlice= createSlice({
   initialState:{value:data},
   reducers: {
      addPassenger(state) {
+       if(state.value<30){
         state.value+= 1;
+       }
         },
         removePassenger(state) {
             state.value-= 1;

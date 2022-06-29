@@ -8,6 +8,7 @@ import RoutingMachine from './RoutingMachine';
 import Logout from '../Logout/logout';
 import { addPassenger, removePassenger } from '../../redux/reducers/PassengerSlice';
 import { Decelerate, Accelerate} from '../../redux/reducers/SpeedSlice';
+import {movement} from "../../redux/actions/movement.js";
 
 
 
@@ -35,19 +36,20 @@ const TrackingPage = () => {
     }
   ];
   const dispatch = useDispatch();
-const passengers= useSelector( (state) => state.PassengerReducer.value);
-const speed = useSelector( (state) => state.SpeedReducer.value);
+  const passengers= useSelector( (state) => state.PassengerReducer.value);
+  const speed = useSelector( (state) => state.SpeedReducer.value);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const rMachine = useRef();
   const selectOne = useRef();
   const selectDes = useRef();
   const [position, setposition] = useState(null);
-  const [start, seStart] = useState(false);
+  const [start, setStart] = useState(false);
   // const [setPassengers] = useState("");
+  const UserEmail = localStorage.getItem('user')
   const [setSpeed] = useState("");
+  var OriginName, DestName;
   const handleRoute = (e) => {
-
 
     e.preventDefault();
     options.filter((option) => {
@@ -65,68 +67,92 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
   };
 
   let cursor = 0;
+  let a=1;
 
   const [currentTrack, setcurrentTrack] = useState(null);
 
   useEffect(() => {
     if (origin && destination && rMachine.current) {
       rMachine.current.setWaypoints([L.latLng(origin), L.latLng(destination)]);
-      // rMachine.current.on('routeselected', (e) => {
-      //   window.clearInterval();
-      //   const coor = e.route.coordinates;
-      //   alert('Route selected');
-      //   setcurrentTrack(coor[cursor]);
-      //   setInterval(() => {
-      //     if (cursor === coor.length - 1) {
-      //       setTimeout(() => {
-      //         cursor = 0;
-      //         setcurrentTrack(coor[cursor]);
-      //       }, 5000);
-      //     }
-      //     cursor++;
-      //     setcurrentTrack(coor[cursor]);
-      //   }, 2000);
-      // });
     }
   }, [origin, destination]);
 
-  const handlestart = () => {
-    rMachine.current.on('routeselected', (e) => {
-      window.clearInterval();
-      const coor = e.route.coordinates;
-      seStart(true);
-      alert('Car Started');
-      setcurrentTrack(coor[cursor]);
-      setInterval(() => {
-        if (cursor === coor.length - 1) {
-          setTimeout(() => {
-            cursor = 0;
-            setcurrentTrack(coor[cursor]);
-          }, 5000);
-        }
-        cursor++;
-        setcurrentTrack(coor[cursor]);
-      }, 2000);
-    });
+  const d = new Date();
+  console.log("o",OriginName)
+function startBus(i){
+  OriginName=document.getElementById('origin').value;
+  DestName=document.getElementById('destination').value;
+  console.log("f",OriginName)
+  const data ={
+    "id":Math.random(),
+    "timeStart":d.getTime(),
+    "speed": 20,
+    "from":OriginName,
+    "to":DestName,
+    "email": UserEmail,
+    "passangers":passengers,
+    "carDriving":"RAC508E"
   }
-  const handlestop = () => {
-    rMachine.current.off('routeselected', (e) => {
-      window.clearInterval();
-      const coor = e.route.coordinates;
-      seStart(false);
-      alert('Car Stopped');
-      setcurrentTrack(coor[cursor]);
-       setInterval(() => {
-         if (cursor === coor.length + 1) {
-           setTimeout(() => {
-             cursor = 0;
-             setcurrentTrack(coor[cursor]);
-           }, 5000);
-         }
-         cursor--;
-         setcurrentTrack(coor[cursor]);
-       }, 2000);
-    });
+  rMachine.current.on('routeselected', (e) => {
+    const coorPoints=e.route.coordinates;
+    const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0))/2;
+
+    var moveBusOnMap = function() {
+      var i = 0;
+      while(i<allPoints){
+        (function(i) {
+          setTimeout(() => {
+            setcurrentTrack(coorPoints[i]);
+            console.log(coorPoints[allPoints-1],' and ',coorPoints[i])
+            if(coorPoints[i]==coorPoints[allPoints-1]){
+              setTimeout(() => {
+              alert("Reached the destination 👍")
+              dispatch(movement(data.id,-5));
+              window.location.reload()
+              },1000)
+            }
+            console.log(speed)
+          }, (20000/speed )* i)
+        })(i++)
+
+      }
+    };   
+    moveBusOnMap();
+})
+dispatch(movement(data,1));
+console.log(movementInfo)
+}
+
+//EXAMPLE
+
+
+
+
+  function handlestop(){
+      //  return handlestart(0);
+      alert("Stopped")
+       rMachine.current.off('routeselected', (e) => {
+          window.clearInterval();
+          const coor = e.route.coordinates;
+          setcurrentTrack(coor[cursor]);
+            setInterval(() => {
+              if (cursor === coor.length - 1) {
+                setTimeout(() => {
+                  cursor = 0;
+                  setcurrentTrack(coor[cursor]);
+                }, 1000);
+              }
+              if(1==0){
+                cursor++;
+              }
+              else{
+                window.clearInterval();
+                setcurrentTrack(coor[cursor]);
+                setStart(false);
+              }
+              setcurrentTrack(coor[cursor]);
+            }, 100000); //Speed
+        });
   }
 
   const handleChange = (e) => {
@@ -159,7 +185,9 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
     if (start == false) {
       // setPassengers((prev) => prev + 1);
       dispatch(addPassenger());
-      alert("Added one Passenger");
+     if(passengers==30){
+      alert("The bus is full");
+     }
     }
     else {
       alert("The bus is moving");
@@ -184,15 +212,6 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
     }
   };
 
-
-  // const handleAccelerate = () => {
-  //   alert("Speeding up the Bus.");
-  //   setSpeed((prev) => prev +1);
-  // };
-  // const handleDecelerate = () => {
-  //   alert("Speeding down the Bus.");
-  //   setSpeed((prev) => prev - 1);
-  // };
   useEffect(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((pos) => {
@@ -275,7 +294,7 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
                 <Icon icon="ic:outline-track-changes" />
               </button>
               <button
-                onClick={handlestart}
+                onClick={()=>startBus(5)}
                 data-tip="Move Bus"
                 className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               >
@@ -283,13 +302,13 @@ const speed = useSelector( (state) => state.SpeedReducer.value);
 
               </button>
               <button
-                onClick={handlestop}
+                onClick={()=>handlestop()}
                 data-tip="Stop Bus"
                 className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
               ><Icon icon="bx:pause" />
               </button>
               <button
-                onClick={handlestop}
+                onClick={()=>handlestop()}
                 data-tip="Stop Bus"
                 className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
               ><Icon icon="bx:stop" />

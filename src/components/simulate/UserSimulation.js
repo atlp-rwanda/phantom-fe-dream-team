@@ -58,12 +58,19 @@ const UserSimulation = () => {
   const speed = useSelector( (state) => state.SpeedReducer.value);
   function FindAcar(org,dest){
     console.log("Find car function")
+    var a=0,i=0,b=-1;
     Infos && Infos.map((info) => (
       setTimeout(() => {
+        i++;
+        b=Infos.length;
         if(info.from==org && info.to==dest){
           console.log("They are the time ",info.timeStart)
           localStorage.setItem('UserD',info.email)
+          a=1;
           startBus(info.timeStart);
+        }
+        else if(a==0 && i==b){
+          return alert("No bus in your route for now!")
         }
       }, 100)))
   }

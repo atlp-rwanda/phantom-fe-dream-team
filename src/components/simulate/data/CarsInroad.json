@@ -1,3 +1,14 @@
 {
-  "CarInRoad": []
+  "CarInRoad": [
+    {
+      "id": 0.23447767192016733,
+      "timeStart": 1656488654560,
+      "speed": 20,
+      "from": "Kimironko",
+      "to": "Down-Town",
+      "email": "gyssagara@gmail.com",
+      "passangers": 0,
+      "carDriving": "RAC508E"
+    }
+  ]
 }

@@ -7,10 +7,12 @@ const SpeedSlice= createSlice({
   initialState:{value:data},
   reducers: {
      Accelerate(state) {
-        state.value+= 1;
+        state.value+= 5;
+        localStorage.setItem("spe",state);
         },
         Decelerate(state) {
-            state.value-= 1;
+            state.value-= 5;
+        localStorage.setItem("spe",state);
             }
   },
 });

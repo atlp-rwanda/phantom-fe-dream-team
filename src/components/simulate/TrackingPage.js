@@ -45,7 +45,6 @@ const TrackingPage = () => {
   const selectDes = useRef();
   const [position, setposition] = useState(null);
   const [start, setStart] = useState(false);
-  // const [setPassengers] = useState("");
   const UserEmail = localStorage.getItem('user')
   const [setSpeed] = useState("");
   var OriginName, DestName;
@@ -67,7 +66,7 @@ const TrackingPage = () => {
   };
 
   let cursor = 0;
-  let a=1;
+  let id=Math.round(Math.random()*100000)
 
   const [currentTrack, setcurrentTrack] = useState(null);
 
@@ -78,15 +77,21 @@ const TrackingPage = () => {
   }, [origin, destination]);
 
   const d = new Date();
-  console.log("o",OriginName)
+  function stop(){
+      localStorage.setItem("spe",0);
+  }
+  function resume(){
+    localStorage.setItem("spe",1);
+}
+
 function startBus(i){
+  localStorage.setItem("spe",1);
   OriginName=document.getElementById('origin').value;
   DestName=document.getElementById('destination').value;
-  console.log("f",OriginName)
   const data ={
-    "id":Math.random(),
+    "id":id,
     "timeStart":d.getTime(),
-    "speed": 20,
+    "speed": speed,
     "from":OriginName,
     "to":DestName,
     "email": UserEmail,
@@ -96,28 +101,33 @@ function startBus(i){
   rMachine.current.on('routeselected', (e) => {
     const coorPoints=e.route.coordinates;
     const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0))/2;
-
-    var moveBusOnMap = function() {
-      var i = 0;
-      while(i<allPoints){
-        (function(i) {
-          setTimeout(() => {
+   var i=localStorage.getItem('i'+id)
+   if(i==undefined){
+     i=0
+   }
+   setInterval(() => {
+     
+   ;
+    
+        const sped= Number(localStorage.getItem("spe"))
+      {if(sped==0){
+        localStorage.setItem("i"+data.id,i); 
+        clearInterval()
+      }
+      else if(i<=allPoints){
             setcurrentTrack(coorPoints[i]);
             console.log(coorPoints[allPoints-1],' and ',coorPoints[i])
             if(coorPoints[i]==coorPoints[allPoints-1]){
-              setTimeout(() => {
               alert("Reached the destination 👍")
               dispatch(movement(data.id,-5));
               window.location.reload()
-              },1000)
             }
-            console.log(speed)
-          }, (20000/speed )* i)
-        })(i++)
-
+            i++
       }
-    };   
-    moveBusOnMap();
+      }
+      }
+    , 4000/speed)
+
 })
 dispatch(movement(data,1));
 console.log(movementInfo)
@@ -228,12 +238,11 @@ console.log(movementInfo)
       <Logout />
       <div className='absolute flex flex-col'>
 
-
+        <div  className="fixed z-20 justify-center "
+          bg-gray-500>
         <form
           id="form"
           onSubmit={handleRoute}
-          className="fixed z-20 justify-center "
-          bg-gray-500
         >
           <div className="flex flex-col bg-blue-700 p-4 md:items-baseline opacity-75">
             <select
@@ -294,61 +303,24 @@ console.log(movementInfo)
                 <Icon icon="ic:outline-track-changes" />
               </button>
               <button
-                onClick={()=>startBus(5)}
+                onClick={()=>startBus(0)}
                 data-tip="Move Bus"
                 className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               >
                 <Icon icon="codicon:debug-start" />
 
               </button>
-              <button
-                onClick={()=>handlestop()}
-                data-tip="Stop Bus"
-                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
-              ><Icon icon="bx:pause" />
-              </button>
-              <button
-                onClick={()=>handlestop()}
-                data-tip="Stop Bus"
-                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
-              ><Icon icon="bx:stop" />
-              </button>
+             
             </div>
             <div className="flex justify-center m-2">
-              <button
-             onClick={() => {
-              dispatch(
-                Accelerate()
-              );}}
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="dashicons:controls-forward" />
-              </button>
-              <button
-  onClick={() => {
-    dispatch(
-      Decelerate()
-    );}}
-                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="ant-design:backward-filled" />
-              </button>
+              
+              
             </div>
             <div className=" flex justify-center m-2">
               <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >SPEED</span>
             </div>
             <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
               <span>{speed}</span>
-            </div>
-            <div className="flex justify-center m-2 ">
-              <button
-                onClick={addPassengers}
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="akar-icons:person-add" />
-              </button>
-              <button
-                onClick={removePassengers}
-                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="eva:person-remove-fill" />
-              </button>
             </div>
             <div className=" flex justify-center  m-2">
               <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4  b " >PASSENGERS</span>
@@ -360,6 +332,44 @@ console.log(movementInfo)
           </div>
 
         </form>
+        <div className="flex justify-center m-2 ">
+              <button
+                onClick={addPassengers}
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="akar-icons:person-add" />
+              </button>
+              <button
+                onClick={removePassengers}
+                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="eva:person-remove-fill" />
+              </button>
+            </div>
+        <button
+  onClick={() => {
+    dispatch(
+      Decelerate()
+    );}}
+                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="ant-design:backward-filled" />
+              </button>
+        <button
+             onClick={() => resume()}
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="codicon:refresh" color="white" />
+              </button>
+
+              <button
+             onClick={() =>{dispatch(Accelerate())}}
+                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+              ><Icon icon="dashicons:controls-forward" />
+              </button>
+        <button
+                onClick={()=>stop()}
+                data-tip="Stop Bus"
+                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
+              ><Icon icon="bx:pause" />
+              </button>
+              </div>
 
         <div className="ml-2 text-center z-10 mt-[-10px]">
           <MapContainer

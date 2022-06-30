@@ -239,7 +239,7 @@ const UserSimulation = () => {
           className="fixed z-20 justify-center "
           bg-gray-500
         >
-          <div className="flex flex-col bg-blue-700 p-4 md:items-baseline opacity-75">
+          <div className="flex flex-col  p-4 md:items-baseline opacity-75">
             <select
               type="text"
               id="origin"

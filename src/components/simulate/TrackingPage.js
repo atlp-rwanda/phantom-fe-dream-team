@@ -238,7 +238,7 @@ console.log(movementInfo)
       <Logout />
       <div className='absolute flex flex-col'>
 
-        <div  className="fixed z-20 justify-center "
+        <div  className="fixed z-30 justify-center "
           bg-gray-500>
         <form
           id="form"
@@ -310,15 +310,10 @@ console.log(movementInfo)
                 <Icon icon="codicon:debug-start" />
 
               </button>
-             
-            </div>
-            <div className="flex justify-center m-2">
-              
               
             </div>
-            <div className=" flex justify-center m-2">
               <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >SPEED</span>
-            </div>
+            
             <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
               <span>{speed}</span>
             </div>
@@ -343,8 +338,7 @@ console.log(movementInfo)
                 className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
               ><Icon icon="eva:person-remove-fill" />
               </button>
-            </div>
-        <button
+              <button
   onClick={() => {
     dispatch(
       Decelerate()
@@ -369,6 +363,8 @@ console.log(movementInfo)
                 className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
               ><Icon icon="bx:pause" />
               </button>
+              
+            </div>
               </div>
 
         <div className="ml-2 text-center z-10 mt-[-10px]">

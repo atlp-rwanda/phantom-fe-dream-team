@@ -7,8 +7,8 @@ import BusTracker from './BusTracker';
 import RoutingMachine from './RoutingMachine';
 import Logout from '../Logout/logout';
 import { addPassenger, removePassenger } from '../../redux/reducers/PassengerSlice';
-import { Decelerate, Accelerate} from '../../redux/reducers/SpeedSlice';
-import {movement} from "../../redux/actions/movement.js";
+import { Decelerate, Accelerate } from '../../redux/reducers/SpeedSlice';
+import { movement } from "../../redux/actions/movement.js";
 
 
 
@@ -36,8 +36,8 @@ const TrackingPage = () => {
     }
   ];
   const dispatch = useDispatch();
-  const passengers= useSelector( (state) => state.PassengerReducer.value);
-  const speed = useSelector( (state) => state.SpeedReducer.value);
+  const passengers = useSelector((state) => state.PassengerReducer.value);
+  const speed = useSelector((state) => state.SpeedReducer.value);
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const rMachine = useRef();
@@ -66,7 +66,7 @@ const TrackingPage = () => {
   };
 
   let cursor = 0;
-  let id=Math.round(Math.random()*100000)
+  let id = Math.round(Math.random() * 100000)
 
   const [currentTrack, setcurrentTrack] = useState(null);
 
@@ -77,92 +77,100 @@ const TrackingPage = () => {
   }, [origin, destination]);
 
   const d = new Date();
-  function stop(){
-      localStorage.setItem("spe",0);
+  function stop() {
+    localStorage.setItem("spe", 0);
   }
-  function resume(){
-    localStorage.setItem("spe",1);
-}
+  function resume() {
+    localStorage.setItem("spe", 1);
+  }
 
-function startBus(i){
-  localStorage.setItem("spe",1);
-  OriginName=document.getElementById('origin').value;
-  DestName=document.getElementById('destination').value;
-  const data ={
-    "id":id,
-    "timeStart":d.getTime(),
-    "speed": speed,
-    "from":OriginName,
-    "to":DestName,
-    "email": UserEmail,
-    "passangers":passengers,
-    "carDriving":"RAC508E"
-  }
-  rMachine.current.on('routeselected', (e) => {
-    const coorPoints=e.route.coordinates;
-    const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0))/2;
-   var i=localStorage.getItem('i'+id)
-   if(i==undefined){
-     i=0
-   }
-   setInterval(() => {
-     
-   ;
-    
-        const sped= Number(localStorage.getItem("spe"))
-      {if(sped==0){
-        localStorage.setItem("i"+data.id,i); 
-        clearInterval()
+  function startBus(i) {
+    localStorage.setItem("spe", 1);
+    OriginName = document.getElementById('origin').value;
+    DestName = document.getElementById('destination').value;
+    const data = {
+      "id": id,
+      "timeStart": d.getTime(),
+      "speed": speed,
+      "from": OriginName,
+      "to": DestName,
+      "email": UserEmail,
+      "passangers": passengers,
+      "carDriving": "RAC508E"
+    }
+    rMachine.current.on('routeselected', (e) => {
+      const coorPoints = e.route.coordinates;
+      const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0)) / 2;
+      var i = localStorage.getItem('i' + id)
+      if (i == undefined) {
+        i = 0
       }
-      else if(i<=allPoints){
+      setInterval(() => {
+
+        ;
+
+        const sped = Number(localStorage.getItem("spe"))
+        {
+          if (sped == 0) {
+            localStorage.setItem("i" + data.id, i);
+            clearInterval()
+          }
+          else if (i <= allPoints) {
             setcurrentTrack(coorPoints[i]);
-            console.log(coorPoints[allPoints-1],' and ',coorPoints[i])
-            if(coorPoints[i]==coorPoints[allPoints-1]){
+            console.log(coorPoints[allPoints - 1], ' and ', coorPoints[i])
+            if (coorPoints[i] == coorPoints[allPoints - 1]) {
               alert("Reached the destination 👍")
-              dispatch(movement(data.id,-5));
+              dispatch(movement(data.id, -5));
               window.location.reload()
             }
             i++
+          }
+        }
       }
-      }
-      }
-    , 4000/speed)
+        , 4000 / speed)
 
-})
-dispatch(movement(data,1));
-console.log(movementInfo)
+    })
+    dispatch(movement(data, 1));
+    console.log(movementInfo)
+  }
+
+  //EXAMPLE
+function speedup(){
+
+  dispatch(Accelerate())
+    setInterval(() => {
+      const sped = Number(localStorage.getItem("spe"))
+    }
+      , 4000 / speed)
 }
 
-//EXAMPLE
 
 
-
-
-  function handlestop(){
-      //  return handlestart(0);
-      alert("Stopped")
-       rMachine.current.off('routeselected', (e) => {
+  function handlestop() {
+    //  return handlestart(0);
+    alert("Stopped")
+    rMachine.current.off('routeselected', (e) => {
+      window.clearInterval();
+      const coor = e.route.coordinates;
+      setcurrentTrack(coor[cursor]);
+      setInterval(() => {
+        if (cursor === coor.length - 1) {
+          setTimeout(() => {
+            cursor = 0;
+            setcurrentTrack(coor[cursor]);
+          }, 1000);
+        }
+        if (1 == 0) {
+          cursor++;
+        }
+        else {
           window.clearInterval();
-          const coor = e.route.coordinates;
           setcurrentTrack(coor[cursor]);
-            setInterval(() => {
-              if (cursor === coor.length - 1) {
-                setTimeout(() => {
-                  cursor = 0;
-                  setcurrentTrack(coor[cursor]);
-                }, 1000);
-              }
-              if(1==0){
-                cursor++;
-              }
-              else{
-                window.clearInterval();
-                setcurrentTrack(coor[cursor]);
-                setStart(false);
-              }
-              setcurrentTrack(coor[cursor]);
-            }, 100000); //Speed
-        });
+          setStart(false);
+        }
+        setcurrentTrack(coor[cursor]);
+      }, 100000); //Speed
+    });
   }
 
   const handleChange = (e) => {
@@ -195,18 +203,18 @@ console.log(movementInfo)
     if (start == false) {
       // setPassengers((prev) => prev + 1);
       dispatch(addPassenger());
-     if(passengers==30){
-      alert("The bus is full");
-     }
+      if (passengers == 30) {
+        alert("The bus is full");
+      }
     }
     else {
       alert("The bus is moving");
     }
 
   };
-//   const handleClick = () => {
-//     dispatch(logout());
-// }
+  //   const handleClick = () => {
+  //     dispatch(logout());
+  // }
 
   const removePassengers = () => {
     if (passengers !== 0 && start == false) {
@@ -238,134 +246,138 @@ console.log(movementInfo)
       <Logout />
       <div className='absolute flex flex-col'>
 
-        <div  className="fixed z-30 justify-center "
+        <div className="fixed z-30 justify-center "
           bg-gray-500>
-        <form
-          id="form"
-          onSubmit={handleRoute}
-        >
-          <div className="flex flex-col bg-blue-700 p-4 md:items-baseline opacity-75">
-            <select
-              type="text"
-              id="origin"
-              name="origin"
-              ref={selectOne}
-              onChange={handleChange}
-              placeholder="your current location"
-              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
-            >
-              <option id="origin-select">Select Origin</option>
-              {options.map((option) => {
-                return (
-                  <option
-                    value={option.name}
-                    key={option.name}
-                    className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
-                  >
-                    {option.name}
-                  </option>
-                );
-              })}
-            </select>
-            <select
-              onChange={handleChangeDes}
-              type="text"
-              id="destination"
-              name="destination"
-              placeholder="your destination"
-              className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
-              ref={selectDes}
-            >
-              <option value="" hidden>
-                Select Destination
-              </option>
-              {options.map((option) => {
-                return (
-                  <option
-                    value={option.name}
-                    key={option.name}
-                    className="cursor-pointer bg-transparent hover:bg-primary font-raleway font-bold disabled:text-gray-400 disabled:bg-gray-100"
-                  >
-                    {option.name}
-                  </option>
-                );
-              })}
-            </select>
-            {/* <div type="submit" className="flex justify-center md:ml-16">
+          <form
+            id="form"
+            onSubmit={handleRoute} >
+
+            <div className="flex flex-col  p-4 md:items-baseline opacity-75">
+              <select
+                type="text"
+                id="origin"
+                name="origin"
+                ref={selectOne}
+                onChange={handleChange}
+                placeholder="your current location"
+                className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2">
+
+                <option id="origin-select">Select Origin</option>
+                {options.map((option) => {
+                  return (
+                    <option
+                      value={option.name}
+                      key={option.name}
+                      className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
+                    >
+                      {option.name}
+                    </option>
+                  );
+                })}
+              </select>
+              <select
+                onChange={handleChangeDes}
+                type="text"
+                id="destination"
+                name="destination"
+                placeholder="your destination"
+                className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 h-10 w-10 md:w-56 border-2"
+                ref={selectDes}
+              >
+                <option value="" hidden>
+                  Select Destination
+                </option>
+                {options.map((option) => {
+                  return (
+                    <option
+                      value={option.name}
+                      key={option.name}
+                      className="cursor-pointer bg-transparent hover:bg-primary font-raleway font-bold disabled:text-gray-400 disabled:bg-gray-100"
+                    >
+                      {option.name}
+                    </option>
+                  );
+                })}
+              </select>
+              {/* <div type="submit" className="flex justify-center md:ml-16">
              
 
-            </div> */}
-            <div className="flex justify-center m-2">
-            <button
-                type="submit"
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              >
-                <Icon icon="ic:outline-track-changes" />
-              </button>
-              <button
-                onClick={()=>startBus(0)}
-                data-tip="Move Bus"
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              >
-                <Icon icon="codicon:debug-start" />
+             </div> */}
+              <div className="flex justify-center m-2">
+                <button
+                  type="submit"
+                  className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+                >
+                  <Icon icon="ic:outline-track-changes" />
+                </button>
+                <button
+                  onClick={() => startBus(0)}
+                  data-tip="Move Bus"
+                  className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
+                >
+                  <Icon icon="codicon:debug-start" />
 
-              </button>
-              
+                </button>
+
+              </div>
+              <div className=" block sm:flex">
+                <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 sm:hidden" >SPEED</span>
+
+                <div className="  bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2 sm:m-0 sm:ml-4" >
+                  <span>{speed}</span>
+                </div>
+                <div className=" flex justify-center  m-2">
+                  <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4  sm:hidden " >PASSENGERS</span>
+                </div>
+                <div className="  bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >
+                  <span>{passengers}</span>
+                </div>
+              </div>
+
+
             </div>
-              <span className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >SPEED</span>
-            
-            <div className=" m-2 bg-black text-white w-6 h-6  flex justify-center items-center p-4 m-2" >
-              <span>{speed}</span>
-            </div>
-            <div className=" flex justify-center  m-2">
-              <span className=" bg-black text-white w-6 h-6  flex justify-center items-center p-4  b " >PASSENGERS</span>
-            </div>
-            <div className="  bg-black text-white w-6 h-6  flex justify-center items-center p-4 " >
-              <span>{passengers}</span>
-            </div>
+
+          </form>
+          <div className="flex justify-center m-2 sm:flex-col sm:flex sm:w-4">
+            <button
+              onClick={addPassengers}
+              className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40"
+            ><Icon icon="akar-icons:person-add" />
+            </button>
+            <button
+              onClick={removePassengers}
+              className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40 sm:right-2"
+            ><Icon icon="eva:person-remove-fill" />
+            </button>
+            <button
+              onClick={() => {
+                dispatch(
+                  Decelerate()
+                );
+              }}
+              className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40"
+            ><Icon icon="ant-design:backward-filled" />
+            </button>
+            <button
+              onClick={() => speedup()}
+              className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40"
+            ><Icon icon="dashicons:controls-forward" />
+            </button>
+            <button
+              onClick={() => resume()}
+              className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40"
+            ><Icon icon="codicon:refresh" color="white" />
+            </button>
+
+            <button
+              onClick={() => stop()}
+              data-tip="Stop Bus"
+              className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2 sm:ml-0 sm:mr-40"
+            ><Icon icon="bx:pause" />
+            </button>
 
           </div>
-
-        </form>
-        <div className="flex justify-center m-2 ">
-              <button
-                onClick={addPassengers}
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="akar-icons:person-add" />
-              </button>
-              <button
-                onClick={removePassengers}
-                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="eva:person-remove-fill" />
-              </button>
-              <button
-  onClick={() => {
-    dispatch(
-      Decelerate()
-    );}}
-                className="bg-red-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="ant-design:backward-filled" />
-              </button>
-        <button
-             onClick={() => resume()}
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="codicon:refresh" color="white" />
-              </button>
-
-              <button
-             onClick={() =>{dispatch(Accelerate())}}
-                className="bg-green-600 text-white w-6 h-6 flex justify-center items-center p-4 m-2"
-              ><Icon icon="dashicons:controls-forward" />
-              </button>
-        <button
-                onClick={()=>stop()}
-                data-tip="Stop Bus"
-                className="bg-red-600 text-white w-6 h-6  flex justify-center items-center p-4 m-2"
-              ><Icon icon="bx:pause" />
-              </button>
-              
-            </div>
-              </div>
+        </div>
 
         <div className="ml-2 text-center z-10 mt-[-10px]">
           <MapContainer
@@ -401,6 +413,6 @@ console.log(movementInfo)
 
     </>
   );
-};  
+};
 
 export default TrackingPage;

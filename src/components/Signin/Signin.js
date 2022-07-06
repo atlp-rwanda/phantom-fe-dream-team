@@ -16,7 +16,7 @@ const Signin = () => {
   let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
-
+  const [buttonValue,setButtonValue]=useState('Login');
   const Dispatch = useDispatch();
   const { loading } = useLoader();
   const [email, setEmail] = useState('');
@@ -28,13 +28,24 @@ const Signin = () => {
 
 console.log('status: ',loginInfo)
 
-var loggedin =  localStorage.getItem("auth")
+var loggedin =  localStorage.getItem("auth-token")
 // preventing a loggedin user to login again while the token is still active 
   function check (){
-    if (loggedin =='00psgwwj7819012n#%$hj18*&'){
-      console.log("welcome")
-      navigate("/dashboard");
-    }
+    fetch('http://localhost:3200/api/v1/profile/update/1', {
+      method: 'PATCH',
+      headers: { "Content-Type": "application/json","auth-token": loggedin},
+      body: JSON.stringify(
+        {
+        }
+      )
+    }).then((res) => {
+      if(res.status!=401){
+        console.log("Verified");
+            navigate("/dashboard");
+      }else{
+        console.log("Not logged in"); 
+      }
+    })
   }
   check()
 
@@ -65,12 +76,16 @@ var loggedin =  localStorage.getItem("auth")
     }
 
     Dispatch(login(inputEmail,inputPassword))
-    if (loginInfo[1] == "00psgwwj7819012n#%$hj18*&"){
-      navigate("/dashboard");
-    }
-    else{
-      seterrorMessage('Email or password is wrong!')
-    }
+    console.log("logIn",loginInfo)
+    setButtonValue(`Loading...`)
+    setTimeout(()=>{
+      if(localStorage.getItem("auth")=='false'){
+        seterrorMessage("email or password is incorrect!!!")
+        setButtonValue(`Login`)
+      }else if(localStorage.getItem("auth")=='true'){
+       navigate("/dashboard");
+      }
+    },4000)
   }
 
 
@@ -139,7 +154,9 @@ var loggedin =  localStorage.getItem("auth")
 
                       </div>
 
-                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'>Log In</button>
+                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'> 
+                      {buttonValue}
+                      </button>
                     </form>
                     <div className='text-center mt-2'>
                     <Link to={"/ResetPassword"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>

@@ -30,6 +30,7 @@ const UserSimulation = () => {
     }
   ];
   const [Infos, setData] = useState(null);
+  const [newInfos, setNewInfos] = useState(null);
   useEffect(() => {
     fetch('http://localhost:8000/CarInRoad')
       .then(res => {
@@ -40,11 +41,11 @@ const UserSimulation = () => {
       })
       .then(data => {
         setData(data);
-        setLoading(false);
+        // setLoading(false);
         setError(null);
       }).catch(err => {
         // cathes Network/connection error
-        setLoading(false);
+        // setLoading(false);
         setError(err.message);
       })
   }, []);
@@ -67,7 +68,7 @@ const UserSimulation = () => {
           console.log("They are the time ",info.timeStart)
           localStorage.setItem('UserD',info.email)
           a=1;
-          startBus(info.timeStart);
+          startBus(info.timeStart,info.id,info.speed,info.current_Loc);
         }
         else if(a==0 && i==b){
           return alert("No bus in your route for now!")
@@ -99,98 +100,76 @@ const UserSimulation = () => {
 
   const [currentTrack, setcurrentTrack] = useState(null);
 
-  function startBus(i){
+  function startBus(i,id,speed,U_L){
     
+
+
+
   const d = new Date();
     d.getTime()
-    const startI=(d.getTime()-i)/1000
+    const startI=(d.getTime()-i)/(10000/speed)
     console.log(startI)
     console.log("The bus started at  ",i)
     rMachine.current.on('routeselected', (e) => {
       const coorPoints=e.route.coordinates;
       const allPoints = (coorPoints.reduce((a, obj) => a + Object.keys(obj).length, 0))/2;
-  
-      var moveBusOnMap = function() {
-        let a=Math.round(startI)
-        var i = a;
-        while(i<allPoints){
-          (function(i) {
-            setTimeout(() => {
-              setcurrentTrack(coorPoints[i]);
-              console.log(coorPoints[allPoints-1],' and ',coorPoints[i])
-              if(coorPoints[i]==coorPoints[allPoints-1]){
-                setTimeout(() => {
-                alert("Reached the destination 👍")
-                window.location.reload()
-                },1000)
-              }
-              console.log(speed)
-            }, (20000/speed )* (i-a))
-          })(i++)
-  
+      if(speed==0){
+       var i = U_L
+      }
+      else{
+        var i = Math.round(startI)
+      }
+      var sped,Npassangers,time_Updated 
+      setInterval(() => {
+
+        console.log(id)
+        //Get information of ongoing bus
+fetch('http://localhost:8000/CarInRoad/'+id)
+.then(res => {
+  if (!res.ok) { // get the error from server
+    throw Error('could not fetch the data for that resource');
+  }
+  return res.json();
+})
+.then(data => {
+  console.log(data)
+  sped =data.speed
+  Npassangers=data.passangers
+  time_Updated=data.time_Updated
+  setNewInfos(data);
+}).catch(err => {
+  // cathes Network/connection error
+  setLoading(false);
+  setError(err.message);
+})
+      localStorage.setItem("passangers",Npassangers)
+        {
+          if (sped == 0) {
+            clearInterval()
+          }
+          else if (i <= allPoints) {
+            setcurrentTrack(coorPoints[i]);
+            console.log(coorPoints[allPoints - 1], ' and ', coorPoints[i])
+            if (coorPoints[i] == coorPoints[allPoints - 1]) {
+              dispatch(movement(data.id, -5));
+              alert("Reached the destination 👍")
+              clearInterval()
+              window.location.reload()
+            }
+            i++
+          }
         }
-      };   
-      moveBusOnMap();
+      }
+        , 10000 / speed)
   })}
 
   useEffect(() => {
     if (origin && destination && rMachine.current) {
       rMachine.current.setWaypoints([L.latLng(origin), L.latLng(destination)]);
-      // rMachine.current.on('routeselected', (e) => {
-      //   window.clearInterval();
-      //   const coor = e.route.coordinates;
-      //   alert('Route selected');
-      //   setcurrentTrack(coor[cursor]);
-      //   setInterval(() => {
-      //     if (cursor === coor.length - 1) {
-      //       setTimeout(() => {
-      //         cursor = 0;
-      //         setcurrentTrack(coor[cursor]);
-      //       }, 5000);
-      //     }
-      //     cursor++;
-      //     setcurrentTrack(coor[cursor]);
-      //   }, 2000);
-      // });
     }
   }, [origin, destination]);
 
-  const handlestart=()=>{
-       rMachine.current.on('routeselected', (e) => {
-        window.clearInterval();
-        const coor = e.route.coordinates;
-        alert('Route selected');
-        setcurrentTrack(coor[cursor]);
-        setInterval(() => {
-          if (cursor === coor.length - 1) {
-            setTimeout(() => {
-              cursor = 0;
-              setcurrentTrack(coor[cursor]);
-            }, 5000);
-          }
-          cursor++;
-          setcurrentTrack(coor[cursor]);
-        }, 2000);
-      });
-  }
-  const handlestop=()=>{
-    rMachine.current.off('routeselected', (e) => {
-     window.clearInterval();
-     const coor = e.route.coordinates;
-     alert('Route selected');
-     setcurrentTrack(coor[cursor]);
-  //    setInterval(() => {
-  //      if (cursor === coor.length + 1) {
-  //        setTimeout(() => {
-  //          cursor = 0;
-  //          setcurrentTrack(coor[cursor]);
-  //        }, 5000);
-  //      }
-  //      cursor--;
-  //      setcurrentTrack(coor[cursor]);
-  //    }, 2000);
-    });
-}
+
 
   const handleChange = (e) => {
     const { value } = e.target;

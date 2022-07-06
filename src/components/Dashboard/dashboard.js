@@ -12,10 +12,28 @@ import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
 
 
 function Dashboard(props) {
-  if (localStorage.getItem('auth')!="00psgwwj7819012n#%$hj18*&"){
-    window.location.assign("../");
-    console.log("Not loggedin");
+  var loggedin =  localStorage.getItem("auth-token")
+// preventing a loggedin user to login again while the token is still active 
+  function check (){
+    fetch('http://localhost:3200/api/v1/profile/update/1', {
+      method: 'PATCH',
+      headers: { "Content-Type": "application/json","auth-token": loggedin},
+      body: JSON.stringify(
+        {
+        }
+      )
+    }).then((res) => {
+      if(res.status!=401){
+        console.log("Verified");
+            navigate("/dashboard");
+      }else{
+          window.location.assign("../");
+          console.log("Not loggedin");
+        
+      }
+    })
   }
+  check()
   return (
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />

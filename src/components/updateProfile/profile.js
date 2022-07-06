@@ -8,14 +8,33 @@ import ErrorPopup from "../error";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 function Profile() {
-  const UserInfo = useSelector(state => state.updateProfile);
-  let username = UserInfo[0];
-  let email= UserInfo[1];
-  let phone= UserInfo[2];
-    const { loading } = useLoader();
+  const [loading, setLoading] = useState(true)
+  const [Data, setData] = useState('')
+  var username ,email,phone;
+  const id =localStorage.getItem("uid")
+  useEffect(() => {
+    fetch('http://localhost:3200/api/v1/profile/'+id)
+      .then(res => {
+        if (!res.ok) { // get the error from server
+          throw Error('could not fetch the data for that resource');
+        }
+        return res.json();
+      })
+      .then(data => {
+        setData(data[0]);
+        setLoading(false);
+        // setError(null);
+      }).catch(err => {
+        // cathes Network/connection error
+        setLoading(false);
+        // setError(err.message);
+      })
+  }, []);
+
+  console.log(Data)
+
     return (
         <div>
-          {loading && <SkeletonUI />}
         {!loading && (
                <div className=" w-full h-full md: flex justify-center pt-[100px] pb-[80px] p-8 ">
                  <div className="flex">
@@ -32,14 +51,14 @@ function Profile() {
                  </Link>
                  </p>
                      <h1 className="pl-0 sm:pl-4 text-[22px] pb-[25px] flex "><u>MY INFORMATION</u></h1>
-                 <h2 className="pl-0 sm:pl-4 text-[18px]">{username}</h2>
+                 <h2 className="pl-0 sm:pl-4 text-[18px]">{Data.firstName+" "+Data.lastName}</h2>
                  <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="clarity:email-solid" className="mt-1"/>
-                 <h2 className="pl-0 sm:pl-4 text-[13px] pl-[8px]">{email}</h2>
+                 <h2 className="pl-0 sm:pl-4 text-[13px] pl-[8px]">{Data.email}</h2>
                  </h2>
                  <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="bxs:phone" className="mt-1" />
-                 <h2 className="pl-0 sm:pl-4 text-[13px] pb-[15px] pl-[8px]">{phone}</h2>
+                 <h2 className="pl-0 sm:pl-4 text-[13px] pb-[15px] pl-[8px]">+250785364200</h2>
                  </h2>
                  
                  <div className=" pl-0 sm:pl-4 flex">

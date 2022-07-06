@@ -98,7 +98,7 @@ export default function resetPassword() {
           })
           .catch((error) => {
             console.log(email);
-            toast.error("Internal sever error!", { theme: "colored" });
+            console.log("Internal sever error!");
           });
       };
 

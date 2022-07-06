@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 import ErrorPopup from './error';
-
+import { backendUrl } from "../../utils/Api";
 export default function resetPassword() {
   const { loading } = useLoader();
   const resetEmail = useSelector( state => state.resetReducer.email )
@@ -62,6 +62,46 @@ export default function resetPassword() {
         setError(false)
       }, "5000")
     }
+
+    //integration 
+      function handleReset(email) {
+        let headersList = {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+        };
+    
+        let bodyContent = JSON.stringify({
+          email: email,
+        });
+    
+        fetch(`${backendUrl}/users1/forgotpassword`, {
+          method: "POST",
+          body: bodyContent,
+          headers: headersList,
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((result) => {
+            if (result.status == "fail") {
+              setError(true);
+              console.log("THIS IS A RESULT", result);
+            } 
+            // else if (result.status == "fail") {
+            //   if (result.code == 400) {
+            //     console.log("THIS IS A RESULT", result);
+            //   } else if (result.code == 401) {
+            //     console.log("THIS IS A RESULT", result);
+            //   }
+            // }
+            // console.log("your result" +result.status)
+          })
+          .catch((error) => {
+            console.log(email);
+            toast.error("Internal sever error!", { theme: "colored" });
+          });
+      };
+
   return (
     <div>
         <ErrorPopup trigger={error}>
@@ -87,7 +127,7 @@ export default function resetPassword() {
           <p className="text-green-700">{success}</p>
          <div className='mt-5 md:mb-10 xs:flex xs:justify-center sm:mb-10 lg:mb-10 '>
          <Link  to={path}>
-       <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mb-10'  onClick={emailValidation}>Search</button>
+       <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg mb-10' onClick={()=>handleReset(email)}>Search</button>
        </Link>
        <Link to="/">
      <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-8'>Cancel</button></Link>

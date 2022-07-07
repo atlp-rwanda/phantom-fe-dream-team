@@ -12,7 +12,7 @@ const LoginReducer =(state ={loading:false,done:false,pass:false},action) =>{
           state.loading=true
           const data={"email":userEmail,
           "password":userPassword};
-          fetch('http://localhost:3200/api/v1/users/login', {
+          fetch('https://phantom-be.herokuapp.com/api/v1/users/login', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

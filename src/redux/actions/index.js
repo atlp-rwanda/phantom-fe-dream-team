@@ -3,9 +3,9 @@
       type: "UPDATE", Username:username, Email:email,Phone:phone
     };
   }
-  export const changePassword = (Password)=>{
+  export const changePassword = (Opassword,Npassword)=>{
     return {
-      type: "CHANGE", NewPassword:Password,
+      type: "CHANGE", OldPassword:Opassword,NewPassword:Npassword
     };
   }
   export const setPermission= (NPermissions,Id)=>{

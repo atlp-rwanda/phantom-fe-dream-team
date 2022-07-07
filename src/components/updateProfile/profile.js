@@ -13,7 +13,7 @@ function Profile() {
   const [Data, setData] = useState('')
   const id =localStorage.getItem("uid")
   useEffect(() => {
-    fetch('http://localhost:3200/api/v1/profile/'+id)
+    fetch('https://phantom-be.herokuapp.com/api/v1/profile/'+id)
       .then(res => {
         if (!res.ok) { // get the error from server
           throw Error('could not fetch the data for that resource');

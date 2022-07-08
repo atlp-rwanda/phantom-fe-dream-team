@@ -1,4 +1,4 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 import  SetRoles from '../SetRolesPermission/setRoles';
@@ -7,6 +7,7 @@ import Users from './User';
 import AssignDrivers from '../Assign-drivers-to-buses/assign';
 import Buses from '../RegisterBuses/buses';
 import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
+import AddBus from '../RegisterBuses/registerBus'
 
 
 
@@ -23,10 +24,7 @@ function Dashboard(props) {
         }
       )
     }).then((res) => {
-      if(res.status!=401){
-        console.log("Verified");
-            navigate("/dashboard");
-      }else{
+      if(res.status==401){
           window.location.assign("../");
           console.log("Not loggedin");
         
@@ -49,7 +47,8 @@ function Dashboard(props) {
             <Route path="Routes/" element={<RoutesDashboard />}> </Route>
          
      
-              <Route path="Buses/*" element={<Buses />} />
+              <Route path="Buses/" element={<Buses />} />
+              <Route path="Buses/add" element={<AddBus/>} />
               <Route path="Users/*" element={<Users />} />
               <Route path="Roles/" element={<SetRoles/>} />
               <Route path="Roles/add" element={<AddRole/>} />

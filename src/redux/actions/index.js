@@ -22,4 +22,9 @@ export const addRole= (role)=>{
         return {
           type:"AddRole",ROLE:role
     };
-  }    
+  }  
+  export const deleteBus= (Id)=>{
+    return {
+      type:"DeleteBus",ID:Id
+    };
+    }  

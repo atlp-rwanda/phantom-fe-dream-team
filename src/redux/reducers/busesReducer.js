@@ -1,34 +1,37 @@
-import { createSlice} from "@reduxjs/toolkit";
-import data from "../../components/RegisterBuses/database.json";
+import React, { useState, useEffect } from "react";
+const BusesReducer = (state=1, action) => {                                        ;
+ const id =action.ID;//for update
+ const ID=action.ID //for delete
+ var loggedin =  localStorage.getItem("auth-token")
 
-
-const initialState = { value: data }
-
-const busesReducer = createSlice({
-    name: 'posts',
-    initialState,
-    reducers: {
-        addBus: (state, action) => {
-            state.value.push(action.payload);
-          },
-        deleteBus: (state, action) => {
-            state.value = state.value.filter((bus) => bus.id !== action.payload.id);
-          },
-          updateBuses: (state, action) => {
-            state.value.map((bus) => {
-              if (bus.id === action.payload.id) {
-                bus.plateNo = action.payload.plateNo;
-                bus.routeNo = action.payload.routeNo;
-                bus.busType = action.payload.busType;
-                bus.seats= action.payload.seats
-              }
-            });
-          }
-    }
-})
-
-export const selectAllPosts = (state) => state.busesReducer.value;
-
-export const { addBus,deleteBus,updateBuses } = busesReducer.actions
-
-export default busesReducer.reducer
+  switch (action.type) {
+    case "UpdateBus" :
+      fetch('https://phantom-be.herokuapp.com/api/v1/buses/'+id, {
+        method: 'PATCH',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Npermissions)
+      }).then(() => {
+      })   
+      return state  
+      case "DeleteBus":
+        fetch('https://phantom-be.herokuapp.com/api/v1/buses/'+ ID, {
+            method: 'DELETE',
+            headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+          }).then(() => {
+          }) 
+          return state  
+      case "AddBus":
+        fetch('https://phantom-be.herokuapp.com/api/v1/buses', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(role)
+          }).then(() => {
+            
+          })    
+        return state  
+   default:
+     return state  
+  }
+  
+  }
+  export default BusesReducer;

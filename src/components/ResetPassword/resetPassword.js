@@ -7,7 +7,9 @@ import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 import ErrorPopup from './error';
 import { backendUrl } from "../../utils/Api";
+import {useNavigate } from 'react-router-dom';
 export default function resetPassword() {
+  const navigate = useNavigate()
   const { loading } = useLoader();
   const resetEmail = useSelector( state => state.resetReducer.email )
   const [email, setEmail] = useState("");
@@ -85,16 +87,12 @@ export default function resetPassword() {
           .then((result) => {
             if (result.status == "fail") {
               setError(true);
-              console.log("THIS IS A RESULT", result);
+              console.log("THIS IS A RESULT", result.status);
             } 
-            // else if (result.status == "fail") {
-            //   if (result.code == 400) {
-            //     console.log("THIS IS A RESULT", result);
-            //   } else if (result.code == 401) {
-            //     console.log("THIS IS A RESULT", result);
-            //   }
-            // }
-            // console.log("your result" +result.status)
+            if (result.status == "success") {
+              navigate("/ResetPassword/EmailExists");
+              console.log("THIS IS A RESULT", result.status);
+              }
           })
           .catch((error) => {
             console.log(email);

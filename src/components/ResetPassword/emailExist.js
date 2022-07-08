@@ -40,39 +40,6 @@ export default function emailExist() {
   }
 
   //  //integration 
-  //  function handleReset(token) {
-  //   let headersList = {
-  //     Accept: "*/*",
-  //     "Content-Type": "application/json",
-  //   };
-
-  //   let bodyContent = JSON.stringify({
-  //     email:"arthurjunior88741@gmail.om",
-  //     password:"pass1", 
-  //     comfirmPassword:"pass1"
-  //   });
-
-  //   fetch(`http://localhost:4000/api/v1/users1/reset/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo0LCJmaXJzdE5hbWUiOiJhcnRodXIiLCJsYXN0TmFtZSI6Imp1bmlvciIsImVtYWlsIjoiYXJ0aHVyanVuaW9yODg3NDFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkNVlhMWlTOG4zLlZhRnJSZnZBUWFLT0MuWndrWTRTY3Jub20xL3JmY2NLQ2JzdXRjTHpMdy4iLCJjcmVhdGVkQXQiOiIyMDIyLTA3LTA1VDE0OjA0OjMwLjA1OVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA3LTA2VDE4OjM1OjMwLjI2N1oifSwiaWF0IjoxNjU3MTg3ODkxLCJleHAiOjE2NTcyNzQyOTF9.39smEXh3NcYV-X-2S6UhR1Az_HWvLjpH0D0PRTMMrKI`, {
-  //     method: "POST",
-  //     body: bodyContent,
-  //     headers: headersList,
-  //   })
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((result) => {
-  //       if (result) {
-  //         navigate("/ResetPassword/EmailSentSuccessful");
-  //         console.log("THIS IS A RESULT", result.status);
-  //       } 
-  //       if (result.status == "fail") {
-  //         console.log("THIS IS A RESULT", result.status);
-  //       } 
-  //     })
-  //     .catch((error) => {
-  //       console.log("Internal sever error!");
-  //     });
-  // };
   const handleSubmit = (event,token,pass,pass1,email) => {
     event.preventDefault()
       if(pass===pass1){

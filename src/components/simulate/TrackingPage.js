@@ -78,10 +78,28 @@ const TrackingPage = () => {
 
   const d = new Date();
   function stop() {
+    var idN=Number(localStorage.getItem("Nid"));
     localStorage.setItem("spe", 0);
+    const data = {
+      "id":  idN,
+      "time_Updated": new Date().getTime(),
+      "speed": 0,
+      "current_Loc":Number(localStorage.getItem("i"+idN)),
+      "passangers": passengers,
+    }
+    dispatch(movement(data, -10));
+    
   }
   function resume() {
+    var idN=Number(localStorage.getItem("Nid"));
     localStorage.setItem("spe", 1);
+    const data = {
+      "id": idN,
+      "time_Updated": new Date().getTime(),
+      "speed": speed,
+      "passangers": passengers,
+    }
+    dispatch(movement(data, 10));
   }
 
   function startBus(i) {
@@ -96,7 +114,9 @@ const TrackingPage = () => {
       "to": DestName,
       "email": UserEmail,
       "passangers": passengers,
-      "carDriving": "RAC508E"
+      "carDriving": "RAC508E",
+      "time_Updated":0,
+      "current_Loc":0
     }
     rMachine.current.on('routeselected', (e) => {
       const coorPoints = e.route.coordinates;
@@ -107,17 +127,14 @@ const TrackingPage = () => {
       }
       setInterval(() => {
 
-        ;
-
         const sped = Number(localStorage.getItem("spe"))
         {
           if (sped == 0) {
-            localStorage.setItem("i" + data.id, i);
             clearInterval()
           }
           else if (i <= allPoints) {
             setcurrentTrack(coorPoints[i]);
-            console.log(coorPoints[allPoints - 1], ' and ', coorPoints[i])
+            localStorage.setItem("i" + data.id, i);
             if (coorPoints[i] == coorPoints[allPoints - 1]) {
               alert("Reached the destination 👍")
               dispatch(movement(data.id, -5));
@@ -127,11 +144,11 @@ const TrackingPage = () => {
           }
         }
       }
-        , 4000 / speed)
+        , 10000 / speed)
 
     })
     dispatch(movement(data, 1));
-    console.log(movementInfo)
+    localStorage.setItem("Nid",data.id)
   }
 
   //EXAMPLE

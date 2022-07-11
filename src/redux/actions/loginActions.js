@@ -5,4 +5,3 @@ export const login = (email,password) => {
     Password:password
 }
 }
-

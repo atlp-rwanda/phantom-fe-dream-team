@@ -9,10 +9,26 @@ const updateProfile = (state =[username,email,phone] , action) => {
   var updatedPhone =action.Phone
   switch (action.type) {
     case "UPDATE":
-    localStorage.setItem('username',updatedName);
-    localStorage.setItem('email',updatedEmail);
-    localStorage.setItem('phone',updatedPhone);
-    state=[username,email,phone];
+      const id =localStorage.getItem("uid")
+      var loggedin =  localStorage.getItem("auth-token")
+      fetch('http://localhost:3200/api/v1/profile/update/'+id, {
+        method: 'PATCH',
+        headers: { "Content-Type": "application/json","auth-token": loggedin },
+        body: JSON.stringify(
+          {
+          "email": updatedEmail,"names":updatedName,"phone":updatedPhone
+          }
+        )
+      }).then((res) => {
+        if(res.status==200){
+          localStorage.setItem('user',[updatedEmail])
+        }
+        console.log(res);
+      })
+    // localStorage.setItem('username',updatedName);
+    // localStorage.setItem('email',updatedEmail);
+    // localStorage.setItem('phone',updatedPhone);
+    // state=[username,email,phone];
       return state;
     default:
       return state;

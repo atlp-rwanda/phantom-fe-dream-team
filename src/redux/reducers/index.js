@@ -6,7 +6,6 @@ import routesReducer from "./routesSlice";
 import LoginReducer from "./LoginReducer";
 import AssignReducer from "./AssignSlice"
 import busesReducer from "./busesReducer";
-
 import PermissionReducer from "./PermissionReducer";
 //import other reducers
 import { combineReducers } from "redux";

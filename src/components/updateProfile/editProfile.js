@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
@@ -10,15 +11,33 @@ import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 function EditProfile() {
 
+  const [loading, setLoading] = useState(true)
+  const [Data, setData] = useState('')
+  const id =localStorage.getItem("uid")
+  useEffect(() => {
+    fetch('http://localhost:3200/api/v1/profile/'+id)
+      .then(res => {
+        if (!res.ok) { // get the error from server
+          throw Error('could not fetch the data for that resource');
+        }
+        return res.json();
+      })
+      .then(data => {
+        setData(data[0]);
+        setLoading(false);
+        // setError(null);
+      }).catch(err => {
+        // cathes Network/connection error
+        setLoading(false);
+        // setError(err.message);
+      })
+  }, []);
 
+  console.log(Data)
   
-    const UserInfo = useSelector(state => state.updateProfile);
     const dispatch = useDispatch();
     const [succeed, setSucceed] = useState(false);
     const [error, setError] = useState(false);
-    let username = UserInfo[0];
-    let email= UserInfo[1];
-    let phone= UserInfo[2];
     var i=0;
     function ValidateEmail(mail) 
     {
@@ -34,11 +53,11 @@ function EditProfile() {
 
     function removeReadonly (){
       document.getElementById('Uname').readOnly = false;
-      document.getElementById('Uname').value = username;
+      document.getElementById('Uname').value = Data.names
       document.getElementById('Email').readOnly = false;
-      document.getElementById('Email').value = email;
+      document.getElementById('Email').value = Data.email;
       document.getElementById('Phone').readOnly = false;
-      document.getElementById('Phone').value = phone;
+      document.getElementById('Phone').value = Data.phone;
       document.getElementById("editPicture").innerHTML=`<label>
       <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>CHANGE</strong></label>`
       document.getElementById("operation1").innerHTML ='Save';
@@ -87,7 +106,6 @@ if (succeed==true){
     window.location.reload()
   }, "5000")
 }
-const { loading } = useLoader();
     return (
       <div>
         {loading && <SkeletonUI />}
@@ -105,19 +123,19 @@ const { loading } = useLoader();
   <span class="mt-2 text-sm font-medium text-blue-700 px-[33px] text-base  ">
     Username:
   </span>
-  <input type="text" id='Uname' name="Uname" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={username} readOnly />
+  <input type="text" id='Uname' name="Uname" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.names} readOnly />
 </label>
 <label class="flex mt-6">
   <span class=" mt-2 text-sm font-medium text-blue-700 px-[52px]  text-base ">
     Email:
   </span>
-  <input type="email" id='Email' name="Email" className="py-2 md: mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={email} readOnly />
+  <input type="email" id='Email' name="Email" className="py-2 md: mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.email} readOnly />
 </label>
 <label class="flex mt-6">
   <span class="mt-2 text-sm font-medium text-blue-700 px-[48.5px] text-base  ">
     Phone:
   </span>
-  <input type="text" id="Phone" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={phone} readOnly />
+  <input type="text" id="Phone" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.phone} readOnly />
 </label>
 <p id='error' className="not-italic subpixel-antialiased text-sm  text-ml text-red-500 text-center font-bold"></p>
 </div>

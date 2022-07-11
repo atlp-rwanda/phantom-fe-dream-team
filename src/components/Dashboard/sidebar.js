@@ -15,14 +15,15 @@ function logout(){
 
 
 function Sidebar({ setRoute }) {
-    
+    const Username=localStorage.getItem("user")
     return (
         <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-full gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
             <div className='flex flex-wrap mt-3'>
                 <img classNam e='h-12 w-12 gap-2 '
                     src={username} />
-
-                <h1 className='text-blue-600 flex text-center pt-2 hover:text-black md:hidden'>Username</h1>
+                 <Link className='flex' to="../profile">
+                <h1 className='pt-4 text-sm text-blue-600 flex text-center pt-2 hover:text-black md:hidden'>{Username}</h1>
+                </Link>
             </div>
             <div>
             <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
@@ -54,6 +55,12 @@ function Sidebar({ setRoute }) {
                 <Link className='flex' to="Roles">
                     <FaUsers className='h-6 w-6 mr-2' />
                     <h1 className='md:hidden'>Roles</h1>
+                </Link>
+            </div>
+            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+                <Link className='flex' to="Simulate">
+                    <FaUsers className='h-6 w-6 mr-2' />
+                    <h1 className='md:hidden'>Simulate</h1>
                 </Link>
             </div>
             

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import UserBusTracker from './BusTrackerUser';
 import RoutingMachine from './RoutingMachine';
+import "../../App.css"
 
 const UserSimulation = () => {
   const options = [

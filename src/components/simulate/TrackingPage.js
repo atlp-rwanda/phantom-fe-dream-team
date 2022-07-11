@@ -9,6 +9,7 @@ import Logout from '../Logout/logout';
 import { addPassenger, removePassenger } from '../../redux/reducers/PassengerSlice';
 import { Decelerate, Accelerate } from '../../redux/reducers/SpeedSlice';
 import { movement } from "../../redux/actions/movement.js";
+import "../../App.css"
 
 
 

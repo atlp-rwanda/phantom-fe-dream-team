@@ -9,7 +9,7 @@ function setRoles() {
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null);
-  const [Infos, setData] = useState(null);
+  const [, setData] = useState(null);
   const [Permissions, setPermissions] = [{
     AddEditDelOp: useState(false),
     viewDelOp: useState(false),
@@ -133,7 +133,7 @@ function setRoles() {
             <tbody>
               {error && <div className="flex content center text-lg text-red-500 pl-8 " >{error}</div>}
               {loading && <SkeletonUI />}
-              {Infos && Infos.map((info) => (
+              { infos && infos.map((info) => (
                 setTimeout(() => {
                   loadForm(info)
                 }, "1000"),

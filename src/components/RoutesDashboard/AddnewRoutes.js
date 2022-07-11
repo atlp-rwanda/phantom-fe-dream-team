@@ -16,14 +16,30 @@ function AddnewRoutes() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [routeNo, setRouteno] = useState("");
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const [noOfStations,setNoofstations]=useState("");
+  const [From, setFrom] = useState("");
+  const [To, setTo] = useState("");
+  const [code,setCode]=useState("");
 
-  const [stations, setStations] = useState("");
-  const [price, setPrice] = useState("");
+  const [routeslug, setRouteslug] = useState("");
+  const [distance, setDistance] = useState("");
 
-
+  function submitForm() {
+    if (From == '' || To == '') {
+      document.getElementById("error").innerHTML = 'Role and Role description must filled !!!';
+    }
+    else {
+      const role = {from:From, to:To, code:code, routeNo:routeNo, routeslug:routeslug, distance:distance};
+      var loggedin =  localStorage.getItem("auth-token")
+      fetch('https://localhost/3002/api/v1/routes', 
+    { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
+        body: JSON.stringify(role)
+      }).then((res) => {
+        console.log(res)
+        // window.location.assign("../buses")
+        // setSucceed(true);
+      })
+    }
+  }
 
   //success popup
   const [succeed, setSucceed] = useState(false);
@@ -38,7 +54,7 @@ function AddnewRoutes() {
     }, "2000")
   }
 
-  const save = Boolean(routeNo)&& Boolean(from)&&Boolean(to)&&Boolean( noOfStations)&&Boolean(stations)&&Boolean(stations)&&Boolean( price)
+  const save = Boolean(routeNo)&& Boolean(From)&&Boolean(To)&&Boolean( code)&&Boolean(routeslug)&&Boolean(routeslug)&&Boolean( distance)
 
 
 
@@ -83,7 +99,7 @@ function AddnewRoutes() {
           <div className=" flex   ">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>From</span></label>
             <div className="ml-28  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="Nyabugogo" value={from}
+              <input type="text" name="name" placeholder="Nyabugogo" value={From}
                onChange={(event) => {
                 setFrom(event.target.value);
               }}
@@ -93,7 +109,7 @@ function AddnewRoutes() {
           <div className="flex sm:justify-center">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>To</span></label>
             <div className="ml-[134px]  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="Remera" value={to}
+              <input type="text" name="name" placeholder="Remera" value={To}
              onChange={(event) => {
               setTo(event.target.value);
             }}
@@ -101,32 +117,32 @@ function AddnewRoutes() {
             </div>
           </div>
           <div className=" flex sm:justify-center ">
-            <label className="text-blue-700 text-xl mt-6 sm:sr-only"><span>No of stations</span></label>
+            <label className="text-blue-700 text-xl mt-6 sm:sr-only"><span>Code</span></label>
             <div className="ml-6  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="10" value={noOfStations}
+              <input type="text" name="name" placeholder="10" value={code}
                onChange={(event) => {
-                setNoofstations(event.target.value);
+                setCode(event.target.value);
               }}
               
               className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
           <div className=" flex sm:justify-center  ">
-            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>Stations</span></label>
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>routeslug</span></label>
             <div className="ml-20  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube" value={stations}
+              <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube" value={routeslug}
                onChange={(event) => {
-                setStations(event.target.value);
+                setRouteslug(event.target.value);
               }}
               className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
           </div>
           <div className=" flex sm:justify-center  ">
-            <label className=" text-blue-700 text-xl mt-6 sm:sr-only  "><span>Price</span></label>
+            <label className=" text-blue-700 text-xl mt-6 sm:sr-only  "><span>distance</span></label>
             <div className="ml-28  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="325"  value={price}
+              <input type="text" name="name" placeholder="325"  value={distance}
                onChange={(event) => {
-                setPrice(event.target.value);
+                setDistance(event.target.value);
               }}
               className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
@@ -137,16 +153,16 @@ function AddnewRoutes() {
       </section>
       <div className='flex justify-center'>
         <div className='mr-10 bg-blue-700 font-bold text-white px-8 py-1 rounded-md hover:bg-white hover:text-blue-700 hover:border-solid hover:border-2 hover:border-blue-500 sm:px-6 py-1  text-ms mb-10 '>
-        <button
+        {/* <button
          onClick={() => {
           dispatch(
             addRoute({
               routeNo,
               from,
               to,
-              noOfStations,
-              stations,
-              price
+              code,
+              routeslug,
+              distance
             }),
             setSucceed(true)
           
@@ -155,7 +171,9 @@ function AddnewRoutes() {
        disabled = {!save}
       >
        
-       Create</button>
+       Create</button> */}
+       <button onClick={() => submitForm()} className=" lg:mt-5 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-1 px-6 rounded xl:text-xs  lg:text-base md:text-xs m:text-xs xs:text-xs">Create</button>
+
         </div>
      <div className='mr-10 bg-blue-700 font-bold text-white px-8 py-1 rounded-md hover:bg-white hover:text-blue-700 hover:border-solid hover:border-2 hover:border-blue-500 sm:px-6 py-1  text-ms  mb-10' >
 

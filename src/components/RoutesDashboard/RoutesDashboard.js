@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
 import SkeletonUI from '../skeletonUI';
-import { setPermission} from "../../redux/actions/index";
+
 import TopNavbar from "../Dashboard/TopNavbar";
+
+
 function Routes() {
   const dispatch = useDispatch();
 
@@ -40,12 +42,20 @@ function Routes() {
         setError(err.message);
       })
   }, []);
+
+  // DELETING A ROUTE
+  
   function Delete(id) {
     if (confirm('Are you sure to delete this role?')) {
-      dispatch(deleteBus(id));
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+      fetch('http://localhost:3002/api/v1/routes/'+ id, {
+        method: 'DELETE',
+        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+      }).then((res) => {
+        
+          window.location.reload();
+        ;
+      }) 
+  
     }
   }
   function Editable(id) {
@@ -64,7 +74,6 @@ var ij=0;
           <th scope="col" className="px-12 py-3" >From</th>
           <th scope="col" className="px-12 py-3">To</th>
           <th scope="col" className="px-12 py-3">Code</th>
-          <th scope="col" className="px-12 py-3">RouteSlug</th>
           <th scope="col" className="px-12 py-3">Distance</th>
           <th scope="col" className="px-12 py-3"> Action</th>
           <th>
@@ -94,9 +103,7 @@ var ij=0;
                   <td className='pl-8 sm:flex'>
                   {info.code}
                   </td>
-                  <td className='pl-8 sm:flex'>
-                  {info.routeSlug}
-                  </td>
+                 
                   <td className='pl-8 sm:flex'>
                   {info.distance}
                   </td>
@@ -107,7 +114,7 @@ var ij=0;
                       </button>
                     </td>
                     <td>
-                      <button onClick={() => Delete(info.id)}>
+                      <button onClick={() => Delete(info.routeId)}>
                         <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
                       </button>
                     </td>

@@ -15,31 +15,37 @@ function AddnewRoutes() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [routeNo, setRouteno] = useState("");
   const [From, setFrom] = useState("");
   const [To, setTo] = useState("");
   const [code,setCode]=useState("");
 
-  const [routeslug, setRouteslug] = useState("");
   const [distance, setDistance] = useState("");
+  const [Latitude,setLatitude] = useState("");
+  const [longitude,setLongitude]= useState("");
 
   function submitForm() {
     if (From == '' || To == '') {
       document.getElementById("error").innerHTML = 'Role and Role description must filled !!!';
     }
+
+    //
+
+
     else {
-      const role = {from:From, to:To, code:code, routeNo:routeNo, routeslug:routeslug, distance:distance};
+      
+      const role = { origin:From, destination:To, distance:distance, code:code,latitude:Latitude,longitude:longitude};
       var loggedin =  localStorage.getItem("auth-token")
-      fetch('https://localhost/3002/api/v1/routes', 
+      fetch('http://localhost:3002/api/v1/routes', 
     { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
         body: JSON.stringify(role)
       }).then((res) => {
         console.log(res)
-        // window.location.assign("../buses")
-        // setSucceed(true);
+        window.location.assign("../routes")
+        setSucceed(true);
       })
     }
   }
+
 
   //success popup
   const [succeed, setSucceed] = useState(false);
@@ -54,7 +60,7 @@ function AddnewRoutes() {
     }, "2000")
   }
 
-  const save = Boolean(routeNo)&& Boolean(From)&&Boolean(To)&&Boolean( code)&&Boolean(routeslug)&&Boolean(routeslug)&&Boolean( distance)
+  const save = Boolean(longitude)&& Boolean(From)&&Boolean(To)&&Boolean( code)&&Boolean(Latitude)&&Boolean( distance)
 
 
 
@@ -85,15 +91,29 @@ function AddnewRoutes() {
         </div>
         <div className=' w-[500px] xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px] sm:pb-5 pb-5 '>
           <div className=" flex   ">
-            <label className=" text-blue-700 text-xl mt-[55px] sm:sr-only "><span>Route no </span></label>
+            <label className=" text-blue-700 text-xl mt-[55px] sm:sr-only "><span>longitude </span></label>
             <div className="ml-16  w-24 sm:ml-1 w-8  ">
-              <input type="text" name="name" placeholder="504" value={routeNo}
+              <input type="text" name="name" placeholder="504" value={longitude}
               
                 onChange={(event) => {
-                  setRouteno(event.target.value);
+                  setLongitude(event.target.value);
                 }}
                 className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
               />
+              
+            </div>
+          </div>
+          <div className=" flex   ">
+            <label className=" text-blue-700 text-xl mt-[55px] sm:sr-only "><span>latitude </span></label>
+            <div className="ml-16  w-24 sm:ml-1 w-8  ">
+              <input type="text" name="name" placeholder="504" value={Latitude}
+              
+                onChange={(event) => {
+                  setLatitude(event.target.value);
+                }}
+                className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
+              />
+              
             </div>
           </div>
           <div className=" flex   ">
@@ -118,7 +138,7 @@ function AddnewRoutes() {
           </div>
           <div className=" flex sm:justify-center ">
             <label className="text-blue-700 text-xl mt-6 sm:sr-only"><span>Code</span></label>
-            <div className="ml-6  sm:ml-1 w-8">
+            <div className="ml-28  sm:ml-1 w-8">
               <input type="text" name="name" placeholder="10" value={code}
                onChange={(event) => {
                 setCode(event.target.value);
@@ -126,16 +146,7 @@ function AddnewRoutes() {
               
               className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
             </div>
-          </div>
-          <div className=" flex sm:justify-center  ">
-            <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>routeslug</span></label>
-            <div className="ml-20  sm:ml-1 w-8">
-              <input type="text" name="name" placeholder="kanogo, Rwandex, Sonatube" value={routeslug}
-               onChange={(event) => {
-                setRouteslug(event.target.value);
-              }}
-              className="border-2 border-blue-700  mt-5 rounded-lg py-1 px-2 shadow-b ml-[10px] focus:outline-none sm:w-[250px] sm:ml-[-20px]"/>
-            </div>
+   
           </div>
           <div className=" flex sm:justify-center  ">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only  "><span>distance</span></label>

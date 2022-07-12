@@ -42,29 +42,29 @@ function Buses() {
 
 
   function submitForm(id) {
-    if (Role != '') {
-      fetch('http://localhost:8000/Permissions/' + id, {
-        method: 'PATCH',
-        headers: { "Content-Type": "application/json" },
+
+    console.log(Infos,'id',id)
+    let obj = Infos.find(o => o.id === id);
+    var update ={
+      plate:document.getElementById('plate'+id).value || obj.plate,
+      busType:document.getElementById('type'+id).value || obj.busType,
+      seat:document.getElementById('seat'+id).value || obj.seat
+    } 
+    if (update != '') {
+      fetch("https://phantom-be.herokuapp.com/api/v1/buses/" + 1, {
+        method: 'PUT',
+        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
         body: JSON.stringify(
-          {
-            plate:Plate,type:busType,seat:Seats
-          }
+          update
         )
-      }).then(() => {
-        console.log('role and permissions updated');
+      }).then((res) => {
+        console.log(res)
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 1000);
       })
     }
-    else {
-      var NPermissions = {
-        "Permissions": { "AddEditDelOp": Permissions.AddEditDelOp, "viewDelOp": Permissions.viewDelOp, "AssgnRemDriv": Permissions.AssgnRemDriv, "addRemRoute": Permissions.addRemRoute, "UpdateBusInfo": Permissions.UpdateBusInfo, "UpdateProf": Permissions.UpdateProf }
-      }
-      dispatch(setPermission(NPermissions, id));
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
     }
-  }
 
 
   function Delete(id) {
@@ -76,8 +76,11 @@ function Buses() {
     }
   }
   function Editable(id) {
-    document.getElementById(id).readOnly = false;
-
+    document.getElementById('plate'+id).readOnly = false;
+    document.getElementById('type'+id).readOnly = false;
+    document.getElementById('seat'+id).readOnly = false;
+    
+ 
   }
 var ij=0;
   return (
@@ -89,9 +92,9 @@ var ij=0;
               <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
                 <th className="pr-[100px]">No</th>
                 <th className=" colspan=2 pr-[100px]" >Plate</th>
-                <th className="colspan=2  sm:hidden" >Type</th>
-                <th className="colspan=2  sm:hidden" >Seats</th>
-                <th className="colspan=2  sm:hidden" >Date added</th>
+                <th className="colspan=2 pr-[100px] sm:hidden" >Type</th>
+                <th className="colspan=2  pr-[140px] sm:hidden" >Seats</th>
+                <th className="colspan=2  pr-[100px] sm:hidden" >Date added</th>
                 <th className="colspan=2  sm:hidden" >Action</th>
               </tr>
             </thead>
@@ -103,19 +106,19 @@ var ij=0;
                 }, "1000"),
                 ij+=1,
                 
-                <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
-                  <td className="text-lg font-bold  sm:text-sm sm:w-4 " onClick={() => Editable(info.id)}>
+                <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4" onClick={() => Editable(info.id)}>
+                  <td className="text-lg font-bold  sm:text-sm sm:w-4 ">
 
                       {ij}
                   </td>
-                  <td className="flex flex-col text-lg sm:text-sm" onClick={() => Editable('plate'+info.id)}>
-                  <input type="text" id={'plate' + info.id} placeholder={info.plate} className="font-bold placeholder-black" readOnly />
+                  <td className="flex flex-col text-lg sm:text-sm">
+                  <input type="text" id={'plate' + info.id} placeholder={info.plate} value={info.plate} className="font-bold placeholder-black mt-4" readOnly />
                   </td>
                   <td className='pl-8 sm:flex'>
-                  {info.busType}
+                  <input type="text" id={'type' + info.id} placeholder={info.busType} className="font-bold placeholder-black" readOnly />
                   </td>
                   <td className='pl-8 sm:flex'>
-                  {info.seat}
+                  <input type="text" id={'seat' + info.id} placeholder={info.seat} className="font-bold placeholder-black" readOnly />
                   </td>
                   <td className='pl-8 sm:flex'>
                   {info.createdAt}

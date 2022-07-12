@@ -1,4 +1,6 @@
 import { login } from "../actions/loginActions"
+import {backendUrl} from "../../utils/Api.js"
+
 if (localStorage.getItem('auth')== null){
     localStorage.setItem('auth',false)
 }
@@ -12,7 +14,7 @@ const LoginReducer =(state ={loading:false,done:false,pass:false},action) =>{
           state.loading=true
           const data={"email":userEmail,
           "password":userPassword};
-          fetch('https://phantom-be.herokuapp.com/api/v1/users/login', {
+          fetch(backendUrl+'users/login', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

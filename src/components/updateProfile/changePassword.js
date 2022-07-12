@@ -21,9 +21,6 @@ function ChangePassword() {
     if (OldPassword == '' || NewPassword1 == '' || NewPassword2 == '') {
       document.getElementById("error").innerHTML = 'All inputs should be filled !!!';
     }
-    // else if (error) {
-    //   document.getElementById("error").innerHTML = 'Incorrect old password !!!';
-    // }
     else if (NewPassword1.length < 6) {
       document.getElementById("error").innerHTML = 'A password shold be atleast 6 characters !!!';
     }

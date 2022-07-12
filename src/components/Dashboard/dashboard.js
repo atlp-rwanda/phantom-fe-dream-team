@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 import  SetRoles from '../SetRolesPermission/setRoles';
@@ -7,15 +7,33 @@ import Users from './User';
 import AssignDrivers from '../Assign-drivers-to-buses/assign';
 import Buses from '../RegisterBuses/buses';
 import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
+import {backendUrl} from "../../utils/Api.js"
 
 
 
 
 function Dashboard(props) {
-  if (localStorage.getItem('auth')!="00psgwwj7819012n#%$hj18*&"){
-    window.location.assign("../");
-    console.log("Not loggedin");
+  var loggedin =  localStorage.getItem("auth-token")
+// preventing a loggedin user to login again while the token is still active 
+  function check (){
+    fetch(backendUrl+'profile/update/1', {
+      method: 'PATCH',
+      headers: { "Content-Type": "application/json","auth-token": loggedin},
+      body: JSON.stringify(
+        {
+        }
+      )
+    }).then((res) => {
+      if(res.status!=401){
+        console.log("Verified");
+            navigate("/dashboard");
+      }else{
+        localStorage.clear()
+          window.location.assign("../");     
+      }
+    })
   }
+  check()
   return (
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />

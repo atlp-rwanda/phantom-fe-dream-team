@@ -21,9 +21,6 @@ function ChangePassword() {
     if (OldPassword == '' || NewPassword1 == '' || NewPassword2 == '') {
       document.getElementById("error").innerHTML = 'All inputs should be filled !!!';
     }
-    else if (OldPassword != password) {
-      document.getElementById("error").innerHTML = 'Incorrect old password !!!';
-    }
     else if (NewPassword1.length < 6) {
       document.getElementById("error").innerHTML = 'A password shold be atleast 6 characters !!!';
     }
@@ -31,9 +28,15 @@ function ChangePassword() {
       document.getElementById("error").innerHTML = 'New password not matching !!!';
     }
     else {
-      dispatch(changePassword(NewPassword1))
+      dispatch(changePassword(OldPassword,NewPassword1))
       document.getElementById("error").innerHTML = '';
-      setSucceed(true);
+      setTimeout(() => {
+        if(localStorage.getItem("error")!="wrong password"){
+          setSucceed(true)
+        }else{
+        document.getElementById("error").innerHTML = 'Incorrect old password !!!'; 
+        }
+      }, 3000);
     }
 
   }

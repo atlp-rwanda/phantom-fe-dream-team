@@ -49,7 +49,7 @@ export default function emailExist() {
       setLoading1(true)
       fetch(`${backendUrl}/users1/reset/${token}`, {
         method: "POST",
-        mode: 'cors',
+        // mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
            },

@@ -83,7 +83,6 @@ export default function resetPassword() {
     
         fetch(`${backendUrl}/users1/forgotpassword`, {
           method: "POST",
-          mode: 'no-cors',
           body: bodyContent,
           headers: headersList,
         })

@@ -51,7 +51,7 @@ function Buses() {
       seat:document.getElementById('seat'+id).value || obj.seat
     } 
     if (update != '') {
-      fetch("https://phantom-be.herokuapp.com/api/v1/buses/" + 1, {
+      fetch("https://phantom-be.herokuapp.com/api/v1/buses/" + id, {
         method: 'PUT',
         headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
         body: JSON.stringify(
@@ -59,9 +59,9 @@ function Buses() {
         )
       }).then((res) => {
         console.log(res)
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 1000);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       })
     }
     }
@@ -82,6 +82,12 @@ function Buses() {
     
  
   }
+  function Sort(I){
+   I.sort((a, b) => {
+      return a.id - b.id;
+  });
+  console.log(I)
+  }
 var ij=0;
   return (
     <>
@@ -101,6 +107,7 @@ var ij=0;
             <tbody>
               {error && <div className="flex content center text-lg text-red-500 pl-8 " >{error}</div>}
               {loading && <SkeletonUI />}
+              {Infos && Sort(Infos)}
               {Infos && Infos.map((info) => (
                 setTimeout(() => {
                 }, "1000"),
@@ -112,7 +119,7 @@ var ij=0;
                       {ij}
                   </td>
                   <td className="flex flex-col text-lg sm:text-sm">
-                  <input type="text" id={'plate' + info.id} placeholder={info.plate} value={info.plate} className="font-bold placeholder-black mt-4" readOnly />
+                  <input type="text" id={'plate' + info.id} placeholder={info.plate} className="font-bold placeholder-black mt-4" readOnly />
                   </td>
                   <td className='pl-8 sm:flex'>
                   <input type="text" id={'type' + info.id} placeholder={info.busType} className="font-bold placeholder-black" readOnly />

@@ -21,13 +21,13 @@ const BusesReducer = (state=1, action) => {                                     
           }) 
           return state  
       case "AddBus":
-        fetch('https://phantom-be.herokuapp.com/api/v1/buses', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(role)
-          }).then(() => {
-            
-          })    
+        const bus=action.BUS
+        fetch('https://phantom-be.herokuapp.com/api/v1/buses', 
+        { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
+            body: JSON.stringify(bus)
+          }).then((res) => {
+            console.log(res)
+          })
         return state  
    default:
      return state  

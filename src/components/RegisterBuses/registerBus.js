@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import SuccefullPopup from '../succesfull';
+import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import ErrorPopup from "../error";
 import Buses from "./buses";
+import { addBus } from "../../redux/actions";
 function AddBus() {
+  const dispatch = useDispatch();
   const [succeed, setSucceed] = useState(false);
   const [error, setError] = useState(false);
   const [Role, setRole] = useState('');
@@ -12,29 +15,24 @@ function AddBus() {
 
   function submitForm() {
     if (Role == '' || Description == '') {
-      document.getElementById("error").innerHTML = 'Role and Role description must filled !!!';
+      document.getElementById("error").innerHTML = 'Bus data must be filled !!!';
     }
     else {
-      const role = {plate:Role, busType:Description, seat:seat};
-      var loggedin =  localStorage.getItem("auth-token")
-      fetch('https://phantom-be.herokuapp.com/api/v1/buses', 
-    { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
-        body: JSON.stringify(role)
-      }).then((res) => {
-        console.log(res)
-        // window.location.assign("../buses")
-        // setSucceed(true);
-      })
+      const bus = {plate:Role, busType:Description, seat:seat};
+     dispatch(addBus(bus))
+     setTimeout(() => {
+      setSucceed(true)
+    }, 1000);
     }
   }
   function close() {
     setSucceed(false)
-    window.location.reload()
+    window.location.assign("../Buses")
   }
   if (succeed == true) {
     setTimeout(() => {
       setSucceed(false)
-      window.location.reload()
+      window.location.assign("../Buses")
     }, "5000")
   }
 

@@ -23,6 +23,11 @@ export const addRole= (role)=>{
           type:"AddRole",ROLE:role
     };
   }  
+export const addBus= (bus)=>{
+    return {
+      type:"AddBus",BUS:bus
+};
+} 
   export const deleteBus= (Id)=>{
     return {
       type:"DeleteBus",ID:Id

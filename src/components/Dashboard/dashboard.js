@@ -28,9 +28,8 @@ function Dashboard(props) {
         console.log("Verified");
             navigate("/dashboard");
       }else{
-          window.location.assign("../");
-          console.log("Not loggedin");
-        
+        localStorage.clear()
+          window.location.assign("../");     
       }
     })
   }

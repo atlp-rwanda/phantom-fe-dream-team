@@ -1,4 +1,5 @@
 import { act } from "react-dom/test-utils";
+import {backendUrl} from "../../utils/Api.js"
 
 let username=localStorage.getItem('username');
 let email=localStorage.getItem('email');
@@ -11,7 +12,7 @@ const updateProfile = (state =[username,email,phone] , action) => {
   switch (action.type) {
     case "UPDATE":
       var loggedin =  localStorage.getItem("auth-token")
-      fetch('https://phantom-be.herokuapp.com/api/v1/profile/update/'+id, {
+      fetch(backendUrl+'profile/update/'+id, {
         method: 'PATCH',
         headers: { "Content-Type": "application/json","auth-token": loggedin },
         body: JSON.stringify(
@@ -30,7 +31,7 @@ const updateProfile = (state =[username,email,phone] , action) => {
         var loggedin =  localStorage.getItem("auth-token")
         const  Opassword=action.OldPassword;
         const Npassword=action.NewPassword
-        fetch('https://phantom-be.herokuapp.com/api/v1/profile/update/'+id, {
+        fetch(backendUrl+'profile/update/'+id, {
           method: 'PATCH',
           headers: { "Content-Type": "application/json","auth-token": loggedin },
           body: JSON.stringify(

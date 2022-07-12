@@ -22,7 +22,11 @@ import Footer from "./components/footer/footer";
 import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
 import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
 
-const user = localStorage.getItem('user')
+var user;
+const auth=localStorage.getItem("auth-token")
+if(auth){
+  user = localStorage.getItem('user')
+}
 
 function App() {
     const NavbarLayout = () => (

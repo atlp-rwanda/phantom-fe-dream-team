@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch} from 'react-redux';
@@ -52,11 +53,19 @@ function EditProfile() {
 
     function removeReadonly (){
       document.getElementById('Uname').readOnly = false;
+<<<<<<< HEAD
       document.getElementById('Uname').value = Data.firstName+" "+Data.lastName
       document.getElementById('Email').readOnly = false;
       document.getElementById('Email').value = Data.email;
       document.getElementById('Phone').readOnly = false;
       document.getElementById('Phone').value = +250785364200;
+=======
+      document.getElementById('Uname').value = Data.names
+      document.getElementById('Email').readOnly = false;
+      document.getElementById('Email').value = Data.email;
+      document.getElementById('Phone').readOnly = false;
+      document.getElementById('Phone').value = Data.phone;
+>>>>>>> develop
       document.getElementById("editPicture").innerHTML=`<label>
       <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required class="hidden"></input><strong>CHANGE</strong></label>`
       document.getElementById("operation1").innerHTML ='Save';
@@ -122,7 +131,11 @@ if (succeed==true){
   <span class="mt-2 text-sm font-medium text-blue-700 px-[33px] text-base  ">
     Username:
   </span>
+<<<<<<< HEAD
   <input type="text" id='Uname' name="Uname" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.firstName+" "+Data.lastName} readOnly />
+=======
+  <input type="text" id='Uname' name="Uname" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.names} readOnly />
+>>>>>>> develop
 </label>
 <label class="flex mt-6">
   <span class=" mt-2 text-sm font-medium text-blue-700 px-[52px]  text-base ">
@@ -134,7 +147,11 @@ if (succeed==true){
   <span class="mt-2 text-sm font-medium text-blue-700 px-[48.5px] text-base  ">
     Phone:
   </span>
+<<<<<<< HEAD
   <input type="text" id="Phone" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder="+250785364200" readOnly />
+=======
+  <input type="text" id="Phone" className="mt-0 px-5 w-64 py-2 bg-white border shadow-sm border-blue-400 placeholder-slate-500 focus:outline-none focus:border-blue-900 focus:ring-blue-700 block rounded-md sm:text-sm focus:ring-1" placeholder={Data.phone} readOnly />
+>>>>>>> develop
 </label>
 <p id='error' className="not-italic subpixel-antialiased text-sm  text-ml text-red-500 text-center font-bold"></p>
 </div>

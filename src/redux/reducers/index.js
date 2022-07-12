@@ -5,7 +5,6 @@ import  {resetReducer}  from "./resetReducers";
 import routesReducer from "./routesSlice";
 import LoginReducer from "./LoginReducer";
 import busesReducer from "./busesReducer";
-import AssignReducer from "./AssignSlice"
 import PermissionReducer from "./PermissionReducer";
 import PassengerReducer from "./PassengerSlice";
 import SpeedReducer from "./SpeedSlice";

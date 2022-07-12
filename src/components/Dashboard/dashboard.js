@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 import  SetRoles from '../SetRolesPermission/setRoles';
@@ -15,7 +15,7 @@ function Dashboard(props) {
   var loggedin =  localStorage.getItem("auth-token")
 // preventing a loggedin user to login again while the token is still active 
   function check (){
-    fetch('http://localhost:3200/api/v1/profile/update/1', {
+    fetch('https://phantom-be.herokuapp.com/api/v1/profile/update/1', {
       method: 'PATCH',
       headers: { "Content-Type": "application/json","auth-token": loggedin},
       body: JSON.stringify(
@@ -27,6 +27,7 @@ function Dashboard(props) {
         console.log("Verified");
             navigate("/dashboard");
       }else{
+        localStorage.clear()
           window.location.assign("../");
           console.log("Not loggedin");
         

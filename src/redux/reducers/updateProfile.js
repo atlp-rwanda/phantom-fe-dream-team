@@ -17,7 +17,7 @@ const updateProfile = (state =[username,email,phone] , action) => {
         headers: { "Content-Type": "application/json","auth-token": loggedin },
         body: JSON.stringify(
           {
-          "email": updatedEmail
+          "email": updatedEmail,"names":updatedName,"phone":updatedPhone
           }
         )
       }).then((res) => {

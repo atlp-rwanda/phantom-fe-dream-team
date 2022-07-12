@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
-import SkeletonUI from '../skeletonUI';
+import SkeletonUI from '../skeletonUI'
 import { setPermission, deleteBus } from "../../redux/actions/index";
 import TopNavbar from "../Dashboard/TopNavbar";
+import {backendUrl} from "../../utils/Api.js"
+import {updateBus} from "../../redux/actions/index"
 function Buses() {
   const dispatch = useDispatch();
 
@@ -20,7 +22,7 @@ function Buses() {
   }];
   var loggedin =  localStorage.getItem("auth-token")
   useEffect(() => {
-    fetch('https://phantom-be.herokuapp.com/api/v1/buses', 
+    fetch(backendUrl+'buses', 
     { method: 'GET', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,}})
       .then(res => {
         if (!res.ok) { // get the error from server
@@ -51,18 +53,12 @@ function Buses() {
       seat:document.getElementById('seat'+id).value || obj.seat
     } 
     if (update != '') {
-      fetch("https://phantom-be.herokuapp.com/api/v1/buses/" + id, {
-        method: 'PUT',
-        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
-        body: JSON.stringify(
-          update
-        )
-      }).then((res) => {
-        console.log(res)
+        dispatch(updateBus(update,id))
+        console.log(update)
         setTimeout(() => {
           window.location.reload();
         }, 1000);
-      })
+ 
     }
     }
 

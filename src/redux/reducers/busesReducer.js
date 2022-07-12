@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {backendUrl} from "../../utils/Api.js"
 const BusesReducer = (state=1, action) => {                                        ;
  const id =action.ID;//for update
  const ID=action.ID //for delete
@@ -6,15 +7,21 @@ const BusesReducer = (state=1, action) => {                                     
 
   switch (action.type) {
     case "UpdateBus" :
-      fetch('https://phantom-be.herokuapp.com/api/v1/buses/'+id, {
-        method: 'PATCH',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Npermissions)
-      }).then(() => {
-      })   
+      const update = action.BUs
+      console.log(update)
+      const id = action.Id
+      fetch(backendUrl+"buses/" + id, {
+        method: 'PUT',
+        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+        body: JSON.stringify(
+          update
+        )
+      }).then((res) => {
+        console.log(res)
+      }) 
       return state  
       case "DeleteBus":
-        fetch('https://phantom-be.herokuapp.com/api/v1/buses/'+ ID, {
+        fetch(backendUrl+'buses/'+ ID, {
             method: 'DELETE',
             headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
           }).then(() => {
@@ -22,7 +29,7 @@ const BusesReducer = (state=1, action) => {                                     
           return state  
       case "AddBus":
         const bus=action.BUS
-        fetch('https://phantom-be.herokuapp.com/api/v1/buses', 
+        fetch(backendUrl+'buses', 
         { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
             body: JSON.stringify(bus)
           }).then((res) => {

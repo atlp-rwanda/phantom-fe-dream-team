@@ -28,6 +28,11 @@ export const addBus= (bus)=>{
       type:"AddBus",BUS:bus
 };
 } 
+export const updateBus= (bus,id)=>{
+  return {
+    type:"UpdateBus",BUs:bus,Id:id
+};
+} 
   export const deleteBus= (Id)=>{
     return {
       type:"DeleteBus",ID:Id

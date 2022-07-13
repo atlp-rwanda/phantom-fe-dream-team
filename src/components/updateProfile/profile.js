@@ -8,12 +8,13 @@ import ErrorPopup from "../error";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
 import { data } from "autoprefixer";
+import {backendUrl} from "../../utils/Api.js"
 function Profile() {
   const [loading, setLoading] = useState(true)
   const [Data, setData] = useState('')
   const id =localStorage.getItem("uid")
   useEffect(() => {
-    fetch('http://localhost:3200/api/v1/profile/'+id)
+    fetch(backendUrl+'profile/'+id)
       .then(res => {
         if (!res.ok) { // get the error from server
           throw Error('could not fetch the data for that resource');
@@ -68,7 +69,7 @@ function Profile() {
                   <h2>PLATE N0:</h2>
                   </div>
                   <div className="pl-[10px]">
-                  <h2>DRIVER</h2>
+                  <h2>{Data.role}</h2>
                   <h2>YOUTONG</h2>
                   <h2>RAD 709 C</h2>  
                   </div>

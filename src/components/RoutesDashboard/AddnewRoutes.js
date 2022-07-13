@@ -100,12 +100,11 @@ function AddnewRoutes() {
                 }}
                 className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
               />
-              
             </div>
           </div>
           <div className=" flex   ">
             <label className=" text-blue-700 text-xl mt-[55px] sm:sr-only "><span>latitude </span></label>
-            <div className="ml-16  w-24 sm:ml-1 w-8  ">
+            <div className="ml-[85px]   w-24 sm:ml-1 w-8  ">
               <input type="text" name="name" placeholder="504" value={Latitude}
               
                 onChange={(event) => {
@@ -113,12 +112,11 @@ function AddnewRoutes() {
                 }}
                 className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
               />
-              
             </div>
           </div>
           <div className=" flex   ">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>From</span></label>
-            <div className="ml-28  sm:ml-1 w-8">
+            <div className="ml-[118px] sm:ml-1 w-8">
               <input type="text" name="name" placeholder="Nyabugogo" value={From}
                onChange={(event) => {
                 setFrom(event.target.value);
@@ -128,7 +126,7 @@ function AddnewRoutes() {
           </div>
           <div className="flex sm:justify-center">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only "><span>To</span></label>
-            <div className="ml-[134px]  sm:ml-1 w-8">
+            <div className="ml-[141px]  sm:ml-1 w-8">
               <input type="text" name="name" placeholder="Remera" value={To}
              onChange={(event) => {
               setTo(event.target.value);
@@ -138,7 +136,7 @@ function AddnewRoutes() {
           </div>
           <div className=" flex sm:justify-center ">
             <label className="text-blue-700 text-xl mt-6 sm:sr-only"><span>Code</span></label>
-            <div className="ml-28  sm:ml-1 w-8">
+            <div className="ml-[110px] sm:ml-1 w-8">
               <input type="text" name="name" placeholder="10" value={code}
                onChange={(event) => {
                 setCode(event.target.value);
@@ -150,7 +148,7 @@ function AddnewRoutes() {
           </div>
           <div className=" flex sm:justify-center  ">
             <label className=" text-blue-700 text-xl mt-6 sm:sr-only  "><span>distance</span></label>
-            <div className="ml-28  sm:ml-1 w-8">
+            <div className="ml-[79px]   sm:ml-1 w-8">
               <input type="text" name="name" placeholder="325"  value={distance}
                onChange={(event) => {
                 setDistance(event.target.value);

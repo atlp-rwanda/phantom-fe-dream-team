@@ -31,7 +31,7 @@ function Dashboard(props) {
       }
     })
   }
-  check()
+  // check()
   return (
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />

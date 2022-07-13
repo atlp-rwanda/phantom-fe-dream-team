@@ -58,6 +58,21 @@ function Routes() {
   
     }
   }
+
+  // update a route 
+  function update (id){
+  console.log(update)
+  fetch( 'http://localhost:3002/api/v1/routes/'+  id, {
+    method: 'PUT',
+    headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+    body: JSON.stringify(
+      update
+    )
+  }).then((res) => {
+    console.log(res)
+  }) 
+}
+
   function Editable(id) {
     document.getElementById(id).readOnly = false;
 
@@ -73,7 +88,6 @@ var ij=0;
           <th scope="col" className="px-12 py-3" >Route no</th>
           <th scope="col" className="px-12 py-3" >From</th>
           <th scope="col" className="px-12 py-3">To</th>
-          <th scope="col" className="px-12 py-3">Code</th>
           <th scope="col" className="px-12 py-3">Distance</th>
           <th scope="col" className="px-12 py-3"> Action</th>
           <th>
@@ -100,9 +114,7 @@ var ij=0;
                   <td className='pl-8 sm:flex'>
                   {info.destination}
                   </td>
-                  <td className='pl-8 sm:flex'>
-                  {info.code}
-                  </td>
+      
                  
                   <td className='pl-8 sm:flex'>
                   {info.distance}

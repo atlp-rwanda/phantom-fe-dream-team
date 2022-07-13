@@ -40,7 +40,7 @@ const LoginReducer =(state ={loading:false,done:false,pass:false},action) =>{
             }
     },state.done=true);
         default:
-            return state=false
+            return state
 
      }
 

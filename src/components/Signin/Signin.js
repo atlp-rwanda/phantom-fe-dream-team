@@ -27,26 +27,6 @@ const Signin = () => {
 
 console.log('status: ',loginInfo)
 
-var loggedin =  localStorage.getItem("auth-token")
-// preventing a loggedin user to login again while the token is still active 
-  function check (){
-    fetch('http://localhost:3200/api/v1/profile/update/1', {
-      method: 'PATCH',
-      headers: { "Content-Type": "application/json","auth-token": loggedin},
-      body: JSON.stringify(
-        {
-        }
-      )
-    }).then((res) => {
-      if(res.status!=401){
-        console.log("Verified");
-            navigate("/dashboard");
-      }else{
-        console.log("Not logged in"); 
-      }
-    })
-  }
-  check()
 // preventing a loggedin user to login again while the token is still active 
  
 
@@ -78,15 +58,6 @@ var loggedin =  localStorage.getItem("auth-token")
 
     Dispatch(login(inputEmail,inputPassword))
     console.log("logIn",loginInfo)
-    setButtonValue(`Loading...`)
-    setTimeout(()=>{
-      if(localStorage.getItem("auth")=='false'){
-        seterrorMessage("email or password is incorrect!!!")
-        setButtonValue(`Login`)
-      }else if(localStorage.getItem("auth")=='true'){
-       navigate("/dashboard");
-      }
-    },4000)
     setLoading1(true)
     setTimeout(()=>{
       if(localStorage.getItem("auth")=='false'){
@@ -163,10 +134,6 @@ var loggedin =  localStorage.getItem("auth-token")
                         {passwordError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{passwordError}</div>}
 
                       </div>
-
-                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'> 
-                      {buttonValue}
-                      </button>
                       {!loading1 &&
                       <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'> 
                       Login
@@ -202,4 +169,3 @@ var loggedin =  localStorage.getItem("auth-token")
 
 
 export default Signin
-

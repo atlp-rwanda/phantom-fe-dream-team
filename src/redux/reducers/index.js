@@ -9,6 +9,7 @@ import PermissionReducer from "./PermissionReducer";
 import PassengerReducer from "./PassengerSlice";
 import SpeedReducer from "./SpeedSlice";
 import isMoving from "./movement"
+import AssignReducer from "./AssignSlice"
 //import other reducers
 import { combineReducers } from "redux";
 

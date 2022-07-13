@@ -12,10 +12,6 @@ import {backendUrl} from "../../utils/Api.js"
 function Profile() {
   const [loading, setLoading] = useState(true)
   const [Data, setData] = useState('')
-<<<<<<< HEAD
-  var username ,email,phone;
-=======
->>>>>>> develop
   const id =localStorage.getItem("uid")
   useEffect(() => {
     fetch(backendUrl+'profile/'+id)
@@ -56,22 +52,14 @@ function Profile() {
                  </Link>
                  </p>
                      <h1 className="pl-0 sm:pl-4 text-[22px] pb-[25px] flex "><u>MY INFORMATION</u></h1>
-<<<<<<< HEAD
-                 <h2 className="pl-0 sm:pl-4 text-[18px]">{Data.firstName+" "+Data.lastName}</h2>
-=======
                  <h2 className="pl-0 sm:pl-4 text-[18px]">{Data.names}</h2>
->>>>>>> develop
                  <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="clarity:email-solid" className="mt-1"/>
                  <h2 className="pl-0 sm:pl-4 text-[13px] pl-[8px]">{Data.email}</h2>
                  </h2>
                  <h2 className="pl-0 sm:pl-4 flex">
                  <Icon icon="bxs:phone" className="mt-1" />
-<<<<<<< HEAD
-                 <h2 className="pl-0 sm:pl-4 text-[13px] pb-[15px] pl-[8px]">+250785364200</h2>
-=======
                  <h2 className="pl-0 sm:pl-4 text-[13px] pb-[15px] pl-[8px]">{Data.phone}</h2>
->>>>>>> develop
                  </h2>
                  
                  <div className=" pl-0 sm:pl-4 flex">

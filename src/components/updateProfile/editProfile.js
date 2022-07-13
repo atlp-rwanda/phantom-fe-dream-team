@@ -9,13 +9,14 @@ import ErrorPopup from "../error";
 import {updateProfile} from "../../redux/actions/index";
 import { useLoader } from '../useLoader';
 import SkeletonUI from '../skeletonUI';
+import {backendUrl} from "../../utils/Api.js"
 function EditProfile() {
 
   const [loading, setLoading] = useState(true)
   const [Data, setData] = useState('')
   const id =localStorage.getItem("uid")
   useEffect(() => {
-    fetch('http://localhost:3200/api/v1/profile/'+id)
+    fetch(backendUrl+'profile/'+id)
       .then(res => {
         if (!res.ok) { // get the error from server
           throw Error('could not fetch the data for that resource');

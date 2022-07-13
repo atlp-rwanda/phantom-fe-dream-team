@@ -6,13 +6,6 @@ import SkeletonUI from './skeletonUI';
 import SuccefullPopup from './Successful';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { login} from '../../redux/actions/loginActions';
-
-
-
-
-
-
-
 const Signin = () => {
   let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);

@@ -6,11 +6,13 @@ import { setPermission, deleteBus } from "../../redux/actions/index";
 import TopNavbar from "../Dashboard/TopNavbar";
 import {backendUrl} from "../../utils/Api.js"
 import {updateBus} from "../../redux/actions/index"
+import SuccefullPopup from '../succesfull';
+import ErrorPopup from "../error";
 function Buses() {
   const dispatch = useDispatch();
-
+  const [succeed, setSucceed] = useState(false);
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null);
   const [Infos, setData] = useState(null);
   const [Permissions, setPermissions] = [{
     AddEditDelOp: useState(false),
@@ -56,7 +58,12 @@ function Buses() {
         dispatch(updateBus(update,id))
         console.log(update)
         setTimeout(() => {
-          window.location.reload();
+          const error = localStorage.getItem("error");
+          if(error!="null"){
+            setError(true)
+          }else{
+            setSucceed(true)
+          }
         }, 1000);
  
     }
@@ -67,7 +74,12 @@ function Buses() {
     if (confirm('Are you sure to delete this role?')) {
       dispatch(deleteBus(id));
     setTimeout(() => {
-      window.location.reload();
+    const error = localStorage.getItem("error");
+      if(error!="null"){
+        setError(true)
+      }else{
+        setSucceed(true)
+      }
     }, 1000);
     }
   }
@@ -83,6 +95,10 @@ function Buses() {
       return a.id - b.id;
   });
   console.log(I)
+  }
+  function close() {
+    setSucceed(false)
+    window.location.reload()
   }
 var ij=0;
   return (
@@ -143,6 +159,16 @@ var ij=0;
             </tbody>
           </table>
       </div>
+
+      <SuccefullPopup trigger={succeed}>
+        <button onClick={() => close()} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">Success</h3>
+      </SuccefullPopup>
+      <ErrorPopup trigger={error}>
+        <button onClick={() => setError(false)} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">An error occured</h3>
+      </ErrorPopup>
+
     </>
   )
 }

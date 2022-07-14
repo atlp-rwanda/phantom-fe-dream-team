@@ -4,6 +4,7 @@ const BusesReducer = (state=1, action) => {                                     
  const id =action.ID;//for update
  const ID=action.ID //for delete
  var loggedin =  localStorage.getItem("auth-token")
+ localStorage.setItem("error",null);
 
   switch (action.type) {
     case "UpdateBus" :
@@ -17,14 +18,19 @@ const BusesReducer = (state=1, action) => {                                     
           update
         )
       }).then((res) => {
-        console.log(res)
+        if(res.status!=200){
+          localStorage.setItem("error",res);
+        }
       }) 
       return state  
       case "DeleteBus":
         fetch(backendUrl+'buses/'+ ID, {
             method: 'DELETE',
             headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
-          }).then(() => {
+          }).then((res) => {
+            if(res.status!=200){
+              localStorage.setItem("error",res);
+            }
           }) 
           return state  
       case "AddBus":
@@ -33,7 +39,10 @@ const BusesReducer = (state=1, action) => {                                     
         { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
             body: JSON.stringify(bus)
           }).then((res) => {
-            console.log(res)
+            if(res.status!=200){
+              localStorage.setItem("error",res);
+            }
+         
           })
         return state  
    default:

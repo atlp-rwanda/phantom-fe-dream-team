@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import TopNavbar from '../Dashboard/TopNavbar';
-
+import { backendUrl } from '../../utils/Api';
 export default function management() {
 
   const [users, setUsers] = useState([])
+  var loggedin =  localStorage.getItem("auth-token")
+  console.log(loggedin)
 
-  fetch("http://localhost:4000/api/v1/users", {
+  fetch(`${backendUrl}users`, {
     method: "GET",
+    headers: { "Content-Type": "application/json","Authorization": `Bearer ${loggedin}`},
+
+
+
   })
     .then((res) => {
       return res.json();
@@ -18,9 +24,10 @@ export default function management() {
 
   const DeleteUser = (id) => {
 
-    fetch(`http://localhost:4000/api/v1/users/${id}`, {
+    fetch(`${backendUrl}users/${id}`, {
       method: "DELETE",
-      mode: "cors",
+      headers: { "Content-Type": "application/json","Authorization": `Bearer ${loggedin}`},
+
     })
       .then((res) => {
         return res.json();
@@ -116,21 +123,21 @@ export default function management() {
           <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">
-                Names
+                NAMES
               </th>
 
               <th scope="col" className="px-6 py-3">
-                Email
+                EMAIL
               </th>
               <th scope="col" className="px-6 py-3">
-                Phone
+                PHONE
               </th>
               <th scope="col" className="px-6 py-3">
-                Role
+                ROLE
               </th>
 
               <th scope="col" className="px-6 py-3">
-                Action
+                ACTION
               </th>
 
             </tr>

@@ -6,11 +6,13 @@ import SuccefullPopup from '../Logout/success'
 import ErrorPopup from '../ResetPassword/error';
 import LOGOUT from '../Logout/logout'
 import { getDefaultNormalizer } from '@testing-library/react';
-// import { backendUrl } from "../../utils/Api";
+import { backendUrl } from "../../utils/Api";
 
 
 const LOCAL_STORAGE_KEY = 'register'
 export default function register() {
+  var loggedin =  localStorage.getItem("auth-token")
+
   const navigate = useNavigate();
    //success popup
    const [succeed, setSucceed] = useState(false);
@@ -200,10 +202,10 @@ function handleRegister(event,firstname,email,phone,role) {
     role: role
   };
 
-  fetch('http://localhost:4000/api/v1/users/register', {
+  fetch(`${backendUrl}users/register`, {
     method: "POST",
     mode: "cors",
-    headers: headersList,
+    headers: { "Content-Type": "application/json","Authorization": `Bearer ${loggedin}`},
     body:JSON.stringify(bodyContent)
   })
     .then((res) => {

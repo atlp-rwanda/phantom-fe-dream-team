@@ -1,22 +1,21 @@
 import {Link, useNavigate} from 'react-router-dom';
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import bus from '../../../src/assets/bus.png'
 import { useLoader } from './useLoader';
 import SkeletonUI from './skeletonUI';
 import SuccefullPopup from './Successful';
-import ErrorPopup from '../error'; 
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/actions/loginActions';
-
-
-
-
-
+import { login} from '../../redux/actions/loginActions';
 const Signin = () => {
   let navigate = useNavigate();
   const [succeed, setSucceed] = useState(false);
   const loginInfo = useSelector(state => state.LoginReducer)
-
+  const [loading1,setLoading1]=useState(false)
+  const [buttonValue,setButtonValue]=useState('Login');
+  const auth=localStorage.getItem("auth-token")
+  if(auth){
+    navigate("../dashboard")
+  }
   const Dispatch = useDispatch();
   const { loading } = useLoader();
   const [email, setEmail] = useState('');
@@ -28,15 +27,8 @@ const Signin = () => {
 
 console.log('status: ',loginInfo)
 
-var loggedin =  localStorage.getItem("auth")
 // preventing a loggedin user to login again while the token is still active 
-  function check (){
-    if (loggedin =='00psgwwj7819012n#%$hj18*&'){
-      console.log("welcome")
-      navigate("/dashboard");
-    }
-  }
-  check()
+ 
 
   function formSubmit(e){
     e.preventDefault();
@@ -65,12 +57,16 @@ var loggedin =  localStorage.getItem("auth")
     }
 
     Dispatch(login(inputEmail,inputPassword))
-    if (loginInfo[1] == "00psgwwj7819012n#%$hj18*&"){
-      navigate("/dashboard");
-    }
-    else{
-      seterrorMessage('Email or password is wrong!')
-    }
+    console.log("logIn",loginInfo)
+    setLoading1(true)
+    setTimeout(()=>{
+      if(localStorage.getItem("auth")=='false'){
+        seterrorMessage("email or password is incorrect!!!")
+        setLoading1(false)
+      }else if(localStorage.getItem("auth")=='true'){
+       navigate("/dashboard");
+      }
+    },2000)
   }
 
 
@@ -138,8 +134,20 @@ var loggedin =  localStorage.getItem("auth")
                         {passwordError&&<div className='error-msg not-italic subpixel-antialiased text-sm font-sans text-ml text-red-500 text-center font-bold'>{passwordError}</div>}
 
                       </div>
-
-                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'>Log In</button>
+                      {!loading1 &&
+                      <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-700 text-white hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'> 
+                      Login
+                      </button>
+                      }
+                       {loading1 &&
+                     <button  className='w-2/3 px-4 py-3 rounded-lg  mt-6 bg-blue-100 text-blue-900 hover:bg-white hover:border-solid hover:border-2 hover:border-blue-600  hover:text-blue-700 font-bold py-2 px-8 rounded xl:text-xs md:py-1 md:px-12  lg:text-base md:text-xs m:text-xs xs:text-xs xs:py-2'> 
+                     <svg role="status" class="inline w-4 h-4 mr-2 text-gray-900 animate-spin dark:text-gray-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                     <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="#1C64F2"/>
+                     </svg>
+                     Loading...
+                 </button>
+                      }
                     </form>
                     <div className='text-center mt-2'>
                     <Link to={"/ResetPassword"} className='text-sm  hover:text-blue-700 focus:text-blue-700'>Forgotten Password?</Link>
@@ -161,3 +169,4 @@ var loggedin =  localStorage.getItem("auth")
 
 
 export default Signin
+

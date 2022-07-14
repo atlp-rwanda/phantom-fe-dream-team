@@ -5,9 +5,14 @@ import user from '../../assets/user.png'
 import SuccefullPopup from '../Logout/success'
 import ErrorPopup from '../ResetPassword/error';
 import LOGOUT from '../Logout/logout'
+import { getDefaultNormalizer } from '@testing-library/react';
+import { backendUrl } from "../../utils/Api";
+
 
 const LOCAL_STORAGE_KEY = 'register'
 export default function register() {
+  var loggedin =  localStorage.getItem("auth-token")
+
   const navigate = useNavigate();
    //success popup
    const [succeed, setSucceed] = useState(false);
@@ -19,6 +24,7 @@ export default function register() {
      setTimeout(() => {
        setSucceed(false)
        navigate('/dashboard/Users')
+
      }, "2000")
    }
        //error popup
@@ -142,6 +148,8 @@ const lastNameValidation = () => {
     setsuccess3("")
   } 
 };
+//ex
+
 //phone number validation
 const [message4, setMessage4] = useState("");
 const [success4, setsuccess4] = useState("");
@@ -177,6 +185,46 @@ const handleOnChange3=(e)=>{
       phoneValidation()
       }
 
+
+//integration 
+
+function handleRegister(event,firstname,email,phone,role) {
+  event.preventDefault();
+  let headersList = {
+    Accept: "*/*",
+    "Content-Type": "application/json",
+  };
+
+  let bodyContent = {   
+    names: firstname,
+    phone: phone,
+    email: email,
+    role: role
+  };
+
+  fetch(`${backendUrl}users/register`, {
+    method: "POST",
+    mode: "cors",
+    headers: { "Content-Type": "application/json","Authorization": `Bearer ${loggedin}`},
+    body:JSON.stringify(bodyContent)
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((result) => {
+      console.log(result.data)
+      if (result.data) {
+        setSucceed(true)
+        // navigate('/dashboard/Users')
+
+      }
+    })
+    .catch((error) => {
+      console.log(email);
+      // console.log("Internal sever error!");
+    });
+};
+
   return (
     <>
     <LOGOUT/>
@@ -198,10 +246,10 @@ const handleOnChange3=(e)=>{
      </div>
      <div className='w-[500px] xs:w-[300px] 2xl:shadow-b sm:w-[300px] md:w-[300px] lg:w-[300px]'>
        <div className='flex sm:flex-col'>
-         <label htmlFor="first_name" className="text-blue-700 text-xl mt-[55px] sm:sr-only">First name:</label>
+         <label htmlFor="first_name" className="text-blue-700 text-xl mt-[55px] sm:sr-only">Names:</label>
          <input 
          type='text' 
-         placeholder='First name' 
+         placeholder='Names' 
          className='border-2 border-blue-700  mt-[50px] rounded-lg py-1 px-2 shadow-b ml-4 focus:outline-none sm:w-[250px]'
          onChange={handleOnChange1} 
          value={firstname}
@@ -209,7 +257,9 @@ const handleOnChange3=(e)=>{
        </div>
        <p className="text-red-500">{message2}</p>
       <p className="text-green-700">{success2}</p>
-       <div className='flex'>
+
+      {/*
+      <div className='flex'>
          <label htmlFor="last_name" className="text-blue-700 text-xl mt-6 sm:sr-only">Last name:</label>
          <input 
          type='text' 
@@ -218,6 +268,8 @@ const handleOnChange3=(e)=>{
          onChange={handleOnChange2} 
          value={lastname}/>
        </div>
+     */}
+       
        <p className="text-red-500">{message3}</p>
       <p className="text-green-700">{success3}</p>
        <div className='flex sm:justify-center'>
@@ -254,7 +306,7 @@ const handleOnChange3=(e)=>{
          </div>
      </div>
      <div className='flex justify-center mb-10'>
-     <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg' onClick={handlesubmit} >Register</button>
+     <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg' onClick={(event)=>handleRegister(event,firstname,email,phone,role)} >Register</button>
      <Link to="/dashboard/Users">
      <button className='bg-blue-700 text-white py-2.5 px-8 rounded-lg ml-5'>Cancel</button>
      </Link>

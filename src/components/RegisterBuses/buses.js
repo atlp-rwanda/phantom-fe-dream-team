@@ -71,7 +71,7 @@ function Buses() {
 
 
   function Delete(id) {
-    if (confirm('Are you sure to delete this role?')) {
+    if (confirm('Are you sure to delete this bus?')) {
       dispatch(deleteBus(id));
     setTimeout(() => {
     const error = localStorage.getItem("error");

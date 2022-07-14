@@ -76,7 +76,8 @@ function Buses() {
     }
   }
   function Editable(id) {
-    document.getElementById(id).readOnly = false;
+    document.getElementById('busType'+id).readOnly = false;
+    document.getElementById('plate'+id).readOnly = false;
 
   }
 var ij=0;
@@ -103,15 +104,16 @@ var ij=0;
                 }, "1000"),
                 ij+=1,
                 
-                <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
-                  <td className="text-lg font-bold  sm:text-sm sm:w-4 " onClick={() => Editable(info.id)}>
+                <tr  onClick={() => Editable(info.id)} className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
+                  <td className="text-lg font-bold  sm:text-sm sm:w-4 ">
 
                       {ij}
                   </td>
-                  <td className="flex flex-col text-lg sm:text-sm" onClick={() => Editable('plate'+info.id)}>
+                  <td className="flex flex-col text-lg sm:text-sm" >
                   <input type="text" id={'plate' + info.id} placeholder={info.plate} className="font-bold placeholder-black" readOnly />
                   </td>
-                  <td className='pl-8 sm:flex'>
+                  <td className='pl-8 sm:flex' >
+                  <input type="text" id={'busType' + info.id} placeholder={info.busType} className="font-bold placeholder-black" readOnly />
                   {info.busType}
                   </td>
                   <td className='pl-8 sm:flex'>

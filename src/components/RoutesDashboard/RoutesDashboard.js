@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
 import SkeletonUI from '../skeletonUI';
+import SuccefullPopup from '../succesfull';
+import ErrorPopup from "../error";
 
 import TopNavbar from "../Dashboard/TopNavbar";
 
@@ -10,8 +12,17 @@ function Routes() {
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null);
+  const [succeed, setSucceed] = useState(false);
+  const [error, setError] = useState(false);
+
   const [Infos, setData] = useState();
+  const [From, setFrom] = useState("");
+  const [To, setTo] = useState("");
+  const [code,setCode]=useState("");
+
+  const [distance, setDistance] = useState("");
+  const [Latitude,setLatitude] = useState("");
+  const [longitude,setLongitude]= useState("");
   const [Permissions, setPermissions] = [{
     AddEditDelOp: useState(false),
     viewDelOp: useState(false),
@@ -60,24 +71,43 @@ function Routes() {
   }
 
   // update a route 
-  function update (id){
-  console.log(update)
-  fetch( 'http://localhost:3002/api/v1/routes/'+  id, {
-    method: 'PUT',
-    headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
-    body: JSON.stringify(
-      update
-    )
-  }).then((res) => {
-    console.log(res)
-  }) 
-}
+  function update(id) {
+    
+    let obj = Infos.find(o => o.routeId === id);
+    var update ={
+      origin:document.getElementById('origin'+id).value || obj.origin,
+      destination:document.getElementById('destination'+id).value || obj.destination,
+      distance:document.getElementById('distance'+id).value || obj.distance
+    } 
+    if (update != '') {
+      fetch('http://localhost:3002/api/v1/routes/'+id, {
+        method: 'PUT',
+        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+        body: JSON.stringify(update)
+      }).then((res) => {
+      if(res.status == 200){
+        setSucceed(true);
+      }else{
+        setError(true);
+      }
+      
+      })   
+        console.log(update)
+    }
+    }
+    function close() {
+      setSucceed(false)
+      window.location.reload()
+    }
 
   function Editable(id) {
-    document.getElementById(id).readOnly = false;
+    document.getElementById('origin'+id).readOnly = false;
+    document.getElementById('destination'+id).readOnly = false;
+    document.getElementById('distance'+id).readOnly = false;
+   
 
   }
-var ij=0;
+
   return (
     <>
       <TopNavbar goto={e => window.location.assign('/dashboard/routes/add')} />
@@ -100,28 +130,30 @@ var ij=0;
               {Infos && Infos.map((info) => (
                 setTimeout(() => {
                 }, "5000"),
-                ij+=1,
+              
                 
-                <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
-                  <td className="text-lg font-bold  sm:text-sm sm:w-4 " onClick={() => Editable(info.id)}>
+                <tr   onClick={() => Editable(info.routeId)} className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4">
+                  <td className="text-lg font-bold  sm:text-sm sm:w-4 ">
 
                       {info.routeId}
                   </td>
-                  <td className="flex flex-col text-lg sm:text-sm" onClick={() => Editable('plate'+info.id)}>
-                  <input type="text" id={'origin' +info.origin} placeholder={info.origin} className="font-bold placeholder-black" readOnly />
+                  <td className="flex flex-col text-lg sm:text-sm" >
+                  <input type="text" id={'origin' + info.routeId} placeholder={info.origin} className="font-bold placeholder-black" readOnly />
                   </td>
                
                   <td className='pl-8 sm:flex'>
-                  {info.destination}
+                  <input type="text" id={'destination' + info.routeId} placeholder={info.destination} className="font-bold placeholder-black" readOnly />
+                 
                   </td>
       
                  
                   <td className='pl-8 sm:flex'>
-                  {info.distance}
+                  <input type="text" id={'distance' + info.routeId} placeholder={info.distance} className="font-bold placeholder-black" readOnly />
+                 
                   </td>
                   <td className='pl-8 sm:flex'>
                     <td>
-                      <button onClick={() => submitForm(info.id)}>
+                      <button onClick={() => update(info.routeId)}>
                         <Icon icon="carbon:change-catalog" color="green" />
                       </button>
                     </td>
@@ -136,6 +168,15 @@ var ij=0;
             </tbody>
           </table>
       </div>
+      <SuccefullPopup trigger={succeed}>
+        <button onClick={() => close()} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">Success</h3>
+      </SuccefullPopup>
+      <ErrorPopup trigger={error}>
+        <button onClick={() => setError(false)} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">An error occured</h3>
+      </ErrorPopup>
+
     </>
   )
 }

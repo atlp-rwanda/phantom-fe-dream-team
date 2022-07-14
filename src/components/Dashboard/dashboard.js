@@ -7,7 +7,9 @@ import Users from './User';
 import AssignDrivers from '../Assign-drivers-to-buses/assign';
 import Buses from '../RegisterBuses/buses';
 import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
-import AddBus from '../RegisterBuses/registerBus'
+import {backendUrl} from "../../utils/Api.js"
+import AddBus from "../RegisterBuses/registerBus"
+
 
 
 
@@ -16,7 +18,7 @@ function Dashboard(props) {
   var loggedin =  localStorage.getItem("auth-token")
 // preventing a loggedin user to login again while the token is still active 
   function check (){
-    fetch('https://phantom-be.herokuapp.com/api/v1/profile/update/1', {
+    fetch(backendUrl+'profile/update/1', {
       method: 'PATCH',
       headers: { "Content-Type": "application/json","auth-token": loggedin},
       body: JSON.stringify(
@@ -24,14 +26,15 @@ function Dashboard(props) {
         }
       )
     }).then((res) => {
-      if(res.status==401){
-          window.location.assign("../");
-          console.log("Not loggedin");
-        
+      if(res.status!=401){
+        console.log("Verified");
+      }else{
+        localStorage.clear()
+          window.location.assign("../");     
       }
     })
   }
-  // check()
+  check()
   return (
     <div className='flex sm:px-6 lg:px-8'>
       <Sidebar />

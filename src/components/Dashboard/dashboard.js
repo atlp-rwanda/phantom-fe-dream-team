@@ -7,6 +7,7 @@ import Users from './User';
 import AssignDrivers from '../Assign-drivers-to-buses/assign';
 import Buses from '../RegisterBuses/buses';
 import RoutesDashboard from '../RoutesDashboard/RoutesDashboard';
+import AddBus from '../RegisterBuses/registerBus'
 import {backendUrl} from "../../utils/Api.js"
 
 
@@ -26,7 +27,6 @@ function Dashboard(props) {
     }).then((res) => {
       if(res.status!=401){
         console.log("Verified");
-            navigate("/dashboard");
       }else{
         localStorage.clear()
           window.location.assign("../");     
@@ -49,7 +49,8 @@ function Dashboard(props) {
             <Route path="Routes/" element={<RoutesDashboard />}> </Route>
          
      
-              <Route path="Buses/*" element={<Buses />} />
+              <Route path="Buses/" element={<Buses />} />
+              <Route path="Buses/add" element={<AddBus/>} />
               <Route path="Users/*" element={<Users />} />
               <Route path="Roles/" element={<SetRoles/>} />
               <Route path="Roles/add" element={<AddRole/>} />

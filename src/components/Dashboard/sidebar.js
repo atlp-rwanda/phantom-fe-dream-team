@@ -3,6 +3,7 @@ import username from '../../assets/Dashboard-images/username.png';
 import route from '../../assets/Dashboard-images/routes.png';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 import { BiBus } from 'react-icons/bi';
+import { FaRoute  } from 'react-icons/fa';
 import { GrWorkshop } from 'react-icons/gr'
 import { FaUsers } from 'react-icons/fa';
 import { BsPersonBadgeFill } from 'react-icons/bs';
@@ -18,7 +19,7 @@ function Sidebar({ setRoute }) {
     const Username=localStorage.getItem("user")
     return (
         <section className='flex flex-col basis-1/5 bg-white border-2 border-white border-solid border-r-black h-full gap-5 col-auto items-center mt-3 sm:justify-items-center sm:m-auto'>
-            <div className='flex flex-wrap mt-3'>
+            <div className='flex flex-wrap mt-3  justify-center'>
                 <img classNam e='h-12 w-12 gap-2 '
                     src={username} />
                  <Link className='flex' to="../profile">
@@ -26,10 +27,9 @@ function Sidebar({ setRoute }) {
                 </Link>
             </div>
             <div>
-            <div className='text-blue-600 flex text-center pt-10 hover:text-black'>
+            <div className='text-blue-600 flex justify-center pt-10 hover:text-black ml-[-20px]'>
                 <Link className='flex' to="Routes">
-                    <img className=' h-6 w-6 mr-2'
-                        src={route} />
+                    <FaRoute className='h-6 w-6 mr-2' />
                     <h1 className='md:hidden'>Routes</h1>
                 </Link>
             </div>

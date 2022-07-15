@@ -13,6 +13,8 @@ function Buses() {
   const [succeed, setSucceed] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true)
+  const [load,setLoad] = useState(false)
+  const [load1,setLoad1] = useState(false)
   const [Infos, setData] = useState(null);
   const [Permissions, setPermissions] = [{
     AddEditDelOp: useState(false),
@@ -47,6 +49,7 @@ function Buses() {
 
   function submitForm(id) {
 
+    setLoad(true)
     console.log(Infos,'id',id)
     let obj = Infos.find(o => o.id === id);
     var update ={
@@ -60,8 +63,10 @@ function Buses() {
         setTimeout(() => {
           const error = localStorage.getItem("error");
           if(error!="null"){
+            setLoad(false)
             setError(true)
           }else{
+            setLoad(false)
             setSucceed(true)
           }
         }, 1000);
@@ -72,12 +77,15 @@ function Buses() {
 
   function Delete(id) {
     if (confirm('Are you sure to delete this bus?')) {
+      setLoad1(true)
       dispatch(deleteBus(id));
     setTimeout(() => {
     const error = localStorage.getItem("error");
       if(error!="null"){
+        setLoad1(false)
         setError(true)
       }else{
+        setLoad1(false)
         setSucceed(true)
       }
     }, 1000);
@@ -144,14 +152,25 @@ var ij=0;
                   </td>
                   <td className='pl-8 sm:flex'>
                     <td>
+                      {!load &&
                       <button onClick={() => submitForm(info.id)}>
-                        <Icon icon="carbon:change-catalog" color="green" />
-                      </button>
+                       <Icon icon="carbon:change-catalog" color="green" />
+                      </button>}
+                      {load &&
+                      <button onClick={() => submitForm(info.id)}>
+                        <Icon icon="eos-icons:bubble-loading" color="green" width="30" />
+                      </button>}
                     </td>
                     <td>
+                      {!load1 &&
                       <button onClick={() => Delete(info.id)}>
                         <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
-                      </button>
+                      </button>}
+                      {load1 &&
+                      <button onClick={() => Delete(info.id)}>
+                        <Icon icon="eos-icons:bubble-loading" color="red" width="30" className='text-red' />
+                      </button>}
+
                     </td>
                   </td>
                 </tr>

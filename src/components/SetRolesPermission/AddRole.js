@@ -17,6 +17,13 @@ function AddRole() {
     UpdateProf: useState(false),
   }];
 
+  var loggedin =  localStorage.getItem("auth-token")
+
+
+
+
+  
+
   function submitForm() {
 
 
@@ -40,10 +47,11 @@ function AddRole() {
     else {
       const role = { Role, Description, Permissions };
 
-      fetch('http://localhost:8000/Permissions/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(role)
+      fetch(`${backendUrl}Permissions`, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json","Authorization": `Bearer ${loggedin}`},
+        body:JSON.stringify(bodyContent)
       }).then(() => {
         window.location.assign("../Roles")
         setSucceed(true);

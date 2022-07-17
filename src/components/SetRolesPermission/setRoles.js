@@ -3,6 +3,8 @@ import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
 import SkeletonUI from '../skeletonUI';
 import { setPermission, deleteRole } from "../../redux/actions/index";
+import { backendUrl } from "../../utils/Api";
+
 import TopNavbar from "../Dashboard/TopNavbar";
 function setRoles() {
   const dispatch = useDispatch();
@@ -20,7 +22,7 @@ function setRoles() {
   }];
 
   useEffect(() => {
-    fetch('http://localhost:8000/Permissions')
+    fetch(`${backendUrl}Permissions`)
       .then(res => {
         if (!res.ok) { // get the error from server
           throw Error('could not fetch the data for that resource');
@@ -84,7 +86,7 @@ function setRoles() {
 
 
     if (Role != '') {
-      fetch('http://localhost:8000/Permissions/' + id, {
+      fetch(`${backendUrl}Permissions/${id}`, {
         method: 'PATCH',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(

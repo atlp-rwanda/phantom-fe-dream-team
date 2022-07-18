@@ -1,34 +1,55 @@
-import { createSlice} from "@reduxjs/toolkit";
-import data from "../../components/RegisterBuses/database.json"
+
+import React, { useState, useEffect } from "react";
+import {backendUrl} from "../../utils/Api.js"
+const BusesReducer = (state=1, action) => {                                        ;
+ const id =action.ID;//for update
+ const ID=action.ID //for delete
+ var loggedin =  localStorage.getItem("auth-token")
+ localStorage.setItem("error",null);
 
 
-const initialState = { value: data }
-
-const busesReducer = createSlice({
-    name: 'posts',
-    initialState,
-    reducers: {
-        addBus: (state, action) => {
-            state.value.push(action.payload);
-          },
-        deleteBus: (state, action) => {
-            state.value = state.value.filter((bus) => bus.id !== action.payload.id);
-          },
-          updateBuses: (state, action) => {
-            state.value.map((bus) => {
-              if (bus.id === action.payload.id) {
-                bus.plateNo = action.payload.plateNo;
-                bus.routeNo = action.payload.routeNo;
-                bus.busType = action.payload.busType;
-                bus.seats= action.payload.seats
-              }
-            });
-          }
-    }
-})
-
-export const selectAllPosts = (state) => state.busesReducer.value;
-
-export const { addBus,deleteBus,updateBuses } = busesReducer.actions
-
-export default busesReducer.reducer
+  switch (action.type) {
+    case "UpdateBus" :
+      const update = action.BUs
+      console.log(update)
+      const id = action.Id
+      fetch(backendUrl+"buses/" + id, {
+        method: 'PUT',
+        headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+        body: JSON.stringify(
+          update
+        )
+      }).then((res) => {
+        if(res.status!=200){
+          localStorage.setItem("error",res);
+        }
+      }) 
+      return state  
+      case "DeleteBus":
+        fetch(backendUrl+'buses/'+ ID, {
+            method: 'DELETE',
+            headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`},
+          }).then((res) => {
+            if(res.status!=200){
+              localStorage.setItem("error",res);
+            }
+          }) 
+          return state  
+      case "AddBus":
+        const bus=action.BUS
+        fetch(backendUrl+'buses', 
+        { method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
+            body: JSON.stringify(bus)
+          }).then((res) => {
+            if(res.status!=200){
+              localStorage.setItem("error",res);
+            }
+         
+          })
+        return state  
+   default:
+     return state  
+  }
+  
+  }
+  export default BusesReducer;

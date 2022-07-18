@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch } from "react-redux";
-import { deleteBus} from "../../redux/reducers/busesReducer";
+// import { deleteBus} from "../../redux/reducers/busesReducer";
 import { Icon } from '@iconify/react';
 
 export default function readonlyrow({item,handleEditClick}) {

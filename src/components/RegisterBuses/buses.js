@@ -1,161 +1,194 @@
-import React,{Fragment,useState} from 'react'
-import TopNavbar from '../Dashboard/TopNavbar';
-import { useSelector,useDispatch } from "react-redux";
-import { deleteBus, selectAllPosts,updateBuses} from "../../redux/reducers/busesReducer";
-import ReadOnlyRow from "./readonlyrow"
-import EditableRow from './editablerow';
+import React, { useState, useEffect } from "react";
 import { Icon } from '@iconify/react';
-
-export default function buses() {
-  const [editbusid,setEditbusid]=useState(null)
+import { useDispatch } from 'react-redux';
+import SkeletonUI from '../skeletonUI'
+import { setPermission, deleteBus } from "../../redux/actions/index";
+import TopNavbar from "../Dashboard/TopNavbar";
+import {backendUrl} from "../../utils/Api.js"
+import {updateBus} from "../../redux/actions/index"
+import SuccefullPopup from '../succesfull';
+import ErrorPopup from "../error";
+function Buses() {
   const dispatch = useDispatch();
-//get all data
-  const posts = useSelector(selectAllPosts)
-//edit form
-  const [editFormData, setEditFormData] = useState({
-    plateNo: "",
-    routeNo: "",
-    busType: "",
-    seats: ""
+  const [succeed, setSucceed] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true)
+  const [load,setLoad] = useState(false)
+  const [load1,setLoad1] = useState(false)
+  const [Infos, setData] = useState(null);
+  const [Permissions, setPermissions] = [{
+    AddEditDelOp: useState(false),
+    viewDelOp: useState(false),
+    AssgnRemDriv: useState(false),
+    addRemRoute: useState(false),
+    UpdateBusInfo: useState(false),
+    UpdateProf: useState(false),
+  }];
+  var loggedin =  localStorage.getItem("auth-token")
+  useEffect(() => {
+    fetch(backendUrl+'buses', 
+    { method: 'GET', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,}})
+      .then(res => {
+        if (!res.ok) { // get the error from server
+          throw Error('could not fetch the data for that resource');
+        }
+        return res.json();
+      })
+      .then(data => {
+        setData(data);
+        console.log(data)
+        setLoading(false);
+        setError(null);
+      }).catch(err => {
+        // cathes Network/connection error
+        setLoading(false);
+        setError(err.message);
+      })
+  }, []);
+
+
+  function submitForm(id) {
+
+    setLoad(true)
+    console.log(Infos,'id',id)
+    let obj = Infos.find(o => o.id === id);
+    var update ={
+      plate:document.getElementById('plate'+id).value || obj.plate,
+      busType:document.getElementById('type'+id).value || obj.busType,
+      seat:document.getElementById('seat'+id).value || obj.seat
+    } 
+    if (update != '') {
+        dispatch(updateBus(update,id))
+        console.log(update)
+        setTimeout(() => {
+          const error = localStorage.getItem("error");
+          if(error!="null"){
+            setLoad(false)
+            setError(true)
+          }else{
+            setLoad(false)
+            setSucceed(true)
+          }
+        }, 1000);
+ 
+    }
+    }
+
+
+  function Delete(id) {
+    if (confirm('Are you sure to delete this bus?')) {
+      setLoad1(true)
+      dispatch(deleteBus(id));
+    setTimeout(() => {
+    const error = localStorage.getItem("error");
+      if(error!="null"){
+        setLoad1(false)
+        setError(true)
+      }else{
+        setLoad1(false)
+        setSucceed(true)
+      }
+    }, 1000);
+    }
+  }
+  function Editable(id) {
+    document.getElementById('plate'+id).readOnly = false;
+    document.getElementById('type'+id).readOnly = false;
+    document.getElementById('seat'+id).readOnly = false;
+    
+ 
+  }
+  function Sort(I){
+   I.sort((a, b) => {
+      return a.id - b.id;
   });
-
-  //update buses
-  const handleEditFormChange = (event) => {
-    event.preventDefault();
-
-    const fieldName = event.target.getAttribute("name");
-    const fieldValue = event.target.value;
-
-    const newFormData = { ...editFormData };
-    newFormData[fieldName] = fieldValue;
-
-    setEditFormData(newFormData);
-  };
-  const handleEditFormSubmit = (event,item) => {
-    event.preventDefault();
-    dispatch(updateBuses(
-      {id:item.id ,
-      plateNo:editFormData.plateNo,
-      routeNo:editFormData.routeNo,
-      busType:editFormData.busType,
-      seats:editFormData.seats
-    }))
-    setEditbusid(null);
-}
-//end
-
-
-//edit button
-const handleEditClick=(event,item)=>{
-  event.preventDefault();
-  setEditbusid(item.id);
-  //get edit form data
-  const formValues = {
-    plateNo: item.plateNo,
-    routeNo:  item.routeNo,
-    busType: item.busType,
-    seats: item.seats
-  };
-  setEditFormData(formValues);
-}
-//cancel button
-const handleCancelClick=()=>{
-  setEditbusid(null);
-}
-  //on large screen
-  const cardElements = posts.map((item) => {
-    return (
-    <Fragment>
-    {/* <ReadOnlyRow item={item}/>
-    <EditableRow/> */}
-     {editbusid === item.id ? (
-                <EditableRow
-                  item={item}
-                  editFormData={editFormData}
-                  handleEditFormChange={handleEditFormChange}
-                  handleEditFormSubmit={handleEditFormSubmit}
-                  handleCancelClick={handleCancelClick}
-                />
-              ) : (
-                <ReadOnlyRow 
-                  item={item}
-                  handleEditClick={handleEditClick}
-                />
-              )}
-    </Fragment>
-    );
-  });
-  //on small screen
-  const Elements = posts.map((item) => {
-    return (
-        <>
- <div className="p-5 bg-gray-100 sm:block lg:hidden md:hidden 2xl:hidden mt-5">
- <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:block lg:hidden md:hidden 2xl:hidden">
- <div className="bg-white space-y-3 p-4 rounded-lg shadow">
-   <div className="flex items-center space-x-2 text-sm">
-     <div className='flex flex-row'>
-        <p className='mr-2'>PlateNo: </p>
-       <p className="text-blue-500 font-bold hover:underline" >{item.plateNo}</p>
-     </div>   
-   </div>
-   <div>
-       <span
-         className="p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-50">{item.busType}</span>
-     </div>
-   <div className="text-sm text-gray-700 flex flex-row">
-   <p className='mr-2'>Seats: </p>
-   {item.seats}
-   </div>
-   <div className="text-sm font-medium text-black flex flex-row">
-   <p className='mr-2'>RouteNo: </p>
-   {item.routeNo}
-   </div>
-   <Icon 
-      onClick={() => {
-      dispatch(deleteBus({ id: item.id }));
-              }}
-     icon="fluent:delete-28-regular" width="24" color='red' />
- </div>
-</div>
-</div>
-        </>
-    );
-  });
+  console.log(I)
+  }
+  function close() {
+    setSucceed(false)
+    window.location.reload()
+  }
+var ij=0;
   return (
     <>
-    <TopNavbar goto={e=>window.location.assign('/dashboard/Buses/AddBus')}/>
+      <TopNavbar goto={e => window.location.assign('/dashboard/buses/add')} />
+      <div className="flex flex-col relative p-4 sm:p-2 sm:w-full">
+          <table id='Wtable' className="table-auto sm:shadow-2xl border-collapse w-fullxx border-black" >
+            <thead className="sm:text-sm">
+              <tr className="mb-12 text-xl text-blue-700 bg-gray-200 border-solid border-2 border-black sm:text-sm">
+                <th className="pr-[100px]">No</th>
+                <th className=" colspan=2 pr-[100px]" >Plate</th>
+                <th className="colspan=2 pr-[100px] sm:hidden" >Type</th>
+                <th className="colspan=2  pr-[140px] sm:hidden" >Seats</th>
+                <th className="colspan=2  pr-[100px] sm:hidden" >Date added</th>
+                <th className="colspan=2  sm:hidden" >Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {error && <div className="flex content center text-lg text-red-500 pl-8 " >{error}</div>}
+              {loading && <SkeletonUI />}
+              {Infos && Sort(Infos)}
+              {Infos && Infos.map((info) => (
+                setTimeout(() => {
+                }, "1000"),
+                ij+=1,
+                
+                <tr className="mb-12  h-8 text-xl hover:border-solid border-solid border-2 border-black hover:border-2 hover:border-blue-600  sm:mb-4" onClick={() => Editable(info.id)}>
+                  <td className="text-lg font-bold  sm:text-sm sm:w-4 ">
 
-    {Elements}
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg justify-center text-center flex mt-10 mb-40 ">
+                      {ij}
+                  </td>
+                  <td className="flex flex-col text-lg sm:text-sm">
+                  <input type="text" id={'plate' + info.id} placeholder={info.plate} className="font-bold placeholder-black mt-4" readOnly />
+                  </td>
+                  <td className='pl-8 sm:flex'>
+                  <input type="text" id={'type' + info.id} placeholder={info.busType} className="font-bold placeholder-black" readOnly />
+                  </td>
+                  <td className='pl-8 sm:flex'>
+                  <input type="text" id={'seat' + info.id} placeholder={info.seat} className="font-bold placeholder-black" readOnly />
+                  </td>
+                  <td className='pl-8 sm:flex'>
+                  {info.createdAt}
+                  </td>
+                  <td className='pl-8 sm:flex'>
+                    <td>
+                      {!load &&
+                      <button onClick={() => submitForm(info.id)}>
+                       <Icon icon="carbon:change-catalog" color="green" />
+                      </button>}
+                      {load &&
+                      <button onClick={() => submitForm(info.id)}>
+                        <Icon icon="eos-icons:bubble-loading" color="green" width="30" />
+                      </button>}
+                    </td>
+                    <td>
+                      {!load1 &&
+                      <button onClick={() => Delete(info.id)}>
+                        <Icon icon="fluent:delete-28-regular" width="24" color="red" className='text-red' />
+                      </button>}
+                      {load1 &&
+                      <button onClick={() => Delete(info.id)}>
+                        <Icon icon="eos-icons:bubble-loading" color="red" width="30" className='text-red' />
+                      </button>}
 
-    <table className="w-full text-sm text-left text-gray-700 dark:text-gray-400 sm:hidden lg:block md:block 2xl:block">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" className="px-12 py-3">
-                   Plate Number
-                </th>
-                <th scope="col" className="px-12 py-3">
-                    Route Number
-                </th>
-                <th scope="col" className="px-12 py-3">
-                    Bus Type
-                </th>
-                <th scope="col" className="px-12 py-3">
-                    Seats
-                </th>
-                <th scope="col" className="px-12 py-3">
-                   Action
-                </th>
-                <th scope="col" className="px-12 py-3 sr-only">
-                   Action
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-           {cardElements} 
-        </tbody>
-    </table>
-</div>
-</>
+                    </td>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+      </div>
+
+      <SuccefullPopup trigger={succeed}>
+        <button onClick={() => close()} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">Success</h3>
+      </SuccefullPopup>
+      <ErrorPopup trigger={error}>
+        <button onClick={() => setError(false)} className="absolute top-0 right-2">X</button>
+        <h3 className="px-10">An error occured</h3>
+      </ErrorPopup>
+
+    </>
   )
 }
+export default Buses;

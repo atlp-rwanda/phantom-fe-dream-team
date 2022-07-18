@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import UserBusTracker from './BusTrackerUser';
 import RoutingMachine from './RoutingMachine';
 import "../../App.css";
+import {backendUrl} from "../../utils/Api.js"
 
 const UserSimulation = () => {
   window.onbeforeunload = function() {
@@ -37,7 +38,7 @@ const UserSimulation = () => {
   const [Infos, setData] = useState(null);
   const [newInfos, setNewInfos] = useState(null);
   useEffect(() => {
-    fetch('http://localhost:3200/api/v1/simulate/alltracks/bus',
+    fetch(backendUrl+'simulate/alltracks/bus',
 {method: 'GET',
  headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`}}
 )
@@ -130,7 +131,7 @@ setData(res);
 
         console.log(id)
         //Get information of ongoing bus
-fetch('http://localhost:3200/api/v1/simulate/'+id,
+fetch(backendUrl+'simulate/'+id,
 {method: 'GET',
  headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`}}
 )

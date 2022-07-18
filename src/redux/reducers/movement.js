@@ -1,4 +1,5 @@
 import { act } from "react-dom/test-utils";
+import {backendUrl} from "../../utils/Api.js"
 
 
 const Movements = (state ={} , action) => {
@@ -7,7 +8,7 @@ const Movements = (state ={} , action) => {
     case "isMoving":
     state=action.AllData;
     const data=action.AllData;
-    fetch('http://localhost:3200/api/v1/simulate/start/', {
+    fetch(backendUrl+'simulate/start/', {
       method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
         body: JSON.stringify(data)
       }).then((res) => {
@@ -18,7 +19,7 @@ const Movements = (state ={} , action) => {
         const Ndata=action.AllData;
         const id=Ndata.id;
         state=action.AllData;
-        fetch('http://localhost:3200/api/v1/simulate/update/'+id, {
+        fetch(backendUrl+'simulate/update/'+id, {
           method: 'PATCH', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
           body: JSON.stringify(
             {
@@ -33,7 +34,7 @@ const Movements = (state ={} , action) => {
             const nData=action.AllData;
             const Id=nData.id;
             state=action.AllData;
-            fetch('http://localhost:3200/api/v1/simulate/update/'+Id, {
+            fetch(backendUrl+'simulate/update/'+Id, {
       method: 'PATCH', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
               body: JSON.stringify(
                 {
@@ -47,7 +48,7 @@ const Movements = (state ={} , action) => {
 
     case "clearIsmoving":
         const ID=action.id
-        fetch('http://localhost:3200/api/v1/simulate/stop/'+ID, {
+        fetch(backendUrl+'simulate/stop/'+ID, {
           method: 'POST', headers: { "Content-Type": "application/json",'Authorization': `Bearer ${loggedin}`,},
           }).then(() => {
           }) 

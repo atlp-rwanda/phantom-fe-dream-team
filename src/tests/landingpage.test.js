@@ -56,7 +56,6 @@ const linkElement = screen.getByText("Send");
 });
 
 
-
 test(' it should render paragraph', () => {
 render(<Landingpage />);
 const linkElement = screen.getByText("Choose Your Route Track your bus live .");

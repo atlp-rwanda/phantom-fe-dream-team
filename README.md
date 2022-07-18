@@ -71,7 +71,7 @@ To run the app in production build of the app, use either of the following.
 -[harerimanajonathan](#https://github.com/harerajo)
 -[JulesHabarurema](#https://github.com/Juleshb)
 -[KwizeraSteven](#https://github.com/Stevenkwizera06)
--[GisagaraPrince](#https://github.com/gyssa-prince)
+-[GyssagaraPrince](#https://github.com/gyssa-prince)
 -[BenjaminByiringiro](#https://github.com/Benafrica)
 -[GermainRukundo](#https://github.com/Rukundo725)
 ## License

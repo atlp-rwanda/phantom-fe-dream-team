@@ -15,10 +15,11 @@ import EditProfile from "./components/updateProfile/editProfile";
 import Profile from "./components/updateProfile/profile";
 import ChangePassword from "./components/updateProfile/changePassword";
 import RegisterUser from "./components/RegisterUser/registerUser"
+import RegisterBuses from "./components/RegisterBuses/registerBus"
+import Track from "./components/simulate/TrackingPage"
+import UserSimulation from "./components/simulate/UserSimulation";
 import Footer from "./components/footer/footer";
 import AddnewRoutes from "./components/RoutesDashboard/AddnewRoutes";
-
-import RegisterBuses from "./components/RegisterBuses/registerBus"
 import AddAssign from "./components/Assign-drivers-to-buses/AddAssign";
 
 var user;
@@ -50,18 +51,24 @@ function App() {
           <Route exact path="/profile" element={[<Profile />]}></Route>
           <Route exact path="/profile/editprofile" element={[<EditProfile />]}></Route>
           <Route exact path="/profile/changepassword" element={[<ChangePassword />]}></Route>
+
         </Route>
         <Route path="dashboard/Users/AddUser" element={<RegisterUser />} />
         <Route path="dashboard/Routes/add" element={<AddnewRoutes />}></Route>
-        <Route path="dashboard/Buses/AddBus" element={<RegisterBuses/>} />
-        <Route exact path="/Dashboard/*" element={<Dashboard />} />
-        <Route exact path="/dashboard/Drivers/Assign" element={<AddAssign />} />  
+        <Route path="dashboard/Buses/AddBus" element={<RegisterBuses />} />
+             <Route exact path="/dashboard/Drivers/Assign" element={<AddAssign />} />  
 
+        <Route exact path="/logout" element={<Logout />}></Route>
+        <Route exact path="/dashboard/*" element={<Dashboard />} />
+        <Route exact path="/dashboard/simulate" element={<Track />}></Route>
+        <Route exact path="/trackbus" element={<UserSimulation />}></Route>
       </Routes>
+     <Footer/>
+    </BrowserRouter>
+      
+        
 
-      <Footer />
 
-        </BrowserRouter>
 
 
 

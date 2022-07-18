@@ -16,7 +16,6 @@ function userBusTracker({ data }) {
   const UserEmail = localStorage.getItem('user')
   const { lat, lng } = data;
   const [prevPos, setPrevPos] = useState([lat, lng]);
-  const Dispatch = useDispatch();
   const seats = Number(localStorage.getItem('passangers'))
   useEffect(() => {
     if (prevPos[1] !== lng && prevPos[0] !== lat) setPrevPos([lat, lng]);

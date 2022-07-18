@@ -1,0 +1,16 @@
+{
+  "CarInRoad": [
+    {
+      "id": 94321,
+      "timeStart": 1656943560492,
+      "speed": 0,
+      "from": "Nyabugogo",
+      "to": "Kimironko",
+      "email": "gyssagara@gmail.com",
+      "passangers": 24,
+      "carDriving": "RAC508E",
+      "time_Updated": 1656943659005,
+      "current_Loc": 102
+    }
+  ]
+}

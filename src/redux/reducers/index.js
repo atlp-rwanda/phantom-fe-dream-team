@@ -4,9 +4,12 @@ import changePassword from "./changepassword";
 import  {resetReducer}  from "./resetReducers"; 
 import routesReducer from "./routesSlice";
 import LoginReducer from "./LoginReducer";
-import AssignReducer from "./AssignSlice"
 import busesReducer from "./busesReducer";
 import PermissionReducer from "./PermissionReducer";
+import PassengerReducer from "./PassengerSlice";
+import SpeedReducer from "./SpeedSlice";
+import isMoving from "./movement"
+import AssignReducer from "./AssignSlice"
 //import other reducers
 import { combineReducers } from "redux";
 
@@ -19,7 +22,10 @@ const allReducers = combineReducers({
     changePassword,
     resetReducer,
     busesReducer,
-    AssignReducer
+    AssignReducer,
+    PassengerReducer,
+    SpeedReducer,
+    isMoving
 
     
     //other reducers

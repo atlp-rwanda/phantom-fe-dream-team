@@ -16,6 +16,7 @@ function AddRole() {
     UpdateBusInfo: useState(false),
     UpdateProf: useState(false),
   }];
+  
 
   function submitForm() {
 
@@ -49,6 +50,7 @@ function AddRole() {
         setSucceed(true);
       })
     }
+    
   }
   function close() {
     setSucceed(false)

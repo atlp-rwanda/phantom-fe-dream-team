@@ -50,6 +50,7 @@ function AddRole() {
         setSucceed(true);
       })
     }
+    
   }
   function close() {
     setSucceed(false)

@@ -19,24 +19,24 @@ function setRoles() {
     UpdateProf: useState(false),
   }];
 
-  useEffect(() => {
-    fetch('http://localhost:8000/Permissions')
-      .then(res => {
-        if (!res.ok) { // get the error from server
-          throw Error('could not fetch the data for that resource');
-        }
-        return res.json();
-      })
-      .then(data => {
-        setData(data);
-        setLoading(false);
-        setError(null);
-      }).catch(err => {
-        // cathes Network/connection error
-        setLoading(false);
-        setError(err.message);
-      })
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:8000/Permissions')
+  //     .then(res => {
+  //       if (!res.ok) { // get the error from server
+  //         throw Error('could not fetch the data for that resource');
+  //       }
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       setData(data);
+  //       setLoading(false);
+  //       setError(null);
+  //     }).catch(err => {
+  //       // cathes Network/connection error
+  //       setLoading(false);
+  //       setError(err.message);
+  //     })
+  // }, []);
 
   function loadForm(info) {
     const Perm = info.Permissions;
